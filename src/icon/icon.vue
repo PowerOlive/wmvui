@@ -1,7 +1,6 @@
 <script>
-import {getColor} from '../utils'
 export default {
-  name: 'mu-icon',
+  name:'mu-icon',
   props: {
     value: {
       type: String
@@ -9,33 +8,40 @@ export default {
     size: {
       type: Number
     },
+    text: {
+      type: String
+    },
     color: {
       type: String,
       default: ''
     }
   },
   computed: {
-    iconStyle () {
+    iconStyle() {
       return {
         'font-size': this.size + 'px',
         'width': this.size + 'px',
         'height': this.size + 'px',
-        'color': getColor(this.color)
+        'color': this.color
       }
     }
   },
   methods: {
-    handleClick (e) {
+    handleClick(e) {
       this.$emit('click', e)
     }
   },
-  render (h) {
-    const {value, iconStyle, handleClick} = this
+  render(h) {
+    var {
+      value,
+      iconStyle,
+      handleClick,
+      text
+    } = this
     if (!value) return null
-    const isMaterial = value.indexOf(':') !== 0
-    const text = isMaterial ? value : ''
+    var isMaterial = value.indexOf(':') !== 0
     return h('i', {
-      class: ['mu-icon', isMaterial ? 'material-icons' : value.substring(1)],
+      class: 'icon-' + (isMaterial ? value : ''),
       style: iconStyle,
       on: {
         click: handleClick
