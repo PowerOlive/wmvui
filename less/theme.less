@@ -308,6 +308,27 @@ a {
   background-color: @linearProgressFillColor;
 }
 
+.mu-menu-item-wrapper{
+  color: @menuTextColor;
+  &.active {
+    color: @menuSelectColor;
+  }
+  &.hover {
+    background-color: @menuHoverColor;
+  }
+  &.disabled {
+    color: @menuDisabledColor;
+  }
+}
+
+.mu-menu-item-left-icon{
+  color: @menuLeftIconColor;
+}
+
+.mu-menu-item-right-icon {
+  color: @menuRightIconColor;
+}
+
 
 // list
 .mu-item-wrapper{
@@ -340,27 +361,6 @@ a {
 
 .mu-item-text{
   color: @listSecondaryTextColor;
-}
-
-.mu-menu-item-wrapper{
-  color: @menuTextColor;
-  &.active {
-    color: @menuSelectColor;
-  }
-  &.hover {
-    background-color: @menuHoverColor;
-  }
-  &.disabled {
-    color: @menuDisabledColor;
-  }
-}
-
-.mu-menu-item-left-icon{
-  color: @menuLeftIconColor;
-}
-
-.mu-menu-item-right-icon {
-  color: @menuRightIconColor;
 }
 
 .mu-pagination-item{
@@ -450,6 +450,10 @@ a {
    }
 }
 
+.mu-refresh-control {
+  color: @refreshControlColor;
+}
+
 
 
 // raisedButton
@@ -473,10 +477,6 @@ a {
 
 .mu-raised-button-secondary{
   background-color: @raisedButtonSecondaryColor;
-}
-
-.mu-refresh-control {
-  color: @refreshControlColor;
 }
 
 .mu-slider-track {
@@ -656,6 +656,32 @@ a {
   color: @tabsSelectedTextColor;
 }
 
+.mu-clock-circle {
+  background-color: @timePickerClockCircleColor;
+}
+
+.mu-time-display {
+  background-color: @timePickerHeaderColor;
+  color: @timePickerColor;
+}
+
+.mu-clock-number{
+  &.selected {
+    background-color: @timePickerSelectColor;
+    color: @timePickerSelectTextColor;
+  }
+}
+
+.mu-clock-pointer {
+  background-color: @timePickerSelectColor;
+
+}
+
+.mu-clock-pointer-mark {
+  background-color: @timePickerSelectTextColor;
+  border-color:  @timePickerSelectColor;
+}
+
 .mu-text-field{
   color: @textFieldTextColor;
   &.focus-state {
@@ -702,32 +728,6 @@ a {
   .mu-text-field.has-label &.float {
     color: @textFieldHintColor
   }
-}
-
-.mu-clock-circle {
-  background-color: @timePickerClockCircleColor;
-}
-
-.mu-time-display {
-  background-color: @timePickerHeaderColor;
-  color: @timePickerColor;
-}
-
-.mu-clock-number{
-  &.selected {
-    background-color: @timePickerSelectColor;
-    color: @timePickerSelectTextColor;
-  }
-}
-
-.mu-clock-pointer {
-  background-color: @timePickerSelectColor;
-
-}
-
-.mu-clock-pointer-mark {
-  background-color: @timePickerSelectTextColor;
-  border-color:  @timePickerSelectColor;
 }
 
 .mu-toast {

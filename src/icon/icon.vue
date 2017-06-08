@@ -1,6 +1,6 @@
 <script>
 export default {
-  name:'mu-icon',
+  name: 'mu-icon',
   props: {
     value: {
       type: String
@@ -17,21 +17,21 @@ export default {
     }
   },
   computed: {
-    iconStyle() {
+    iconStyle () {
       return {
         'font-size': this.size + 'px',
-        'width': this.size + 'px',
-        'height': this.size + 'px',
+        // 'width': this.size + 'px',
+        // 'height': this.size + 'px',
         'color': this.color
       }
     }
   },
   methods: {
-    handleClick(e) {
+    handleClick (e) {
       this.$emit('click', e)
     }
   },
-  render(h) {
+  render (h) {
     var {
       value,
       iconStyle,

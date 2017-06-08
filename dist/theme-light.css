@@ -231,6 +231,24 @@ a {
 .mu-linear-progress-determinate {
   background-color: #2196f3;
 }
+.mu-menu-item-wrapper {
+  color: rgba(0, 0, 0, 0.87);
+}
+.mu-menu-item-wrapper.active {
+  color: #ff4081;
+}
+.mu-menu-item-wrapper.hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mu-menu-item-wrapper.disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.mu-menu-item-left-icon {
+  color: #757575;
+}
+.mu-menu-item-right-icon {
+  color: #757575;
+}
 .mu-item-wrapper.hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -254,24 +272,6 @@ a {
 }
 .mu-item-text {
   color: rgba(0, 0, 0, 0.54);
-}
-.mu-menu-item-wrapper {
-  color: rgba(0, 0, 0, 0.87);
-}
-.mu-menu-item-wrapper.active {
-  color: #ff4081;
-}
-.mu-menu-item-wrapper.hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.mu-menu-item-wrapper.disabled {
-  color: rgba(0, 0, 0, 0.38);
-}
-.mu-menu-item-left-icon {
-  color: #757575;
-}
-.mu-menu-item-right-icon {
-  color: #757575;
 }
 .mu-pagination-item {
   color: rgba(0, 0, 0, 0.87);
@@ -336,6 +336,9 @@ a {
 .mu-radio.disabled .mu-radio-icon-checked {
   color: rgba(0, 0, 0, 0.38);
 }
+.mu-refresh-control {
+  color: #2196f3;
+}
 .mu-raised-button {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
@@ -352,9 +355,6 @@ a {
 }
 .mu-raised-button-secondary {
   background-color: #ff4081;
-}
-.mu-refresh-control {
-  color: #2196f3;
 }
 .mu-slider-track {
   background-color: #bdbdbd;
@@ -490,6 +490,24 @@ a {
 .mu-tab-active {
   color: #ffffff;
 }
+.mu-clock-circle {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.mu-time-display {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+.mu-clock-number.selected {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+.mu-clock-pointer {
+  background-color: #2196f3;
+}
+.mu-clock-pointer-mark {
+  background-color: #ffffff;
+  border-color: #2196f3;
+}
 .mu-text-field {
   color: rgba(0, 0, 0, 0.54);
 }
@@ -525,24 +543,6 @@ a {
 }
 .mu-text-field.has-label .mu-text-field-label.float {
   color: rgba(0, 0, 0, 0.38);
-}
-.mu-clock-circle {
-  background-color: rgba(0, 0, 0, 0.07);
-}
-.mu-time-display {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-.mu-clock-number.selected {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-.mu-clock-pointer {
-  background-color: #2196f3;
-}
-.mu-clock-pointer-mark {
-  background-color: #ffffff;
-  border-color: #2196f3;
 }
 .mu-toast {
   background-color: rgba(0, 0, 0, 0.87);
