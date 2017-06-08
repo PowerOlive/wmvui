@@ -103,6 +103,13 @@ export default {
   left: 0;
   transform: translate3d(0, -50%, 0);
 }
+.mu-popup-center {
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+}
 
 .popup-slide-top-enter-active,
 .popup-slide-top-leave-active,

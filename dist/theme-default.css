@@ -2,10 +2,6 @@
   background-color: #7e57c2;
   color: #ffffff;
 }
-.mu-avatar {
-  color: #ffffff;
-  background-color: #bdbdbd;
-}
 .mu-badge {
   background-color: #bdbdbd;
   color: #ffffff;
@@ -17,6 +13,10 @@
 .mu-badge-secondary {
   background-color: #ff4081;
   color: #ffffff;
+}
+.mu-avatar {
+  color: #ffffff;
+  background-color: #bdbdbd;
 }
 body {
   background-color: #ffffff;
@@ -231,24 +231,6 @@ a {
 .mu-linear-progress-determinate {
   background-color: #7e57c2;
 }
-.mu-menu-item-wrapper {
-  color: rgba(0, 0, 0, 0.87);
-}
-.mu-menu-item-wrapper.active {
-  color: #ff4081;
-}
-.mu-menu-item-wrapper.hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.mu-menu-item-wrapper.disabled {
-  color: rgba(0, 0, 0, 0.38);
-}
-.mu-menu-item-left-icon {
-  color: #757575;
-}
-.mu-menu-item-right-icon {
-  color: #757575;
-}
 .mu-item-wrapper.hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -286,6 +268,24 @@ a {
 .mu-pagination-item.disabled {
   color: rgba(0, 0, 0, 0.38);
 }
+.mu-menu-item-wrapper {
+  color: rgba(0, 0, 0, 0.87);
+}
+.mu-menu-item-wrapper.active {
+  color: #ff4081;
+}
+.mu-menu-item-wrapper.hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.mu-menu-item-wrapper.disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+.mu-menu-item-left-icon {
+  color: #757575;
+}
+.mu-menu-item-right-icon {
+  color: #757575;
+}
 .mu-paper {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
@@ -306,10 +306,10 @@ a {
 .mu-picker-item.selected {
   color: rgba(0, 0, 0, 0.87);
 }
-.mu-popup {
+.mu-popover {
   background-color: #ffffff;
 }
-.mu-popover {
+.mu-popup {
   background-color: #ffffff;
 }
 .mu-radio input[type="radio"]:checked + .mu-radio-wrapper .mu-radio-icon-uncheck {
@@ -490,6 +490,24 @@ a {
 .mu-tab-active {
   color: #ffffff;
 }
+.mu-clock-circle {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.mu-time-display {
+  background-color: #7e57c2;
+  color: #ffffff;
+}
+.mu-clock-number.selected {
+  background-color: #7e57c2;
+  color: #ffffff;
+}
+.mu-clock-pointer {
+  background-color: #7e57c2;
+}
+.mu-clock-pointer-mark {
+  background-color: #ffffff;
+  border-color: #7e57c2;
+}
 .mu-text-field {
   color: rgba(0, 0, 0, 0.54);
 }
@@ -525,24 +543,6 @@ a {
 }
 .mu-text-field.has-label .mu-text-field-label.float {
   color: rgba(0, 0, 0, 0.38);
-}
-.mu-clock-circle {
-  background-color: rgba(0, 0, 0, 0.07);
-}
-.mu-time-display {
-  background-color: #7e57c2;
-  color: #ffffff;
-}
-.mu-clock-number.selected {
-  background-color: #7e57c2;
-  color: #ffffff;
-}
-.mu-clock-pointer {
-  background-color: #7e57c2;
-}
-.mu-clock-pointer-mark {
-  background-color: #ffffff;
-  border-color: #7e57c2;
 }
 .mu-toast {
   background-color: rgba(0, 0, 0, 0.87);
