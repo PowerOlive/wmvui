@@ -4,7 +4,7 @@
   :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
   :type="type" :href="href" :target="target" :disabled="disabled" :keyboardFocused="keyboardFocused" class="mu-icon-button">
   <slot>
-    <icon :value="icon" :class="iconClass"></icon>
+    <icon :value="icon" :size="size" :class="iconClass"></icon>
   </slot>
   <tooltip v-if="tooltip" :trigger="tooltipTrigger" :verticalPosition="verticalPosition" :horizontalPosition="horizontalPosition" :show="tooltipShown" :label="tooltip" :touch="touch"></tooltip>
 </abstract-button>
@@ -21,6 +21,9 @@ export default {
   props: {
     icon: {
       type: String
+    },
+    size: {
+      type: Number
     },
     iconClass: {
       type: [String, Array, Object],

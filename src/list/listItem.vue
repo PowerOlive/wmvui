@@ -240,20 +240,22 @@ export default {
 .mu-item {
   min-height: 48px;
   display: flex;
-  padding: 16px 16px;
   color: @textColor;
   position: relative;
   &.show-left{
-    padding-left: 72px;
+    padding-left: 15px;
   }
   &.show-right{
-    padding-right: 56px;
+    padding-right: 4px;
   }
   &.has-avatar {
     min-height: 56px;
   }
   &.selected {
     color: @primaryColor;
+  }
+  .mu-item-content{
+    padding-left:4px;
   }
 }
 
@@ -271,22 +273,16 @@ export default {
   align-items: center;
   justify-content: flex-start;
   width: 40px;
-  height: 100%;
-  position: absolute;
   color: @grey600;
-  top: 0;
-  max-height: 72px;
 }
 
 .mu-item-left{
-  left: 16px;
   .mu-item.selected &{
     color: @primaryColor;
   }
 }
 
 .mu-item-right{
-  right: 12px;
   justify-content: center;
   > .mu-icon-button {
     align-self: flex-start;
