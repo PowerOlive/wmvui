@@ -1,25 +1,25 @@
 <template>
 <mu-drawer @hide="handleHide" @close="handleClose" :open="open" :docked="docked" :overlay="docked" class="app-drawer" :zDepth="1">
   <mu-appbar :zDepth="0" class="exmaples-nav-appbar">
-    <a @click="handleMenuChange('#/index')" href="#/index" class="exmaples-appbar-title">Muse-UI</a>
+    <a @click="handleMenuChange('#/index')" href="#/index" class="exmaples-appbar-title">WMVUI基于Muse-UI</a>
     <!-- <mu-badge content="rc" class="exmaples-version" secondary/> -->
   </mu-appbar>
   <mu-divider/>
   <div class="exmaple-drawer-content">
-    <div class="mu-version-box">
+    <!-- <div class="mu-version-box">
       <span class="mu-version-text">Version: </span>
       <mu-dropDown-menu :value="version" @change="handleVersionChange" v-if="versions.length > 0">
         <mu-menu-item v-for="vtext in versions" :key="'version-' + vtext" :value="vtext" :title="vtext"/>
       </mu-dropDown-menu>
-    </div>
-    <div class="mu-lang-box">
+    </div> -->
+    <!-- <div class="mu-lang-box">
       <span class="mu-lang-title">Lang: </span>
       <span class="mu-lang-select">
         <a href="javascript:;" class="mu-lang" :class="{'active': lang === 'zh'}" @click="changeLang('zh')">中文</a>
         <span>/</span>
         <a href="javascript:;" class="mu-lang" :class="{'active': lang === 'en'}" @click="changeLang('en')">En</a>
       </span>
-    </div>
+    </div> -->
     <mu-list @change="handleMenuChange" :value="menuVal">
       <mu-list-item :title="$t('getStarted')" toggleNested>
         <mu-list-item value="#/install" slot="nested" :title="$t('installation')"/>
@@ -97,7 +97,7 @@
     <mu-divider/>
     <mu-sub-header>{{$t('resource')}}</mu-sub-header>
     <mu-list>
-      <mu-list-item href="https://github.com/museui/muse-ui" target="_blank" title="GitHub"/>
+      <mu-list-item href="https://github.com/531431988/wmvui" target="_blank" title="GitHub"/>
       <mu-list-item href="http://vuejs.org/" target="_blank" title="Vue"/>
       <mu-list-item href="https://material.google.com/" target="_blank" title="Material Design"/>
       <mu-list-item href="http://www.material-ui.com/" target="_blank" title="Material-UI"/>

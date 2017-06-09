@@ -16,17 +16,23 @@
     <mu-avatar :size="32" icon="face"/> icon avatar chip
   </mu-chip>
 
-  <mu-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
-    <mu-avatar color="blue300" backgroundColor="indigo900" :size="32">MB</mu-avatar> custom chip
+  <mu-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete style="border-radius:48px;">
+    <mu-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</mu-avatar> custom chip
   </mu-chip>
+  <mu-toast v-if="toast" message="你点击的删除" />
 </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      toast: false
+    }
+  },
   methods: {
     handleClose () {
-      window.alert('你点击了删除按钮')
+      this.toast = true
     }
   }
 }

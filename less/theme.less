@@ -3,6 +3,11 @@
   color: @appbarTextColor;
 }
 
+.mu-avatar {
+  color: @avatarColor;
+  background-color: @avatarBackgroundColor;
+}
+
 .mu-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -16,11 +21,6 @@
 .mu-badge-secondary {
   background-color: @badgeSecondaryColor;
   color: @badgeSecondaryTextColor;
-}
-
-.mu-avatar {
-  color: @avatarColor;
-  background-color: @avatarBackgroundColor;
 }
 
 body {
@@ -342,20 +342,6 @@ a {
   color: @listSecondaryTextColor;
 }
 
-.mu-pagination-item{
-  color: @paginationTextColor;
-  &.hover {
-    background-color: @paginationHoverBackgroundColor;
-  }
-  &.active {
-    color: @paginationActiveColor;
-    background-color: @paginationActiveBackgroundColor;
-  }
-  &.disabled {
-    color: @paginationDisabledColor;
-  }
-}
-
 .mu-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -377,9 +363,27 @@ a {
   color: @menuRightIconColor;
 }
 
+.mu-pagination-item{
+  color: @paginationTextColor;
+  &.hover {
+    background-color: @paginationHoverBackgroundColor;
+  }
+  &.active {
+    color: @paginationActiveColor;
+    background-color: @paginationActiveBackgroundColor;
+  }
+  &.disabled {
+    color: @paginationDisabledColor;
+  }
+}
+
 .mu-paper {
   background-color: @paperBackgroundColor;
   color: @paperColor;
+}
+
+.mu-popover {
+  background-color: @popoverColor;
 }
 
 .mu-picker{
@@ -403,10 +407,6 @@ a {
   &.selected {
     color: @pickerSelectedTextColor;
   }
-}
-
-.mu-popover {
-  background-color: @popoverColor;
 }
 
 .mu-popup {
@@ -450,6 +450,10 @@ a {
    }
 }
 
+.mu-refresh-control {
+  color: @refreshControlColor;
+}
+
 
 
 // raisedButton
@@ -473,10 +477,6 @@ a {
 
 .mu-raised-button-secondary{
   background-color: @raisedButtonSecondaryColor;
-}
-
-.mu-refresh-control {
-  color: @refreshControlColor;
 }
 
 .mu-slider-track {
@@ -656,32 +656,6 @@ a {
   color: @tabsSelectedTextColor;
 }
 
-.mu-clock-circle {
-  background-color: @timePickerClockCircleColor;
-}
-
-.mu-time-display {
-  background-color: @timePickerHeaderColor;
-  color: @timePickerColor;
-}
-
-.mu-clock-number{
-  &.selected {
-    background-color: @timePickerSelectColor;
-    color: @timePickerSelectTextColor;
-  }
-}
-
-.mu-clock-pointer {
-  background-color: @timePickerSelectColor;
-
-}
-
-.mu-clock-pointer-mark {
-  background-color: @timePickerSelectTextColor;
-  border-color:  @timePickerSelectColor;
-}
-
 .mu-text-field{
   color: @textFieldTextColor;
   &.focus-state {
@@ -728,6 +702,32 @@ a {
   .mu-text-field.has-label &.float {
     color: @textFieldHintColor
   }
+}
+
+.mu-clock-circle {
+  background-color: @timePickerClockCircleColor;
+}
+
+.mu-time-display {
+  background-color: @timePickerHeaderColor;
+  color: @timePickerColor;
+}
+
+.mu-clock-number{
+  &.selected {
+    background-color: @timePickerSelectColor;
+    color: @timePickerSelectTextColor;
+  }
+}
+
+.mu-clock-pointer {
+  background-color: @timePickerSelectColor;
+
+}
+
+.mu-clock-pointer-mark {
+  background-color: @timePickerSelectTextColor;
+  border-color:  @timePickerSelectColor;
 }
 
 .mu-toast {

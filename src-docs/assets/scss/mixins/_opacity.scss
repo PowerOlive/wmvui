@@ -1,0 +1,20 @@
+// opacity IE8
+//-----------------------------------------------------
+@mixin opacity($num){
+	opacity:$num;
+    filter:alpha(opacity= ($num * 100) );
+}
+
+
+
+// background-color:rgba();
+//-----------------------------------------------------
+// @include bg-color-rgba(rgba(255, 0, 0, 0.5));
+
+@mixin bg-color-rgba($color){
+	background-color:$color;
+	@if $lte8 == true {
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr='#{ie-hex-str($color)}', endColorstr='#{ie-hex-str($color)}');
+		//filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F990000,endColorstr=#7F990000);
+	}
+}

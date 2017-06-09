@@ -139,6 +139,7 @@ export default {
 @import "../styles/import.less";
 .mu-raised-button {
   display: inline-block;
+  vertical-align: middle;
   overflow: hidden;
   position: relative;
   border-radius: 2px;
@@ -181,7 +182,7 @@ export default {
       }
     }
   }
-  .mu-icon {
+  .vui-icon {
     vertical-align: middle;
     margin-left: 12px;
     margin-right: 0;
@@ -190,7 +191,7 @@ export default {
     }
   }
   &.no-label {
-    .mu-icon {
+    .vui-icon {
       margin: 0;
     }
   }
@@ -198,7 +199,7 @@ export default {
     .mu-raised-button-wrapper{
       padding-right: 8px;
     }
-    .mu-icon {
+    .vui-icon {
       margin-right: 4px;
       margin-left: 0;
     }
@@ -229,6 +230,7 @@ export default {
 
 .mu-raised-button-full{
   width: 100%;
+  display: block;
 }
 
 .mu-raised-button.mu-raised-button-inverse {

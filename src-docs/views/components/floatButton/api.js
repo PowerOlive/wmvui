@@ -6,10 +6,10 @@ export default {
     default: '',
     desc: 'props.icon'
   }, {
-    name: 'iconClass',
-    type: 'String',
+    name: 'iconSize',
+    type: 'Number',
     default: '',
-    desc: 'props.iconClass'
+    desc: 'props.iconSize'
   }, {
     name: 'disabled',
     type: 'Boolean',
@@ -36,10 +36,10 @@ export default {
     default: 'false',
     desc: 'props.secondary'
   }, {
-    name: 'mini',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.mini'
+    name: 'btnSize',
+    type: 'String',
+    default: '32px',
+    desc: 'props.btnSize'
   }, {
     name: 'backgroundColor',
     type: 'String',

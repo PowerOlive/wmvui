@@ -9,6 +9,8 @@ export default {
   tooltipExampleDesc: '不同位置、不同类型的提示文字，鼠标移上去看看吧',
   props: {
     icon: '按钮上的图标',
+    iconSize: '图标的大小',
+    iconColor: '图标的颜色',
     iconClass: '图标的样式',
     disabled: '按钮是否不可用',
     type: '相当于button元素的type属性',

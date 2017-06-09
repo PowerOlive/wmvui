@@ -41,7 +41,7 @@ export default {
     if (!value) return null
     var isMaterial = value.indexOf(':') !== 0
     return h('i', {
-      class: 'icon-' + (isMaterial ? value : ''),
+      class: ['vui-icon ', 'icon-' + (isMaterial ? value : '')],
       style: iconStyle,
       on: {
         click: handleClick
@@ -52,9 +52,8 @@ export default {
 </script>
 
 <style lang="less">
-@import "../styles/import.less";
-.mu-icon {
-    font-size: @iconSize;
-    cursor: inherit;
+.vui-icon:before {
+  font-size:inherit;
+  color:inherit;
 }
 </style>

@@ -1,0 +1,158 @@
+//辅助类
+// --------------------------------------------------、
+//对齐方式
+.tl{text-align:left!important;}
+.tr{text-align:right!important;}
+.tc{text-align:center!important;}
+.tj{text-align:justify;}
+.tn{white-space:nowrap;}
+
+.b{font-weight:700 !important;}
+
+//文本颜色
+//-----------------------------------------------------
+@each $txt-name, $text-color in $map-colors{
+    .t-#{$txt-name}{
+        color:nth($text-color,2) !important;
+    }
+}
+.t-grey{
+    color: #999 !important;
+}
+.t-gray{
+    color: #ccc !important;
+}
+
+//背景颜色
+//-----------------------------------------------------
+@each $bg-name, $bg-color in $map-colors{
+    .bg-#{$bg-name}{
+        background-color: nth($bg-color,2) !important;
+        &,a{color:nth($bg-color,1);}
+        @if $bg-name == 'white' {
+            background-color: $white !important;
+            &,a{color:$font-color;}
+        }
+    }
+
+}
+
+//内块对齐
+.block{display:block;width:100%;}
+.inline-block{display:inline-block;}
+.v-top{vertical-align:top;}
+.v-middle{vertical-align:middle;}
+
+//填充边距方法
+//-----------------------------------------------------
+@mixin padding-margin($className,$attr){
+    @each $i in $list-padding-margin {
+        .#{$className}#{$i}{
+            #{$attr}:($i / 10)*1rem !important;
+        }
+    }
+}
+//默认填充
+//-----------------------------------------------------
+@include padding-margin(pd,padding);
+@include padding-margin(pt,padding-top);
+@include padding-margin(pr,padding-right);
+@include padding-margin(pb,padding-bottom);
+@include padding-margin(pl,padding-left);
+
+//默认边距
+//-----------------------------------------------------
+@include padding-margin(mt,margin-top);
+@include padding-margin(mr,margin-right);
+@include padding-margin(mb,margin-bottom);
+@include padding-margin(ml,margin-left);
+
+//分割线
+.line,
+.line-dotted,
+.line-dashed{border:0;overflow:hidden;border-top: 1px solid lighten($black,64%); }
+.line-dotted{border-top-style:dotted}
+.line-dashed{border-top-style:dashed}
+
+//单行文字溢出省略号
+.ell{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//浮动
+.clear{@include clear;}
+.fr{float:right;}
+.fl{float:left;}
+
+//显示隐藏
+.hide{display:none;}
+.show{display:block;}
+[hidden],
+template {
+    display: none;
+}
+
+//定位
+.pr{position:relative;}
+.pa{position:absolute;}
+.pf{position:fixed;}
+
+
+
+//滚动条
+.roll-x{
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.roll-y{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.img-circle,
+.img-round{
+    @extend .inline-block;
+    @extend .v-middle;
+    overflow: hidden;
+}
+.img-circle{
+    border-radius:50%;
+    overflow: hidden;
+}
+.img-round{
+    border-radius: .2rem
+}
+.img-border {
+    padding: 3px;
+    border: 1px solid #e4eaec;
+}
+
+
+@each $name, $color in $map-colors{
+    .img-border-#{$name}{
+        border-color:nth($color,2) !important;
+    }
+}
+
+// .active{
+//     position: relative;
+//     &:before{
+//         content: '';
+//         position:absolute;
+//         @include transform(scale(.6));
+//     }
+//     &:active{
+//         &:before{
+//             background:rgba(0,0,0,.1);
+//             opacity:0;
+//             height: $bar-base-height;
+//             width:$bar-base-height;
+//             border-radius:50%;
+//             @include transition(opacity 2s cubic-bezier(0.23, 1, 0.32, 1) 0ms, transform 1s cubic-bezier(0.23, 1, 0.32, 1) 0ms);
+//             left:50%;
+//             @include transform(scale(1));
+//         }
+//     }
+// }

@@ -1,0 +1,9 @@
+//display-tab
+//-----------------------------------------------------
+// @include valign(top);
+// 
+
+@mixin display-tab($display:table,$width:100%){
+	display:$display;
+	width:$width;
+}

@@ -1,8 +1,7 @@
 <template>
-<mu-appbar title="Title">
-  <mu-icon-button icon="menu" slot="left"/>
-  <mu-flat-button label="expand_more" slot="right"/>
-  <mu-flat-button href="333" label="expand_more" slot="right"/>
-  <mu-icon-button icon="expand_more" slot="right"/>
-</mu-appbar>
+  <mu-appbar title="菜单">
+    <mu-icon-button icon="left" slot="left" :size="22" to="/"></mu-icon-button>
+    <div class="tc">App Bar</div>
+    <mu-icon-button slot="right" icon="right"></mu-icon-button>
+  </mu-appbar>
 </template>

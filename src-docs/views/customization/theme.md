@@ -1,12 +1,12 @@
 ### 主题的使用
 
-muse-ui 预设 4 种主题 `light`, `dark`, `carbon`, `teal` 只需要在组件后面引入即可
+WMVUI 预设 4 种主题 `light`, `dark`, `carbon`, `teal` 只需要在组件后面引入即可
 
 ```js
 import Vue from 'vue'
-import MuseUI from 'muse-ui'
-import 'muse-ui/dist/muse-ui.css'
-import 'muse-ui/dist/theme-carbon.css' // 使用 carbon 主题
+import MuseUI from 'wuvui'
+import 'wuvui/dist/wuvui.css'
+import 'wuvui/dist/theme-carbon.css' // 使用 carbon 主题
 Vue.use(MuseUI)
 ```
 
@@ -22,10 +22,10 @@ Vue.use(MuseUI)
 </mu-tabs>
 </template>
 <script>
-import light from '!raw!muse-ui/dist/theme-default.css'
-import dark from '!raw!muse-ui/dist/theme-dark.css'
-import carbon from '!raw!muse-ui/dist/theme-carbon.css'
-import teal from '!raw!muse-ui/dist/theme-teal.css'
+import light from 'wuvui/dist/theme-default.css'
+import dark from 'wuvui/dist/theme-dark.css'
+import carbon from 'wuvui/dist/theme-carbon.css'
+import teal from 'wuvui/dist/theme-teal.css'
 export default {
   data () {
     return {
@@ -63,7 +63,7 @@ export default {
 目前只支持 `less`, 黑色的主题配置 `dark.less`
 
 ```less
-@import "muse-ui/less/vars.less"; // 默认基础的变量
+@import "wuvui/less/vars.less"; // 默认基础的变量
 
 // 修改基础变量
 
@@ -90,7 +90,7 @@ export default {
 @activeIconColor: fade(@fullWhite, 100%);
 @inActiveIconColor: fade(@fullWhite, 50%);
 
-@import "muse-ui/less/theme-vars.less";  // 默认组件变量
+@import "wuvui/less/theme-vars.less";  // 默认组件变量
 
 // 修改组件变量
 @avatarBackgroundColor: lighten(@alternateTextColor, 26%);
@@ -104,7 +104,7 @@ export default {
 @tableRowHoverBackgroundColor: fade(@textColor, 10%);
 @tableRowSelectedBackgroundColor: fade(@textColor, 5%);
 
-@import "muse-ui/less/theme.less"; // 主题相关的样式
+@import "wuvui/less/theme.less"; // 主题相关的样式
 
 ```
 

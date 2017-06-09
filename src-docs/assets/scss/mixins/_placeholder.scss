@@ -1,0 +1,17 @@
+// Placeholder text
+// -----------------------------------------------------
+@mixin placeholder($placeholder-color) {
+    &::-moz-placeholder {
+        color: $placeholder-color;
+        opacity: 1; // Firefox
+    }
+    &:-ms-input-placeholder {
+        color:$placeholder-color;
+        margin-top:-.5px;
+    } // Internet Explorer 10+
+    &::-webkit-input-placeholder  { 
+        color: $placeholder-color; 
+    } // Safari and Chrome
+}
+
+

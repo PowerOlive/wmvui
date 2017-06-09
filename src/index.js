@@ -50,11 +50,14 @@ import * as stepper from './stepper'
 import autoComplete from './autoComplete'
 import pagination from './pagination'
 
+import number from './number'   // 自定义
+
 import * as grid from './grid'
 
 import * as flexbox from './flexbox'
 import config from './config'
 const components = {
+  number,
   icon,
   badge,
   appBar,

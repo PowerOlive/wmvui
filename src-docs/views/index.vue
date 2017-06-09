@@ -1,53 +1,53 @@
 <template>
   <div>
     <div class="mu-banner">
-      <img src="/images/bg.png" class="mu-banner-image" width="100%" height="100%"/>
+      <img src="images/bg.png" class="mu-banner-image" width="100%" height="100%"/>
       <div class="mu-logo">
-        <img src="/images/logo.png" class="mu-logo-image" alt="">
+        <img src="images/logo.png" class="mu-logo-image" alt="">
       </div>
       <h1 class="mu-banner-title">
-        Muse-UI
+        WMVUI
       </h1>
       <h2 class="mu-banner-sub-title">
-        {{$t('subTitle')}}
+        基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index">Muse-UI</a> 的UI组件库再次开发完善<br>集成更多实用组件 感谢大牛们的开源
       </h2>
       <div class="mu-banner-actions">
-        <mu-raised-button label="Get Started" to="/install" class="mu-banner-button"/>
-        <mu-raised-button label="GITHUB" href="https://github.com/museui/muse-ui" class="mu-banner-button" icon=":mudocs-icon-custom-github"/>
+        <mu-raised-button label="文档" to="/install" class="mu-banner-button"/>
+        <mu-raised-button label="GITHUB" href="https://github.com/531431988/wmvui" class="mu-banner-button" icon=":mudocs-icon-custom-github"/>
       </div>
     </div>
     <div class="mu-desc-wrapper">
       <div class="mu-desc">
         <div class="mu-desc-content">
-          <h2 class="mu-desc-title">{{$t('component')}}</h2>
+          <h2 class="mu-desc-title">组件丰富</h2>
           <h3 class="mu-desc-sub-title">多功能组件，使用无忧</h3>
           <div class="mu-desc-text">
-            {{$t('componentDesc')}}
+            Muse UI 基本实现了 Material Design 设计规范类的所有组件，另外还开发许多的功能性的组件
           </div>
         </div>
-        <img src="/images/img1.png" class="mu-desc-image" />
+        <img src="images/img1.png" class="mu-desc-image" />
       </div>
       <mu-divider/>
       <div class="mu-desc">
-        <img src="/images/img2.png" class="mu-desc-image" />
+        <img src="images/img2.png" class="mu-desc-image" />
         <div class="mu-desc-content">
-          <h2 class="mu-desc-title">{{$t('custom')}}</h2>
+          <h2 class="mu-desc-title">可定制</h2>
           <h3 class="mu-desc-sub-title">自定义主题文件，更易扩展</h3>
           <div class="mu-desc-text">
-            {{$t('customDesc')}}
+            Muse UI 使用less文件，所有的颜色都有一个变量维护，通过编写 less 文件完成自定义主题，另外组件内部也提供一些修改效果的参数
           </div>
         </div>
       </div>
       <mu-divider/>
       <div class="mu-desc">
         <div class="mu-desc-content">
-          <h2 class="mu-desc-title">{{$t('base')}}</h2>
+          <h2 class="mu-desc-title">可定制</h2>
           <h3 class="mu-desc-sub-title">基于 Vue 2.0，开发更加快速</h3>
           <div class="mu-desc-text">
-            {{$t('baseDesc')}}
+            Muse UI 基于 Vue2.0 开发，Vue2.0是当下最快的前端框架之一，小巧，api友好，可用于开发的复杂单页应用
           </div>
         </div>
-        <img src="/images/img3.png" class="mu-desc-image" />
+        <img src="images/img3.png" class="mu-desc-image" />
       </div>
     </div>
 
@@ -59,13 +59,7 @@
 </template>
 
 <script>
-import zh from './zh'
-import en from './en'
 export default {
-  locales: {
-    zh,
-    en
-  }
 }
 </script>
 

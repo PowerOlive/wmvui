@@ -28,6 +28,11 @@ export default {
       default: '',
       desc: 'bottomNavItem.props.icon'
     }, {
+      name: 'iconSize',
+      type: 'Number',
+      default: '',
+      desc: 'bottomNavItem.props.iconClass'
+    }, {
       name: 'iconClass',
       type: 'String,Object,Array',
       default: '',

@@ -16,16 +16,16 @@
 ## Install
 
 ```bash
-npm install muse-ui -save
+npm install wmvui -save
 ```
 
 ## Get Started
 
 ```javascript
 import Vue from 'vue'
-import MuseUI from 'muse-ui'
-import 'muse-ui/dist/muse-ui.css'
-Vue.use(MuseUI)
+import WMVUI from 'wmvui'
+import 'wmvui/dist/wmvui.css'
+Vue.use(WMVUI)
 ```
 
 or
@@ -39,7 +39,7 @@ or
     loaders: [
       // ...
       {
-        test: /muse-ui.src.*?js$/,
+        test: /wmvui.src.*?js$/,
         loader: 'babel'
       }
     ]
@@ -47,7 +47,7 @@ or
   resolve: {
     // ...
     alias: {
-      'muse-components': 'muse-ui/src'
+      'muse-components': 'wmvui/src'
     }
   }
 }
@@ -62,7 +62,7 @@ webpack2
     loaders: [
       // ...
       {
-        test: /muse-ui.src.*?js$/,
+        test: /wmvui.src.*?js$/,
         loader: 'babel-loader'
       }
     ]
@@ -70,7 +70,7 @@ webpack2
   resolve: {
     // ...
     alias: {
-      'muse-components': 'muse-ui/src'
+      'wmvui': 'wmvui/src'
     }
   }
 }
@@ -80,9 +80,9 @@ webpack2
 
 ```javascript
 import Vue from 'vue'
-import 'muse-components/styles/base.less' // 加载基础的样式
-import appBar from 'muse-components/appBar'
-import avatar from 'muse-components/avatar'
+import 'wmvui/styles/base.less' // 加载基础的样式
+import appBar from 'wmvui/appBar'
+import avatar from 'wmvui/avatar'
 // ..
 Vue.component(appBar.name, appBar)
 Vue.component(avatar.name, avatar)
@@ -112,6 +112,6 @@ Please make sure to read the [Contributing Guide](https://museui.github.io/#/con
 
 ## Licence
 
-muse-ui is open source and released under the MIT Licence.
+wmvui is open source and released under the MIT Licence.
 
 Copyright (c) 2016 myron

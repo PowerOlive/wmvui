@@ -1,20 +1,18 @@
 <template>
 <div class="container">
-  <mu-raised-button label="Default" class="demo-raised-button"/>
-  <mu-raised-button label="Primary" class="demo-raised-button" primary/>
-  <mu-raised-button label="Secondary" class="demo-raised-button" secondary/>
-  <mu-raised-button label="Disabled" class="demo-raised-button" disabled/>
+  <mu-raised-button label="默认"/>
+  <mu-raised-button label="主色" primary/>
+  <mu-raised-button label="强调色" secondary/>
+  <mu-raised-button label="不可用" disabled/>
   <br/>
-  <mu-raised-button label="full Width" fullWidth/>
+  <br/>
+  <br/>
+  <mu-raised-button label="块按钮" fullWidth/>
 </div>
 </template>
-
 <style>
-  .container{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .demo-raised-button {
-    margin: 12px;
-  }
+.mu-raised-button{
+  margin:10px 10px 0 0;
+}
 </style>
+

@@ -6,6 +6,11 @@ export default {
     default: '',
     desc: 'props.icon'
   }, {
+    name: 'iconSize',
+    type: 'Number',
+    default: '',
+    desc: 'props.iconSize'
+  }, {
     name: 'iconClass',
     type: 'String,Object,Array',
     default: '',
@@ -40,6 +45,11 @@ export default {
     type: 'Boolean',
     default: 'false',
     desc: 'props.disabled'
+  }, {
+    name: 'fullWidth',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.fullWidth'
   }, {
     name: 'type',
     type: 'String',

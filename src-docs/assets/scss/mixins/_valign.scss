@@ -1,0 +1,9 @@
+//垂直对齐方式
+//-----------------------------------------------------
+// @include valign(top);
+// 
+
+@mixin valign($direction){
+	display:inline-block;
+	vertical-align:$direction;
+}

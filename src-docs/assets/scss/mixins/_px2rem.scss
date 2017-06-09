@@ -1,0 +1,29 @@
+$baseFontSize: 80;
+
+@mixin px2rem($name,$val...){
+	@if length($val) == 1 and  nth($val,1) != null{
+		#{$name}:nth($val,1) / $baseFontSize * 1rem;
+	}@else if length($val) == 2 {
+		@if nth($val,1) != null and nth($val,2) != null {
+			#{$name}-top:nth($val,1) / $baseFontSize * 1rem;
+			#{$name}-bottom:nth($val,1) / $baseFontSize * 1rem;
+			#{$name}-left:nth($val,2) / $baseFontSize * 1rem;
+			#{$name}-right:nth($val,2) / $baseFontSize * 1rem;
+		}
+	}@else if length($val) == 3 {
+		@if nth($val,1) != null and nth($val,2) != null and nth($val,3) != null {
+			#{$name}-top:nth($val,1) / $baseFontSize * 1rem;
+			#{$name}-left:nth($val,2) / $baseFontSize * 1rem;
+			#{$name}-right:nth($val,2) / $baseFontSize * 1rem;
+			#{$name}-bottom:nth($val,3) / $baseFontSize * 1rem;
+		}
+	}@else if length($val) == 4 {
+		@if nth($val,1) != null and nth($val,2) != null and nth($val,3) != null and nth($val,4) != null {
+			#{$name}-top:nth($val,1) / $baseFontSize * 1rem;
+			#{$name}-right:nth($val,2) / $baseFontSize * 1rem;
+			#{$name}-bottom:nth($val,3) / $baseFontSize * 1rem;
+			#{$name}-left:nth($val,4) / $baseFontSize * 1rem;
+		}
+	}
+
+}

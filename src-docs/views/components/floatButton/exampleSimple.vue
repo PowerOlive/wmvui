@@ -1,16 +1,16 @@
 <template>
 <div>
-  <mu-float-button icon="add" class="demo-float-button"/>
-  <mu-float-button icon="add" mini class="demo-float-button"/>
-  <mu-float-button icon="add" secondary class="demo-float-button"/>
-  <mu-float-button icon="add" secondary mini class="demo-float-button"/>
-  <mu-float-button icon="star" disabled class="demo-float-button"/>
-  <mu-float-button icon="star" disabled mini class="demo-float-button"/>
+  <mu-float-button icon="like-fill" btnSize="40px" />
+  <mu-float-button icon="search" btnSize="40px" :iconSize="22" />
+  <mu-float-button icon="menu" secondary />
+  <mu-float-button icon="more" secondary />
+  <mu-float-button icon="code" disabled />
+  <mu-float-button icon="right" disabled />
 </div>
 </template>
 
 <style>
-  .demo-float-button {
-    margin-right: 12px;
+  .mu-float-button{
+    margin: 10px 10px 0 0;
   }
 </style>

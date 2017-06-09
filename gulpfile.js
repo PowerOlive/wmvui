@@ -25,7 +25,7 @@ gulp.task('theme', ['theme:var', 'theme:style', 'theme:less'], function () {
              .pipe(less())
              .pipe(rename({
                dirname: '',
-               prefix: 'theme-',
+               prefix: '',
                extname: '.css'
              }))
              .pipe(gulp.dest('./dist'))

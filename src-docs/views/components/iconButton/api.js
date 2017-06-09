@@ -7,6 +7,16 @@ export default {
     default: '',
     desc: 'props.icon'
   }, {
+    name: 'iconSize',
+    type: 'Number',
+    default: '',
+    desc: 'props.iconSize'
+  }, {
+    name: 'iconColor',
+    type: 'String',
+    default: '',
+    desc: 'props.iconColor'
+  }, {
     name: 'iconClass',
     type: 'String',
     default: '',

@@ -5,7 +5,7 @@
   :style="buttonStyle" :disabled="disabled" class="mu-float-button" :class="[buttonClass]">
   <div class="mu-float-button-wrapper">
     <slot>
-      <icon :value="this.icon" :class="iconClass"></icon>
+      <icon :value="this.icon" :size="iconSize"></icon>
     </slot>
   </div>
 </abstract-button>
@@ -23,9 +23,12 @@ export default {
     icon: {
       type: String
     },
-    iconClass: {
-      type: [String, Array, Object],
-      default: ''
+    iconSize: {
+      type: Number
+    },
+    btnSize: {
+      type: String,
+      default: '32px'
     },
     type: {
       type: String
@@ -45,10 +48,6 @@ export default {
       type: Boolean,
       default: false
     },
-    mini: {
-      type: Boolean,
-      default: false
-    },
     backgroundColor: {
       type: String,
       default: ''
@@ -58,12 +57,13 @@ export default {
     buttonClass () {
       let classNames = []
       if (this.secondary) classNames.push('mu-float-button-secondary')
-      if (this.mini) classNames.push('mu-float-button-mini')
       return classNames.join(' ')
     },
     buttonStyle () {
       return {
-        'background-color': getColor(this.backgroundColor)
+        'background-color': getColor(this.backgroundColor),
+        'width': this.btnSize,
+        'height': this.btnSize
       }
     }
   },
@@ -152,10 +152,6 @@ export default {
   bottom: 0;
 }
 
-.mu-float-button-mini {
-  width: 40px;
-  height: 40px;
-}
 
 .mu-float-button-secondary {
   background-color: @accentColor;

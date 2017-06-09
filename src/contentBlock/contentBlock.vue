@@ -15,7 +15,7 @@ export default {
 .mu-content-block{
   padding: 8px 16px;
   width: 100%;
-  p{
+  /* p{
     margin-top: 1em;
     margin-bottom: 1em;
     &:first-child{
@@ -24,6 +24,6 @@ export default {
     &:last-child{
       margin-bottom: 0;
     }
-  }
+  } */
 }
 </style>

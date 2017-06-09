@@ -9,6 +9,7 @@ export default {
   complexExampleDesc: '配合选择文件按钮，图标，定义label的位置',
   props: {
     icon: '按钮上的图标',
+    iconSize: '按钮上的图标大小',
     iconClass: '图标的样式, 同 `class` 绑定方式一致',
     label: '按钮上的文字',
     labelPosition: '文字的位置, before 在图标之前，after 在图标之后',

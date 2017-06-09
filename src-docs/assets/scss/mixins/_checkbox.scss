@@ -1,0 +1,64 @@
+// 激活状态 判断是否兼容IE8
+@mixin enable($type){
+    display: inline-block;
+    vertical-align:middle;
+    cursor: pointer;
+    input{
+        opacity:0;
+        width:0;
+        height: 0;
+        display: none;
+        @include appearance(none);
+    }
+    .inner{
+        position: relative;
+        cursor: pointer;
+        display: block;
+        @include transition(background-color .3s ease-in-out,border .3s ease-in-out);
+    }
+    
+    @if $lte8 == true {
+        &.checked{
+            .inner{
+                @content;
+            }
+        }
+    }@else {
+        input[type="#{$type}"]:checked{
+            &+.inner{
+                @content;
+            }
+        }
+    }
+}
+
+//禁用状态 判断是否兼容IE8
+@mixin disabled($type){
+    &.disabled{
+        &,.inner{
+            @include opacity(.5);
+            cursor:not-allowed;
+        }
+    }
+    @if $lte8 == true {
+        @if $type == null {
+            &.disabled{
+                .inner{@content;}
+            }
+        } @else {
+            &.disabled.#{$type}{
+                .inner{@content;}
+            }
+        }
+    }@else {
+        @if $type == null {
+            input:disabled+.inner{
+                @content;
+            }
+        } @else {
+            input[type="#{$type}"]:disabled+.inner{
+                @content;
+            }
+        }
+    }
+}

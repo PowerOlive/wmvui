@@ -1,14 +1,13 @@
 <template>
 <div class="demo-raised-button-container">
-  <mu-raised-button class="demo-raised-button" label="选择文件">
+  <mu-raised-button label="选择文件">
     <input type="file" class="file-button">
   </mu-raised-button>
-  <mu-raised-button class="demo-raised-button" label="文字在后面" icon="android" primary/>
-  <mu-raised-button class="demo-raised-button" label="文字在前面" labelPosition="before" icon="folder" secondary/>
-  <mu-raised-button class="demo-raised-button" href="https://github.com/museui/muse-ui" label="链接按钮" labelPosition="after" secondary>
-      <i class="mudocs-icon-custom-github mu-icon" style="font-size:24px;"></i>
+  <mu-raised-button label="文字在后面" icon="like-fill" primary/>
+  <mu-raised-button label="文字在前面" labelPosition="before" icon="like-fill" secondary/>
+  <mu-raised-button href="https://github.com/531431988/wmvui"  icon="like-fill" label="链接按钮" labelPosition="after" secondary>
   </mu-raised-button>
-  <mu-raised-button class="demo-raised-button" icon="android" backgroundColor="#a4c639" />
+  <mu-raised-button icon="like-fill" backgroundColor="#a4c639" />
 </div>
 </template>
 
@@ -27,13 +26,7 @@ export default {
   bottom: 0;
   opacity: 0;
 }
-
-.demo-raised-button-container{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.demo-raised-button {
-  margin: 12px;
+.mu-raised-button{
+  margin:10px 10px 0 0;
 }
 </style>

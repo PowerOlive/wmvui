@@ -8,7 +8,7 @@
   :rippleOpacity="rippleOpacity"
   :class="buttonClass" :centerRipple="false">
   <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
-  <icon :value="icon" :class="iconClass"></icon>
+  <icon :value="icon" :size="iconSize" :class="iconClass"></icon>
   <slot></slot>
   <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
 </abstract-button>
@@ -26,8 +26,15 @@ export default {
     icon: {
       type: String
     },
+    iconSize: {
+      type: Number
+    },
     iconClass: {
       type: [String, Array, Object]
+    },
+    fullWidth: {
+      type: Boolean,
+      default: false
     },
     type: {
       type: String
@@ -113,6 +120,7 @@ export default {
         'mu-flat-button-primary': this.primary,
         'mu-flat-button-secondary': this.secondary,
         'label-before': this.labelPosition === 'before',
+        'mu-raised-button-full': this.fullWidth,
         'no-label': !this.label
       }
     }
@@ -128,6 +136,7 @@ export default {
 @import "../styles/import.less";
 .mu-flat-button {
   display: inline-block;
+  vertical-align: middle;
   overflow: hidden;
   position: relative;
   border-radius: 2px;
@@ -156,16 +165,16 @@ export default {
     cursor: not-allowed;
     background: none;
   }
-  .mu-icon {
+  .vui-icon{
     vertical-align: middle;
-    margin-left: 12px;
+    margin-left: 8px;
     margin-right: 0;
     + .mu-flat-button-label {
       padding-left: 8px;
     }
 
   }
-  &.no-label .mu-icon {
+  &.no-label .vui-icon{
     margin-left: 0;
   }
   .mu-circle-ripple{
@@ -173,7 +182,7 @@ export default {
   }
   &.label-before {
     padding-right: 8px;
-    .mu-icon {
+    .vui-icon{
       margin-right: 4px;
       margin-left: 0;
     }
@@ -188,6 +197,10 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+.mu-raised-button-full{
+  width: 100%;
+  display: block;
 }
 .mu-flat-button-primary{
   color: @primaryColor;

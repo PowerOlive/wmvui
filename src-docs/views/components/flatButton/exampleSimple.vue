@@ -1,17 +1,16 @@
 <template>
 <div class="container">
-  <mu-flat-button label="Default" class="demo-flat-button"/>
-  <mu-flat-button label="Primary" class="demo-flat-button" primary/>
-  <mu-flat-button label="Secondary" class="demo-flat-button" secondary/>
-  <mu-flat-button label="Disabled" class="demo-flat-button" disabled/>
+  <mu-flat-button label="默认"/>
+  <mu-flat-button label="主色" primary/>
+  <mu-flat-button label="强调色" secondary/>
+  <mu-flat-button label="不可用" disabled/>
+  <mu-flat-button label="块按钮" fullWidth/>
+
 </div>
 </template>
 
-<style lang="css">
-.container{
-  display: flex;
-}
-.demo-flat-button {
-  margin: 12px;
+<style>
+.mu-raised-button{
+	margin:10px 10px 0 0;
 }
 </style>

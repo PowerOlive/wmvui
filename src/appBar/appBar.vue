@@ -76,12 +76,12 @@ export default {
   overflow: hidden;
   font-size: 20px;
   font-weight: 400;
-  line-height: 56px;
+  /* line-height: 56px; */
 }
 
 @media (min-width: 480px) {
   .mu-appbar-title {
-    line-height: 64px;
+    /* line-height: 64px; */
   }
   .mu-appbar {
     height: 64px;

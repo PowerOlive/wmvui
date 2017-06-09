@@ -1,0 +1,9 @@
+//公用三角形
+//-----------------------------------------------------
+// @include triangle(0 6px 0 0);
+// 
+@mixin triangle($width...){
+	border-width:$width;
+	border-style:solid;
+	border-color:transparent;
+}

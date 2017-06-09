@@ -3,16 +3,16 @@
   <markdown-element :text="$t('title')"/>
   <mu-paper :class="['theme-' + theme, 'demo-theme-paper']">
     <mu-tabs :value="theme" @change="changeTheme">
-      <mu-tab title="DEFAULT" value="default"/>
-      <mu-tab title="LIGHT" value="light"/>
-      <mu-tab title="DARK" value="dark"/>
-      <mu-tab title="CARBON" value="carbon"/>
-      <mu-tab title="TEAL" value="teal"/>
+      <mu-tab title="默认" value="default"/>
+      <mu-tab title="亮蓝" value="light"/>
+      <mu-tab title="暗蓝" value="dark"/>
+      <mu-tab title="深灰" value="carbon"/>
+      <mu-tab title="蓝绿" value="teal"/>
     </mu-tabs>
     <mu-row>
       <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item center">
-          <mu-avatar icon="star" :size="56"/>
+          <mu-avatar icon="like-fill" :size="56" :iconSize="24"/>
         </div>
         <div class="demo-theme-item center">
           <mu-raised-button label="secondary" secondary/>

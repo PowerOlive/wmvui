@@ -1,0 +1,79 @@
+// button
+
+
+//缩放动画
+// @keyframes push {
+//     50% {transform: scale(0.5);}
+// }
+
+
+// 按钮样式
+// --------------------------------------------------
+@mixin btn-style($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &[disabled],
+    &.disabled{
+        // &:hover,
+        // &:active
+        &,{
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+}
+// 按钮尺寸
+// --------------------------------------------------
+@mixin btn-size($padding-vertical, $padding-horizontal, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    border-radius: $border-radius;
+}
+
+//btn-group 边框
+@mixin btn-group-border($border,$darken){
+    &:not(:last-child){
+        border-right-color:darken( $border,$darken);
+    }
+}
+
+
+//按钮皮肤
+// --------------------------------------------------
+@mixin btn-skin($type){
+    @if $type != light {    //输出正常按钮与反色按钮
+        @each $name, $btn-color in $map-colors{
+            @if $type == normal {
+                .btn-#{$name}{
+                    @include btn-style(nth($btn-color,1),nth($btn-color,2),nth($btn-color,3));
+                    // &:hover {
+                    //     color:nth($btn-color,1);
+                    //     background-color: lighten(nth($btn-color,2), 6%);
+                    //     border-color: lighten(nth($btn-color,3), 6%);
+                    // }
+                }
+            } @else if $type ==  invert {
+                &.btn-#{$name}{
+                    color:nth($btn-color,2);
+                    @include btn-style(nth($btn-color,2),nth($btn-color,1),nth($btn-color,3));
+                    // &:hover {
+                    //     color:nth($btn-color,1);
+                    //     background-color: lighten(nth($btn-color,2), 6%);
+                    //     border-color: lighten(nth($btn-color,3), 6%);
+                    // }
+                }
+            }
+        }
+    } @else {   //输出亮按钮
+        @each $name, $btn-color in $map-light-btn{
+           .btn-#{$type}-#{$name}{
+                @include btn-style(nth($btn-color,3),nth($btn-color,2),lighten(nth($btn-color,3),10%));
+                // &:hover {
+                //     color:nth($btn-color,1);
+                //     background-color:darken(nth($btn-color,2),2%);
+                //     border-color:lighten(nth($btn-color,3),10%);
+                // }
+            }
+        }
+    }
+}

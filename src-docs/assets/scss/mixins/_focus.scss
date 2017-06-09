@@ -1,0 +1,17 @@
+//焦点外边框
+//-----------------------------------------------------
+@mixin focus() {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+//form控件焦点
+//-----------------------------------------------------
+@mixin form-control-focus($border-color,$box-shadow: $form-box-shadow) {
+    &:focus{
+        border-color: $border-color;
+        outline: 0;
+        @include box-shadow(0 0 0 2px $box-shadow);
+    }
+}

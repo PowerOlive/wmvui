@@ -16,11 +16,11 @@ export default {
   UI Color Palette
   </a> 中的每一个颜色，在javasrcript 和 less 中都有对应的颜色变量，组件中关于颜色属性(overlayColor，rippleColor 除外)可以直接使用变量名.
   颜色变量文件在
-  <a target="_blank" href="https://github.com/museui/muse-ui/blob/master/src/utils/colors.js">
+  <a target="_blank" href="https://github.com/531431988/wmvui/blob/master/src/utils/colors.js">
   src/utils/colors.js
   </a>
   或者
-  <a target="_blank" href="https://github.com/museui/muse-ui/blob/master/src/styles/colors.less">
+  <a target="_blank" href="https://github.com/531431988/wmvui/blob/master/src/styles/colors.less">
     src/styles/colors.less
   </a>
   。`
