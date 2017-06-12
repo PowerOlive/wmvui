@@ -1,12 +1,15 @@
 <template>
 <div>
-  <mu-raised-button label="默认" @click="showToast()"/>
-  <mu-raised-button label="顶部" @click="showToast('top')"/>
-  <mu-raised-button label="底部" @click="showToast('bottom')"/>
+  <mu-raised-button label="默认" @click="showToast('middle','默认中间显示')"/>
+  <mu-raised-button label="顶部" @click="showToast('top','我在上面')"/>
+  <mu-raised-button label="底部" @click="showToast('bottom','我在下面')"/>
 
-
-
-  <mu-toast v-model="toast.show" :position="toast.position" :time="toast.time" :message="toast.message" />
+  <mu-toast 
+    v-model="toast.show" 
+    :position="toast.position" 
+    :time="toast.time"
+    :icon="toast.type"
+    :message="toast.message" />
 </div>
 </template>
 
@@ -16,18 +19,18 @@ export default {
     return {
       toast: {
         show: false,
-        time: 2000,
-        message: '默认中间显示'
+        time: 1000,
+        icon: 'warn'
       }
     }
   },
   methods: {
-    showToast (val) {
+    showToast (val, msg) {
       this.toast.show = false
       this.toast = Object.assign(this.toast, {
         show: true,
         position: val,
-        message: '11111'
+        message: msg
       })
     }
   }

@@ -3,7 +3,7 @@
     :event="event" :exact="exact" :append="append" :replace="replace"
     :disableTouchRipple="shift" class="mu-buttom-item" :class="{'mu-bottom-item-active': active}"
     :center-ripple="false" wrapperClass="mu-buttom-item-wrapper" @click.native="handleClick">
-    <icon v-if="icon" class="mu-bottom-item-icon" :class="iconClass" :value="icon"></icon>
+    <icon v-if="icon" class="mu-bottom-item-icon" :class="iconClass" :icon="icon"></icon>
     <slot></slot>
     <span v-if="title" class="mu-bottom-item-text" :class="titleClass">{{title}}</span>
   </abstract-button>

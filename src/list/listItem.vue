@@ -242,11 +242,12 @@ export default {
   display: flex;
   color: @textColor;
   position: relative;
+  padding: 4px 12px;
   &.show-left{
     padding-left: 15px;
   }
   &.show-right{
-    padding-right: 4px;
+    /* padding-right: 4px; */
   }
   &.has-avatar {
     min-height: 56px;
@@ -274,6 +275,10 @@ export default {
   justify-content: flex-start;
   width: 40px;
   color: @grey600;
+  .vui-icon{
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .mu-item-left{

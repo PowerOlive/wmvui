@@ -7,19 +7,19 @@
     delete chip
   </mu-chip>
   <mu-chip class="demo-chip">
-    <mu-avatar :size="32" src="/images/uicon.jpg"/> avatar chip
+    <mu-avatar src="/images/uicon.jpg"/> avatar chip
   </mu-chip>
   <mu-chip class="demo-chip" @delete="handleClose" showDelete>
-    <mu-avatar :size="32" src="/images/uicon.jpg"/> avatar delete chip
+    <mu-avatar src="/images/uicon.jpg"/> avatar delete chip
   </mu-chip>
   <mu-chip class="demo-chip" @delete="handleClose" showDelete>
-    <mu-avatar :size="32" icon="face"/> icon avatar chip
+    <mu-avatar icon="like-fill"/> icon avatar chip
   </mu-chip>
 
-  <mu-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete style="border-radius:48px;">
+  <mu-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
     <mu-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</mu-avatar> custom chip
   </mu-chip>
-  <mu-toast v-if="toast" message="你点击的删除" />
+  <mu-toast v-model="toast" message="你点击的删除" />
 </div>
 </template>
 

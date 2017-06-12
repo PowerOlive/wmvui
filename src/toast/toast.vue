@@ -1,6 +1,7 @@
 <template>
 <transition name="mu-toast">
   <div class="mu-toast"  v-show="show" :class="toastClass" :style="{'z-index': zIndex}">
+    <!-- <icon :value="icon" /> -->
     {{message}}
   </div>
 </transition>
@@ -8,7 +9,11 @@
 
 <script>
 import {getZIndex} from '../internal/popup/utils'
+import icon from '../icon'
 export default {
+  components: {
+    icon
+  },
   name: 'mu-toast',
   props: {
     value: Boolean,
@@ -20,9 +25,8 @@ export default {
       type: Number,
       default: 2000
     },
-    type: {
-      type: String,
-      default: 'success'
+    icon: {
+      type: String
     },
     isShowMask: {
       type: Boolean,
@@ -43,17 +47,8 @@ export default {
   computed: {
     toastClass () {
       return {
-        'vui-toast-warn': this.type === 'warn',
-        'vui-toast-cancel': this.type === 'cancel',
-        'vui-toast-success': this.type === 'success',
-        'vui-toast-text': this.type === 'text',
         'vux-toast-top': this.position === 'top',
         'vux-toast-bottom': this.position === 'bottom'
-      }
-    },
-    style () {
-      if (this.type === 'text' && this.width === 'auto') {
-        return { padding: '10px' }
       }
     }
   },
@@ -106,9 +101,12 @@ export default {
 </style>
 <style lang="scss">
 .mu-toast{
-  top:50%;
-  left:50%;
-  transform: translate3D(-50%,-50%,0);
+  &,
+  &.vux-toast-middle{
+    top:50%;
+    left:50%;
+    transform: translate3D(-50%,-50%,0);
+  }
   &.vux-toast-top {
     top:5%;
   }

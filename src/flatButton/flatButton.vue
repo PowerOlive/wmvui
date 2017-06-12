@@ -8,7 +8,7 @@
   :rippleOpacity="rippleOpacity"
   :class="buttonClass" :centerRipple="false">
   <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
-  <icon :value="icon" :size="iconSize" :class="iconClass"></icon>
+  <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
   <slot></slot>
   <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
 </abstract-button>

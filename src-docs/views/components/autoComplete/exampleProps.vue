@@ -12,11 +12,11 @@ export default {
       dataSource: [{
         value: 't1',
         text: '第一个Icon',
-        rightIcon: 'inbox'
+        rightIcon: 'like-fill'
       }, {
         value: 't2',
         text: '第二个Icon',
-        rightIcon: 'info'
+        rightIcon: 'menu'
       }, {
         value: 't3',
         text: '第三个Icon',

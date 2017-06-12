@@ -1,7 +1,7 @@
 <template>
   <div class="mu-avatar" @click="handleClick" :style="avatarStyle">
     <div class="mu-avatar-inner">
-      <icon v-if="icon" :value="icon" :size="iconSize" :class="iconClass"></icon>
+      <icon v-if="icon" :icon="icon" :size="iconSize" :class="iconClass"></icon>
       <img :src="src" v-if="src" :class="imgClass" />
       <slot></slot>
     </div>

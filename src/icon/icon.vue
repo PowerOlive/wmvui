@@ -2,7 +2,7 @@
 export default {
   name: 'mu-icon',
   props: {
-    value: {
+    icon: {
       type: String
     },
     size: {
@@ -33,15 +33,15 @@ export default {
   },
   render (h) {
     var {
-      value,
+      icon,
       iconStyle,
       handleClick,
       text
     } = this
-    if (!value) return null
-    var isMaterial = value.indexOf(':') !== 0
+    if (!icon) return null
+    var isMaterial = icon.indexOf(':') !== 0
     return h('i', {
-      class: ['vui-icon ', 'icon-' + (isMaterial ? value : '')],
+      class: ['vui-icon ', 'icon-' + (isMaterial ? icon : '')],
       style: iconStyle,
       on: {
         click: handleClick

@@ -5,7 +5,7 @@
   :style="buttonStyle" :disabled="disabled" class="mu-float-button" :class="[buttonClass]">
   <div class="mu-float-button-wrapper">
     <slot>
-      <icon :value="this.icon" :size="iconSize"></icon>
+      <icon :icon="this.icon" :size="iconSize"></icon>
     </slot>
   </div>
 </abstract-button>

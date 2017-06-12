@@ -83,8 +83,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .mu-chip {
-  border-radius: 16px;
-  line-height: 32px;
+  border-radius: 10000px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;

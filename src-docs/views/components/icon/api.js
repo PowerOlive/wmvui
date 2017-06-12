@@ -1,18 +1,23 @@
 export default {
   props: [{
-    name: 'value',
+    name: 'icon',
     type: 'String',
     default: '',
-    desc: 'props.value'
+    desc: 'props.icon'
   }, {
     name: 'size',
     type: 'Number',
-    default: '24',
+    default: '',
     desc: 'props.size'
   }, {
     name: 'color',
     type: 'String',
     default: '',
     desc: 'props.color'
+  }, {
+    name: 'text',
+    type: 'String',
+    default: '',
+    desc: 'props.text'
   }]
 }

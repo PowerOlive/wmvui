@@ -1,17 +1,17 @@
 <template>
 <div>
   <div class="icon-contaner">
-    <mu-icon value="home"/>
-    <mu-icon value="flight_takeoff" color="red"/>
-    <mu-icon value="cloud_download" color="orange"/>
-    <mu-icon value="videogame_asset" color="blue"/>
+    <mu-icon icon="like-fill"/>
+    <mu-icon icon="menu" color="red"/>
+    <mu-icon icon="search" color="orange"/>
+    <mu-icon icon="more" color="blue"/>
   </div>
 
   <div class="icon-contaner">
-    <mu-icon value="home"/>
-    <mu-icon value="home" :size="32"/>
-    <mu-icon value="home" :size="36"/>
-    <mu-icon value="home" :size="48"/>
+    <mu-icon icon="code"/>
+    <mu-icon icon="like" :size="32"/>
+    <mu-icon icon="right" :size="36"/>
+    <mu-icon icon="left" :size="48"/>
   </div>
 </div>
 </template>

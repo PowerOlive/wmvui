@@ -7,7 +7,7 @@
     :disabled="disabled" :keyboardFocused="keyboardFocused"
     :class="buttonClass" wrapperClass="mu-raised-button-wrapper" :centerRipple="false">
     <span class="mu-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
-    <icon :value="icon" :class="iconClass"></icon>
+    <icon :icon="icon" :class="iconClass"></icon>
     <slot></slot>
     <span class="mu-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
   </abstract-button>

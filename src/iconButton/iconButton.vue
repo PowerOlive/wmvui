@@ -4,7 +4,7 @@
   :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
   :type="type" :href="href" :target="target" :disabled="disabled" :keyboardFocused="keyboardFocused" class="mu-icon-button">
   <slot>
-    <icon :value="icon" :size="iconSize" :color="iconColor" :class="iconClass"></icon>
+    <icon :icon="icon" :size="iconSize" :color="iconColor" :class="iconClass"></icon>
   </slot>
   <tooltip v-if="tooltip" :trigger="tooltipTrigger" :verticalPosition="verticalPosition" :horizontalPosition="horizontalPosition" :show="tooltipShown" :label="tooltip" :touch="touch"></tooltip>
 </abstract-button>

@@ -6,7 +6,7 @@
       :disableFocusRipple="disableFocusRipple" :disabled="disabled" containerElement="div"
       @click="handleClick" @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit">
      <div class="mu-menu-item" :class="{'have-left-icon': leftIcon || inset}">
-       <icon :value="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="mu-menu-item-left-icon" :class="leftIconClass"/>
+       <icon :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="mu-menu-item-left-icon" :class="leftIconClass"/>
        <div class="mu-menu-item-title" :class="titleClass">
          <slot name="title">
            {{title}}
@@ -16,7 +16,7 @@
          <span v-if="showAfterText" :class="afterTextClass">{{afterText}}</span>
          <slot name="after"></slot>
        </div>
-       <icon :value="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="mu-menu-item-right-icon" :class="rightIconClass"/>
+       <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="mu-menu-item-right-icon" :class="rightIconClass"/>
      </div>
    </abstract-button>
    <popover :open="openMenu" v-if="$slots && $slots.default && $slots.default.length > 0" :anchorOrigin="{ vertical: 'top', horizontal: 'right'}"

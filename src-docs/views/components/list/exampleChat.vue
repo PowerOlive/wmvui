@@ -2,37 +2,37 @@
 <mobile-tear-sheet>
   <mu-list>
     <mu-sub-header>最近聊天记录</mu-sub-header>
-    <mu-list-item title="Mike Li">
+    <mu-list-item title="小明">
       <mu-avatar src="/images/avatar1.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
-    <mu-list-item title="Maco Mai">
+    <mu-list-item title="小虎儿">
       <mu-avatar src="/images/avatar2.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
-    <mu-list-item title="Alex Qin">
+    <mu-list-item title="小胖子">
       <mu-avatar src="/images/avatar3.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
-    <mu-list-item title="Allen Qun">
+    <mu-list-item title="小慧慧">
       <mu-avatar src="/images/avatar4.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
-    <mu-list-item title="Myron Liu">
+    <mu-list-item title="小义">
       <mu-avatar src="/images/uicon.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
   </mu-list>
   <mu-divider/>
   <mu-list>
     <mu-sub-header>历史聊天记录</mu-sub-header>
-    <mu-list-item title="Gaia Zhou">
+    <mu-list-item title="小明">
       <mu-avatar src="/images/avatar5.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
-    <mu-list-item title="Miller Wang">
+    <mu-list-item title="小刀">
       <mu-avatar src="/images/avatar6.jpg" slot="leftAvatar"/>
-      <mu-icon value="chat_bubble" slot="right"/>
+      <mu-icon icon="right" slot="right"/>
     </mu-list-item>
   </mu-list>
 </mobile-tear-sheet>

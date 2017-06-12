@@ -1,6 +1,6 @@
 <template>
   <div class="mu-text-field" :class="textFieldClass" :style="isFocused ? errorStyle : {}">
-    <icon  v-if="icon" class="mu-text-field-icon" :class="iconClass" :value="icon"></icon>
+    <icon  v-if="icon" class="mu-text-field-icon" :class="iconClass" :icon="icon"></icon>
     <div @click="handleLabelClick" ref="content" class="mu-text-field-content">
       <text-field-label v-if="label" :float="float" :focus="isFocused" :normalClass="labelClass" :focusClass="labelFocusClass">{{label}}</text-field-label>
       <text-field-hint v-if="hintText" :text="hintText" :show="showHint" :class="hintTextClass"></text-field-hint>

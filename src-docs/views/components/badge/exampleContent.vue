@@ -1,8 +1,8 @@
 <template>
 <div class="demo-badge-container">
   <mu-badge class="demo-badge-content">
-    <mu-icon value="like-fill"/>
-    <mu-icon value="plus" slot="content"/>
+    <mu-icon icon="like-fill"/>
+    <mu-icon icon="plus" slot="content"/>
   </mu-badge>
   <mu-badge  class="demo-badge-content">
     版权信息
