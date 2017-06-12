@@ -1,31 +1,27 @@
 <template>
 <div class="demo-menu-container">
-  <mu-paper class="demo-menu">
-    <mu-menu desktop>
-      <mu-menu-item title="Bold" afterText="⌘B"/>
-      <mu-menu-item title="Italic" afterText="⌘I"/>
-      <mu-menu-item title="Underline" afterText="⌘U"/>
-      <mu-menu-item title="Strikethrough" afterText="Alt+Shift+5"/>
-      <mu-menu-item title="Superscript" afterText="⌘."/>
-      <mu-menu-item title="Subscript" afterText="⌘,"/>
-      <mu-divider />
-      <mu-menu-item title="Paragraph styles" rightIcon="keyboard_arrow_right"/>
-      <mu-menu-item title="Align" rightIcon="keyboard_arrow_right"/>
-      <mu-menu-item title="Line spacing" rightIcon="keyboard_arrow_right"/>
-      <mu-menu-item title="Paragraph styles" rightIcon="keyboard_arrow_right"/>
-      <mu-menu-item title="Numbered list" rightIcon="keyboard_arrow_right"/>
-      <mu-menu-item title="List options" rightIcon="keyboard_arrow_right"/>
-      <mu-divider />
-      <mu-menu-item title="Clear formatting" afterText="⌘/"/>
-    </mu-menu>
-  </mu-paper>
-  <mu-paper class="demo-menu">
-    <mu-menu desktop :width="256">
-      <mu-menu-item title="Open" afterText="Cmd + O" />
-      <mu-menu-item title="Paste in place" afterText="Shift + V" />
-      <mu-menu-item title="Research" afterText="Opt + Shift + Cmd + I" />
-    </mu-menu>
-  </mu-paper>
+  <mu-menu desktop :autoWidth="false" :width="200">
+    <mu-menu-item title="亚瑟" afterText="大贱人"/>
+    <mu-menu-item title="不知火舞" afterText="骚贱浪"/>
+    <mu-menu-item title="韩信" afterText="韩跳跳"/>
+    <mu-menu-item title="孙悟空" afterText="猴三棍"/>
+    <mu-menu-item title="赵云" afterText="小枪枪"/>
+    <mu-menu-item title="张飞" afterText="烟人小飞飞"/>
+    <mu-divider />
+    <mu-menu-item title="花木兰" rightIcon="right"/>
+    <mu-menu-item title="大乔" rightIcon="right"/>
+    <mu-menu-item title="小乔" rightIcon="right"/>
+    <mu-menu-item title="露娜可可" rightIcon="right"/>
+    <mu-menu-item title="橘石精" rightIcon="right"/>
+    <mu-menu-item title="高贱离" rightIcon="right"/>
+    <mu-divider />
+    <mu-menu-item title="妲已" afterText="少儿不益"/>
+  </mu-menu>
+  <mu-menu :autoWidth="false" :width="300">
+    <mu-menu-item title="诸葛亮" afterText="猪哥亮" />
+    <mu-menu-item title="兰陵王" afterText="后期辣鸡" />
+    <mu-menu-item title="程咬金" afterText="操不死的小强" />
+  </mu-menu>
 </div>
 </template>
 

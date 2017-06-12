@@ -1,25 +1,22 @@
 <template>
 <mu-paper class="demo-menu">
-  <mu-menu desktop>
-    <mu-menu-item title="Single" inset/>
-    <mu-menu-item title="1.15" inset/>
-    <mu-menu-item title="Double" inset/>
-    <mu-menu-item title="Custom: 1.2" rightIcon="keyboard_arrow_right" leftIcon="check">
-      <mu-menu-item title="Show" rightIcon="keyboard_arrow_right">
-        <mu-menu-item title="Show Level 2" />
-        <mu-menu-item title="Grid lines" leftIcon="check" />
-        <mu-menu-item title="Page breaks" inset/>
-        <mu-menu-item title="Rules" leftIcon="check" />
+  <mu-menu desktop :multiple="true">
+    <mu-menu-item title="黄忠" inset/>
+    <mu-menu-item title="太阳" inset/>
+    <mu-menu-item title="敌人杰" inset/>
+    <mu-menu-item title="小李飞刀" rightIcon="right" leftIcon="like-fill">
+      <mu-menu-item title="飞刀无敌" rightIcon="right">
+        <mu-menu-item title="又见飞刀" />
+        <mu-menu-item title="一刀" leftIcon="like-fill" />
+        <mu-menu-item title="二刀" inset/>
       </mu-menu-item>
-      <mu-menu-item title="Grid lines" leftIcon="check" />
-      <mu-menu-item title="Page breaks" inset/>
-      <mu-menu-item title="Rules" leftIcon="check" />
+      <mu-menu-item title=" bu bu bu~" leftIcon="like-fill" />
     </mu-menu-item>
     <mu-divider />
-    <mu-menu-item title="Add space before paragraph" />
-    <mu-menu-item title="Add space after paragraph" />
+    <mu-menu-item title="我不是你记忆中的精柯" />
+    <mu-menu-item title="但致使的程度没两样" />
     <mu-divider />
-    <mu-menu-item title="Custom spacing..." />
+    <mu-menu-item title="小伙子开黑不……" />
   </mu-menu>
 </mu-paper>
 </template>

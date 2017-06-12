@@ -2,18 +2,18 @@
 <div>
   <mu-paper class="demo-menu">
     <mu-menu>
-      <mu-menu-item title="Maps"/>
-      <mu-menu-item title="Books"/>
-      <mu-menu-item title="Flights"/>
-      <mu-menu-item title="Apps"/>
+      <mu-menu-item title="程咬金"/>
+      <mu-menu-item title="亚瑟"/>
+      <mu-menu-item title="墨子"/>
+      <mu-menu-item title="孙膑"/>
     </mu-menu>
   </mu-paper>
   <mu-paper class="demo-menu">
     <mu-menu>
-      <mu-menu-item title="Refresh"/>
-      <mu-menu-item title="Help & feedback"/>
-      <mu-menu-item title="Settings"/>
-      <mu-menu-item title="Sign out"/>
+      <mu-menu-item title="大乔"/>
+      <mu-menu-item title="小乔"/>
+      <mu-menu-item title="蔡文姬"/>
+      <mu-menu-item title="妲已"/>
     </mu-menu>
   </mu-paper>
 </div>

@@ -2,23 +2,23 @@
 <div>
   <mu-paper class="demo-menu">
     <mu-menu>
-      <mu-menu-item title="Preview" leftIcon="remove_red_eye"/>
-      <mu-menu-item title="Share" leftIcon="person_add"/>
-      <mu-menu-item title="Get Links" leftIcon="link"/>
+      <mu-menu-item title="李白" leftIcon="code"/>
+      <mu-menu-item title="王玿珺" leftIcon="code"/>
+      <mu-menu-item title="墨子" leftIcon="code"/>
       <mu-divider />
-      <mu-menu-item title="Make a copy" leftIcon="content_copy"/>
-      <mu-menu-item title="Download" leftIcon="file_download"/>
-      <mu-menu-item title="Remove" leftIcon="delete"/>
+      <mu-menu-item title="阿柯" leftIcon="code"/>
+      <mu-menu-item title="亚瑟" leftIcon="code"/>
+      <mu-menu-item title="典韦" leftIcon="code"/>
     </mu-menu>
   </mu-paper>
   <mu-paper class="demo-menu">
     <mu-menu>
-      <mu-menu-item title="Clear Config"/>
-      <mu-menu-item title="New Config" rightIcon="person_add"/>
-      <mu-menu-item title="Project" rightIcon="settings"/>
-      <mu-menu-item title="Workspace" rightIcon="settings" rightIconColor="#559"/>
-      <mu-menu-item title="Paragraph" rightIcon="¶"/>
-      <mu-menu-item title="Section" rightIcon="§"/>
+      <mu-menu-item title="姜子牙"/>
+      <mu-menu-item title="小雀雀" rightIcon="right"/>
+      <mu-menu-item title="敌人节" rightIcon="right"/>
+      <mu-menu-item title="蔡文鸡" rightIcon="right" rightIconColor="#559"/>
+      <mu-menu-item title="刘备" rightIcon="right"/>
+      <mu-menu-item title="张飞（小飞飞）" rightIcon="right"/>
     </mu-menu>
   </mu-paper>
 </div>

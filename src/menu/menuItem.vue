@@ -13,7 +13,7 @@
          </slot>
        </div>
        <div v-if="!rightIcon">
-         <span v-if="showAfterText" :class="afterTextClass">{{afterText}}</span>
+         <span v-if="showAfterText" :class="afterTextClass" style="color:#999;">{{afterText}}</span>
          <slot name="after"></slot>
        </div>
        <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="mu-menu-item-right-icon" :class="rightIconClass"/>
@@ -218,7 +218,7 @@ export default {
     padding: 0 24px;
   }
   &.have-left-icon{
-    padding-left: 72px;
+    padding-left: 40px;
   }
 }
 
@@ -233,10 +233,10 @@ export default {
   position: absolute;
   top: 0;
   left: 4px;
-  margin: 12px;
+  margin:0 12px;
   color: @grey600;
   .mu-menu-destop & {
-    top: 4px;
+    /* top: 4px; */
     left: 24px;
     margin: 0;
   }
@@ -246,10 +246,10 @@ export default {
   position: absolute;
   top: 0;
   right: 4px;
-  margin: 12px;
+  margin: 0 12px;
   color: @grey600;
   .mu-menu-destop & {
-    top: 4px;
+    /* top: 4px; */
     right: 24px;
     margin: 0;
   }
