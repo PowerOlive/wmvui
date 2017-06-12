@@ -126,6 +126,7 @@ export default {
 <style lang="css">
 .mu-icon-menu{
   display: inline-block;
+  vertical-align: middle;
   position: relative;
 }
 </style>

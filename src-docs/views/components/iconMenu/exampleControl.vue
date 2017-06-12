@@ -1,6 +1,6 @@
 <template>
 <div>
-  <mu-icon-menu icon="more_vert" @change="handleChange" :open="open" @open="handleOpen" @close="handleClose" :value="value">
+  <mu-icon-menu icon="menu" @change="handleChange" :open="open" @open="handleOpen" @close="handleClose" :value="value">
     <mu-menu-item value="1" title="Refresh" />
     <mu-menu-item value="2" title="Send feedback" />
     <mu-menu-item value="3" title="Settings" />

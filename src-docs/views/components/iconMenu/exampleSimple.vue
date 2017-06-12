@@ -1,48 +1,40 @@
 <template>
 <div>
   <mu-icon-menu
-      icon="more_vert"
+      icon="menu"
       :anchorOrigin="leftTop"
       :targetOrigin="leftTop"
     >
-      <mu-menu-item title="Refresh" />
-      <mu-menu-item title="Send feedback" />
-      <mu-menu-item title="Settings" />
-      <mu-menu-item title="Help" />
-      <mu-menu-item title="Sign out" />
+      <mu-menu-item title="选我" />
+      <mu-menu-item title="选我5杀" />
+      <mu-menu-item title="妈德智障他们骗你的" />
     </mu-icon-menu>
     <mu-icon-menu
-      icon="more_vert"
+      icon="menu"
       :anchorOrigin="leftBottom"
       :targetOrigin="leftBottom"
     >
-      <mu-menu-item title="Refresh" />
-      <mu-menu-item title="Send feedback" />
-      <mu-menu-item title="Settings" />
-      <mu-menu-item title="Help" />
-      <mu-menu-item title="Sign out" />
+      <mu-menu-item title="选我" />
+      <mu-menu-item title="选我5杀" />
+      <mu-menu-item title="妈德智障他们骗你的" />
     </mu-icon-menu>
     <mu-icon-menu
-      icon="more_vert"
+      icon="menu"
       :anchorOrigin="rightBottom"
       :targetOrigin="rightBottom"
     >
-      <mu-menu-item title="Refresh" />
-      <mu-menu-item title="Send feedback" />
-      <mu-menu-item title="Settings" />
-      <mu-menu-item title="Help" />
-      <mu-menu-item title="Sign out" />
+      <mu-menu-item title="选我" />
+      <mu-menu-item title="选我5杀" />
+      <mu-menu-item title="妈德智障他们骗你的" />
     </mu-icon-menu>
     <mu-icon-menu
-      icon="more_vert"
+      icon="menu"
       :anchorOrigin="rightTop"
       :targetOrigin="rightTop"
     >
-      <mu-menu-item title="Refresh" />
-      <mu-menu-item title="Send feedback" />
-      <mu-menu-item title="Settings" />
-      <mu-menu-item title="Help" />
-      <mu-menu-item title="Sign out" />
+      <mu-menu-item title="选我" />
+      <mu-menu-item title="选我5杀" />
+      <mu-menu-item title="妈德智障他们骗你的" />
     </mu-icon-menu>
 </div>
 </template>
