@@ -52,6 +52,7 @@
         <mu-list-item slot="nested" value="#/drawer" title="Drawer"/>
         <mu-list-item slot="nested" value="#/gridList" title="Grid List"/>
         <mu-list-item slot="nested" value="#/icon" title="Icon"/>
+        <mu-list-item slot="nested" value="#/svgIcon" title="svg icon"/>
         <mu-list-item slot="nested" value="#/list" title="List"/>
         <mu-list-item slot="nested" title="Menus" toggleNested>
           <mu-list-item slot="nested" value="#/menu" title="Menu"/>

@@ -1,7 +1,7 @@
 <template>
 <transition name="mu-toast">
   <div class="mu-toast"  v-show="show" :class="toastClass" :style="{'z-index': zIndex}">
-    <!-- <icon :value="icon" /> -->
+    <svg-icon :icon="svgIcon"  />
     {{message}}
   </div>
 </transition>
@@ -9,10 +9,10 @@
 
 <script>
 import {getZIndex} from '../internal/popup/utils'
-import icon from '../icon'
+import svgIcon from '../svgIcon'
 export default {
   components: {
-    icon
+    svgIcon
   },
   name: 'mu-toast',
   props: {
@@ -20,13 +20,13 @@ export default {
     message: {
       type: String
     },
+    svgIcon: {
+      type: String
+    },
     position: String,
     time: {
       type: Number,
       default: 2000
-    },
-    icon: {
-      type: String
     },
     isShowMask: {
       type: Boolean,
@@ -77,14 +77,16 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .mu-toast {
-  height: 48px;
-  line-height: 48px;
-  padding: 0 24px;
+  padding:10px 24px;
   background-color: @textColor;
   color: @alternateTextColor;
   border-radius: 24px;
   .ellipsis();
   position: fixed;
+  .vui-svg-icon{
+    display: block;
+    margin: 0 auto 10px;
+  }
 }
 
 .mu-toast-enter-active,.mu-toast-leave-active{

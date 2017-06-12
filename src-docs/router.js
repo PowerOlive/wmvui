@@ -25,6 +25,7 @@ import Divider from './views/components/divider'
 import Drawer from './views/components/drawer'
 import GridList from './views/components/gridList'
 import Icon from './views/components/icon'
+import svgIcon from './views/components/svgIcon'
 import LinearProgress from './views/components/linearProgress'
 import CircularProgress from './views/components/circularProgress'
 import List from './views/components/list'
@@ -84,6 +85,7 @@ const router = new Router({
     { path: '/drawer', component: Drawer },
     { path: '/gridList', component: GridList },
     { path: '/icon', component: Icon },
+    { path: '/svgIcon', component: svgIcon },
     { path: '/linearProgress', component: LinearProgress },
     { path: '/circularProgress', component: CircularProgress },
     { path: '/list', component: List },

@@ -2,6 +2,7 @@ import './styles/base.less'
 import Vue from 'vue'
 import {retina} from './utils'
 import icon from './icon'
+import svgIcon from './svgIcon'
 import badge from './badge'
 import appBar from './appBar'
 import iconButton from './iconButton'
@@ -59,6 +60,7 @@ import config from './config'
 const components = {
   number,
   icon,
+  svgIcon,
   badge,
   appBar,
   iconButton,
