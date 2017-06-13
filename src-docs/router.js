@@ -35,6 +35,7 @@ import DropDownMenu from './views/components/dropDownMenu'
 import Paper from './views/components/paper'
 import Popover from './views/components/popover'
 import SelectField from './views/components/selectField'
+import number from './views/components/number'
 import Checkbox from './views/components/checkbox'
 import Radio from './views/components/radio'
 import Switch from './views/components/switch'
@@ -42,7 +43,7 @@ import Slider from './views/components/slider'
 // import SnackbarToast from './views/components/snackbarToast'
 import Stepper from './views/components/stepper'
 import SubHeader from './views/components/subHeader'
-import Table from './views/components/table'
+// import Table from './views/components/table'
 import Tabs from './views/components/tabs'
 import TextField from './views/components/textField'
 import TimePicker from './views/components/timePicker'
@@ -54,7 +55,7 @@ import InfiniteScroll from './views/components/infiniteScroll'
 import Picker from './views/components/picker'
 import Popup from './views/components/popup'
 import RefreshControl from './views/components/refreshControl'
-import Pagination from './views/components/pagination'
+// import Pagination from './views/components/pagination'
 Vue.use(Router)
 
 const router = new Router({
@@ -95,6 +96,7 @@ const router = new Router({
     { path: '/paper', component: Paper },
     { path: '/popover', component: Popover },
     { path: '/selectField', component: SelectField },
+    { path: '/number', component: number },
     { path: '/checkbox', component: Checkbox },
     { path: '/radio', component: Radio },
     { path: '/switch', component: Switch },
@@ -102,7 +104,7 @@ const router = new Router({
     // { path: '/snackbarToast', component: SnackbarToast },
     { path: '/stepper', component: Stepper },
     { path: '/subHeader', component: SubHeader },
-    { path: '/table', component: Table },
+    // { path: '/table', component: Table },
     { path: '/tabs', component: Tabs },
     { path: '/textField', component: TextField },
     { path: '/timePicker', component: TimePicker },
@@ -111,7 +113,7 @@ const router = new Router({
     { path: '/flexbox', component: Flexbox },
     { path: '/grid', component: Grid },
     { path: '/infiniteScroll', component: InfiniteScroll },
-    { path: '/pagination', component: Pagination },
+    // { path: '/pagination', component: Pagination },
     { path: '/picker', component: Picker },
     { path: '/popup', component: Popup },
     { path: '/refreshControl', component: RefreshControl },

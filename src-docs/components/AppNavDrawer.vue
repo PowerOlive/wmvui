@@ -67,6 +67,7 @@
         </mu-list-item>
         <mu-list-item slot="nested" value="#/selectField" title="Select Field"/>
         <mu-list-item slot="nested" title="Selection Controls" toggleNested>
+          <mu-list-item slot="nested" value="#/number" title="Number"/>
           <mu-list-item slot="nested" value="#/checkbox" title="Checkbox"/>
           <mu-list-item slot="nested" value="#/radio" title="Radio"/>
           <mu-list-item slot="nested" value="#/switch" title="Switch"/>

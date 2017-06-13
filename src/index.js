@@ -44,7 +44,7 @@ import slider from './slider'
 import linearProgress from './linearProgress'
 import circularProgress from './circularProgress'
 import * as gridList from './gridList'
-// import * as table from './table'
+import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
 import * as stepper from './stepper'
@@ -101,7 +101,7 @@ const components = {
   linearProgress,
   circularProgress,
   ...gridList,
-  // ...table,
+  ...table,
   datePicker,
   timePicker,
   ...stepper,
