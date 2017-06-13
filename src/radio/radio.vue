@@ -12,8 +12,8 @@
       <svg class="mu-radio-icon-checked mu-radio-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
         <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
       </svg>
-      <icon :value="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-radio-icon-uncheck"></icon>
-      <icon :value="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-radio-icon-checked"></icon>
+      <icon :icon="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-radio-icon-uncheck"></icon>
+      <icon :icon="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-radio-icon-checked"></icon>
     </div>
     <div class="mu-radio-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
   </touch-ripple>
@@ -26,8 +26,8 @@
       <svg class="mu-radio-icon-checked mu-radio-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
         <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
       </svg>
-      <icon :value="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-radio-icon-uncheck"></icon>
-      <icon :value="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-radio-icon-checked"></icon>
+      <icon :icon="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-radio-icon-uncheck"></icon>
+      <icon :icon="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-radio-icon-checked"></icon>
     </div>
     <div class="mu-radio-label" :class="labelClass"  v-if="label && !labelLeft">{{label}}</div>
   </div>
@@ -43,7 +43,7 @@ export default {
     name: {
       type: String
     },
-    value: {
+    icon: {
       type: String
     },
     nativeValue: {

@@ -1,8 +1,8 @@
 <template>
 <mu-tabs :value="activeTab" @change="handleTabChange">
-  <mu-tab value="tab1" icon="home"/>
-  <mu-tab value="tab2" icon="flight_takeoff"/>
-  <mu-tab value="tab3" icon="favorite"/>
+  <mu-tab value="tab1" icon="like-fill"/>
+  <mu-tab value="tab2" icon="like-fill"/>
+  <mu-tab value="tab3" icon="like-fill"/>
 </mu-tabs>
 </template>
 

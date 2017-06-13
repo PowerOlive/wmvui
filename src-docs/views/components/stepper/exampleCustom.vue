@@ -8,7 +8,7 @@
     </mu-step>
     <mu-step>
       <mu-step-label class="demo-step-label-warning">
-        <mu-icon slot="icon" value="warning" color="red"/>
+        <mu-icon slot="icon" icon="like-fill" color="red"/>
         创建一个群组
       </mu-step-label>
     </mu-step>

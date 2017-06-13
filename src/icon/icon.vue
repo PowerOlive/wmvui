@@ -6,7 +6,8 @@ export default {
       type: String
     },
     size: {
-      type: Number
+      type: Number,
+      default: 24
     },
     text: {
       type: String

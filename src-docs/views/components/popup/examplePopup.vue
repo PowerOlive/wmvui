@@ -52,7 +52,7 @@ export default {
       if (val) {
         setTimeout(() => {
           this.topPopup = false
-        }, 2000)
+        }, 1000)
       }
     }
   }

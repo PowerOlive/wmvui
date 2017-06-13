@@ -72,10 +72,10 @@
           <mu-list-item slot="nested" value="#/switch" title="Switch"/>
         </mu-list-item>
         <mu-list-item slot="nested" value="#/slider" title="Slider"/>
-        <mu-list-item slot="nested" value="#/snackbarToast" title="SnackBar & Toast"/>
+        <!-- <mu-list-item slot="nested" value="#/snackbarToast" title="SnackBar & Toast"/> -->
         <mu-list-item slot="nested" value="#/stepper" title="Stepper"/>
         <mu-list-item slot="nested" value="#/subHeader" title="Sub Header"/>
-        <mu-list-item slot="nested" value="#/table" title="Table"/>
+        <!-- <mu-list-item slot="nested" value="#/table" title="Table"/> -->
         <mu-list-item slot="nested" value="#/tabs" title="Tabs"/>
         <mu-list-item slot="nested" value="#/textField" title="Text Field"/>
         <mu-list-item slot="nested" value="#/timePicker" title="Time Picker"/>
@@ -85,24 +85,24 @@
         <mu-list-item slot="nested" value="#/flexbox" title="Flex Box"/>
         <mu-list-item slot="nested" value="#/grid" title="Grid"/>
         <mu-list-item slot="nested" value="#/infiniteScroll" title="Infinite Scroll"/>
-        <mu-list-item slot="nested" value="#/pagination" title="Pagination"/>
+        <!-- <mu-list-item slot="nested" value="#/pagination" title="Pagination"/> -->
         <mu-list-item slot="nested" value="#/picker" title="Picker"/>
-        <mu-list-item slot="nested" value="#/popup" title="Popup"/>
+        <mu-list-item slot="nested" value="#/popup" title="Popup & Toast"/>
         <mu-list-item slot="nested" value="#/refreshControl" title="Refresh Control"/>
       </mu-list-item>
-      <mu-list-item :title="$t('more')" toggleNested>
+      <!-- <mu-list-item :title="$t('more')" toggleNested>
         <mu-list-item slot="nested" :title="$t('changeLog')" value="#/changeLog"/>
         <mu-list-item slot="nested" :title="$t('contributing')" value="#/contributing"/>
-      </mu-list-item>
+      </mu-list-item> -->
     </mu-list>
-    <mu-divider/>
+    <!-- <mu-divider/>
     <mu-sub-header>{{$t('resource')}}</mu-sub-header>
     <mu-list>
       <mu-list-item href="https://github.com/531431988/wmvui" target="_blank" title="GitHub"/>
       <mu-list-item href="http://vuejs.org/" target="_blank" title="Vue"/>
       <mu-list-item href="https://material.google.com/" target="_blank" title="Material Design"/>
       <mu-list-item href="http://www.material-ui.com/" target="_blank" title="Material-UI"/>
-    </mu-list>
+    </mu-list> -->
   </div>
 </mu-drawer>
 </template>

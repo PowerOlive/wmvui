@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="demo-icon-tip" ref="demo" @mouseenter="handleHover" @mouseleave="handleHoverExit">
-    <mu-icon value="print"/>
+    <mu-icon icon="like-fill" :size="24"/>
     <mu-tooltip label="打印" :show="show" :trigger="trigger" :touch="touch" :verticalPosition="verticalPosition" :horizontalPosition="horizontalPosition"/>
   </div>
   <div class="demo-tip-setting">

@@ -3,7 +3,7 @@
   :event="event" :exact="exact" :append="append" :replace="replace" :disabled="disabled"
   :center-ripple="false" :class="{'mu-tab-active': active}" @click="tabClick">
   <slot>
-    <icon :value="icon" :size="size" :class="iconClass"/>
+    <icon :icon="icon" :size="size" :class="iconClass"/>
   </slot>
   <div class="mu-tab-text" :class="textClass" v-if="title">{{title}}</div>
 </abstract-button>

@@ -23,7 +23,7 @@ import * as card from './card'
 import chip from './chip'
 import overlay from './internal/popup/overlay'
 import dialog from './dialog'
-import toast from './toast'
+// import toast from './toast'
 import snackbar from './snackbar'
 import popup from './popup'
 import * as menu from './menu'
@@ -44,12 +44,12 @@ import slider from './slider'
 import linearProgress from './linearProgress'
 import circularProgress from './circularProgress'
 import * as gridList from './gridList'
-import * as table from './table'
+// import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
 import * as stepper from './stepper'
 import autoComplete from './autoComplete'
-import pagination from './pagination'
+// import pagination from './pagination'
 
 import number from './number'   // 自定义
 
@@ -81,7 +81,7 @@ const components = {
   chip,
   overlay,
   dialog,
-  toast,
+  // toast,
   snackbar,
   popup,
   ...menu,
@@ -101,14 +101,14 @@ const components = {
   linearProgress,
   circularProgress,
   ...gridList,
-  ...table,
+  // ...table,
   datePicker,
   timePicker,
   ...stepper,
   autoComplete,
   ...grid,
-  ...flexbox,
-  pagination
+  ...flexbox
+  // pagination
 }
 
 const install = function () {

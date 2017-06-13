@@ -5,6 +5,26 @@ export default {
     default: 'false',
     desc: 'props.open'
   }, {
+    name: 'toast',
+    type: 'Boolean,Object',
+    default: 'false',
+    desc: 'props.toast'
+  }, {
+    name: 'icon',
+    type: 'String',
+    default: 'false',
+    desc: 'props.icon'
+  }, {
+    name: 'svgIcon',
+    type: 'Boolean,String',
+    default: 'false',
+    desc: 'props.svgIcon'
+  }, {
+    name: 'loading',
+    type: 'Object',
+    default: 'false',
+    desc: 'props.loading'
+  }, {
     name: 'popupClass',
     type: 'String,Object,Array',
     default: '',
