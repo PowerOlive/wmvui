@@ -1,11 +1,11 @@
-.mu-radio {
+.vui-radio {
   input[type="radio"] {
     &:checked {
-      + .mu-radio-wrapper {
-        .mu-radio-icon-uncheck{
+      + .vui-radio-wrapper {
+        .vui-radio-icon-uncheck{
           color: @radioCheckedColor;
         }
-        .mu-radio-ripple-wrapper{
+        .vui-radio-ripple-wrapper{
           color: @radioCheckedColor;
         }
       }
@@ -14,23 +14,23 @@
   }
 }
 
-.mu-radio-label {
+.vui-radio-label {
   color: @radioTextColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
     color: @radioDisabledColor;
   }
 }
 
-.mu-radio-icon-uncheck {
+.vui-radio-icon-uncheck {
   color: @radioColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
     color: @radioDisabledColor;
   }
 }
 
-.mu-radio-icon-checked {
+.vui-radio-icon-checked {
   color: @radioCheckedColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
      color: @radioDisabledColor;
    }
 }

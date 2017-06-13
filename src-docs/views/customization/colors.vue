@@ -3,8 +3,8 @@
   <h2 class="demo-head-title">UI Color Palette</h2>
   <p v-html="$t('color')"></p>
   <div class="demo-colors-wrapper">
-    <mu-row>
-      <mu-col v-for="color in mainColors" :key="color" width="50" desktop="25" tablet="33" class="demo-color-group">
+    <vui-row>
+      <vui-col v-for="color in mainColors" :key="color" width="50" desktop="25" tablet="33" class="demo-color-group">
         <div class="demo-color" :style="getColorInfo(color, '500').style">
           <span class="demo-color-title">{{color}}</span>
           <div class="demo-color-container">
@@ -18,8 +18,8 @@
             <span>{{getColorInfo(color, palette).value}}</span>
           </div>
         </div>
-      </mu-col>
-    </mu-row>
+      </vui-col>
+    </vui-row>
   </div>
 </div>
 </template>

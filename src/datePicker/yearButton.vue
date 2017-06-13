@@ -1,6 +1,6 @@
 <template>
-<button class="mu-year-button" @click="handleClick" @mouseenter="handleHover" @mouseleave="handleHoverExit" :class="{'selected': selected, 'hover': hover}">
-  <span class="mu-year-button-text">{{year}}</span>
+<button class="vui-year-button" @click="handleClick" @mouseenter="handleHover" @mouseleave="handleHoverExit" :class="{'selected': selected, 'hover': hover}">
+  <span class="vui-year-button-text">{{year}}</span>
 </button>
 </template>
 
@@ -47,7 +47,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-year-button{
+.vui-year-button{
   position: relative;
   display: block;
   background: none;
@@ -63,19 +63,19 @@ export default {
   line-height: inherit;
 }
 
-.mu-year-button-text {
+.vui-year-button-text {
   align-self: center;
   color: @textColor;
   font-size: 17px;
   font-weight: 400;
   position: relative;
   top: -1px;
-  .mu-year-button.selected &{
+  .vui-year-button.selected &{
     color: @primaryColor;
     font-size: 26px;
     font-weight: 500;
   }
-  .mu-year-button.hover &{
+  .vui-year-button.hover &{
     color: @primaryColor;
   }
 }

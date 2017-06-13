@@ -1,7 +1,7 @@
 <template>
-<div class="mu-infinite-scroll">
+<div class="vui-infinite-scroll">
   <circular v-show="loading" :size="24"></circular>
-  <span v-show="loading" class="mu-infinite-scroll-text">{{loadingText}}</span>
+  <span v-show="loading" class="vui-infinite-scroll-text">{{loadingText}}</span>
 </div>
 </template>
 
@@ -9,7 +9,7 @@
 import circular from '../internal/circular'
 import Scroll from '../internal/scroll'
 export default {
-  name: 'mu-infinite-scroll',
+  name: 'vui-infinite-scroll',
   mixins: [Scroll],
   props: {
     loading: {
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="css">
-.mu-infinite-scroll{
+.vui-infinite-scroll{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ export default {
   line-height: 36px;
   width: 100%;
 }
-.mu-infinite-scroll-text{
+.vui-infinite-scroll-text{
   margin-left: 16px;
   font-size: 16px;
 }

@@ -1,7 +1,7 @@
 <template>
 <span>
-  <transition name="mu-popover" @after-enter="show()" @after-leave="hide()">
-    <div class="mu-popover" :class="popoverClass" ref="popup" v-if="open" :style="{'z-index': zIndex}">
+  <transition name="vui-popover" @after-enter="show()" @after-leave="hide()">
+    <div class="vui-popover" :class="popoverClass" ref="popup" v-if="open" :style="{'z-index': zIndex}">
       <slot></slot>
     </div>
   </transition>
@@ -13,7 +13,7 @@ import scroll from '../internal/scroll'
 import popup from '../internal/popup'
 import resize from '../internal/resize'
 export default {
-  name: 'mu-popover',
+  name: 'vui-popover',
   mixins: [scroll, resize, popup],
   props: {
     overlay: {
@@ -205,7 +205,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-popover{
+.vui-popover{
   position: fixed;
   background: @dialogBackgroundColor;
   border-radius: 2px;
@@ -216,12 +216,12 @@ export default {
   transform-origin: center top;
 }
 
-.mu-popover-enter-active, .mu-popover-leave-active{
+.vui-popover-enter-active, .vui-popover-leave-active{
   transition-duration: 300ms;
   transition-property: opacity, transform;
 }
 
-.mu-popover-enter, .mu-popover-leave-active {
+.vui-popover-enter, .vui-popover-leave-active {
   transform: scaleY(0);
   opacity: 0;
 }

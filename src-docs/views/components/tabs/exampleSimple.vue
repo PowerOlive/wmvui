@@ -1,10 +1,10 @@
 <template>
 <div>
-  <mu-tabs :value="activeTab" @change="handleTabChange">
-    <mu-tab value="tab1" title="李白"/>
-    <mu-tab value="tab2" title="阿柯"/>
-    <mu-tab value="tab3" @active="handleActive" title="兰陵王"/>
-  </mu-tabs>
+  <vui-tabs :value="activeTab" @change="handleTabChange">
+    <vui-tab value="tab1" title="李白"/>
+    <vui-tab value="tab2" title="阿柯"/>
+    <vui-tab value="tab3" @active="handleActive" title="兰陵王"/>
+  </vui-tabs>
   <div v-if="activeTab === 'tab1'">
     <h2>Tab One</h2>
     <p>

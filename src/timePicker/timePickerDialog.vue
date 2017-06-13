@@ -93,7 +93,7 @@ export default {
       this.container === 'dialog' ? h(dialog, {
         props: {
           open: this.open,
-          dialogClass: ['mu-time-picker-dialog', this.mode]
+          dialogClass: ['vui-time-picker-dialog', this.mode]
         },
         on: {
           close: this.handleClose,
@@ -116,16 +116,16 @@ export default {
 </script>
 
 <style lang="less">
-.mu-time-picker-dialog{
+.vui-time-picker-dialog{
   width: 280px;
  &.landscape {
    width: 479px;
-   .mu-dialog-body {
+   .vui-dialog-body {
      min-height: 352px;
      min-width: 479px;
    }
  }
- .mu-dialog-body {
+ .vui-dialog-body {
    padding: 0;
    min-height: 450px;
    min-width: 280px;

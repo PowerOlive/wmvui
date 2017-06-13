@@ -1,35 +1,35 @@
 <template>
   <label @mousedown="handleMouseDown" @mouseup="handleMouseUp" @mouseleave="handleMouseLeave"
     @touchstart="handleTouchStart" @touchend="handleTouchEnd" @touchcancel="handleTouchEnd" @click.stop="handleClick"
-    class="mu-checkbox" :class="{'label-left': labelLeft, 'disabled': disabled, 'no-label': !label}">
+    class="vui-checkbox" :class="{'label-left': labelLeft, 'disabled': disabled, 'no-label': !label}">
     <input type="checkbox" :disabled="disabled" :name="name" :value="nativeValue" @change="handleChange" v-model="inputValue">
-    <touch-ripple v-if="!disabled" rippleWrapperClass="mu-checkbox-ripple-wrapper" class="mu-checkbox-wrapper">
-      <div class="mu-checkbox-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
-      <div class="mu-checkbox-icon">
-        <svg class="mu-checkbox-icon-uncheck mu-checkbox-svg-icon" :class="iconClass" v-if="!checkedIcon" viewBox="0 0 24 24">
+    <touch-ripple v-if="!disabled" rippleWrapperClass="vui-checkbox-ripple-wrapper" class="vui-checkbox-wrapper">
+      <div class="vui-checkbox-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
+      <div class="vui-checkbox-icon">
+        <svg class="vui-checkbox-icon-uncheck vui-checkbox-svg-icon" :class="iconClass" v-if="!checkedIcon" viewBox="0 0 24 24">
           <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
         </svg>
-        <svg class="mu-checkbox-icon-checked mu-checkbox-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
+        <svg class="vui-checkbox-icon-checked vui-checkbox-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
           <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
-        <icon :icon="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-checkbox-icon-uncheck"></icon>
-        <icon :icon="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-checkbox-icon-checked"></icon>
+        <icon :icon="uncheckIcon" :size="iconSize" v-if="uncheckIcon" :class="iconClass" class="vui-checkbox-icon-uncheck"></icon>
+        <icon :icon="checkedIcon" :size="iconSize" v-if="checkedIcon" :class="iconClass" class="vui-checkbox-icon-checked"></icon>
       </div>
-      <div class="mu-checkbox-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
+      <div class="vui-checkbox-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
     </touch-ripple>
-    <div class="mu-checkbox-wrapper" v-if="disabled">
-      <div class="mu-checkbox-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
-      <div class="mu-checkbox-icon">
-        <svg class="mu-checkbox-icon-uncheck mu-checkbox-svg-icon" :class="iconClass" v-if="!checkedIcon" viewBox="0 0 24 24">
+    <div class="vui-checkbox-wrapper" v-if="disabled">
+      <div class="vui-checkbox-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
+      <div class="vui-checkbox-icon">
+        <svg class="vui-checkbox-icon-uncheck vui-checkbox-svg-icon" :class="iconClass" v-if="!checkedIcon" viewBox="0 0 24 24">
           <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
         </svg>
-        <svg class="mu-checkbox-icon-checked mu-checkbox-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
+        <svg class="vui-checkbox-icon-checked vui-checkbox-svg-icon" :class="iconClass" v-if="!uncheckIcon" viewBox="0 0 24 24">
           <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
-        <icon :icon="uncheckIcon" v-if="uncheckIcon" :class="iconClass" class="mu-checkbox-icon-uncheck"></icon>
-        <icon :icon="checkedIcon" v-if="checkedIcon" :class="iconClass" class="mu-checkbox-icon-checked"></icon>
+        <icon :icon="uncheckIcon" :size="iconSize" v-if="uncheckIcon" :class="iconClass" class="vui-checkbox-icon-uncheck"></icon>
+        <icon :icon="checkedIcon" :size="iconSize" v-if="checkedIcon" :class="iconClass" class="vui-checkbox-icon-checked"></icon>
       </div>
-      <div class="mu-checkbox-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
+      <div class="vui-checkbox-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
     </div>
   </label>
 </template>
@@ -38,12 +38,13 @@
 import icon from '../icon'
 import touchRipple from '../internal/touchRipple'
 export default {
-  name: 'mu-checkbox',
+  name: 'vui-checkbox',
   props: {
     name: {
       type: String
     },
     icon: {},
+    iconSize: Number,
     nativeValue: {
       type: String
     },
@@ -126,7 +127,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-checkbox {
+.vui-checkbox {
   position: relative;
   display: inline-block;
   height: 24px;
@@ -136,18 +137,18 @@ export default {
   input[type="checkbox"] {
     display: none;
     &:checked {
-      + .mu-checkbox-wrapper {
-        .mu-checkbox-icon-uncheck{
+      + .vui-checkbox-wrapper {
+        .vui-checkbox-icon-uncheck{
           opacity: 0;
           transition: opacity 650ms @easeOutFunction 150ms;
           color: @primaryColor;
         }
-        .mu-checkbox-icon-checked{
+        .vui-checkbox-icon-checked{
           opacity: 1;
           transform: scale(1);
           transition: opacity 0ms @easeOutFunction, transform 800ms @easeOutFunction;
         }
-        .mu-checkbox-ripple-wrapper{
+        .vui-checkbox-ripple-wrapper{
           color: @primaryColor;
         }
       }
@@ -163,7 +164,7 @@ export default {
   }
 }
 
-.mu-checkbox-wrapper{
+.vui-checkbox-wrapper{
   display: flex;
   width: 100%;
   height: 24px;
@@ -171,30 +172,30 @@ export default {
   justify-content: space-between;
 }
 
-.mu-checkbox-icon{
+.vui-checkbox-icon{
   width: 24px;
   height: 24px;
   vertical-align: middle;
   position: relative;
   margin-right: 16px;
-  .mu-checkbox.label-left &{
+  .vui-checkbox.label-left &{
     margin-right: 0;
     margin-left: 16px;
   }
-  .mu-checkbox.no-label &{
+  .vui-checkbox.no-label &{
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.mu-checkbox-label {
+.vui-checkbox-label {
   color: @textColor;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @disabledColor;
   }
 }
 
-.mu-checkbox-svg-icon{
+.vui-checkbox-svg-icon{
   display: inline-block;
   fill: currentColor;
   height: 24px;
@@ -202,19 +203,19 @@ export default {
   user-select: none;
 }
 
-.mu-checkbox-icon-uncheck {
+.vui-checkbox-icon-uncheck {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 1;
   transition: opacity 1s @easeOutFunction .2s;
   color: @textColor;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @disabledColor;
   }
 }
 
-.mu-checkbox-icon-checked {
+.vui-checkbox-icon-checked {
   position: absolute;
   left: 0;
   top: 0;
@@ -222,17 +223,17 @@ export default {
   color: @primaryColor;
   transform: scale(0);
   transition: opacity 450ms @easeOutFunction, transform 0ms @easeOutFunction 450ms;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @disabledColor;
   }
 }
 
-.mu-checkbox-ripple-wrapper {
+.vui-checkbox-ripple-wrapper {
   width: 48px;
   height: 48px;
   top: -12px;
   left: -12px;
-  .mu-checkbox.label-left & {
+  .vui-checkbox.label-left & {
       right: -12px;
       left: auto;
   }

@@ -1,14 +1,14 @@
 <template>
-<div class="mu-tooltip" :class="{'touched': touch, 'when-shown': show}" :style="tooltipStyle">
-  <div class="mu-tooltip-ripple" :style="rippleStyle" :class="{'when-shown': show}" ref="ripple">
+<div class="vui-tooltip" :class="{'touched': touch, 'when-shown': show}" :style="tooltipStyle">
+  <div class="vui-tooltip-ripple" :style="rippleStyle" :class="{'when-shown': show}" ref="ripple">
   </div>
-  <span class="mu-tooltip-label">{{label}}</span>
+  <span class="vui-tooltip-label">{{label}}</span>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-tooltip',
+  name: 'vui-tooltip',
   props: {
     label: {
       type: String
@@ -97,7 +97,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-tooltip{
+.vui-tooltip{
   position: absolute;
   font-size: 10px;
   line-height: 22px;
@@ -123,7 +123,7 @@ export default {
 
 
 
-.mu-tooltip-ripple{
+.vui-tooltip-ripple{
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -135,7 +135,7 @@ export default {
   }
 }
 
-.mu-tooltip-label {
+.vui-tooltip-label {
   white-space: nowrap;
   position: relative;
 }

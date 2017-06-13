@@ -1,6 +1,6 @@
 <template>
   <div @mousedown="handleMouseDown" @mouseup="end()" @mouseleave="end()" @touchstart="handleTouchStart"  @touchend="end()" @touchcancel="end()">
-    <div class="mu-ripple-wrapper" :class="rippleWrapperClass" ref="holder">
+    <div class="vui-ripple-wrapper" :class="rippleWrapperClass" ref="holder">
       <circle-ripple :key="ripple.key" :color="ripple.color" :opacity="ripple.opacity" :merge-style="ripple.style" v-for="ripple in ripples"></circle-ripple>
     </div>
     <slot></slot>
@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style lang="css">
-.mu-ripple-wrapper {
+.vui-ripple-wrapper {
   height: 100%;
   width: 100%;
   position: absolute;

@@ -1,10 +1,10 @@
 <template>
-<mu-menu class="demo-menu-divider">
-  <mu-menu-item title="设置" leftIcon="settings"/>
-  <mu-menu-item title="帮助" leftIcon="help_outline"/>
-  <mu-divider />
-  <mu-menu-item title="退出" leftIcon="power_settings_new"/>
-</mu-menu>
+<vui-menu class="demo-menu-divider">
+  <vui-menu-item title="设置" leftIcon="settings"/>
+  <vui-menu-item title="帮助" leftIcon="help_outline"/>
+  <vui-divider />
+  <vui-menu-item title="退出" leftIcon="power_settings_new"/>
+</vui-menu>
 </template>
 
 <style lang="css">

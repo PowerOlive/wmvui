@@ -1,25 +1,25 @@
 <template>
 <div class="demo-chip-container">
-  <mu-chip class="demo-chip">
+  <vui-chip class="demo-chip">
     default chip
-  </mu-chip>
-  <mu-chip class="demo-chip"  @delete="handleClose" showDelete>
+  </vui-chip>
+  <vui-chip class="demo-chip"  @delete="handleClose" showDelete>
     delete chip
-  </mu-chip>
-  <mu-chip class="demo-chip">
-    <mu-avatar src="/images/uicon.jpg"/> avatar chip
-  </mu-chip>
-  <mu-chip class="demo-chip" @delete="handleClose" showDelete>
-    <mu-avatar src="/images/uicon.jpg"/> avatar delete chip
-  </mu-chip>
-  <mu-chip class="demo-chip" @delete="handleClose" showDelete>
-    <mu-avatar icon="like-fill"/> icon avatar chip
-  </mu-chip>
+  </vui-chip>
+  <vui-chip class="demo-chip">
+    <vui-avatar src="/images/uicon.jpg"/> avatar chip
+  </vui-chip>
+  <vui-chip class="demo-chip" @delete="handleClose" showDelete>
+    <vui-avatar src="/images/uicon.jpg"/> avatar delete chip
+  </vui-chip>
+  <vui-chip class="demo-chip" @delete="handleClose" showDelete>
+    <vui-avatar icon="like-fill"/> icon avatar chip
+  </vui-chip>
 
-  <mu-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
-    <mu-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</mu-avatar> custom chip
-  </mu-chip>
-  <mu-toast v-model="toast" message="你点击的删除" />
+  <vui-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
+    <vui-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</vui-avatar> custom chip
+  </vui-chip>
+  <vui-toast v-model="toast" message="你点击的删除" />
 </div>
 </template>
 

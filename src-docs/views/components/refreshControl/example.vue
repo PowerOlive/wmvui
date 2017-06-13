@@ -1,12 +1,12 @@
 <template>
   <div class="demo-refresh-container">
-    <mu-refresh-control :refreshing="refreshing" :trigger="trigger" @refresh="refresh"/>
-    <mu-list>
+    <vui-refresh-control :refreshing="refreshing" :trigger="trigger" @refresh="refresh"/>
+    <vui-list>
       <template v-for="item in list">
-        <mu-list-item disableRipple :title="item"/>
-        <mu-divider/>
+        <vui-list-item disableRipple :title="item"/>
+        <vui-divider/>
       </template>
-    </mu-list>
+    </vui-list>
   </div>
 </template>
 

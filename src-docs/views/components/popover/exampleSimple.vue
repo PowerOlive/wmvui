@@ -1,15 +1,15 @@
 <template>
 <div>
-  <mu-raised-button label="点这里" ref="button" @click="toggle"/>
-  <mu-popover :trigger="trigger" :open="open" @close="handleClose">
-    <mu-menu>
-      <mu-menu-item title="Refresh" />
-      <mu-menu-item title="Send feedback" />
-      <mu-menu-item title="Settings" />
-      <mu-menu-item title="Help" />
-      <mu-menu-item title="Sign out" />
-    </mu-menu>
-  </mu-popover>
+  <vui-raised-button label="点这里" ref="button" @click="toggle"/>
+  <vui-popover :trigger="trigger" :open="open" @close="handleClose">
+    <vui-menu>
+      <vui-menu-item title="Refresh" />
+      <vui-menu-item title="Send feedback" />
+      <vui-menu-item title="Settings" />
+      <vui-menu-item title="Help" />
+      <vui-menu-item title="Sign out" />
+    </vui-menu>
+  </vui-popover>
 </div>
 </template>
 

@@ -1,7 +1,7 @@
 <script>
 import abstractButton from '../internal/abstractButton'
 export default {
-  name: 'mu-bottom-nav',
+  name: 'vui-bottom-nav',
   props: {
     shift: {
       type: Boolean,
@@ -39,11 +39,11 @@ export default {
   },
   render (h) {
     return h(abstractButton, {
-      class: ['mu-bottom-nav', this.shift ? 'mu-bottom-nav-shift' : undefined],
+      class: ['vui-bottom-nav', this.shift ? 'vui-bottom-nav-shift' : undefined],
       props: {
         disableTouchRipple: !this.shift,
         centerRipple: false,
-        wrapperClass: 'mu-bottom-nav-shift-wrapper',
+        wrapperClass: 'vui-bottom-nav-shift-wrapper',
         containerElement: 'div',
         rippleOpacity: 0.3
       }
@@ -54,7 +54,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-bottom-nav{
+.vui-bottom-nav{
   height: 56px;
   display: flex;
   justify-content: center;
@@ -66,11 +66,11 @@ export default {
   color: @alternateTextColor;
 }
 
-.mu-bottom-nav-shift{
+.vui-bottom-nav-shift{
   background-color: @primaryColor;
 }
 
-.mu-bottom-nav-shift-wrapper{
+.vui-bottom-nav-shift-wrapper{
   height: 100%;
   width: 100%;
   display: flex;

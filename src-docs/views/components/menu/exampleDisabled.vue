@@ -1,25 +1,25 @@
 <template>
 <div>
-  <mu-paper class="demo-menu">
-    <mu-menu desktop>
-      <mu-menu-item title="返回"/>
-      <mu-menu-item disabled title="前进"/>
-      <mu-divider />
-      <mu-menu-item disabled title="关闭"/>
-      <mu-menu-item disabled title="切换"/>
-      <mu-menu-item title="菜单"/>
-    </mu-menu>
-  </mu-paper>
-  <mu-paper class="demo-menu">
-    <mu-menu desktop>
-      <mu-menu-item title="剪切"/>
-      <mu-menu-item disabled title="复制"/>
-      <mu-divider />
-      <mu-menu-item title="粘贴"/>
-      <mu-menu-item title="全选"/>
-      <mu-menu-item title="取消"/>
-    </mu-menu>
-  </mu-paper>
+  <vui-paper class="demo-menu">
+    <vui-menu desktop>
+      <vui-menu-item title="返回"/>
+      <vui-menu-item disabled title="前进"/>
+      <vui-divider />
+      <vui-menu-item disabled title="关闭"/>
+      <vui-menu-item disabled title="切换"/>
+      <vui-menu-item title="菜单"/>
+    </vui-menu>
+  </vui-paper>
+  <vui-paper class="demo-menu">
+    <vui-menu desktop>
+      <vui-menu-item title="剪切"/>
+      <vui-menu-item disabled title="复制"/>
+      <vui-divider />
+      <vui-menu-item title="粘贴"/>
+      <vui-menu-item title="全选"/>
+      <vui-menu-item title="取消"/>
+    </vui-menu>
+  </vui-paper>
 </div>
 </template>
 

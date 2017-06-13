@@ -1,7 +1,7 @@
 <template>
-  <mu-appbar title="菜单">
-    <mu-icon-button icon="left" slot="left" :size="22" to="/"></mu-icon-button>
+  <vui-appbar title="菜单">
+    <vui-icon-button icon="left" slot="left" :size="22" to="/"></vui-icon-button>
     <div class="tc">App Bar</div>
-    <mu-icon-button slot="right" icon="right"></mu-icon-button>
-  </mu-appbar>
+    <vui-icon-button slot="right" icon="right"></vui-icon-button>
+  </vui-appbar>
 </template>

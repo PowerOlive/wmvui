@@ -1,5 +1,5 @@
 <template>
-<mu-date-picker hintText="English" okLabel="Ok" cancelLabel="Cancel" :dateTimeFormat="enDateFormat"/>
+<vui-date-picker hintText="English" okLabel="Ok" cancelLabel="Cancel" :dateTimeFormat="enDateFormat"/>
 </template>
 
 <script>

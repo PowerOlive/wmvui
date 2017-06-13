@@ -1,8 +1,8 @@
 <template>
-<div class="mu-clock-minutes">
+<div class="vui-clock-minutes">
   <clock-pointer hasSelected :value="minutes.selected" :hasSelected="minutes.hasSelected" type="minute" />
   <clock-number v-for="minute in minutes.numbers" :selected="minute.isSelected" :key="minute.minute" type="minute" :value="minute.minute" />
-  <div ref="mask" @mouseup="handleUp" @mousemove="handleMove" @touchmove="handleTouch" @touchend="handleTouch" class="mu-clock-minutes-mask"></div>
+  <div ref="mask" @mouseup="handleUp" @mousemove="handleMove" @touchmove="handleTouch" @touchend="handleTouch" class="vui-clock-minutes-mask"></div>
 </div>
 </template>
 
@@ -128,7 +128,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-clock-minutes{
+.vui-clock-minutes{
   height: 100%;
   width: 100%;
   border-radius: 100%;
@@ -137,7 +137,7 @@ export default {
   box-sizing: border-box;
 }
 
-.mu-clock-minutes-mask{
+.vui-clock-minutes-mask{
   height: 100%;
   width: 100%;
   pointer-events: auto;

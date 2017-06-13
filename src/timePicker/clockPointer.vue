@@ -40,13 +40,13 @@ export default {
     if (this.value === undefined || this.value === null) return h('span', {})
     return h('div', {
       class: {
-        'mu-clock-pointer': true,
+        'vui-clock-pointer': true,
         'inner': this.isInner
       },
       style: this.pointerStyle
     }, [h('div', {
       class: {
-        'mu-clock-pointer-mark': true,
+        'vui-clock-pointer-mark': true,
         'has-selected': this.hasSelected
       }
     })])
@@ -56,7 +56,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-clock-pointer {
+.vui-clock-pointer {
   height: 40%;
   background-color: @primaryColor;
   width: 2px;
@@ -70,7 +70,7 @@ export default {
   }
 }
 
-.mu-clock-pointer-mark {
+.vui-clock-pointer-mark {
   box-sizing: content-box;
   background-color: @alternateTextColor;
   border: 4px solid @primaryColor;

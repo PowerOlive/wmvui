@@ -1,7 +1,7 @@
 <template>
   <div>
-    <hr class="mu-text-field-line" :class="lineClass" />
-    <hr v-if="!disabled" class="mu-text-field-focus-line" :style="errorStyle" :class="focusLineClass"/>
+    <hr class="vui-text-field-line" :class="lineClass" />
+    <hr v-if="!disabled" class="vui-text-field-focus-line" :style="errorStyle" :class="focusLineClass"/>
   </div>
 </template>
 
@@ -55,7 +55,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-text-field-line {
+.vui-text-field-line {
   margin: 0;
   height: 1px;
   border: none;
@@ -63,7 +63,7 @@ export default {
   left: 0;
   right: 0;
   position: absolute;
-  .mu-text-field.has-icon & {
+  .vui-text-field.has-icon & {
     left: 56px;
   }
   &.disabled{
@@ -73,7 +73,7 @@ export default {
   }
 }
 
-.mu-text-field-focus-line{
+.vui-text-field-focus-line{
   margin: 0;
   height: 2px;
   border: none;
@@ -84,7 +84,7 @@ export default {
   margin-top: -1px;
   transform: scaleX(0);
   transition: transform .45s @easeOutFunction;
-  .mu-text-field.has-icon & {
+  .vui-text-field.has-icon & {
     left: 56px;
   }
   &.focus {

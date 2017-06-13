@@ -1,11 +1,11 @@
 <template>
 <div class="demo-badge-container">
-  <mu-badge content="10" class="demo-icon-badge" circle secondary>
-    <mu-icon icon="like-fill" :size="24" />
-  </mu-badge>
-  <mu-badge content="12" circle secondary>
-    <mu-icon-button icon="like-fill" />
-  </mu-badge>
+  <vui-badge content="10" class="demo-icon-badge" circle secondary>
+    <vui-icon icon="like-fill" :size="24" />
+  </vui-badge>
+  <vui-badge content="12" circle secondary>
+    <vui-icon-button icon="like-fill" />
+  </vui-badge>
 </div>
 </template>
 

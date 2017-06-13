@@ -1,7 +1,7 @@
 <template>
-  <div class="mu-text-field-multiline">
-    <textarea ref="textareaHidden" rows="1" class="mu-text-field-textarea-hide mu-text-field-input" :value="value"></textarea>
-    <textarea ref="textarea" :name="name" class="mu-text-field-input mu-text-field-textarea"
+  <div class="vui-text-field-multiline">
+    <textarea ref="textareaHidden" rows="1" class="vui-text-field-textarea-hide vui-text-field-input" :value="value"></textarea>
+    <textarea ref="textarea" :name="name" class="vui-text-field-input vui-text-field-textarea"
       :class="normalClass" :value="value" @change="handleChange"
       @input="handleInput" @focus="handleFocus" @blur="handleBlur"
       :placeholder="placeholder" :disabled="disabled" :required="required"></textarea>
@@ -89,18 +89,18 @@ export default {
 </script>
 
 <style lang="less">
-.mu-text-field-textarea{
+.vui-text-field-textarea{
   resize: vertical;
   line-height: 1.5;
   position: relative;
   height: 100%;
   resize: none;
 }
-.mu-text-field-multiline{
+.vui-text-field-multiline{
   width: 100%;
   position: relative;
 }
-.mu-text-field-textarea-hide{
+.vui-text-field-textarea-hide{
   width: 100%;
   height: initial;
   resize: none;

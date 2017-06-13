@@ -1,16 +1,16 @@
 <template>
 <label @mousedown="handleMouseDown" @mouseleave="handleMouseLeave" @mouseup="handleMouseUp"
   @touchstart="handleTouchStart" @touchend="handleTouchEnd" @touchcancel="handleTouchEnd" @click.stop="handleClick"
-  class="mu-switch" :class="{'label-left': labelLeft, 'disabled': disabled, 'no-label': !label}">
+  class="vui-switch" :class="{'label-left': labelLeft, 'disabled': disabled, 'no-label': !label}">
   <input type="checkbox" :disabled="disabled" :name="name" @change="handleChange"  v-model="inputValue">
-  <div class="mu-switch-wrapper">
-    <div class="mu-switch-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
-    <div class="mu-switch-container">
-      <div class="mu-switch-track" :class="trackClass"></div>
-      <div class="mu-switch-thumb" :class="thumbClass" v-if="disabled"></div>
-      <touch-ripple v-if="!disabled"  rippleWrapperClass="mu-switch-ripple-wrapper" class="mu-switch-thumb"/>
+  <div class="vui-switch-wrapper">
+    <div class="vui-switch-label" :class="labelClass" v-if="label && labelLeft">{{label}}</div>
+    <div class="vui-switch-container">
+      <div class="vui-switch-track" :class="trackClass"></div>
+      <div class="vui-switch-thumb" :class="thumbClass" v-if="disabled"></div>
+      <touch-ripple v-if="!disabled"  rippleWrapperClass="vui-switch-ripple-wrapper" class="vui-switch-thumb"/>
     </div>
-    <div class="mu-switch-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
+    <div class="vui-switch-label" :class="labelClass" v-if="label && !labelLeft">{{label}}</div>
   </div>
 </label>
 </template>
@@ -18,7 +18,7 @@
 <script>
 import touchRipple from '../internal/touchRipple'
 export default {
-  name: 'mu-switch',
+  name: 'vui-switch',
   props: {
     name: {
       type: String
@@ -99,7 +99,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-switch {
+.vui-switch {
   position: relative;
   display: inline-block;
   height: 24px;
@@ -109,11 +109,11 @@ export default {
   input[type="checkbox"] {
     display: none;
     &:checked {
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: fade(@primaryColor, 50%);
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @primaryColor;
           color: @primaryColor;
           transform: translate3d(18px, 0, 0);
@@ -124,11 +124,11 @@ export default {
   }
   &.disabled {
     input[type="checkbox"]:checked{
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: @lighterPrimaryColor;
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @grey300;
         }
       }
@@ -143,7 +143,7 @@ export default {
   }
 }
 
-.mu-switch-wrapper{
+.vui-switch-wrapper{
   display: flex;
   width: 100%;
   height: 24px;
@@ -151,41 +151,41 @@ export default {
   justify-content: space-between;
 }
 
-.mu-switch-container{
+.vui-switch-container{
   width: 38px;
   padding: 4px 0px 4px 2px;
   position: relative;
   margin-right: 8px;
   transition: all 450ms @easeOutFunction;
-  .mu-switch.label-left &{
+  .vui-switch.label-left &{
     margin-right: 0;
     margin-left: 8px;
   }
-  .mu-switch.no-label &{
+  .vui-switch.no-label &{
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.mu-switch-label {
+.vui-switch-label {
   color: @textColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     color: @disabledColor;
   }
 }
 
-.mu-switch-track {
+.vui-switch-track {
   width: 100%;
   height: 14px;
   border-radius: 30px;
   background-color: @lighterPrimaryColor;
   transition: all 450ms @easeOutFunction;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @lighterPrimaryColor;
   }
 }
 
-.mu-switch-thumb {
+.vui-switch-thumb {
   position: absolute;
   top: 1px;
   left: 0px;
@@ -198,12 +198,12 @@ export default {
   .depth(1);
   transition: all 450ms @easeOutFunction;
   backface-visibility: hidden;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @grey300;
   }
 }
 
-.mu-switch-ripple-wrapper {
+.vui-switch-ripple-wrapper {
   height: 200%;
   width: 200%;
   top: -10px;

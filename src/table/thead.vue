@@ -1,12 +1,12 @@
 <template>
-  <thead class="mu-thead">
+  <thead class="vui-thead">
     <slot></slot>
   </thead>
 </template>
 
 <script>
 export default {
-  name: 'mu-thead',
+  name: 'vui-thead',
   created () {
     this.isThead = true
   },
@@ -37,7 +37,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-thead {
+.vui-thead {
   border-bottom: 1px solid @borderColor;
 }
 </style>

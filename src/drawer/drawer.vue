@@ -1,5 +1,5 @@
 <template>
-<paper class="mu-drawer" :style="drawerStyle" :class="{'open': open, 'right': right}" :zDepth="zDepth">
+<paper class="vui-drawer" :style="drawerStyle" :class="{'open': open, 'right': right}" :zDepth="zDepth">
   <slot></slot>
 </paper>
 </template>
@@ -12,7 +12,7 @@ import {getWidth} from '../utils'
 const transitionEvents = ['msTransitionEnd', 'mozTransitionEnd', 'oTransitionEnd', 'webkitTransitionEnd', 'transitionend']
 
 export default {
-  name: 'mu-drawer',
+  name: 'vui-drawer',
   props: {
     right: {
       type: Boolean,
@@ -105,7 +105,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-drawer {
+.vui-drawer {
   width: 256px;
   position: fixed;
   top: 0;

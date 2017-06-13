@@ -1,8 +1,8 @@
 <template>
 <div>
-  <mu-circular-progress mode="determinate" :size="40" :value="value"/>
-  <mu-circular-progress mode="determinate" :size="60" :strokeWidth="5" :value="value"/>
-  <mu-circular-progress mode="determinate" :size="90" color="red" :value="value"/>
+  <vui-circular-progress mode="determinate" :size="40" :value="value"/>
+  <vui-circular-progress mode="determinate" :size="60" :strokeWidth="5" :value="value"/>
+  <vui-circular-progress mode="determinate" :size="90" color="red" :value="value"/>
 </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
-<div class="mu-circular-progress" :style="{'width': size + 'px', 'height': size + 'px'}">
+<div class="vui-circular-progress" :style="{'width': size + 'px', 'height': size + 'px'}">
   <circular v-if="mode === 'indeterminate'" :size="size" :color="color" :borderWidth="strokeWidth" />
-  <svg class="mu-circular-progress-determinate"
+  <svg class="vui-circular-progress-determinate"
     :viewBox="'0 0 ' + size + ' ' + size" :style="circularSvgStyle"
     v-if="mode === 'determinate'">
-    <circle class="mu-circular-progress-determinate-path"
+    <circle class="vui-circular-progress-determinate-path"
       :r="radius" :cx="size / 2" :cy="size / 2" fill="none"
       stroke-miterlimit="20" :stroke-width="strokeWidth"
       :style="circularPathStyle"
@@ -17,7 +17,7 @@
 import circular from '../internal/circular'
 import {getColor} from '../utils'
 export default {
-  name: 'mu-circular-progress',
+  name: 'vui-circular-progress',
   props: {
     max: {
       type: Number,
@@ -87,17 +87,17 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-circular-progress {
+.vui-circular-progress {
   display: inline-block;
   position: relative;
   overflow: hidden;
 }
 
-.mu-circular-progress-determinate{
+.vui-circular-progress-determinate{
   position: relative;
 }
 
-.mu-circular-progress-determinate-path{
+.vui-circular-progress-determinate-path{
   stroke: @primaryColor;
   stroke-linecap: round;
   transition: all 0.3s linear;

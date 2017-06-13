@@ -1,18 +1,18 @@
 <template>
-<div class="mu-card-text">
+<div class="vui-card-text">
   <slot></slot>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-card-text'
+  name: 'vui-card-text'
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-card-text{
+.vui-card-text{
   padding: 16px;
   font-size: 14px;
   color: @textColor;

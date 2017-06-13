@@ -1,9 +1,9 @@
 <template>
-<mu-tabs :value="activeTab" @change="handleTabChange">
-  <mu-tab value="tab1" icon="like-fill"/>
-  <mu-tab value="tab2" icon="like-fill"/>
-  <mu-tab value="tab3" icon="like-fill"/>
-</mu-tabs>
+<vui-tabs :value="activeTab" @change="handleTabChange">
+  <vui-tab value="tab1" icon="like-fill"/>
+  <vui-tab value="tab2" icon="like-fill"/>
+  <vui-tab value="tab3" icon="like-fill"/>
+</vui-tabs>
 </template>
 
 <script>

@@ -1,8 +1,8 @@
 <template>
 <div>
-  <mu-icon-menu icon="menu" :maxHeight="300">
-    <mu-menu-item v-for="item, index in list" :title="item" :key="index"/>
-  </mu-icon-menu>
+  <vui-icon-menu icon="menu" :maxHeight="300">
+    <vui-menu-item v-for="item, index in list" :title="item" :key="index"/>
+  </vui-icon-menu>
 </div>
 </template>
 

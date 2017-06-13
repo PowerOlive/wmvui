@@ -1,41 +1,41 @@
 <template>
 <div>
-  <mu-icon-menu
+  <vui-icon-menu
       icon="menu"
       :anchorOrigin="leftTop"
       :targetOrigin="leftTop"
     >
-      <mu-menu-item title="选我" />
-      <mu-menu-item title="选我5杀" />
-      <mu-menu-item title="妈德智障他们骗你的" />
-    </mu-icon-menu>
-    <mu-icon-menu
+      <vui-menu-item title="选我" />
+      <vui-menu-item title="选我5杀" />
+      <vui-menu-item title="妈德智障他们骗你的" />
+    </vui-icon-menu>
+    <vui-icon-menu
       icon="menu"
       :anchorOrigin="leftBottom"
       :targetOrigin="leftBottom"
     >
-      <mu-menu-item title="选我" />
-      <mu-menu-item title="选我5杀" />
-      <mu-menu-item title="妈德智障他们骗你的" />
-    </mu-icon-menu>
-    <mu-icon-menu
+      <vui-menu-item title="选我" />
+      <vui-menu-item title="选我5杀" />
+      <vui-menu-item title="妈德智障他们骗你的" />
+    </vui-icon-menu>
+    <vui-icon-menu
       icon="menu"
       :anchorOrigin="rightBottom"
       :targetOrigin="rightBottom"
     >
-      <mu-menu-item title="选我" />
-      <mu-menu-item title="选我5杀" />
-      <mu-menu-item title="妈德智障他们骗你的" />
-    </mu-icon-menu>
-    <mu-icon-menu
+      <vui-menu-item title="选我" />
+      <vui-menu-item title="选我5杀" />
+      <vui-menu-item title="妈德智障他们骗你的" />
+    </vui-icon-menu>
+    <vui-icon-menu
       icon="menu"
       :anchorOrigin="rightTop"
       :targetOrigin="rightTop"
     >
-      <mu-menu-item title="选我" />
-      <mu-menu-item title="选我5杀" />
-      <mu-menu-item title="妈德智障他们骗你的" />
-    </mu-icon-menu>
+      <vui-menu-item title="选我" />
+      <vui-menu-item title="选我5杀" />
+      <vui-menu-item title="妈德智障他们骗你的" />
+    </vui-icon-menu>
 </div>
 </template>
 

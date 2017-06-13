@@ -1,5 +1,5 @@
 <template>
-<span class="mu-clock-number" :class="numberClass" :style="numberStyle">{{value === 0 ? '00' : value}}</span>
+<span class="vui-clock-number" :class="numberClass" :style="numberStyle">{{value === 0 ? '00' : value}}</span>
 </template>
 
 <script>
@@ -83,7 +83,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-clock-number{
+.vui-clock-number{
   display: inline-block;
   width: 32px;
   height: 32px;

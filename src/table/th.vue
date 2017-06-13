@@ -1,6 +1,6 @@
 <template>
-  <th class="mu-th" @mouseenter="showTooltip" @mouseleave="hideTooltip">
-    <div class="mu-th-wrapper" ref="wrapper">
+  <th class="vui-th" @mouseenter="showTooltip" @mouseleave="hideTooltip">
+    <div class="vui-th-wrapper" ref="wrapper">
       <slot></slot>
       <tooltip v-if="tooltip" :trigger="tooltipTrigger" :verticalPosition="verticalPosition" :horizontalPosition="horizontalPosition" :show="tooltipShown" :label="tooltip" :touch="touch"></tooltip>
     </div>
@@ -10,7 +10,7 @@
 <script>
 import tooltip from '../tooltip'
 export default {
-  name: 'mu-th',
+  name: 'vui-th',
   props: {
     tooltip: {
       type: String
@@ -59,7 +59,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-th {
+.vui-th {
   font-weight: normal;
   font-size: 12px;
   padding-left: 24px;
@@ -70,7 +70,7 @@ export default {
   position: relative;
 }
 
-.mu-th-wrapper{
+.vui-th-wrapper{
   position: relative;
   padding-top: 12px;
   padding-bottom: 12px;

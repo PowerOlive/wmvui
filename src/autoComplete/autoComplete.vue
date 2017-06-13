@@ -1,5 +1,5 @@
 <template>
-<div class="mu-auto-complete" :class="{'fullWidth': fullWidth}">
+<div class="vui-auto-complete" :class="{'fullWidth': fullWidth}">
   <text-field @focus="handleFocus" v-model="searchText" @input="handleInput"
     @keydown.native="handleKeyDown" ref="textField"
     @blur="handleBlur" :value="searchText" :disabled="disabled" :inputClass="inputClass"
@@ -8,11 +8,11 @@
     :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconClass="iconClass" :fullWidth="fullWidth"
     :underlineShow="underlineShow" :underlineClass="underlineClass" :underlineFocusClass="underlineFocusClass"/>
   <popover :overlay="false" :autoPosition="false" :scroller="scroller" :open="open && list.length > 0"  @close="handleClose" :trigger="anchorEl" :anchorOrigin="anchorOrigin" :targetOrigin="targetOrigin">
-    <mu-menu v-if="open" :maxHeight="maxHeight" :style="{'width': (menuWidth && menuWidth > inputWidth ? menuWidth : inputWidth) + 'px'}" :disableAutoFocus="focusTextField"
-      @mousedown.native="handleMouseDown" initiallyKeyboardFocused :autoWidth="false" ref="menu" @itemClick="handleItemClick" class="mu-auto-complete-menu">
-      <menu-item class="mu-auto-complete-menu-item" v-for="item, index in list" :key="'auto_' + index"  @mousedown.native="handleMouseDown" :disableFocusRipple="disableFocusRipple" afterText
+    <vui-menu v-if="open" :maxHeight="maxHeight" :style="{'width': (menuWidth && menuWidth > inputWidth ? menuWidth : inputWidth) + 'px'}" :disableAutoFocus="focusTextField"
+      @mousedown.native="handleMouseDown" initiallyKeyboardFocused :autoWidth="false" ref="menu" @itemClick="handleItemClick" class="vui-auto-complete-menu">
+      <menu-item class="vui-auto-complete-menu-item" v-for="item, index in list" :key="'auto_' + index"  @mousedown.native="handleMouseDown" :disableFocusRipple="disableFocusRipple" afterText
       :leftIcon="item.leftIcon" :leftIconColor="item.leftIconColor" :rightIconColor="item.rightIconColor" :rightIcon="item.rightIcon" :value="item.value" :title="item.text"/>
-    </mu-menu>
+    </vui-menu>
   </popover>
 </div>
 </template>
@@ -24,7 +24,7 @@ import {menu, menuItem} from '../menu'
 import * as filters from './filters'
 import keycode from 'keycode'
 export default {
-  name: 'mu-auto-complete',
+  name: 'vui-auto-complete',
   props: {
     anchorOrigin: {
       type: Object,
@@ -302,14 +302,14 @@ export default {
   components: {
     popover,
     'text-field': textField,
-    'mu-menu': menu,
+    'vui-menu': menu,
     'menu-item': menuItem
   }
 }
 </script>
 
 <style lang="less">
-.mu-auto-complete{
+.vui-auto-complete{
   display: inline-block;
   position: relative;
   width: 256px;
@@ -318,7 +318,7 @@ export default {
   }
 }
 
-.mu-auto-complete-menu-item{
+.vui-auto-complete-menu-item{
   width: 100%;
   overflow: hidden;
 }

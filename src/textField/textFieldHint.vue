@@ -1,5 +1,5 @@
 <template>
-  <div class="mu-text-field-hint" :class="{'show': show}">
+  <div class="vui-text-field-hint" :class="{'show': show}">
     {{text}}
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-text-field-hint{
+.vui-text-field-hint{
   position: absolute;
   opacity: 0;
   transition: opacity .45s @easeOutFunction;
@@ -31,7 +31,7 @@ export default {
   &.show{
     opacity: 1;
   }
-  .mu-text-field.multi-line &{
+  .vui-text-field.multi-line &{
     line-height: 1.5;
   }
 }

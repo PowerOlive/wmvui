@@ -1,3 +1,3 @@
 <template>
-<mu-linear-progress />
+<vui-linear-progress />
 </template>

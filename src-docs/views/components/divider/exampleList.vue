@@ -1,10 +1,10 @@
 <template>
-<mu-list class="demo-list">
-  <mu-list-item title="List Item 1"/>
-  <mu-divider shallowInset/>
-  <mu-list-item title="List Item 2"/>
-  <mu-list-item title="List Item 3"/>
-</mu-list>
+<vui-list class="demo-list">
+  <vui-list-item title="List Item 1"/>
+  <vui-divider shallowInset/>
+  <vui-list-item title="List Item 2"/>
+  <vui-list-item title="List Item 3"/>
+</vui-list>
 </template>
 
 <style lang="css">

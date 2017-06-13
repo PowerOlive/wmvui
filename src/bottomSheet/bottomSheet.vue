@@ -1,7 +1,7 @@
 <template>
   <span>
-    <transition name="mu-bottom-sheet" @after-enter="show()" @after-leave="hide()">
-      <div class="mu-bottom-sheet" :class="sheetClass" ref="popup" v-show="open" :style="{'z-index': zIndex}">
+    <transition name="vui-bottom-sheet" @after-enter="show()" @after-leave="hide()">
+      <div class="vui-bottom-sheet" :class="sheetClass" ref="popup" v-show="open" :style="{'z-index': zIndex}">
         <slot></slot>
       </div>
     </transition>
@@ -11,7 +11,7 @@
 <script>
 import Popup from '../internal/popup'
 export default {
-  name: 'mu-bottom-sheet',
+  name: 'vui-bottom-sheet',
   mixins: [Popup],
   props: {
     sheetClass: {
@@ -31,7 +31,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-bottom-sheet {
+.vui-bottom-sheet {
   background-color: @dialogBackgroundColor;
   position: fixed;
   left: 0;
@@ -39,14 +39,14 @@ export default {
   bottom: 0;
 }
 
-.mu-bottom-sheet-enter-active,
-.mu-bottom-sheet-leave-active{
+.vui-bottom-sheet-enter-active,
+.vui-bottom-sheet-leave-active{
   transition: transform .3s @easeOutFunction;
   backface-visibility: hidden;
 }
 
-.mu-bottom-sheet-enter,
-.mu-bottom-sheet-leave-active{
+.vui-bottom-sheet-enter,
+.vui-bottom-sheet-leave-active{
   transform: translate3d(0, 100%, 0);
 }
 </style>

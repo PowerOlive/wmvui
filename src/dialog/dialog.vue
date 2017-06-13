@@ -1,17 +1,17 @@
 <template>
   <span>
-    <transition name="mu-dialog-slide" @after-enter="show()" @after-leave="hide()">
-      <div class="mu-dialog-wrapper" @click="handleWrapperClick" v-if="open" ref="popup" :style="{'z-index': zIndex}">
-        <div class="mu-dialog" ref="dialog" :class="dialogClass">
-          <h3 class="mu-dialog-title" v-if="showTitle" ref="title" :class="headerClass">
+    <transition name="vui-dialog-slide" @after-enter="show()" @after-leave="hide()">
+      <div class="vui-dialog-wrapper" @click="handleWrapperClick" v-if="open" ref="popup" :style="{'z-index': zIndex}">
+        <div class="vui-dialog" ref="dialog" :class="dialogClass">
+          <h3 class="vui-dialog-title" v-if="showTitle" ref="title" :class="headerClass">
             <slot name="title">
               {{title}}
             </slot>
           </h3>
-          <div class="mu-dialog-body " :style="bodyStyle" :class="bodyClass" ref="elBody">
+          <div class="vui-dialog-body " :style="bodyStyle" :class="bodyClass" ref="elBody">
             <slot></slot>
           </div>
-          <div class="mu-dialog-actions" v-if="showFooter" ref="footer" :class="footerClass">
+          <div class="vui-dialog-actions" v-if="showFooter" ref="footer" :class="footerClass">
             <slot name="actions"></slot>
           </div>
         </div>
@@ -26,7 +26,7 @@ import PopupManager from '../internal/popup/manager'
 import {convertClass} from '../utils'
 export default {
   mixins: [Popup],
-  name: 'mu-dialog',
+  name: 'vui-dialog',
   props: {
     dialogClass: {
       type: [String, Array, Object]
@@ -128,7 +128,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-dialog-wrapper {
+.vui-dialog-wrapper {
   position: fixed;
   left: 0;
   top: 0;
@@ -138,7 +138,7 @@ export default {
   justify-content: center;
   align-items: center;
 }
-.mu-dialog {
+.vui-dialog {
   width: 75%;
   max-width: 768px;
   padding: 0;
@@ -148,7 +148,7 @@ export default {
   .depth(5);
 }
 
-.mu-dialog-title {
+.vui-dialog-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -158,25 +158,25 @@ export default {
   font-weight: normal;
   line-height: 32px;
   color: @textColor;
-  + .mu-dialog-body{
+  + .vui-dialog-body{
     padding-top: 0;
   }
   &.scrollable{
     border-bottom: 1px solid @borderColor;
   }
 }
-.mu-dialog-body {
+.vui-dialog-body {
   padding: 24px 24px 20px;
   color: fade(@textColor, 60%);
 }
 
-.mu-dialog-actions {
+.vui-dialog-actions {
   min-height: 48px;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  .mu-raised-button + .mu-raised-button{
+  .vui-raised-button + .vui-raised-button{
     margin-left: 10px;
   }
   &.scrollable{
@@ -184,23 +184,23 @@ export default {
   }
 }
 
-.mu-dialog-slide-enter-active,
-.mu-dialog-slide-leave-active{
+.vui-dialog-slide-enter-active,
+.vui-dialog-slide-leave-active{
   transition: opacity .45s @easeOutFunction;
-  .mu-dialog {
+  .vui-dialog {
     backface-visibility: hidden;
     transition: transform .45s @easeOutFunction;
   }
 }
-.mu-dialog-slide-enter,
-.mu-dialog-slide-leave-active {
+.vui-dialog-slide-enter,
+.vui-dialog-slide-leave-active {
     opacity: 0;
 }
 
-.mu-dialog-slide-enter .mu-dialog{
+.vui-dialog-slide-enter .vui-dialog{
   transform: translate3d(0, -64px, 0);
 }
-.mu-dialog-slide-leave-active .mu-dialog{
+.vui-dialog-slide-leave-active .vui-dialog{
   transform: translate3d(0, 64px, 0);
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 <div class="demo-picker-container">
-  <mu-picker :slots="addressSlots" :visible-item-count="5" @change="addressChange" :values="address"/>
+  <vui-picker :slots="addressSlots" :visible-item-count="5" @change="addressChange" :values="address"/>
   <p>
     您选择的城市是： {{addressProvince}} {{addressCity}}
   </p>

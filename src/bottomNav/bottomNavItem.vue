@@ -1,11 +1,11 @@
 <template>
   <abstract-button :href="href" :to="to" :tag="tag" :activeClass="activeClass"
     :event="event" :exact="exact" :append="append" :replace="replace"
-    :disableTouchRipple="shift" class="mu-buttom-item" :class="{'mu-bottom-item-active': active}"
-    :center-ripple="false" wrapperClass="mu-buttom-item-wrapper" @click.native="handleClick">
-    <icon v-if="icon" class="mu-bottom-item-icon" :class="iconClass" :icon="icon"></icon>
+    :disableTouchRipple="shift" class="vui-buttom-item" :class="{'vui-bottom-item-active': active}"
+    :center-ripple="false" wrapperClass="vui-buttom-item-wrapper" @click.native="handleClick">
+    <icon v-if="icon" class="vui-bottom-item-icon" :class="iconClass" :icon="icon"></icon>
     <slot></slot>
-    <span v-if="title" class="mu-bottom-item-text" :class="titleClass">{{title}}</span>
+    <span v-if="title" class="vui-bottom-item-text" :class="titleClass">{{title}}</span>
   </abstract-button>
 </template>
 
@@ -15,7 +15,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import {isNotNull} from '../utils'
 export default {
-  name: 'mu-bottom-nav-item',
+  name: 'vui-bottom-nav-item',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -76,7 +76,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-buttom-item {
+.vui-buttom-item {
   flex: 1;
   min-width: 80px;
   max-width: 168px;
@@ -92,24 +92,24 @@ export default {
   transition: all .4s @easeInOutFunction;
   user-select: none;
   padding: 6px;
-  .mu-bottom-nav-shift & {
+  .vui-bottom-nav-shift & {
     color: fade(@alternateTextColor, 70%);
     padding: 8px 12px 10px;
     min-width: 56px;
     max-width: 168px;
   }
 }
-.mu-buttom-item-wrapper {
+.vui-buttom-item-wrapper {
   display: block;
   height: 100%;
 }
-.mu-bottom-item-active {
+.vui-bottom-item-active {
   padding-top: 6px;
   padding-bottom: 5px;
-  .mu-bottom-item-text{
+  .vui-bottom-item-text{
     font-size: 14px;
   }
-  .mu-bottom-nav-shift & {
+  .vui-bottom-nav-shift & {
     flex: 1.7;
     min-width: 96px;
     max-width: 168px;
@@ -118,43 +118,43 @@ export default {
   }
 }
 
-.mu-bottom-item-text{
+.vui-bottom-item-text{
   display: block;
   text-align: center;
   font-size: 12px;
   transition: all .4s @easeOutFunction, color 0.3s, font-size 0.3s;
   backface-visibility: hidden;
-  .mu-bottom-item-active &{
+  .vui-bottom-item-active &{
     color: @primaryColor;
   }
-  .mu-bottom-nav-shift .mu-bottom-item-active &{
+  .vui-bottom-nav-shift .vui-bottom-item-active &{
     color: @alternateTextColor;
   }
-  .mu-bottom-nav-shift & {
+  .vui-bottom-nav-shift & {
     opacity: 0;
     transform: scale(1) translate3d(0, 6px, 0);
   }
-  .mu-bottom-nav-shift .mu-bottom-item-active & {
+  .vui-bottom-nav-shift .vui-bottom-item-active & {
     transform: scale(1) translate3d(0, 2px, 0);
     opacity: 1;
   }
 }
-.mu-bottom-item-icon {
+.vui-bottom-item-icon {
   display: block;
   margin: auto;
   transition: all .45s @easeOutFunction;
   backface-visibility: hidden;
   width: 24px;
-  .mu-bottom-item-active &{
+  .vui-bottom-item-active &{
     color: @primaryColor;
   }
-  .mu-bottom-nav-shift .mu-bottom-item-active & {
+  .vui-bottom-nav-shift .vui-bottom-item-active & {
     color: @alternateTextColor;
   }
-  .mu-bottom-nav-shift & {
+  .vui-bottom-nav-shift & {
     transform: translate3d(0, 8px, 0);
   }
-  .mu-bottom-nav-shift .mu-bottom-item-active & {
+  .vui-bottom-nav-shift .vui-bottom-item-active & {
     transform: scale(1) translateZ(0);
   }
 }

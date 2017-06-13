@@ -1,33 +1,33 @@
 <template>
 <mobile-tear-sheet>
-  <mu-list>
-    <mu-list-item title="有图标">
-      <mu-avatar src="/images/avatar1.jpg" slot="rightAvatar"/>
-      <mu-icon icon="menu" slot="left" color="pinkA200"/>
-    </mu-list-item>
-    <mu-list-item title="木有图标" inset>
-      <mu-avatar src="/images/avatar2.jpg" slot="rightAvatar"/>
-    </mu-list-item>
-    <mu-list-item title="木有图标" inset>
-      <mu-avatar src="/images/avatar3.jpg" slot="rightAvatar"/>
-    </mu-list-item>
-    <mu-list-item title="木有图标" inset>
-      <mu-avatar src="/images/avatar4.jpg" slot="rightAvatar"/>
-    </mu-list-item>
-  </mu-list>
-  <mu-divider style="margin:10px 0"/>
-  <mu-list>
-    <mu-list-item title="菜单">
-      <mu-avatar src="/images/uicon.jpg" slot="rightAvatar"/>
-      <mu-avatar color="pinkA200" :style="{'margin-left': '-8px'}" backgroundColor="transparent" slot="leftAvatar">A</mu-avatar>
-    </mu-list-item>
-    <mu-list-item title="菜单" inset>
-      <mu-avatar src="/images/avatar5.jpg" slot="rightAvatar"/>
-    </mu-list-item>
-    <mu-list-item title="菜单" inset>
-      <mu-avatar src="/images/avatar6.jpg" slot="rightAvatar"/>
-    </mu-list-item>
-  </mu-list>
+  <vui-list>
+    <vui-list-item title="有图标">
+      <vui-avatar src="/images/avatar1.jpg" slot="rightAvatar"/>
+      <vui-icon icon="menu" slot="left" color="pinkA200"/>
+    </vui-list-item>
+    <vui-list-item title="木有图标" inset>
+      <vui-avatar src="/images/avatar2.jpg" slot="rightAvatar"/>
+    </vui-list-item>
+    <vui-list-item title="木有图标" inset>
+      <vui-avatar src="/images/avatar3.jpg" slot="rightAvatar"/>
+    </vui-list-item>
+    <vui-list-item title="木有图标" inset>
+      <vui-avatar src="/images/avatar4.jpg" slot="rightAvatar"/>
+    </vui-list-item>
+  </vui-list>
+  <vui-divider style="margin:10px 0"/>
+  <vui-list>
+    <vui-list-item title="菜单">
+      <vui-avatar src="/images/uicon.jpg" slot="rightAvatar"/>
+      <vui-avatar color="pinkA200" :style="{'margin-left': '-8px'}" backgroundColor="transparent" slot="leftAvatar">A</vui-avatar>
+    </vui-list-item>
+    <vui-list-item title="菜单" inset>
+      <vui-avatar src="/images/avatar5.jpg" slot="rightAvatar"/>
+    </vui-list-item>
+    <vui-list-item title="菜单" inset>
+      <vui-avatar src="/images/avatar6.jpg" slot="rightAvatar"/>
+    </vui-list-item>
+  </vui-list>
 </mobile-tear-sheet>
 </template>
 

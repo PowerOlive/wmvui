@@ -1,13 +1,13 @@
 <template>
-<div class="mu-clock" :class="{'mu-clock-landspace': landscape}">
+<div class="vui-clock" :class="{'vui-clock-landspace': landscape}">
   <!--time display-->
   <time-display :selectedTime="selectedTime" :format="format" :mode="mode" :affix="getAffix()"
     @selectMin="mode = 'minute'" @selectHour="mode = 'hour'" @selectAffix="handleSelectAffix"/>
-  <div class="mu-clock-container">
-    <div class="mu-clock-circle"></div>
+  <div class="vui-clock-container">
+    <div class="vui-clock-circle"></div>
     <clock-hours v-if="mode === 'hour'" :format="format" :initialHours="selectedTime.getHours()" @change="handleChangeHours" />
     <clock-minutes v-if="mode === 'minute'" @change="handleChangeMinutes" :initialMinutes="selectedTime.getMinutes()"/>
-    <div class="mu-clock-actions">
+    <div class="vui-clock-actions">
       <flat-button :label="cancelLabel" @click="dismiss" primary/>
       <flat-button :label="okLabel" @click="accept" primary/>
     </div>
@@ -138,43 +138,43 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-clock {
+.vui-clock {
   user-select: none;
   width: 280px;
 }
 
-.mu-clock-landspace{
+.vui-clock-landspace{
   width: 479px;
   display: flex;
   justify-content: space-between;
 }
 
-.mu-clock-container {
+.vui-clock-container {
   height: 280px;
   padding: 10px;
   position: relative;
   box-sizing: content-box;
   position: relative;
   padding-bottom: 62px;
-  .mu-clock-landspace & {
+  .vui-clock-landspace & {
     width: 300px;
   }
 }
 
-.mu-clock-circle {
+.vui-clock-circle {
   position: absolute;
   top: 20px;
   width: 260px;
   height: 260px;
   border-radius: 100%;
   background-color: fade(@darkBlack, 7%);
-  .mu-clock-landspace &{
+  .vui-clock-landspace &{
     left: 50%;
     margin-left: -130px;
   }
 }
 
-.mu-clock-actions{
+.vui-clock-actions{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

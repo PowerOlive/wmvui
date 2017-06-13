@@ -1,14 +1,14 @@
 <template>
-  <div class="mu-icon-menu">
+  <div class="vui-icon-menu">
     <icon-button :tooltip="tooltip" :tooltipPosition="tooltipPosition" :icon="icon" :iconClass="iconClass" @click="handleOpen">
       <slot name="icon"></slot>
     </icon-button>
     <popover v-if="$slots && $slots.default && $slots.default.length > 0" :open="openMenu" :trigger="trigger" :scroller="scroller" :anchorOrigin="anchorOrigin"
       :targetOrigin="targetOrigin" @close="handleClose">
-      <mu-menu @change="change" :popover="openMenu" :value="value" :class="menuClass" :listClass="menuListClass"
+      <vui-menu @change="change" :popover="openMenu" :value="value" :class="menuClass" :listClass="menuListClass"
         @itemClick="itemClick" :multiple="multiple" :desktop="desktop" :maxHeight="maxHeight">
         <slot></slot>
-      </mu-menu>
+      </vui-menu>
     </popover>
   </div>
 </template>
@@ -18,7 +18,7 @@ import iconButton from '../iconButton'
 import popover from '../popover'
 import {menu} from '../menu'
 export default {
-  name: 'mu-icon-menu',
+  name: 'vui-icon-menu',
   props: {
     icon: {
       type: String,
@@ -118,13 +118,13 @@ export default {
   components: {
     'icon-button': iconButton,
     popover,
-    'mu-menu': menu
+    'vui-menu': menu
   }
 }
 </script>
 
 <style lang="css">
-.mu-icon-menu{
+.vui-icon-menu{
   display: inline-block;
   vertical-align: middle;
   position: relative;

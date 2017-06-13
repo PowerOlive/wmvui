@@ -1,5 +1,5 @@
 <template>
-<abstract-button  class="mu-pagination-item" wrapperClass="mu-pagination-item-wrapper" :class="{'circle': isCircle, 'active': isActive}":centerRipple="false" :disabled="disabled"
+<abstract-button  class="vui-pagination-item" wrapperClass="vui-pagination-item-wrapper" :class="{'circle': isCircle, 'active': isActive}":centerRipple="false" :disabled="disabled"
   @click="handleClick"  @hover="handleHover" @hoverExit="handleHoverExit" containerElement="div">
   <span v-if="index">{{index}}</span>
   <slot></slot>
@@ -60,7 +60,7 @@ export default{
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-pagination-item {
+.vui-pagination-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,13 +89,13 @@ export default{
   }
   &.circle{
     border-radius: 50%;
-    .mu-ripple-wrapper {
+    .vui-ripple-wrapper {
       border-radius: 50%;
     }
   }
 }
 
-.mu-pagination-item-wrapper {
+.vui-pagination-item-wrapper {
   display: flex;
   align-items: center;
   height: 100%;

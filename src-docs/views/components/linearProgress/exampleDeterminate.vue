@@ -1,5 +1,5 @@
 <template>
-<mu-linear-progress mode="determinate" :value="value"/>
+<vui-linear-progress mode="determinate" :value="value"/>
 </template>
 
 <script>

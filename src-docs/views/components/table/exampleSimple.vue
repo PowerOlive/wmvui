@@ -1,37 +1,37 @@
 <template>
 <div>
-  <mu-raised-button label="unselect" @click="unselect"/>
-  <mu-table multiSelectable enableSelectAll ref="table">
-    <mu-thead>
-      <mu-tr>
-        <mu-th>ID</mu-th>
-        <mu-th>Name</mu-th>
-        <mu-th>Status</mu-th>
-      </mu-tr>
-    </mu-thead>
-    <mu-tbody>
-      <mu-tr>
-        <mu-td>1</mu-td>
-        <mu-td>John Smith</mu-td>
-        <mu-td>Employed</mu-td>
-      </mu-tr>
-      <mu-tr>
-        <mu-td>2</mu-td>
-        <mu-td>Randal White</mu-td>
-        <mu-td>Unemployed</mu-td>
-      </mu-tr>
-      <mu-tr>
-        <mu-td>3</mu-td>
-        <mu-td>Stephanie Sanders</mu-td>
-        <mu-td>Employed</mu-td>
-      </mu-tr>
-      <mu-tr>
-        <mu-td>4</mu-td>
-        <mu-td>Steve Brown</mu-td>
-        <mu-td>Employed</mu-td>
-      </mu-tr>
-    </mu-tbody>
-  </mu-table>
+  <vui-raised-button label="unselect" @click="unselect"/>
+  <vui-table multiSelectable enableSelectAll ref="table">
+    <vui-thead>
+      <vui-tr>
+        <vui-th>ID</vui-th>
+        <vui-th>Name</vui-th>
+        <vui-th>Status</vui-th>
+      </vui-tr>
+    </vui-thead>
+    <vui-tbody>
+      <vui-tr>
+        <vui-td>1</vui-td>
+        <vui-td>John Smith</vui-td>
+        <vui-td>Employed</vui-td>
+      </vui-tr>
+      <vui-tr>
+        <vui-td>2</vui-td>
+        <vui-td>Randal White</vui-td>
+        <vui-td>Unemployed</vui-td>
+      </vui-tr>
+      <vui-tr>
+        <vui-td>3</vui-td>
+        <vui-td>Stephanie Sanders</vui-td>
+        <vui-td>Employed</vui-td>
+      </vui-tr>
+      <vui-tr>
+        <vui-td>4</vui-td>
+        <vui-td>Steve Brown</vui-td>
+        <vui-td>Employed</vui-td>
+      </vui-tr>
+    </vui-tbody>
+  </vui-table>
 </div>
 </template>
 <script>

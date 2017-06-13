@@ -1,16 +1,16 @@
 <template>
-<div class="mu-card">
+<div class="vui-card">
   <slot></slot>
 </div>
 </template>
 <script>
 export default {
-  name: 'mu-card'
+  name: 'vui-card'
 }
 </script>
 <style lang="less">
 @import "../styles/import.less";
-.mu-card {
+.vui-card {
   background-color: @dialogBackgroundColor;
   position: relative;
   border-radius: 2px;

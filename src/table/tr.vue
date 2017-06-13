@@ -1,12 +1,12 @@
 <template>
-  <tr class="mu-tr" :key="rowId" @click="handleClick" @mouseenter="handleHover" @mouseleave="handleExit" :class="className">
-    <mu-th class="mu-checkbox-col" v-if="isTh && showCheckbox">
+  <tr class="vui-tr" :key="rowId" @click="handleClick" @mouseenter="handleHover" @mouseleave="handleExit" :class="className">
+    <vui-th class="vui-checkbox-col" v-if="isTh && showCheckbox">
       <checkbox :value="isSelectAll && enableSelectAll" @change="handleSelectAllChange" :disabled="!enableSelectAll || !multiSelectable" />
-    </mu-th>
-    <mu-td class="mu-checkbox-col" v-if="isTb && showCheckbox">
+    </vui-th>
+    <vui-td class="vui-checkbox-col" v-if="isTb && showCheckbox">
       <checkbox ref="checkLabel" :disabled="!selectable || !$parent.selectable" @change="handleCheckboxChange" @click.native="handleCheckboxClick" :value="isSelected"/>
-    </mu-td>
-    <mu-td class="mu-checkbox-col" v-if="isTf && showCheckbox"></mu-td>
+    </vui-td>
+    <vui-td class="vui-checkbox-col" v-if="isTf && showCheckbox"></vui-td>
     <slot></slot>
   </tr>
 </template>
@@ -18,7 +18,7 @@ import th from './th'
 import checkbox from '../checkbox'
 let uuid = 1
 export default {
-  name: 'mu-tr',
+  name: 'vui-tr',
   props: {
     selectable: {
       type: Boolean,
@@ -136,8 +136,8 @@ export default {
     }
   },
   components: {
-    'mu-td': td,
-    'mu-th': th,
+    'vui-td': td,
+    'vui-th': th,
     checkbox
   }
 }
@@ -145,7 +145,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-tr {
+.vui-tr {
   border-bottom: 1px solid @borderColor;
   color: @textColor;
   height: 48px;
@@ -162,15 +162,15 @@ export default {
     background-color: fade(lighten(@primaryColor, 50%), 40%);
   }
 
-  .mu-tfoot & {
+  .vui-tfoot & {
     border-top: 1px solid @borderColor;
   }
-  .mu-checkbox {
+  .vui-checkbox {
     vertical-align: middle;
   }
 }
 
-.mu-checkbox-col {
+.vui-checkbox-col {
   width: 72px;
 }
 </style>

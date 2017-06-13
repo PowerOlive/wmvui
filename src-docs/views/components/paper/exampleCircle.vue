@@ -1,10 +1,10 @@
 <template>
 <div>
-  <mu-paper class="demo-paper" circle :zDepth="1" />
-  <mu-paper class="demo-paper" circle :zDepth="2" />
-  <mu-paper class="demo-paper" circle :zDepth="3" />
-  <mu-paper class="demo-paper" circle :zDepth="4" />
-  <mu-paper class="demo-paper" circle :zDepth="5" />
+  <vui-paper class="demo-paper" circle :zDepth="1" />
+  <vui-paper class="demo-paper" circle :zDepth="2" />
+  <vui-paper class="demo-paper" circle :zDepth="3" />
+  <vui-paper class="demo-paper" circle :zDepth="4" />
+  <vui-paper class="demo-paper" circle :zDepth="5" />
 </div>
 </template>
 <style lang="css">

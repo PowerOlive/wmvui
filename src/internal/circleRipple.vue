@@ -1,6 +1,6 @@
 <template>
-  <transition name="mu-ripple">
-    <div class="mu-circle-ripple" :style="styles"></div>
+  <transition name="vui-ripple">
+    <div class="vui-circle-ripple" :style="styles"></div>
   </transition>
 </template>
 
@@ -32,7 +32,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-circle-ripple{
+.vui-circle-ripple{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,15 +46,15 @@ export default {
   opacity: 0.1;
 }
 
-.mu-ripple-enter-active, .mu-ripple-leave-active{
+.vui-ripple-enter-active, .vui-ripple-leave-active{
   transition: opacity 2s @easeOutFunction, transform .45s @easeOutFunction;
 }
 
-.mu-ripple-enter {
+.vui-ripple-enter {
   transform: scale(0);
 }
 
-.mu-ripple-leave-active{
+.vui-ripple-leave-active{
   opacity: 0 !important;
 }
 </style>

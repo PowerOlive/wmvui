@@ -1,12 +1,12 @@
 <template>
-<tfoot class="mu-tfoot">
+<tfoot class="vui-tfoot">
   <slot></slot>
 </tfoot>
 </template>
 
 <script>
 export default {
-  name: 'mu-tfoot',
+  name: 'vui-tfoot',
   created () {
     this.isTfoot = true
   },

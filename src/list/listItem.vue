@@ -4,38 +4,38 @@
       :href="href" :disabled="disabled" :disableFocusRipple="disableRipple"  :disableTouchRipple="disableRipple" :target="target"
       :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
       @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
-      class="mu-item-wrapper" :wrapperStyle="itemStyle" :style="disabled ? itemStyle : {}" :centerRipple="false">
+      class="vui-item-wrapper" :wrapperStyle="itemStyle" :style="disabled ? itemStyle : {}" :centerRipple="false">
       <div :class="itemClass">
-        <div class="mu-item-left" v-if="showLeft">
+        <div class="vui-item-left" v-if="showLeft">
           <slot name="left"></slot>
           <slot name="leftAvatar"></slot>
         </div>
-        <div class="mu-item-content">
-          <div class="mu-item-title-row" v-if="showTitleRow">
-            <div class="mu-item-title" :class="titleClass">
+        <div class="vui-item-content">
+          <div class="vui-item-title-row" v-if="showTitleRow">
+            <div class="vui-item-title" :class="titleClass">
                <slot name="title">
                  {{title}}
                </slot>
             </div>
-            <div class="mu-item-after" :class="afterTextClass">
+            <div class="vui-item-after" :class="afterTextClass">
                 <slot name="after">
                   {{afterText}}
                 </slot>
             </div>
           </div>
-          <div class="mu-item-text" :style="textStyle" :class="describeTextClass" v-if="showDescribe">
+          <div class="vui-item-text" :style="textStyle" :class="describeTextClass" v-if="showDescribe">
             <slot name="describe">
               {{describeText}}
             </slot>
           </div>
           <slot></slot>
         </div>
-        <div class="mu-item-right" v-if="showRight">
+        <div class="vui-item-right" v-if="showRight">
           <icon-button @click.stop="handleToggleNested" @mousedown.native="stop" @touchstart.native="stop"  v-if="toggleNested">
-            <svg v-if="nestedOpen" class="mu-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
+            <svg v-if="nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
               <path d="M6 15L12 9L18 15"/>
             </svg>
-            <svg v-if="!nestedOpen" class="mu-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
+            <svg v-if="!nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
               <path d="M6 9L12 15L18 9"/>
             </svg>
           </icon-button>
@@ -45,9 +45,9 @@
       </div>
     </abstract-button>
     <expand-transition>
-      <mu-list v-if="showNested" :class="nestedListClass" :nestedLevel="nestedLevel" @change="handleNestedChange" :value="nestedSelectValue">
+      <vui-list v-if="showNested" :class="nestedListClass" :nestedLevel="nestedLevel" @change="handleNestedChange" :value="nestedSelectValue">
         <slot name="nested"></slot>
-      </mu-list>
+      </vui-list>
     </expand-transition>
   </div>
 </template>
@@ -60,7 +60,7 @@ import list from './list'
 import expandTransition from '../internal/expandTransition'
 import {isNotNull} from '../utils'
 export default {
-  name: 'mu-list-item',
+  name: 'vui-list-item',
   mixins: [routerMixin],
   props: {
     href: {
@@ -148,7 +148,7 @@ export default {
       return this.describeText || (this.$slots && this.$slots.describe && this.$slots.describe.length > 0)
     },
     itemClass () {
-      var arr = ['mu-item']
+      var arr = ['vui-item']
       if (this.showLeft || this.inset) arr.push('show-left')
       if (this.showRight) arr.push('show-right')
       if (this.hasAvatar) arr.push('has-avatar')
@@ -214,7 +214,7 @@ export default {
   },
   components: {
     'abstract-button': abstractButton,
-    'mu-list': list,
+    'vui-list': list,
     'icon-button': iconButton,
     'expand-transition': expandTransition
   }
@@ -223,7 +223,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-item-wrapper {
+.vui-item-wrapper {
   display: block;
   color: inherit;
   position: relative;
@@ -237,7 +237,7 @@ export default {
   }
 }
 
-.mu-item {
+.vui-item {
   min-height: 48px;
   display: flex;
   color: @textColor;
@@ -255,12 +255,12 @@ export default {
   &.selected {
     color: @primaryColor;
   }
-  .mu-item-content{
+  .vui-item-content{
     padding-left:4px;
   }
 }
 
-.mu-item-toggle-button {
+.vui-item-toggle-button {
   position: absolute;
   color: @textColor;
   position: absolute;
@@ -268,8 +268,8 @@ export default {
   top: 0;
 }
 
-.mu-item-right,
-.mu-item-left{
+.vui-item-right,
+.vui-item-left{
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -281,28 +281,28 @@ export default {
   }
 }
 
-.mu-item-left{
-  .mu-item.selected &{
+.vui-item-left{
+  .vui-item.selected &{
     color: @primaryColor;
   }
 }
 
-.mu-item-right{
+.vui-item-right{
   justify-content: center;
-  > .mu-icon-button {
+  > .vui-icon-button {
     align-self: flex-start;
   }
-  > .mu-icon-menu {
+  > .vui-icon-menu {
     align-self: flex-start;
   }
 }
 
-.mu-item-content{
+.vui-item-content{
   width: 100%;
   align-self: center;
 }
 
-.mu-item-title-row{
+.vui-item-title-row{
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -311,25 +311,25 @@ export default {
   line-height: 1;
 }
 
-.mu-item-title{
+.vui-item-title{
   flex: 1;
   display: block;
   font-size: 16px;
   max-width: 100%;
 }
 
-.mu-item-sub-title {
+.vui-item-sub-title {
   line-height: 1;
   margin-top: 4px;
 }
-.mu-item-after{
+.vui-item-after{
   margin-left: auto;
   color: @secondaryTextColor;
   display: flex;
   align-items: center;
 }
 
-.mu-item-text{
+.vui-item-text{
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -345,7 +345,7 @@ export default {
   color: @secondaryTextColor;
 }
 
-.mu-item-svg-icon {
+.vui-item-svg-icon {
   display: inline-block;
   width: 24px;
   height: 24px;

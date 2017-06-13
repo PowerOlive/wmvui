@@ -1,5 +1,5 @@
 <template>
-<div class="mu-text-field-label" :class="labelClass">
+<div class="vui-text-field-label" :class="labelClass">
   <slot></slot>
 </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-text-field-label {
+.vui-text-field-label {
   line-height: 20px;
   transition: all .45s @easeOutFunction;
   z-index: 1;
@@ -48,11 +48,11 @@ export default {
   user-select: none;
   pointer-events: none;
   backface-visibility: hidden;
-  .mu-text-field.has-label & {
+  .vui-text-field.has-label & {
     top: 8px;
     position: absolute;
   }
-  .mu-text-field.has-label &.float {
+  .vui-text-field.has-label &.float {
     transform: translate3d(0, 28px, 0) scale(1);
     color: @disabledColor;
   }

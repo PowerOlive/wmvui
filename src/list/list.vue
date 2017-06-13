@@ -1,11 +1,11 @@
 <template>
-  <div class="mu-list">
+  <div class="vui-list">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name: 'mu-list',
+  name: 'vui-list',
   props: {
     nestedLevel: {
       type: Number,
@@ -26,13 +26,13 @@ export default {
 </script>
 <style lang="less">
 @import "../styles/import.less";
-.mu-list {
+.vui-list {
   padding: 8px 0;
   width: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: visible;
-  .mu-sub-header:first-child{
+  .vui-sub-header:first-child{
     margin-top: -8px;
   }
 }

@@ -1,22 +1,22 @@
 <template>
 <div class="demo-step-container">
-  <mu-stepper :activeStep="activeStep">
-    <mu-step>
-      <mu-step-label>
+  <vui-stepper :activeStep="activeStep">
+    <vui-step>
+      <vui-step-label>
         选择活动地点
-      </mu-step-label>
-    </mu-step>
-    <mu-step>
-      <mu-step-label>
+      </vui-step-label>
+    </vui-step>
+    <vui-step>
+      <vui-step-label>
         创建一个群组
-      </mu-step-label>
-    </mu-step>
-    <mu-step>
-      <mu-step-label>
+      </vui-step-label>
+    </vui-step>
+    <vui-step>
+      <vui-step-label>
         宣传活动
-      </mu-step-label>
-    </mu-step>
-  </mu-stepper>
+      </vui-step-label>
+    </vui-step>
+  </vui-stepper>
   <div class="demo-step-content">
     <p v-if="finished">
       都完成啦!<a href="javascript:;" @click="reset">点这里</a>可以重置
@@ -26,8 +26,8 @@
         {{content}}
       </p>
       <div>
-        <mu-flat-button class="demo-step-button" label="上一步" :disabled="activeStep === 0" @click="handlePrev"/>
-        <mu-raised-button class="demo-step-button" :label="activeStep === 2 ? '完成' : '下一步'" primary @click="handleNext"/>
+        <vui-flat-button class="demo-step-button" label="上一步" :disabled="activeStep === 0" @click="handlePrev"/>
+        <vui-raised-button class="demo-step-button" :label="activeStep === 2 ? '完成' : '下一步'" primary @click="handleNext"/>
       </div>
     </template>
   </div>

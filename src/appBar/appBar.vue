@@ -1,9 +1,9 @@
 <template>
-<div class="mu-appbar" :class="['mu-paper-' + zDepth ]">
+<div class="vui-appbar" :class="['vui-paper-' + zDepth ]">
   <div class="left">
     <slot name="left"></slot>
   </div>
-  <div class="mu-appbar-title" :class="titleClass">
+  <div class="vui-appbar-title" :class="titleClass">
     <slot>
       <span>{{title}}</span>
     </slot>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'mu-appbar',
+  name: 'vui-appbar',
   props: {
     title: {
       type: String,
@@ -35,7 +35,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-appbar {
+.vui-appbar {
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
@@ -55,10 +55,10 @@ export default {
     align-items: center;
     height: 100%;
   }
-  .mu-icon-button {
+  .vui-icon-button {
     color: inherit;
   }
-  .mu-flat-button {
+  .vui-flat-button {
     color: inherit;
     height: 100%;
     line-height: 100%;
@@ -66,7 +66,7 @@ export default {
   }
 }
 
-.mu-appbar-title {
+.vui-appbar-title {
   flex: 1;
   padding-left: 8px;
   padding-right: 8px;
@@ -80,13 +80,13 @@ export default {
 }
 
 @media (min-width: 480px) {
-  .mu-appbar-title {
+  .vui-appbar-title {
     /* line-height: 64px; */
   }
-  .mu-appbar {
+  .vui-appbar {
     height: 64px;
   }
-  .mu-appbar-title {
+  .vui-appbar-title {
     font-size: 24px;
   }
 }

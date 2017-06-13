@@ -1,11 +1,11 @@
-.mu-switch {
+.vui-switch {
   input[type="checkbox"] {
     &:checked {
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: @switchTrackOnColor;
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @switchThumbOnColor;
           color: @switchThumbOnColor;
         }
@@ -15,11 +15,11 @@
   }
   &.disabled {
     input[type="checkbox"]:checked{
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: @switchTrackDisabledColor;
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @switchThumbDisabledColor;
         }
       }
@@ -28,24 +28,24 @@
 }
 
 
-.mu-switch-label {
+.vui-switch-label {
   color: @switchTextColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     color: @switchTextDisabledColor;
   }
 }
 
-.mu-switch-track {
+.vui-switch-track {
   background-color: @switchTrackOffColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @switchTrackDisabledColor;
   }
 }
 
-.mu-switch-thumb {
+.vui-switch-thumb {
   color: @switchTextColor;
   background-color: @switchThumbOffColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @switchThumbDisabledColor;
   }
 }

@@ -1,43 +1,43 @@
 <template>
 <div>
-  <mu-flexbox>
-    <mu-flexbox-item class="flex-demo">
+  <vui-flexbox>
+    <vui-flexbox-item class="flex-demo">
       1
-    </mu-flexbox-item>
-    <mu-flexbox-item class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item class="flex-demo">
       2
-    </mu-flexbox-item>
-    <mu-flexbox-item class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item class="flex-demo">
       3
-    </mu-flexbox-item>
-  </mu-flexbox>
-  <mu-flexbox class="mt8">
-    <mu-flexbox-item class="flex-demo">
+    </vui-flexbox-item>
+  </vui-flexbox>
+  <vui-flexbox class="mt8">
+    <vui-flexbox-item class="flex-demo">
       4
-    </mu-flexbox-item>
-    <mu-flexbox-item class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item class="flex-demo">
       5
-    </mu-flexbox-item>
-  </mu-flexbox>
-  <mu-flexbox class="mt8">
-    <mu-flexbox-item order="0" class="flex-demo">
+    </vui-flexbox-item>
+  </vui-flexbox>
+  <vui-flexbox class="mt8">
+    <vui-flexbox-item order="0" class="flex-demo">
       6
-    </mu-flexbox-item>
-    <mu-flexbox-item order="2" span="200" class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item order="2" span="200" class="flex-demo">
       7
-    </mu-flexbox-item>
-    <mu-flexbox-item order="1" class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item order="1" class="flex-demo">
       8
-    </mu-flexbox-item>
-  </mu-flexbox>
-  <mu-flexbox class="mt8" orient="vertical">
-    <mu-flexbox-item order="0" class="flex-demo">
+    </vui-flexbox-item>
+  </vui-flexbox>
+  <vui-flexbox class="mt8" orient="vertical">
+    <vui-flexbox-item order="0" class="flex-demo">
       9
-    </mu-flexbox-item>
-    <mu-flexbox-item order="2" class="flex-demo">
+    </vui-flexbox-item>
+    <vui-flexbox-item order="2" class="flex-demo">
       10
-    </mu-flexbox-item>
-  </mu-flexbox>
+    </vui-flexbox-item>
+  </vui-flexbox>
 </div>
 </template>
 

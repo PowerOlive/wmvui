@@ -1,5 +1,5 @@
 <template>
-<text-field ref="textField" class="mu-select-field" :label="label" :labelFloat="labelFloat" :underlineShow="underlineShow"
+<text-field ref="textField" class="vui-select-field" :label="label" :labelFloat="labelFloat" :underlineShow="underlineShow"
   :labelClass="labelClass" :labelFocusClass="labelFocusClass" :underlineClass="underlineClass" :underlineFocusClass="underlineFocusClass"
   :fullWidth="fullWidth" :hintText="hintText" :hintTextClass="hintTextClass"
   :helpText="helpText" :helpTextClass="helpTextClass" :icon="icon" :iconClass="iconClass"
@@ -20,7 +20,7 @@ import textField from '../textField'
 import dropDownMenu from '../dropDownMenu'
 import {isNull} from '../utils'
 export default {
-  name: 'mu-select-field',
+  name: 'vui-select-field',
   props: {
     name: {
       type: String
@@ -153,13 +153,13 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-select-field{
-  .mu-dropDown-menu{
+.vui-select-field{
+  .vui-dropDown-menu{
     display: block;
     width: 100%;
     height: 32px;
   }
-  .mu-dropDown-menu-text{
+  .vui-dropDown-menu-text{
     line-height: 32px;
     height: 32px;
     padding-left: 0px;
@@ -167,10 +167,10 @@ export default {
     word-wrap: break-word;
     overflow: hidden;
   }
-  .mu-dropDown-menu-line{
+  .vui-dropDown-menu-line{
     display: none;
   }
-  .mu-dropDown-menu-icon{
+  .vui-dropDown-menu-icon{
     right: 0;
     top: 6px;
   }

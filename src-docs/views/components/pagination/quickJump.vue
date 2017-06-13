@@ -1,6 +1,6 @@
 <template>
-  <mu-pagination :total="total" :defaultCurrent="defaultCurrent" :showQuickJumper="showQuickJumper"  @pageChange="handleClick">
-  </mu-pagination>
+  <vui-pagination :total="total" :defaultCurrent="defaultCurrent" :showQuickJumper="showQuickJumper"  @pageChange="handleClick">
+  </vui-pagination>
 </template>
 
 <script>

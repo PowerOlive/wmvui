@@ -1,12 +1,12 @@
 <template>
-<td class="mu-td" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" @click="handleClick">
+<td class="vui-td" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" @click="handleClick">
   <slot></slot>
 </td>
 </template>
 
 <script>
 export default {
-  name: 'mu-td',
+  name: 'vui-td',
   props: {
     name: {
       type: String
@@ -32,7 +32,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-td{
+.vui-td{
   padding-left: 24px;
   padding-right: 24px;
   height: 48px;

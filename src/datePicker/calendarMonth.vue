@@ -1,6 +1,6 @@
 <template>
-<div class="mu-calendar-monthday-content">
-  <div class="mu-calendar-monthday-row" :key="i"  v-for="week, i in weeksArray">
+<div class="vui-calendar-monthday-content">
+  <div class="vui-calendar-monthday-row" :key="i"  v-for="week, i in weeksArray">
     <day-button @click="handleClick(date)" v-for="date, j in week" :disabled="isDisableDate(date)" :key="'dayButton' + i + '' + j" :selected="equalsDate(date)" :date="date"></day-button>
   </div>
 </div>
@@ -64,7 +64,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-calendar-monthday-content {
+.vui-calendar-monthday-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -75,7 +75,7 @@ export default {
   text-align: center;
 }
 
-.mu-calendar-monthday-row {
+.vui-calendar-monthday-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

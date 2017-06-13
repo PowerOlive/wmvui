@@ -1,65 +1,65 @@
 <template>
 <div>
   <h2 class="api-view-title">{{title}}</h2>
-  <mu-tabs class="api-view-tabs" v-if="showTabs" @change="handleChange" :value="value">
-    <mu-tab value="props" v-if="api.props" title="Props"/>
-    <mu-tab value="slots" v-if="api.slots" title="Slots"/>
-    <mu-tab value="events" v-if="api.events" title="Events"/>
-  </mu-tabs>
-  <mu-table v-show="value === 'props'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
-    <mu-thead>
-      <mu-tr>
-        <mu-th class="api-th" width="20%">{{$t('name')}}</mu-th>
-        <mu-th class="api-th" width="15%">{{$t('type')}}</mu-th>
-        <mu-th class="api-th" width="25%">{{$t('default')}}</mu-th>
-        <mu-th class="api-th" width="40%">{{$t('description')}}</mu-th>
-      </mu-tr>
-    </mu-thead>
-    <mu-tbody>
-      <mu-tr v-for="item, index in api.props" :key="item.name + index">
-        <mu-td class="api-td">{{item.name}}</mu-td>
-        <mu-td class="api-td api-type-td">{{item.type}}</mu-td>
-        <mu-td class="api-td api-default-td">
+  <vui-tabs class="api-view-tabs" v-if="showTabs" @change="handleChange" :value="value">
+    <vui-tab value="props" v-if="api.props" title="Props"/>
+    <vui-tab value="slots" v-if="api.slots" title="Slots"/>
+    <vui-tab value="events" v-if="api.events" title="Events"/>
+  </vui-tabs>
+  <vui-table v-show="value === 'props'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
+    <vui-thead>
+      <vui-tr>
+        <vui-th class="api-th" width="20%">{{$t('name')}}</vui-th>
+        <vui-th class="api-th" width="15%">{{$t('type')}}</vui-th>
+        <vui-th class="api-th" width="25%">{{$t('default')}}</vui-th>
+        <vui-th class="api-th" width="40%">{{$t('description')}}</vui-th>
+      </vui-tr>
+    </vui-thead>
+    <vui-tbody>
+      <vui-tr v-for="item, index in api.props" :key="item.name + index">
+        <vui-td class="api-td">{{item.name}}</vui-td>
+        <vui-td class="api-td api-type-td">{{item.type}}</vui-td>
+        <vui-td class="api-td api-default-td">
           <markdown-element :text="item.default"/>
-        </mu-td>
-        <mu-td class="api-desc-td api-td">
+        </vui-td>
+        <vui-td class="api-desc-td api-td">
           <markdown-element :text="translate(item.desc)"/>
-        </mu-td>
-      </mu-tr>
-    </mu-tbody>
-  </mu-table>
-  <mu-table v-show="value === 'slots'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
-    <mu-thead>
-      <mu-tr>
-        <mu-th class="api-th" width="15%">{{$t('name')}}</mu-th>
-        <mu-th class="api-th" width="55%">{{$t('description')}}</mu-th>
-      </mu-tr>
-    </mu-thead>
-    <mu-tbody>
-      <mu-tr v-for="item, index in api.slots" :key="'slot_' + index">
-        <mu-td class="api-td">{{item.name}}</mu-td>
-        <mu-td class="api-desc-td api-td">
+        </vui-td>
+      </vui-tr>
+    </vui-tbody>
+  </vui-table>
+  <vui-table v-show="value === 'slots'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
+    <vui-thead>
+      <vui-tr>
+        <vui-th class="api-th" width="15%">{{$t('name')}}</vui-th>
+        <vui-th class="api-th" width="55%">{{$t('description')}}</vui-th>
+      </vui-tr>
+    </vui-thead>
+    <vui-tbody>
+      <vui-tr v-for="item, index in api.slots" :key="'slot_' + index">
+        <vui-td class="api-td">{{item.name}}</vui-td>
+        <vui-td class="api-desc-td api-td">
           <markdown-element :text="translate(item.desc)"/>
-        </mu-td>
-      </mu-tr>
-    </mu-tbody>
-  </mu-table>
-  <mu-table v-show="value === 'events'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
-    <mu-thead>
-      <mu-tr>
-        <mu-th class="api-th" width="15%">{{$t('name')}}</mu-th>
-        <mu-th class="api-th" width="55%">{{$t('description')}}</mu-th>
-      </mu-tr>
-    </mu-thead>
-    <mu-tbody>
-      <mu-tr v-for="item, index in api.events" :key="'event_' + index">
-        <mu-td class="api-td">{{item.name}}</mu-td>
-        <mu-td class="api-desc-td api-td">
+        </vui-td>
+      </vui-tr>
+    </vui-tbody>
+  </vui-table>
+  <vui-table v-show="value === 'events'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
+    <vui-thead>
+      <vui-tr>
+        <vui-th class="api-th" width="15%">{{$t('name')}}</vui-th>
+        <vui-th class="api-th" width="55%">{{$t('description')}}</vui-th>
+      </vui-tr>
+    </vui-thead>
+    <vui-tbody>
+      <vui-tr v-for="item, index in api.events" :key="'event_' + index">
+        <vui-td class="api-td">{{item.name}}</vui-td>
+        <vui-td class="api-desc-td api-td">
           <markdown-element :text="translate(item.desc)"/>
-        </mu-td>
-      </mu-tr>
-    </mu-tbody>
-  </mu-table>
+        </vui-td>
+      </vui-tr>
+    </vui-tbody>
+  </vui-table>
 </div>
 </template>
 
@@ -111,14 +111,14 @@ export default {
   background-color: transparent;
   color: @textColor;
   margin-bottom: 16px;
-  .mu-tab-link-highlight {
+  .vui-tab-link-highlight {
     background-color: @primaryColor;
   }
-  .mu-tab-link{
+  .vui-tab-link{
     color: @secondaryTextColor;
   }
 
-  .mu-tab-active{
+  .vui-tab-active{
     color: @primaryColor;
   }
 }
@@ -150,7 +150,7 @@ export default {
 }
 
 .api-view-table {
-  .mu-table {
+  .vui-table {
     min-width: 700px;
     // table-layout: auto;
   }

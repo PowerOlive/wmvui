@@ -1,19 +1,19 @@
 <template>
   <div>
     <div v-if="fixedHeader">
-      <table class="mu-table">
+      <table class="vui-table">
         <slot name="header"></slot>
       </table>
     </div>
     <div :style="bodyStyle">
-      <table class="mu-table">
+      <table class="vui-table">
         <slot v-if="!fixedHeader" name="header"></slot>
         <slot></slot>
         <slot v-if="!fixedFooter" name="footer"></slot>
       </table>
     </div>
     <div v-if="fixedFooter">
-      <table class="mu-table">
+      <table class="vui-table">
         <slot name="footer"></slot>
       </table>
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'mu-table',
+  name: 'vui-table',
   props: {
     fixedFooter: {
       type: Boolean,
@@ -136,7 +136,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-table {
+.vui-table {
   background-color: @alternateTextColor;
   padding: 0 24px;
   width: 100%;

@@ -1,8 +1,8 @@
 <template>
 <div>
-  <mu-slider v-model="value1" disabled class="demo-slider"/>
-  <mu-slider v-model="value2" disabled class="demo-slider"/>
-  <mu-slider v-model="value3" disabled class="demo-slider"/>
+  <vui-slider v-model="value1" disabled class="demo-slider"/>
+  <vui-slider v-model="value2" disabled class="demo-slider"/>
+  <vui-slider v-model="value3" disabled class="demo-slider"/>
 </div>
 </template>
 

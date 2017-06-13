@@ -1,14 +1,14 @@
 <template>
-<div class="mu-picker">
+<div class="vui-picker">
   <picker-slot :divider="slot.divider" :content="slot.content"  :text-align="slot.textAlign" :width="slot.width" v-for="(slot, $index) in slots" :key="$index" @change="change($index, arguments)" :value="values[$index]" :values="slot.values" :visible-item-count="visibleItemCount"></picker-slot>
-  <div class="mu-picker-center-highlight"></div>
+  <div class="vui-picker-center-highlight"></div>
 </div>
 </template>
 
 <script>
 import pickerSlot from './picker-slot'
 export default {
-  name: 'mu-picker',
+  name: 'vui-picker',
   props: {
     visibleItemCount: {
       type: Number,
@@ -39,7 +39,7 @@ export default {
 </script>
 <style lang="less">
 @import "../styles/import.less";
-.mu-picker{
+.vui-picker{
   background: @dialogBackgroundColor;
   overflow: hidden;
   width: 100%;
@@ -51,7 +51,7 @@ export default {
   -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
 }
 
-.mu-picker-center-highlight {
+.vui-picker-center-highlight {
   height: 36px;
   box-sizing: border-box;
   position: absolute;
@@ -64,14 +64,14 @@ export default {
   border-bottom: 1px solid @borderColor;
 }
 
-.mu-picker-center-highlight:before {
+.vui-picker-center-highlight:before {
   left: 0;
   top: 0;
   bottom: auto;
   right: auto;
 }
 
-.mu-picker-center-highlight:after {
+.vui-picker-center-highlight:after {
   left: 0;
   bottom: 0;
   right: auto;

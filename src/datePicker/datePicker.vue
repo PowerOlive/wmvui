@@ -1,5 +1,5 @@
 <template>
-<div class="mu-date-picker" :class="{'fullWidth': fullWidth}">
+<div class="vui-date-picker" :class="{'fullWidth': fullWidth}">
   <text-field @focus="handleFocus" @labelClick="handleClick" :value="inputValue" :disabled="disabled" :fullWidth="fullWidth"
     :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
@@ -13,7 +13,7 @@ import * as dateUtils from './dateUtils'
 import textField from '../textField'
 import datePickerDialog from './datePickerDialog'
 export default {
-  name: 'mu-date-picker',
+  name: 'vui-date-picker',
   props: {
     dateTimeFormat: {
       type: Object,
@@ -184,7 +184,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-date-picker{
+.vui-date-picker{
   display: inline-block;
   position: relative;
   width: 256px;

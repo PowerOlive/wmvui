@@ -1,5 +1,5 @@
 <template>
-<div class="mu-linear-progress" :style="{'height': size + 'px', 'border-radius': (size ? size / 2 : '') + 'px'}">
+<div class="vui-linear-progress" :style="{'height': size + 'px', 'border-radius': (size ? size / 2 : '') + 'px'}">
   <div :style="linearStyle" :class="linearClass"></div>
 </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import {getColor} from '../utils'
 export default {
-  name: 'mu-linear-progress',
+  name: 'vui-linear-progress',
   props: {
     max: {
       type: Number,
@@ -49,7 +49,7 @@ export default {
       }
     },
     linearClass () {
-      return 'mu-linear-progress-' + this.mode
+      return 'vui-linear-progress-' + this.mode
     }
   }
 }
@@ -57,7 +57,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-linear-progress{
+.vui-linear-progress{
   position: relative;
   height: 4px;
   display: block;
@@ -68,18 +68,18 @@ export default {
   overflow: hidden;
 }
 
-.mu-linear-progress-indeterminate{
+.vui-linear-progress-indeterminate{
   position: absolute;
   top: 0;
   bottom: 0;
   width: 40%;
   border-radius: 2px;
   background-color: @primaryColor;
-  animation: mu-linear-progress-animate 840ms @easeInOutFunction;
+  animation: vui-linear-progress-animate 840ms @easeInOutFunction;
   animation-iteration-count: infinite;
 }
 
-.mu-linear-progress-determinate{
+.vui-linear-progress-determinate{
   position: absolute;
   top: 0;
   bottom: 0;
@@ -89,7 +89,7 @@ export default {
   border-radius: 2px;
 }
 
-@keyframes mu-linear-progress-animate {
+@keyframes vui-linear-progress-animate {
   0% {
     left: -40%;
   }

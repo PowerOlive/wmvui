@@ -1,16 +1,16 @@
 <template>
 <abstract-button
-  :disabled="disabled" :keyboardFocused="keyboardFocused" wrapperClass="mu-flat-button-wrapper"
-  :type="type" :href="href" :target="target" :style="buttonStyle" class="mu-flat-button"
+  :disabled="disabled" :keyboardFocused="keyboardFocused" wrapperClass="vui-flat-button-wrapper"
+  :type="type" :href="href" :target="target" :style="buttonStyle" class="vui-flat-button"
   :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
   @click="handleClick" :rippleColor="rippleColor"
   @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
   :rippleOpacity="rippleOpacity"
   :class="buttonClass" :centerRipple="false">
-  <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
+  <span class="vui-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
   <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
   <slot></slot>
-  <span class="mu-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
+  <span class="vui-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
 </abstract-button>
 </template>
 
@@ -20,7 +20,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import {getColor} from '../utils'
 export default {
-  name: 'mu-flat-button',
+  name: 'vui-flat-button',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -117,10 +117,10 @@ export default {
     },
     buttonClass () {
       return {
-        'mu-flat-button-primary': this.primary,
-        'mu-flat-button-secondary': this.secondary,
+        'vui-flat-button-primary': this.primary,
+        'vui-flat-button-secondary': this.secondary,
         'label-before': this.labelPosition === 'before',
-        'mu-raised-button-full': this.fullWidth,
+        'vui-raised-button-full': this.fullWidth,
         'no-label': !this.label
       }
     }
@@ -134,7 +134,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-flat-button {
+.vui-flat-button {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -169,7 +169,7 @@ export default {
     vertical-align: middle;
     margin-left: 8px;
     margin-right: 0;
-    + .mu-flat-button-label {
+    + .vui-flat-button-label {
       padding-left: 8px;
     }
 
@@ -177,7 +177,7 @@ export default {
   &.no-label .vui-icon{
     margin-left: 0;
   }
-  .mu-circle-ripple{
+  .vui-circle-ripple{
     color: @textColor;
   }
   &.label-before {
@@ -186,31 +186,31 @@ export default {
       margin-right: 4px;
       margin-left: 0;
     }
-    .mu-flat-button-label {
+    .vui-flat-button-label {
       padding-right: 8px;
     }
   }
 }
-.mu-flat-button-wrapper{
+.vui-flat-button-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.mu-raised-button-full{
+.vui-raised-button-full{
   width: 100%;
   display: block;
 }
-.mu-flat-button-primary{
+.vui-flat-button-primary{
   color: @primaryColor;
 }
 
-.mu-flat-button-secondary{
+.vui-flat-button-secondary{
   color: @accentColor;
 }
 
-.mu-flat-button-label{
+.vui-flat-button-label{
   vertical-align: middle;
   padding-right: 16px;
   padding-left: 16px;

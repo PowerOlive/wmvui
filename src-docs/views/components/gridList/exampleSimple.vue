@@ -1,14 +1,14 @@
 <template>
 <div class="gridlist-demo-container">
-  <mu-grid-list class="gridlist-demo">
-    <mu-sub-header>图片展示</mu-sub-header>
-    <mu-grid-tile v-for="tile, index in list" :key="index">
+  <vui-grid-list class="gridlist-demo">
+    <vui-sub-header>图片展示</vui-sub-header>
+    <vui-grid-tile v-for="tile, index in list" :key="index">
       <img :src="tile.image"/>
       <span slot="title">{{tile.title}}</span>
       <span slot="subTitle">by <b>{{tile.author}}</b></span>
-      <mu-icon-button icon="star_border" slot="action"/>
-    </mu-grid-tile>
-  </mu-grid-list>
+      <vui-icon-button icon="star_border" slot="action"/>
+    </vui-grid-tile>
+  </vui-grid-list>
 </div>
 </template>
 

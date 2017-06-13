@@ -3,7 +3,7 @@ import description from './README.md'
 export default {
   description,
   simpleExample: '简单的使用示例',
-  simpleExampleDesc: '同 `table` 标签一样使用，只不过都需要 `mu-` 前缀',
+  simpleExampleDesc: '同 `table` 标签一样使用，只不过都需要 `vui-` 前缀',
   complexExample: '稍复杂的使用',
   complexExampleDesc: '设置不同的参数，完成不同的功能',
   table: {

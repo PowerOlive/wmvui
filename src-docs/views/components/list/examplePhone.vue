@@ -1,23 +1,23 @@
 <template>
 <mobile-tear-sheet>
-  <mu-list>
-    <mu-list-item title="(+86) 88977296" describeText="电话">
-      <mu-icon icon="phone-fill" color="indigo" :size="26" slot="left"/>
-      <mu-icon icon="right" slot="right"/>
-    </mu-list-item>
-    <mu-divider style="margin:10px 0"/>
-    <mu-list-item title="(+86) 88977296" describeText="电话">
-      <mu-icon icon="phone-fill" color="indigo" :size="26" slot="left"/>
-      <mu-icon icon="right" slot="right"/>
-    </mu-list-item>
-  </mu-list>
-  <mu-divider inset/>
-  <mu-list>
-    <mu-list-item title="mike.io@example.com" describeText="电子邮箱">
-      <mu-icon icon="email-fill" color="indigo" :size="26" slot="left"/>
-      <mu-icon icon="right" slot="right"/>
-    </mu-list-item>
-  </mu-list>
+  <vui-list>
+    <vui-list-item title="(+86) 88977296" describeText="电话">
+      <vui-icon icon="phone-fill" color="indigo" :size="26" slot="left"/>
+      <vui-icon icon="right" slot="right"/>
+    </vui-list-item>
+    <vui-divider style="margin:10px 0"/>
+    <vui-list-item title="(+86) 88977296" describeText="电话">
+      <vui-icon icon="phone-fill" color="indigo" :size="26" slot="left"/>
+      <vui-icon icon="right" slot="right"/>
+    </vui-list-item>
+  </vui-list>
+  <vui-divider inset/>
+  <vui-list>
+    <vui-list-item title="mike.io@example.com" describeText="电子邮箱">
+      <vui-icon icon="email-fill" color="indigo" :size="26" slot="left"/>
+      <vui-icon icon="right" slot="right"/>
+    </vui-list-item>
+  </vui-list>
 </mobile-tear-sheet>
 </template>
 <script>

@@ -1,11 +1,11 @@
 <template>
-<mu-paper>
-  <mu-bottom-nav :value="bottomNav" @change="handleChange">
-    <mu-bottom-nav-item value="recents" title="Recents" icon="like"/>
-    <mu-bottom-nav-item value="favorites" title="Favorites" icon="search"/>
-    <mu-bottom-nav-item value="nearby" title="Nearby" icon="more" :iconSize="24"/>
-  </mu-bottom-nav>
-</mu-paper>
+<vui-paper>
+  <vui-bottom-nav :value="bottomNav" @change="handleChange">
+    <vui-bottom-nav-item value="recents" title="Recents" icon="like"/>
+    <vui-bottom-nav-item value="favorites" title="Favorites" icon="search"/>
+    <vui-bottom-nav-item value="nearby" title="Nearby" icon="more"/>
+  </vui-bottom-nav>
+</vui-paper>
 </template>
 
 <script>

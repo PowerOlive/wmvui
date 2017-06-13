@@ -1,7 +1,7 @@
 <template>
-  <div class="mu-picker-slot" :class="{'mu-picker-slot-divider': divider}" :style="{'width': width}">
-    <div v-if="!divider" class="mu-picker-slot-wrapper" :class="{'animate': animate}" :style="{'height': contentHeight + 'px'}" ref="wrapper">
-      <div class="mu-picker-item" :style="{'text-align': textAlign}" :class="{'selected': item === value}"
+  <div class="vui-picker-slot" :class="{'vui-picker-slot-divider': divider}" :style="{'width': width}">
+    <div v-if="!divider" class="vui-picker-slot-wrapper" :class="{'animate': animate}" :style="{'height': contentHeight + 'px'}" ref="wrapper">
+      <div class="vui-picker-item" :style="{'text-align': textAlign}" :class="{'selected': item === value}"
       v-for="item, index in values" :key="index">{{item.text || item}}</div>
     </div>
     <div v-if="divider">{{ content }}</div>
@@ -89,7 +89,7 @@ export default {
     },
     doOnValuesChange () {
       let el = this.$el
-      let items = el.querySelectorAll('.mu-picker-item')
+      let items = el.querySelectorAll('.vui-picker-item')
       Array.prototype.forEach.call(items, (item, index) => {
         translateUtil.translateElement(item, null, ITEM_HEIGHT * index)
       })
@@ -149,25 +149,25 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-picker-slot{
+.vui-picker-slot{
   .flex-shrink(1);
   font-size: 18px;
   overflow: hidden;
   position: relative;
   max-height: 100%;
   text-align: center;
-  &.mu-picker-slot-divider{
+  &.vui-picker-slot-divider{
     color: @textColor;
     display: flex;
     align-items: center;
     line-height: 36px;
   }
 }
-.mu-picker-slot-wrapper.animate{
+.vui-picker-slot-wrapper.animate{
   transition: transform .45s @easeOutFunction;
   backface-visibility: hidden;
 }
-.mu-picker-item{
+.vui-picker-item{
   line-height: 36px;
   padding: 0 10px;
   font-size: 20px;

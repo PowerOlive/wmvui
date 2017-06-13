@@ -1,34 +1,34 @@
 <template>
 <mobile-tear-sheet>
-  <mu-list>
-    <mu-list-item title="列表">
-      <mu-icon slot="left" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="left" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="left" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="left" icon="right" />
-    </mu-list-item>
-  </mu-list>
-  <mu-divider />
-  <mu-list>
-    <mu-list-item title="列表">
-      <mu-icon slot="right" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="right" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="right" icon="right" />
-    </mu-list-item>
-    <mu-list-item title="列表">
-      <mu-icon slot="right" icon="right" />
-    </mu-list-item>
-  </mu-list>
+  <vui-list>
+    <vui-list-item title="列表">
+      <vui-icon slot="left" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="left" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="left" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="left" icon="right" />
+    </vui-list-item>
+  </vui-list>
+  <vui-divider />
+  <vui-list>
+    <vui-list-item title="列表">
+      <vui-icon slot="right" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="right" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="right" icon="right" />
+    </vui-list-item>
+    <vui-list-item title="列表">
+      <vui-icon slot="right" icon="right" />
+    </vui-list-item>
+  </vui-list>
 </mobile-tear-sheet>
 </template>
 <script>

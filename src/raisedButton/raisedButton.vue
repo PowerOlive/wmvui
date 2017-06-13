@@ -3,13 +3,13 @@
     @hover="handleHover" @hoverExit="handleHoverExit" @click="handleClick"
     :type="type" :href="href" :target="target" :style="buttonStyle"
     :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
-    class="mu-raised-button" :rippleColor="rippleColor":rippleOpacity="rippleOpacity"
+    class="vui-raised-button" :rippleColor="rippleColor":rippleOpacity="rippleOpacity"
     :disabled="disabled" :keyboardFocused="keyboardFocused"
-    :class="buttonClass" wrapperClass="mu-raised-button-wrapper" :centerRipple="false">
-    <span class="mu-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
+    :class="buttonClass" wrapperClass="vui-raised-button-wrapper" :centerRipple="false">
+    <span class="vui-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
     <icon :icon="icon" :class="iconClass"></icon>
     <slot></slot>
-    <span class="mu-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
+    <span class="vui-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
   </abstract-button>
 </template>
 
@@ -19,7 +19,7 @@ import routerMixin from '../internal/routerMixin'
 import {getColor} from '../utils'
 import icon from '../icon'
 export default {
-  name: 'mu-raised-button',
+  name: 'vui-raised-button',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -101,11 +101,11 @@ export default {
     },
     buttonClass () {
       return {
-        'mu-raised-button-primary': this.primary,
-        'mu-raised-button-secondary': this.secondary,
+        'vui-raised-button-primary': this.primary,
+        'vui-raised-button-secondary': this.secondary,
         'label-before': this.labelPosition === 'before',
-        'mu-raised-button-inverse': this.inverse,
-        'mu-raised-button-full': this.fullWidth,
+        'vui-raised-button-inverse': this.inverse,
+        'vui-raised-button-full': this.fullWidth,
         'focus': this.focus,
         'no-label': !this.label
       }
@@ -137,7 +137,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-raised-button {
+.vui-raised-button {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -164,7 +164,7 @@ export default {
     .depth(2);
   }
   &.hover {
-    .mu-raised-button-wrapper {
+    .vui-raised-button-wrapper {
       background-color: fade(@textColor, 10%);
     }
   }
@@ -177,7 +177,7 @@ export default {
     &:active,
     &:hover {
       box-shadow: none;
-      .mu-raised-button-wrapper {
+      .vui-raised-button-wrapper {
         background-color: transparent;
       }
     }
@@ -186,7 +186,7 @@ export default {
     vertical-align: middle;
     margin-left: 12px;
     margin-right: 0;
-    + .mu-raised-button-label {
+    + .vui-raised-button-label {
       padding-left: 8px;
     }
   }
@@ -196,14 +196,14 @@ export default {
     }
   }
   &.label-before {
-    .mu-raised-button-wrapper{
+    .vui-raised-button-wrapper{
       padding-right: 8px;
     }
     .vui-icon {
       margin-right: 4px;
       margin-left: 0;
     }
-    .mu-raised-button-label {
+    .vui-raised-button-label {
       padding-right: 8px;
     }
   }
@@ -212,7 +212,7 @@ export default {
     .depth(2);
   }
 }
-.mu-raised-button-wrapper{
+.vui-raised-button-wrapper{
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -220,32 +220,32 @@ export default {
   width: 100%;
   height: 100%;
 }
-.mu-raised-button-primary{
+.vui-raised-button-primary{
   background-color: @primaryColor;
 }
 
-.mu-raised-button-secondary{
+.vui-raised-button-secondary{
   background-color: @accentColor;
 }
 
-.mu-raised-button-full{
+.vui-raised-button-full{
   width: 100%;
   display: block;
 }
 
-.mu-raised-button.mu-raised-button-inverse {
+.vui-raised-button.vui-raised-button-inverse {
   color: @alternateTextColor;
-  .mu-circle-ripple {
+  .vui-circle-ripple {
     opacity: 0.3;
   }
   &.hover {
-    .mu-raised-button-wrapper {
+    .vui-raised-button-wrapper {
       background-color: fade(@alternateTextColor, 30%);
     }
   }
 }
 
-.mu-raised-button-label{
+.vui-raised-button-label{
   vertical-align: middle;
   padding-right: 16px;
   padding-left: 16px;

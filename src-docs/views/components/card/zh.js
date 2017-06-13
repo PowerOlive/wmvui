@@ -3,7 +3,7 @@ import description from './README.md'
 export default {
   description,
   simpleExample: '简单的使用',
-  simpleExampleDesc: '`card` 需要一系列组件配合使用才能完成效果, `mu-card`、`mu-card-header`、`mu-card-media`、`mu-card-title`、`mu-card-text`、`mu-card-actions`',
+  simpleExampleDesc: '`card` 需要一系列组件配合使用才能完成效果, `vui-card`、`vui-card-header`、`vui-card-media`、`vui-card-title`、`vui-card-text`、`vui-card-actions`',
   card: {
     slots: {
       default: '用于放置子组件'

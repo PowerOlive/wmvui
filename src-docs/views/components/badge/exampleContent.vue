@@ -1,19 +1,19 @@
 <template>
 <div class="demo-badge-container">
-  <mu-badge class="demo-badge-content">
-    <mu-icon icon="like-fill"/>
-    <mu-icon icon="plus" slot="content"/>
-  </mu-badge>
-  <mu-badge  class="demo-badge-content">
+  <vui-badge class="demo-badge-content">
+    <vui-icon icon="like-fill"/>
+    <vui-icon icon="plus" slot="content"/>
+  </vui-badge>
+  <vui-badge  class="demo-badge-content">
     版权信息
     <span style="font-size: 20px;" slot="content">&copy;</span>
-  </mu-badge>
+  </vui-badge>
 </div>
 </template>
 <style lang="less">
 .demo-badge-content {
   padding: 12px;
-  .mu-badge{
+  .vui-badge{
     background-color: inherit;
     color: inherit;
   }

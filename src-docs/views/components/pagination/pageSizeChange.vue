@@ -1,6 +1,6 @@
 <template>
-  <mu-pagination :total="total" :showSizeChanger="showSizeChanger" :pageSizeOption="pageSizeOption" @pageSizeChange="handleClick">
-  </mu-pagination>
+  <vui-pagination :total="total" :showSizeChanger="showSizeChanger" :pageSizeOption="pageSizeOption" @pageSizeChange="handleClick">
+  </vui-pagination>
 </template>
 
 <script>

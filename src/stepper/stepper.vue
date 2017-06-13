@@ -2,7 +2,7 @@
 <script>
 import stepConnector from './stepConnector'
 export default {
-  name: 'mu-stepper',
+  name: 'vui-stepper',
   props: {
     activeStep: {
       type: Number,
@@ -44,7 +44,7 @@ export default {
       if (children.length > 0) children[children.length - 1].componentOptions.propsData.last = true
     }
     return h('div', {
-      class: ['mu-stepper', orientation === 'vertical' ? 'mu-stepper-vertical' : '']
+      class: ['vui-stepper', orientation === 'vertical' ? 'vui-stepper-vertical' : '']
     }, children)
   }
 }
@@ -52,7 +52,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-stepper{
+.vui-stepper{
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -60,7 +60,7 @@ export default {
   justify-content: space-between;
 }
 
-.mu-stepper-vertical{
+.vui-stepper-vertical{
   flex-direction: column;
   align-items: stretch;
 }

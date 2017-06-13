@@ -1,7 +1,7 @@
 <template>
 <span>
   <transition :name="transition" @after-enter="show()" @after-leave="hide()">
-    <div class="mu-popup" ref="popup" v-if="open" :class="popupCss" :style="{'z-index': zIndex}">
+    <div class="vui-popup" ref="popup" v-if="open" :class="popupCss" :style="{'z-index': zIndex}">
       <circular v-if="loading" :size="loading.size" :color="loading.color" :strokeWidth="loading.strokeWidth"  />
       <icon v-if="icon" :icon="icon" />
       <svg-icon v-if="svgIcon" :icon="svgIcon"  />
@@ -18,7 +18,7 @@ import {convertClass} from '../utils'
 import svgIcon from '../svgIcon'
 import icon from '../icon'
 export default {
-  name: 'mu-popup',
+  name: 'vui-popup',
   mixins: [Popup],
   components: {
     svgIcon,
@@ -61,22 +61,22 @@ export default {
     popupCss () {
       const {position, popupClass, toast, loading} = this
       let classNames = []
-      if (position) classNames.push('mu-popup-' + position)
+      if (position) classNames.push('vui-popup-' + position)
       if (toast) {
-        classNames.push('mu-popup-toast')
+        classNames.push('vui-popup-toast')
         if (toast.type === 'error') {
-          classNames.push('mu-popup-toast-error')
+          classNames.push('vui-popup-toast-error')
         } else if (toast.type === 'success') {
-          classNames.push('mu-popup-toast-success')
+          classNames.push('vui-popup-toast-success')
         } else if (toast.type === 'info') {
-          classNames.push('mu-popup-toast-info')
+          classNames.push('vui-popup-toast-info')
         } else if (toast.type === 'warn') {
-          classNames.push('mu-popup-toast-warn')
+          classNames.push('vui-popup-toast-warn')
         } else {
-          classNames.push('mu-popup-toast-text')
+          classNames.push('vui-popup-toast-text')
         }
       }
-      if (loading) classNames.push('mu-popup-loading')
+      if (loading) classNames.push('vui-popup-loading')
       return classNames.concat(convertClass(popupClass))
     }
   },
@@ -99,7 +99,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-popup {
+.vui-popup {
   position: fixed;
   background-color: @textColor;
   top: 50%;
@@ -119,35 +119,35 @@ export default {
       font-size: 50px;
     }
   }
-  &.mu-popup-toast,
-  &.mu-popup-loading{
+  &.vui-popup-toast,
+  &.vui-popup-loading{
     background-color:rgba(0,0,0,.8);
     border-radius: 20px;
   }
-  &.mu-popup-toast{
+  &.vui-popup-toast{
     color:#fff;
     padding:10px 20px;
   }
-  &.mu-popup-loading{
+  &.vui-popup-loading{
     padding:24px;
   }
-  &.mu-popup-toast-error{
+  &.vui-popup-toast-error{
     color: @red
   }
-  &.mu-popup-toast-success{
+  &.vui-popup-toast-success{
     color: @lightGreenA700
   }
-  &.mu-popup-toast-info{
+  &.vui-popup-toast-info{
     color: @blue500
   }
-  &.mu-popup-toast-warn{
+  &.vui-popup-toast-warn{
     color: @deepOrange500
   }
-  &.mu-popup-toast-text{
+  &.vui-popup-toast-text{
     color: #fff
   }
 }
-.mu-popup-top {
+.vui-popup-top {
   top: 0;
   right: auto;
   bottom: auto;
@@ -155,14 +155,14 @@ export default {
   transform: translate3d(-50%, 0, 0);
 }
 
-.mu-popup-right {
+.vui-popup-right {
   top: 50%;
   right: 0;
   bottom: auto;
   left: auto;
   transform: translate3d(0, -50%, 0);
 }
-.mu-popup-bottom {
+.vui-popup-bottom {
   top: auto;
   right: auto;
   bottom: 0;
@@ -170,14 +170,14 @@ export default {
   transform: translate3d(-50%, 0, 0);
 }
 
-.mu-popup-left {
+.vui-popup-left {
   top: 50%;
   right: auto;
   bottom: auto;
   left: 0;
   transform: translate3d(0, -50%, 0);
 }
-.mu-popup-center {
+.vui-popup-center {
   top: 50%;
   right: auto;
   bottom: auto;

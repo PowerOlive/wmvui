@@ -2,8 +2,8 @@
 <abstract-button :type="type" :href="href" @click="handleClick" :target="target"
   :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
   @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
-  :style="buttonStyle" :disabled="disabled" class="mu-float-button" :class="[buttonClass]">
-  <div class="mu-float-button-wrapper">
+  :style="buttonStyle" :disabled="disabled" class="vui-float-button" :class="[buttonClass]">
+  <div class="vui-float-button-wrapper">
     <slot>
       <icon :icon="this.icon" :size="iconSize"></icon>
     </slot>
@@ -17,7 +17,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import {getColor} from '../utils'
 export default {
-  name: 'mu-float-button',
+  name: 'vui-float-button',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -56,7 +56,7 @@ export default {
   computed: {
     buttonClass () {
       let classNames = []
-      if (this.secondary) classNames.push('mu-float-button-secondary')
+      if (this.secondary) classNames.push('vui-float-button-secondary')
       return classNames.join(' ')
     },
     buttonStyle () {
@@ -92,7 +92,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-float-button {
+.vui-float-button {
   position: relative;
   display: inline-block;
   overflow: visible;
@@ -113,7 +113,7 @@ export default {
   outline: 0;
   padding: 0;
   cursor: pointer;
-  .mu-circle-ripple{
+  .vui-circle-ripple{
     opacity: .3;
   }
   &.disabled{
@@ -124,7 +124,7 @@ export default {
     &.hover,
     &:active,
     &:hover {
-      .mu-float-button-wrapper {
+      .vui-float-button-wrapper {
         background-color: transparent;
       }
       box-shadow: none;
@@ -134,13 +134,13 @@ export default {
   &.hover,
   &:active{
     .depth(3);
-    .mu-float-button-wrapper {
+    .vui-float-button-wrapper {
       background-color: fade(@alternateTextColor, 30%);
     }
   }
 }
 
-.mu-float-button-wrapper{
+.vui-float-button-wrapper{
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -153,7 +153,7 @@ export default {
 }
 
 
-.mu-float-button-secondary {
+.vui-float-button-secondary {
   background-color: @accentColor;
 }
 </style>

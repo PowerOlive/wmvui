@@ -1,10 +1,10 @@
 <template>
-<mu-paper class="code-examples">
+<vui-paper class="code-examples">
   <code-block :title="title" :description="description" :code="code"/>
   <div class="code-examples-content">
     <slot></slot>
   </div>
-</mu-paper>
+</vui-paper>
 </template>
 
 <script>

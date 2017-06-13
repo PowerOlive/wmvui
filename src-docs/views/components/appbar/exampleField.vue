@@ -1,13 +1,13 @@
 <template>
-  <mu-appbar>
-    <mu-icon-button icon="menu" slot="left" />
-    <mu-text-field icon="search" class="appbar-search-field flex-item" hintText="搜索关键字" fullWidth />
+  <vui-appbar>
+    <vui-icon-button icon="menu" slot="left" />
+    <vui-text-field icon="search" class="appbar-search-field flex-item" hintText="搜索关键字" fullWidth />
     <div slot="right">
-      <mu-badge content="12" circle secondary badgeClass="vui-badge">
-          <mu-icon-button icon="like-fill"/>
-      </mu-badge>
+      <vui-badge content="12" circle secondary badgeClass="vui-badge">
+          <vui-icon-button icon="like-fill"/>
+      </vui-badge>
     </div>
-  </mu-appbar>
+  </vui-appbar>
 </template>
 
 <style lang="scss">
@@ -17,10 +17,10 @@
   &.focus-state {
     color: #FFF;
   }
-  .mu-text-field-input {
+  .vui-text-field-input {
     color: #FFF;
   }
-  .mu-text-field-focus-line {
+  .vui-text-field-focus-line {
     background-color: #FFF;
   }
 }

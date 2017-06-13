@@ -1,56 +1,26 @@
-.mu-appbar{
+.vui-appbar{
   background-color: @appbarColor;
   color: @appbarTextColor;
 }
 
-.mu-avatar {
+.vui-avatar {
   color: @avatarColor;
   background-color: @avatarBackgroundColor;
 }
 
-.mu-badge {
+.vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
 }
 
-.mu-badge-primary {
+.vui-badge-primary {
   background-color: @badgePrimaryColor;
   color: @badgePrimaryTextColor;
 }
 
-.mu-badge-secondary {
+.vui-badge-secondary {
   background-color: @badgeSecondaryColor;
   color: @badgeSecondaryTextColor;
-}
-
-.mu-bottom-nav {
-  background-color: @bottomNavBackgroundColor;
-}
-
-.mu-bottom-nav-shift{
-  background-color: @bottomNavShiftBackgroundColor;
-}
-
-.mu-buttom-item {
-  color: @bottomNavUnselectedColor;
-  .mu-bottom-nav-shift & {
-    color: @bottomNavShiftUnselectedColor;
-  }
-}
-
-.mu-bottom-item-active{
-  .mu-bottom-item-text {
-    color: @bottomNavSelectedColor;
-    .mu-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
-  .mu-bottom-item-icon {
-    color: @bottomNavSelectedColor;
-    .mu-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
 }
 
 body {
@@ -63,55 +33,101 @@ a {
   color: @baseLinkColor;
 }
 
-.mu-bottom-sheet {
+.vui-bottom-nav {
+  background-color: @bottomNavBackgroundColor;
+}
+
+.vui-bottom-nav-shift{
+  background-color: @bottomNavShiftBackgroundColor;
+}
+
+.vui-buttom-item {
+  color: @bottomNavUnselectedColor;
+  .vui-bottom-nav-shift & {
+    color: @bottomNavShiftUnselectedColor;
+  }
+}
+
+.vui-bottom-item-active{
+  .vui-bottom-item-text {
+    color: @bottomNavSelectedColor;
+    .vui-bottom-nav-shift & {
+      color: @bottomNavShiftSelectedColor;
+    }
+  }
+  .vui-bottom-item-icon {
+    color: @bottomNavSelectedColor;
+    .vui-bottom-nav-shift & {
+      color: @bottomNavShiftSelectedColor;
+    }
+  }
+}
+
+.vui-bottom-sheet {
   background-color: @bottomSheetColor;
 }
 
-.mu-card {
+.vui-card {
   background-color: @cardBackgroudColor;
 }
 
-.mu-card-header-title{
-  .mu-card-title{
+.vui-card-header-title{
+  .vui-card-title{
     color: @cardTitleColor;
   }
-  .mu-card-sub-title{
+  .vui-card-sub-title{
     color: @cardSubtitleColor;
   }
 }
 
 
-.mu-card-media-title {
+.vui-card-media-title {
   background-color: @cardMediaOverlayContentBackground;
-  .mu-card-title {
+  .vui-card-title {
     color: @cardMediaTitleColor;
   }
-  .mu-card-sub-title {
+  .vui-card-sub-title {
     color: @cardMediaSubtitleColor;
   }
 }
 
-.mu-card-title-container{
-  .mu-card-title{
+.vui-card-title-container{
+  .vui-card-title{
     color: @cardTitleColor;
   }
-  .mu-card-sub-title{
+  .vui-card-sub-title{
     color: @cardSubtitleColor;
   }
 }
 
-.mu-card-text{
+.vui-card-text{
   color: @cardTextColor;
 }
 
-.mu-checkbox {
+.vui-chip {
+  background-color: @chipColor;
+  color: @chipTextColor;
+  &.hover{
+    .vui-chip-delete-icon{
+      color: @chipHoverDeleteColor;
+    }
+    background-color: @chipHoverColor;
+    cursor: pointer;
+  }
+}
+
+.vui-chip-delete-icon{
+  color: @chipDeleteColor;
+}
+
+.vui-checkbox {
   input[type="checkbox"] {
     &:checked {
-      + .mu-checkbox-wrapper {
-        .mu-checkbox-icon-uncheck{
+      + .vui-checkbox-wrapper {
+        .vui-checkbox-icon-uncheck{
           color: @checkboxCheckedColor;
         }
-        .mu-checkbox-ripple-wrapper{
+        .vui-checkbox-ripple-wrapper{
           color: @checkboxCheckedColor;
         }
       }
@@ -120,138 +136,122 @@ a {
   }
 }
 
-.mu-checkbox-label {
+.vui-checkbox-label {
   color: @checkboxTextColor;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @checkboxDisabledColor;
   }
 }
 
-.mu-checkbox-icon-uncheck {
+.vui-checkbox-icon-uncheck {
   color: @checkboxColor;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @checkboxDisabledColor;
   }
 }
 
-.mu-checkbox-icon-checked {
+.vui-checkbox-icon-checked {
   color: @checkboxCheckedColor;
-  .mu-checkbox.disabled & {
+  .vui-checkbox.disabled & {
     color: @checkboxDisabledColor;
   }
 }
 
-.mu-circular-progress-determinate-path{
+.vui-circular-progress-determinate-path{
   stroke: @circularProgressColor;
 }
 
-.mu-chip {
-  background-color: @chipColor;
-  color: @chipTextColor;
-  &.hover{
-    .mu-chip-delete-icon{
-      color: @chipHoverDeleteColor;
-    }
-    background-color: @chipHoverColor;
-    cursor: pointer;
-  }
-}
-
-.mu-chip-delete-icon{
-  color: @chipDeleteColor;
-}
-
-.mu-calendar {
-  color: @datePickerCalendarTextColor;
-}
-
-.mu-calendar-year {
-  background-color: @datePickerCalendarYearBackgroundColor;
-}
-
-
-.mu-date-display{
-  background-color: @datePickerHeaderColor;
-  color: @datePickerTextColor;
-}
-
-
-.mu-day-button-bg {
-  background-color: @datePickerSelectColor;
-}
-
-.mu-day-button-text{
-  font-weight: 400;
-  position: relative;
-  color: @datePickerCalendarTextColor;
-  .mu-day-button.now & {
-    color: @datePickerSelectColor;
-  }
-  .mu-day-button.hover &,
-  .mu-day-button.selected &{
-    color: @datePickerSelectTextColor;
-  }
-}
-
-.mu-year-button-text {
-  color: @datePickerCalendarTextColor;
-  .mu-year-button.selected &{
-    color: @datePickerSelectColor;
-  }
-  .mu-year-button.hover &{
-    color: @datePickerSelectColor;
-  }
-}
-
-.mu-dialog {
+.vui-dialog {
   background-color: @dialogColor;
 }
 
-.mu-dialog-footer,
-.mu-dialog-header {
+.vui-dialog-footer,
+.vui-dialog-header {
   &.scrollable{
     border-bottom-color: @dialogBorderColor;
   }
 }
 
-.mu-dialog-title{
+.vui-dialog-title{
   color: @dialogTitleColor;
 }
 
-.mu-dialog-body {
+.vui-dialog-body {
   color: @dialogBodyColor
 }
 
-.mu-dropDown-menu-text {
+.vui-calendar {
+  color: @datePickerCalendarTextColor;
+}
+
+.vui-calendar-year {
+  background-color: @datePickerCalendarYearBackgroundColor;
+}
+
+
+.vui-date-display{
+  background-color: @datePickerHeaderColor;
+  color: @datePickerTextColor;
+}
+
+
+.vui-day-button-bg {
+  background-color: @datePickerSelectColor;
+}
+
+.vui-day-button-text{
+  font-weight: 400;
+  position: relative;
+  color: @datePickerCalendarTextColor;
+  .vui-day-button.now & {
+    color: @datePickerSelectColor;
+  }
+  .vui-day-button.hover &,
+  .vui-day-button.selected &{
+    color: @datePickerSelectTextColor;
+  }
+}
+
+.vui-year-button-text {
+  color: @datePickerCalendarTextColor;
+  .vui-year-button.selected &{
+    color: @datePickerSelectColor;
+  }
+  .vui-year-button.hover &{
+    color: @datePickerSelectColor;
+  }
+}
+
+.vui-dropDown-menu-text {
   color: @dropDownMenuTextColor;
 }
 
-.mu-dropDown-menu-icon {
+.vui-dropDown-menu-icon {
   color: @dropDownMenuIconColor;
 }
 
-.mu-dropDown-menu-line {
+.vui-dropDown-menu-line {
   background-color: @dropDownMenuLineColor;
 }
 
 // flatbutton
-.mu-flat-button {
+.vui-flat-button {
   color: @flatButtonTextColor;
   background-color: @flatButtonColor;
-  .mu-circle-ripple {
+  .vui-circle-ripple {
     color: @flatButtonTextColor;
   }
 }
 
-.mu-flat-button-primary{
+.vui-flat-button-primary{
   color: @flatButtonPrimaryTextColor;
 }
 
-.mu-flat-button-secondary{
+.vui-flat-button-secondary{
   color: @flatButtonSecondaryTextColor;
 }
 
-.mu-float-button {
+.vui-float-button {
   background-color: @floatButtonColor;
   color: @floatButtonIconColor;
   &.disabled{
@@ -261,88 +261,88 @@ a {
   }
   &.hover,
   &:active{
-    .mu-float-button-wrapper {
+    .vui-float-button-wrapper {
       background-color: fade(@floatButtonIconColor, 30%);
     }
   }
 }
 
-.mu-float-button-secondary {
+.vui-float-button-secondary {
   background-color: @floatButtonSecondaryColor;
   color: @floatButtonSecondaryIconColor;
 }
 
-.mu-grid-tile-titlebar{
+.vui-grid-tile-titlebar{
   background-color: @gridListTitlebarColor;
 }
 
-.mu-grid-tile-title-container{
+.vui-grid-tile-title-container{
   color: @gridListTextColor;
 }
 
-.mu-grid-tile-action {
-  .mu-icon {
+.vui-grid-tile-action {
+  .vui-icon {
     color: @gridListTextColor;
   }
 }
 
 
 // circle
-.mu-circle-spinner{
+.vui-circle-spinner{
   border-color: @circleColor;
 }
 
-.mu-circle-secondary {
+.vui-circle-secondary {
   border-color: @circleSecondaryColor;
 }
 
-.mu-linear-progress{
+.vui-linear-progress{
   background-color: @linearProgressColor;
 }
 
-.mu-linear-progress-indeterminate{
+.vui-linear-progress-indeterminate{
   background-color: @linearProgressFillColor;
 }
 
-.mu-linear-progress-determinate{
+.vui-linear-progress-determinate{
   background-color: @linearProgressFillColor;
 }
 
 
 // list
-.mu-item-wrapper{
+.vui-item-wrapper{
   &.hover {
     background-color: @listHoverColor;
   }
 }
-.mu-item {
+.vui-item {
   color: @listTextColor;
   &.selected {
     color: @listSelectedColor;
   }
 }
 
-.mu-item-link-icon{
+.vui-item-link-icon{
   color: @listRightIconColor;
 }
 
-.mu-item-left{
+.vui-item-left{
   color: @listLeftIconColor;
 }
 
-.mu-item-right{
+.vui-item-right{
   color: @listRightIconColor;
 }
 
-.mu-item-after{
+.vui-item-after{
   color: @listSecondaryTextColor;
 }
 
-.mu-item-text{
+.vui-item-text{
   color: @listSecondaryTextColor;
 }
 
-.mu-menu-item-wrapper{
+.vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
     color: @menuSelectColor;
@@ -355,15 +355,15 @@ a {
   }
 }
 
-.mu-menu-item-left-icon{
+.vui-menu-item-left-icon{
   color: @menuLeftIconColor;
 }
 
-.mu-menu-item-right-icon {
+.vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
 
-.mu-pagination-item{
+.vui-pagination-item{
   color: @paginationTextColor;
   &.hover {
     background-color: @paginationHoverBackgroundColor;
@@ -377,16 +377,16 @@ a {
   }
 }
 
-.mu-paper {
+.vui-paper {
   background-color: @paperBackgroundColor;
   color: @paperColor;
 }
 
-.mu-picker{
+.vui-picker{
   background-color: @pickerColor;
 }
 
-.mu-picker-center-highlight {
+.vui-picker-center-highlight {
   &::before,
   &::after {
     background-color: @pickerBorderColor;
@@ -394,33 +394,29 @@ a {
 }
 
 
-.mu-picker-slot.mu-picker-slot-divider {
+.vui-picker-slot.vui-picker-slot-divider {
   color: @pickerSelectedTextColor;
 }
 
-.mu-picker-item{
+.vui-picker-item{
   color: @pickerTextColor;
   &.selected {
     color: @pickerSelectedTextColor;
   }
 }
 
-.mu-popover {
+.vui-popover {
   background-color: @popoverColor;
 }
 
-.mu-popup {
-  background-color: @popupColor;
-}
-
-.mu-radio {
+.vui-radio {
   input[type="radio"] {
     &:checked {
-      + .mu-radio-wrapper {
-        .mu-radio-icon-uncheck{
+      + .vui-radio-wrapper {
+        .vui-radio-icon-uncheck{
           color: @radioCheckedColor;
         }
-        .mu-radio-ripple-wrapper{
+        .vui-radio-ripple-wrapper{
           color: @radioCheckedColor;
         }
       }
@@ -429,35 +425,39 @@ a {
   }
 }
 
-.mu-radio-label {
+.vui-radio-label {
   color: @radioTextColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
     color: @radioDisabledColor;
   }
 }
 
-.mu-radio-icon-uncheck {
+.vui-radio-icon-uncheck {
   color: @radioColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
     color: @radioDisabledColor;
   }
 }
 
-.mu-radio-icon-checked {
+.vui-radio-icon-checked {
   color: @radioCheckedColor;
-  .mu-radio.disabled & {
+  .vui-radio.disabled & {
      color: @radioDisabledColor;
    }
+}
+
+.vui-popup {
+  background-color: @popupColor;
 }
 
 
 
 // raisedButton
-.mu-raised-button{
+.vui-raised-button{
   background-color: @raisedButtonColor;
   color: @raisedButtonTextColor;
   &.hover {
-    .mu-raised-button-wrapper {
+    .vui-raised-button-wrapper {
       background-color: fade(@raisedButtonTextColor, 10%);
     }
   }
@@ -467,65 +467,65 @@ a {
   }
 }
 
-.mu-raised-button-primary{
+.vui-raised-button-primary{
   background-color: @raisedButtonPrimaryColor;
 }
 
-.mu-raised-button-secondary{
+.vui-raised-button-secondary{
   background-color: @raisedButtonSecondaryColor;
 }
 
-.mu-refresh-control {
+.vui-refresh-control {
   color: @refreshControlColor;
 }
 
-.mu-slider-track {
+.vui-slider-track {
   background-color: @sliderTrackColor;
 }
 
 
-.mu-slider-fill{
+.vui-slider-fill{
   background-color: @sliderSelectionColor;
   &.disabled {
     background-color: @sliderDisabledColor;
   }
 }
 
-.mu-slider-thumb{
+.vui-slider-thumb{
   background-color: @sliderSelectionColor;
   color: @sliderSelectionColor;
-  .mu-slider.zero &,
-  .mu-slider.disabled &{
+  .vui-slider.zero &,
+  .vui-slider.disabled &{
     border-color: @sliderDisabledColor;
     color: @sliderDisabledColor;
     background-color: @sliderZeroColor;
   }
 }
 
-.mu-snackbar {
+.vui-snackbar {
   color: @snackbarTextColor;
   background-color: @snackbarColor;
 }
 
-.mu-step-button {
+.vui-step-button {
   background-color: @stepperBackgroundColor;
   &.hover {
     background-color: @stepperHoverBackgroundColor
   }
 }
 
-.mu-step-connector-line {
+.vui-step-connector-line {
   border-color: @stepperConnectorLineColor;
 }
 
-.mu-step-content{
-  .mu-stepper-vertical & {
+.vui-step-content{
+  .vui-stepper-vertical & {
     border-left: 1px solid @stepperConnectorLineColor;
   }
 }
 
 
-.mu-step-label{
+.vui-step-label{
   color: @stepperTextColor;
   &.disabled {
     color: @stepperDisabledTextColor;
@@ -533,42 +533,42 @@ a {
 }
 
 
-.mu-step-label-icon {
+.vui-step-label-icon {
   color: @stepperInactiveIconColor;
-  .mu-step-label.disabled &{
+  .vui-step-label.disabled &{
     color: @stepperInactiveIconColor;
   }
-  .mu-step-label.completed &,
-  .mu-step-label.active & {
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
     color: @stepperIconColor;
   }
 }
 
-.mu-step-label-circle{
+.vui-step-label-circle{
   background-color: @stepperInactiveIconColor;
   color: @stepperNumTextColor;
-  .mu-step-label.disabled &{
+  .vui-step-label.disabled &{
     background-color: @stepperInactiveIconColor;
   }
-  .mu-step-label.completed &,
-  .mu-step-label.active & {
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
     background-color: @stepperIconColor;
   }
 }
 
 // subheader
-.mu-sub-header{
+.vui-sub-header{
   color: @subHeaderColor;
 }
 
-.mu-switch {
+.vui-switch {
   input[type="checkbox"] {
     &:checked {
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: @switchTrackOnColor;
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @switchThumbOnColor;
           color: @switchThumbOnColor;
         }
@@ -578,11 +578,11 @@ a {
   }
   &.disabled {
     input[type="checkbox"]:checked{
-      + .mu-switch-wrapper {
-        .mu-switch-track{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
           background-color: @switchTrackDisabledColor;
         }
-        .mu-switch-thumb{
+        .vui-switch-thumb{
           background-color: @switchThumbDisabledColor;
         }
       }
@@ -591,41 +591,41 @@ a {
 }
 
 
-.mu-switch-label {
+.vui-switch-label {
   color: @switchTextColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     color: @switchTextDisabledColor;
   }
 }
 
-.mu-switch-track {
+.vui-switch-track {
   background-color: @switchTrackOffColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @switchTrackDisabledColor;
   }
 }
 
-.mu-switch-thumb {
+.vui-switch-thumb {
   color: @switchTextColor;
   background-color: @switchThumbOffColor;
-  .mu-switch.disabled & {
+  .vui-switch.disabled & {
     background-color: @switchThumbDisabledColor;
   }
 }
 
-.mu-table {
+.vui-table {
   background-color: @tableBackgroundColor;
 }
 
-.mu-thead {
+.vui-thead {
   border-bottom-color: @tableBorderColor;
 }
 
-.mu-th {
+.vui-th {
   color: @tableTheadTextColor;
 }
 
-.mu-tr {
+.vui-tr {
   border-bottom-color: @tableBorderColor;
   color: @tableTextColor;
   &.selected {
@@ -638,25 +638,25 @@ a {
     background-color: @tableRowStripeBackgroundColor;
   }
 
-  .mu-tfoot & {
+  .vui-tfoot & {
     border-top-color: @tableBorderColor;
   }
 }
 
-.mu-tabs{
+.vui-tabs{
   background-color: @tabsBackgroundColor;
 }
-.mu-tab-link-highlight {
+.vui-tab-link-highlight {
   background-color: @tabsLineColor;
 }
-.mu-tab-link{
+.vui-tab-link{
   color: @tabsTextColor;
 }
-.mu-tab-active {
+.vui-tab-active {
   color: @tabsSelectedTextColor;
 }
 
-.mu-text-field{
+.vui-text-field{
   color: @textFieldTextColor;
   &.focus-state {
     color: @textFieldFocusTextColor;
@@ -669,25 +669,25 @@ a {
   }
 }
 
-.mu-text-field-input {
+.vui-text-field-input {
   color: @textFieldInputColor;
 }
 
 
-.mu-text-field-help {
-  .mu-text-field.error &{
+.vui-text-field-help {
+  .vui-text-field.error &{
     color: @textFieldErrorTextColor;
   }
 }
 
-.mu-text-field-line {
+.vui-text-field-line {
   background-color: @textFieldLineColor;
   &.disabled {
     border-color: @textFieldDisabledLineColor;
   }
 }
 
-.mu-text-field-focus-line{
+.vui-text-field-focus-line{
   background-color: @textFieldFocusLineColor;
   &.error {
     background-color: @textFieldErrorLineColor;
@@ -695,45 +695,45 @@ a {
 }
 
 
-.mu-text-field-hint {
+.vui-text-field-hint {
   color: @textFieldHintColor;
 }
-.mu-text-field-label {
-  .mu-text-field.has-label &.float {
+.vui-text-field-label {
+  .vui-text-field.has-label &.float {
     color: @textFieldHintColor
   }
 }
 
-.mu-clock-circle {
+.vui-clock-circle {
   background-color: @timePickerClockCircleColor;
 }
 
-.mu-time-display {
+.vui-time-display {
   background-color: @timePickerHeaderColor;
   color: @timePickerColor;
 }
 
-.mu-clock-number{
+.vui-clock-number{
   &.selected {
     background-color: @timePickerSelectColor;
     color: @timePickerSelectTextColor;
   }
 }
 
-.mu-clock-pointer {
+.vui-clock-pointer {
   background-color: @timePickerSelectColor;
 
 }
 
-.mu-clock-pointer-mark {
+.vui-clock-pointer-mark {
   background-color: @timePickerSelectTextColor;
   border-color:  @timePickerSelectColor;
 }
 
-.mu-tooltip{
+.vui-tooltip{
   color: @tooltipTextColor;
 }
 
-.mu-tooltip-ripple.when-shown {
+.vui-tooltip-ripple.when-shown {
   background-color: @tooltipRippleColor;
 }

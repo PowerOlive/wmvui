@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'mu-svg-icon',
+  name: 'vui-svg-icon',
   props: {
     icon: {
       type: String

@@ -1,12 +1,12 @@
 <template>
 <div class="demo-infinite-container">
-  <mu-list>
+  <vui-list>
     <template v-for="item in list">
-      <mu-list-item :title="item"/>
-      <mu-divider/>
+      <vui-list-item :title="item"/>
+      <vui-divider/>
     </template>
-  </mu-list>
-  <mu-infinite-scroll :scroller="scroller" :loading="loading" @load="loadMore"/>
+  </vui-list>
+  <vui-infinite-scroll :scroller="scroller" :loading="loading" @load="loadMore"/>
 </div>
 </template>
 

@@ -1,23 +1,23 @@
 <template>
 <div>
   <div class="icon-contaner">
-    <mu-icon icon="like-fill"/>
-    <mu-icon icon="menu" color="red"/>
-    <mu-icon icon="search" color="orange"/>
-    <mu-icon icon="more" color="blue"/>
+    <vui-icon icon="like-fill"/>
+    <vui-icon icon="menu" color="red"/>
+    <vui-icon icon="search" color="orange"/>
+    <vui-icon icon="more" color="blue"/>
   </div>
 
   <div class="icon-contaner">
-    <mu-icon icon="code"/>
-    <mu-icon icon="like" :size="32"/>
-    <mu-icon icon="right" :size="36"/>
-    <mu-icon icon="left" :size="48"/>
+    <vui-icon icon="code"/>
+    <vui-icon icon="like" :size="32"/>
+    <vui-icon icon="right" :size="36"/>
+    <vui-icon icon="left" :size="48"/>
   </div>
 </div>
 </template>
 
 <style>
-.icon-contaner .mu-icon {
+.icon-contaner .vui-icon {
   margin-right: 12px;
   margin-bottom: 12px;
 }

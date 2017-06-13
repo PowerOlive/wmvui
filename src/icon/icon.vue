@@ -1,13 +1,13 @@
 <script>
 export default {
-  name: 'mu-icon',
+  name: 'vui-icon',
   props: {
     icon: {
       type: String
     },
     size: {
-      type: Number,
-      default: 24
+      type: Number
+      // default: 24
     },
     text: {
       type: String

@@ -3,7 +3,7 @@ import description from './README_EN.md'
 export default {
   description,
   simpleExample: 'Simple Example',
-  simpleExampleDesc: '`card` needs to combined with following components `mu-card`、`mu-card-header`、`mu-card-media`、`mu-card-title`、`mu-card-text`、`mu-card-actions`.',
+  simpleExampleDesc: '`card` needs to combined with following components `vui-card`、`vui-card-header`、`vui-card-media`、`vui-card-title`、`vui-card-text`、`vui-card-actions`.',
   card: {
     slots: {
       default: 'place the children components'

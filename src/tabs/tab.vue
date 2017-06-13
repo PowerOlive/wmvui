@@ -1,11 +1,11 @@
 <template>
-<abstract-button class="mu-tab-link" :href="href" :to="to" :tag="tag" :activeClass="activeClass"
+<abstract-button class="vui-tab-link" :href="href" :to="to" :tag="tag" :activeClass="activeClass"
   :event="event" :exact="exact" :append="append" :replace="replace" :disabled="disabled"
-  :center-ripple="false" :class="{'mu-tab-active': active}" @click="tabClick">
+  :center-ripple="false" :class="{'vui-tab-active': active}" @click="tabClick">
   <slot>
     <icon :icon="icon" :size="size" :class="iconClass"/>
   </slot>
-  <div class="mu-tab-text" :class="textClass" v-if="title">{{title}}</div>
+  <div class="vui-tab-text" :class="textClass" v-if="title">{{title}}</div>
 </abstract-button>
 </template>
 
@@ -15,7 +15,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import {isNotNull, convertClass} from '../utils'
 export default {
-  name: 'mu-tab',
+  name: 'vui-tab',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -75,7 +75,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-tab-link{
+.vui-tab-link{
   min-height: 48px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -97,10 +97,10 @@ export default {
   transition: all .45s @easeInOutFunction;
   cursor: pointer;
 }
-.mu-tab-active{
+.vui-tab-active{
   color: @alternateTextColor;
 }
-.mu-tab-text{
+.vui-tab-text{
   &.has-icon {
     margin-top: 8px;
   }

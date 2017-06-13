@@ -1,12 +1,12 @@
 <template>
-<div class="mu-grid-list" :style="gridListStyle">
+<div class="vui-grid-list" :style="gridListStyle">
   <slot></slot>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-grid-list',
+  name: 'vui-grid-list',
   props: {
     cellHeight: {
       type: Number,
@@ -33,7 +33,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-grid-list {
+.vui-grid-list {
   display: flex;
   flex-wrap: wrap;
 }

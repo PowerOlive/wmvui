@@ -14,12 +14,12 @@ Vue.use(MuseUI)
 
 ```html
 <template>
-<mu-tabs :value="theme" @change="changeTheme">
-  <mu-tab title="LIGHT (DEFAULT)" value="light"/>
-  <mu-tab title="DARK" value="dark"/>
-  <mu-tab title="CARBON" value="carbon"/>
-  <mu-tab title="TEAL" value="teal"/>
-</mu-tabs>
+<vui-tabs :value="theme" @change="changeTheme">
+  <vui-tab title="LIGHT (DEFAULT)" value="light"/>
+  <vui-tab title="DARK" value="dark"/>
+  <vui-tab title="CARBON" value="carbon"/>
+  <vui-tab title="TEAL" value="teal"/>
+</vui-tabs>
 </template>
 <script>
 import light from 'wuvui/dist/theme-default.css'

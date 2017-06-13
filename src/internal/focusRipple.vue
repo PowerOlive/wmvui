@@ -1,6 +1,6 @@
 <template>
-  <div class="mu-focus-ripple-wrapper">
-    <div ref="innerCircle" :style="style" class="mu-focus-ripple"></div>
+  <div class="vui-focus-ripple-wrapper">
+    <div ref="innerCircle" :style="style" class="vui-focus-ripple"></div>
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-focus-ripple-wrapper{
+.vui-focus-ripple-wrapper{
   height: 100%;
   width: 100%;
   position: absolute;
@@ -60,19 +60,19 @@ export default {
   overflow: hidden;
 }
 
-.mu-focus-ripple{
+.vui-focus-ripple{
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 50%;
   opacity: 0.16;
   background-color: currentColor;
-  animation: mu-pulsate 750ms @easeInOutFunction;
+  animation: vui-pulsate 750ms @easeInOutFunction;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes mu-pulsate {
+@keyframes vui-pulsate {
   0% {
     transform: scale(0.72);
   }

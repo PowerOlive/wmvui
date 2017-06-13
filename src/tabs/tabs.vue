@@ -1,13 +1,13 @@
 <template>
-  <div class="mu-tabs">
+  <div class="vui-tabs">
     <slot></slot>
-    <span class="mu-tab-link-highlight" ref="highlight" :class="lineClass"></span>
+    <span class="vui-tab-link-highlight" ref="highlight" :class="lineClass"></span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-tabs',
+  name: 'vui-tabs',
   props: {
     lineClass: {
       type: [String, Object, Array]
@@ -58,7 +58,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-tabs{
+.vui-tabs{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +70,7 @@ export default {
   width: 100%;
 }
 
-.mu-tab-link-highlight{
+.vui-tab-link-highlight{
   position: absolute;
   left: 0;
   bottom: 0;

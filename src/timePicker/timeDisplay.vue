@@ -1,17 +1,17 @@
 <template>
-<div class="mu-time-display">
-  <div class="mu-time-display-text">
-    <div class="mu-time-display-affix"></div>
-    <div class="mu-time-display-time">
-      <span class="mu-time-display-clickable" @click="handleSelectHour" :class="{'inactive': mode === 'minute'}">{{sanitizeTime[0]}}</span>
+<div class="vui-time-display">
+  <div class="vui-time-display-text">
+    <div class="vui-time-display-affix"></div>
+    <div class="vui-time-display-time">
+      <span class="vui-time-display-clickable" @click="handleSelectHour" :class="{'inactive': mode === 'minute'}">{{sanitizeTime[0]}}</span>
       <span>:</span>
-      <span class="mu-time-display-clickable" @click="handleSelectMin" :class="{'inactive': mode === 'hour'}">{{sanitizeTime[1]}}</span>
+      <span class="vui-time-display-clickable" @click="handleSelectMin" :class="{'inactive': mode === 'hour'}">{{sanitizeTime[1]}}</span>
     </div>
-    <div class="mu-time-display-affix">
-      <div v-if="format === 'ampm'" @click="handleSelectAffix('pm')"  class="mu-time-display-clickable" :class="{'inactive': affix === 'am'}">
+    <div class="vui-time-display-affix">
+      <div v-if="format === 'ampm'" @click="handleSelectAffix('pm')"  class="vui-time-display-clickable" :class="{'inactive': affix === 'am'}">
         PM
       </div>
-      <div v-if="format === 'ampm'" @click="handleSelectAffix('am')"  class="mu-time-display-clickable mu-time-display-affix-top" :class="{'inactive': affix === 'pm'}">
+      <div v-if="format === 'ampm'" @click="handleSelectAffix('am')"  class="vui-time-display-clickable vui-time-display-affix-top" :class="{'inactive': affix === 'pm'}">
         AM
       </div>
     </div>
@@ -83,19 +83,19 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-time-display {
+.vui-time-display {
   padding: 14px 0px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   background-color: @primaryColor;
   color: @alternateTextColor;
-  .mu-clock-landspace & {
+  .vui-clock-landspace & {
     width: 179px;
     position: relative;
   }
 }
 
-.mu-time-display-text {
+.vui-time-display-text {
   margin: 6px 0px;
   line-height: 58px;
   height: 58px;
@@ -103,7 +103,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  .mu-clock-landspace & {
+  .vui-clock-landspace & {
     margin: 0;
     position: absolute;
     left: 0;
@@ -119,13 +119,13 @@ export default {
   }
 }
 
-.mu-time-display-affix {
+.vui-time-display-affix {
   flex: 1 1;
   position: relative;
   line-height: 17px;
   height: 17px;
   font-size: 17px;
-  .mu-clock-landspace &{
+  .vui-clock-landspace &{
     flex: none;
     height: auto;
     display: flex;
@@ -133,28 +133,28 @@ export default {
   }
 }
 
-.mu-time-display-time {
+.vui-time-display-time {
   margin: 0px 10px;
-  .mu-clock-landspace & {
+  .vui-clock-landspace & {
     margin-top: -28px;
   }
 }
 
-.mu-time-display-clickable {
+.vui-time-display-clickable {
   cursor: pointer;
   &.inactive {
     opacity: 0.7
   }
-  .mu-clock-landspace & {
+  .vui-clock-landspace & {
     margin-top: 8px;
   }
 }
 
-.mu-time-display-affix-top {
+.vui-time-display-affix-top {
   position: absolute;
   top: -20px;
   left: 0px;
-  .mu-clock-landspace &{
+  .vui-clock-landspace &{
     position: static;
     order: -1;
   }

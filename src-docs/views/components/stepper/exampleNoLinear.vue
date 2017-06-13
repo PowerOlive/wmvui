@@ -1,29 +1,29 @@
 <template>
 <div class="demo-step-container">
-  <mu-stepper :activeStep="activeStep" :linear="false">
-    <mu-step>
-      <mu-step-button @click="changeStep(0)">
+  <vui-stepper :activeStep="activeStep" :linear="false">
+    <vui-step>
+      <vui-step-button @click="changeStep(0)">
         选择活动地点
-      </mu-step-button>
-    </mu-step>
-    <mu-step>
-      <mu-step-button @click="changeStep(1)">
+      </vui-step-button>
+    </vui-step>
+    <vui-step>
+      <vui-step-button @click="changeStep(1)">
         创建一个群组
-      </mu-step-button>
-    </mu-step>
-    <mu-step>
-      <mu-step-button @click="changeStep(2)">
+      </vui-step-button>
+    </vui-step>
+    <vui-step>
+      <vui-step-button @click="changeStep(2)">
         宣传活动
-      </mu-step-button>
-    </mu-step>
-  </mu-stepper>
+      </vui-step-button>
+    </vui-step>
+  </vui-stepper>
   <div class="demo-step-content">
       <p>
         {{content}}
       </p>
       <div>
-        <mu-flat-button class="demo-step-button" label="上一步" :disabled="activeStep === 0" @click="handlePrev"/>
-        <mu-raised-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2" primary @click="handleNext"/>
+        <vui-flat-button class="demo-step-button" label="上一步" :disabled="activeStep === 0" @click="handlePrev"/>
+        <vui-raised-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2" primary @click="handleNext"/>
       </div>
   </div>
 </div>

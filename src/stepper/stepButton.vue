@@ -1,5 +1,5 @@
 <template>
-<abstract-button @click="handleClick" :centerRipple="false" class="mu-step-button" :disabled="disabled">
+<abstract-button @click="handleClick" :centerRipple="false" class="vui-step-button" :disabled="disabled">
   <step-label :active="active" :completed="completed" :num="num" :disabled="disabled" v-if="childrenInLabel">
     <slot></slot>
     <slot name="icon" slot="icon"></slot>
@@ -12,7 +12,7 @@
 import abstractButton from '../internal/abstractButton'
 import stepLabel from './stepLabel'
 export default {
-  name: 'mu-step-button',
+  name: 'vui-step-button',
   props: {
     active: {
       type: Boolean
@@ -48,7 +48,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-step-button {
+.vui-step-button {
   border: 10px;
   display: inline-block;
   cursor: pointer;
@@ -61,7 +61,7 @@ export default {
   transform: translate(0px, 0px);
   background-color: transparent;
   transition: all 450ms @easeOutFunction 0ms;
-  .mu-stepper-vertical & {
+  .vui-stepper-vertical & {
     width: 100%;
   }
   &.hover {

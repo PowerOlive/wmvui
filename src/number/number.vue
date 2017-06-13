@@ -1,15 +1,15 @@
 <template>
-  <span class="mu-number">
-    <a @click="sub" class="mu-number-selector mu-number-selector-sub":class="{'mu-number-disabled':disabledMin}">-</a>
-    <input v-model.number="currentValue" :name="name" class="mu-number-input" :style="{width: width+'px'}" :readonly="!fillable" pattern="[0-9]*"/>
-    <a @click="add" class="mu-number-selector mu-number-selector-plus" :class="{'mu-number-disabled':disabledMax}">
+  <span class="vui-number">
+    <a @click="sub" class="vui-number-selector vui-number-selector-sub":class="{'vui-number-disabled':disabledMin}">-</a>
+    <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!fillable" pattern="[0-9]*"/>
+    <a @click="add" class="vui-number-selector vui-number-selector-plus" :class="{'vui-number-disabled':disabledMax}">
       +
     </a>
   </span>
 </template>
 <script>
 export default {
-  name: 'mu-number',
+  name: 'vui-number',
   components: {
   },
   props: {
@@ -104,22 +104,22 @@ $number-input-font-color:#333;
 $number-input-font-disabled-color:#999;
 $number-input-border-color:#bbb;
 
-.mu-number{
+.vui-number{
     display: inline-block;
     vertical-align:middle;
 }
-.mu-number-input {
+.vui-number-input {
   font-size:16px;
   appearance: none;
   text-align:center;
 }
-.mu-number-selector.mu-number-disabled{
+.vui-number-selector.vui-number-disabled{
   color:$number-input-font-disabled-color;
   border-color: #ddd;
 }
 
-.mu-number-input,
-.mu-number-selector{
+.vui-number-input,
+.vui-number-selector{
   border-radius: 0;
   height:29px;
   line-height: inherit;
@@ -129,7 +129,7 @@ $number-input-border-color:#bbb;
   border:1px solid $number-input-border-color;
 
 }
-.mu-number-selector{
+.vui-number-selector{
     padding: 2px;
     text-align: center;
     line-height: 1;
@@ -137,10 +137,10 @@ $number-input-border-color:#bbb;
     font-weight: 700;
     width: 28px;
 }
-.mu-number-selector-sub {
+.vui-number-selector-sub {
   border-right:none;
 }
-.mu-number-selector-plus {
+.vui-number-selector-plus {
   border-left:none;
 }
 </style>

@@ -28,7 +28,7 @@ export default {
       return {
         selected: this.selected,
         hover: this.hover,
-        'mu-day-button': true,
+        'vui-day-button': true,
         disabled: this.disabled,
         now: this.isNow
       }
@@ -57,21 +57,21 @@ export default {
         disabled: this.disabled
       }
     }, [
-      h('div', {class: 'mu-day-button-bg'}),
+      h('div', {class: 'vui-day-button-bg'}),
       h('span', {
-        class: 'mu-day-button-text',
+        class: 'vui-day-button-text',
         domProps: {
           innerHTML: this.date.getDate()
         }
       })
-    ]) : h('span', {class: 'mu-day-empty'})
+    ]) : h('span', {class: 'vui-day-empty'})
   }
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-day-button {
+.vui-day-button {
   display: inline-block;
   background: none;
   user-select: none;
@@ -90,13 +90,13 @@ export default {
   }
 }
 
-.mu-day-empty {
+.vui-day-empty {
   font-weight: 400;
   padding: 4px 0px;
   position: relative;
   width: 42px;
 }
-.mu-day-button-bg {
+.vui-day-button-bg {
   position: absolute;
   top: 0;
   left: 4px;
@@ -107,27 +107,27 @@ export default {
   transform: scale(0);
   transition: all .45s @easeOutFunction;
   width: 34px;
-  .mu-day-button.hover &,
-  .mu-day-button.selected &{
+  .vui-day-button.hover &,
+  .vui-day-button.selected &{
     transform: scale(1);
   }
-  .mu-day-button.hover &{
+  .vui-day-button.hover &{
     opacity: 0.6;
   }
-  .mu-day-button.selected &{
+  .vui-day-button.selected &{
     opacity: 1;
   }
 }
 
-.mu-day-button-text{
+.vui-day-button-text{
   font-weight: 400;
   position: relative;
   color: @textColor;
-  .mu-day-button.now &{
+  .vui-day-button.now &{
     color: @primaryColor;
   }
-  .mu-day-button.hover &,
-  .mu-day-button.selected &{
+  .vui-day-button.hover &,
+  .vui-day-button.selected &{
     color: @alternateTextColor;
   }
 }

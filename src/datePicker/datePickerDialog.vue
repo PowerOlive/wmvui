@@ -116,7 +116,7 @@ export default {
       this.container === 'dialog' ? h(dialog, {
         props: {
           open: this.open,
-          dialogClass: ['mu-date-picker-dialog', this.mode]
+          dialogClass: ['vui-date-picker-dialog', this.mode]
         },
         on: {
           close: this.handleClose,
@@ -140,16 +140,16 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-date-picker-dialog {
+.vui-date-picker-dialog {
    width: 310px;
   &.landscape {
     width: 479px;
-    .mu-dialog-body {
+    .vui-dialog-body {
       min-height: 330px;
       min-width: 479px;
     }
   }
-  .mu-dialog-body {
+  .vui-dialog-body {
     padding: 0;
     min-height: 434px;
     min-width: 310px;

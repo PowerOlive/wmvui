@@ -1,15 +1,15 @@
 <template>
 <div>
-    <mu-raised-button label="toggle drawer" @click="toggle()"/>
-    <mu-raised-button label="undocked drawer" @click="toggle(true)"/>
-    <mu-drawer :open="open" :docked="docked" @close="toggle()">
-      <mu-list @itemClick="docked ? '' : toggle()">
-        <mu-list-item title="Menu Item 1"/>
-        <mu-list-item title="Menu Item 2"/>
-        <mu-list-item title="Menu Item 3"/>
-        <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
-      </mu-list>
-    </mu-drawer>
+    <vui-raised-button label="toggle drawer" @click="toggle()"/>
+    <vui-raised-button label="undocked drawer" @click="toggle(true)"/>
+    <vui-drawer :open="open" :docked="docked" @close="toggle()">
+      <vui-list @itemClick="docked ? '' : toggle()">
+        <vui-list-item title="Menu Item 1"/>
+        <vui-list-item title="Menu Item 2"/>
+        <vui-list-item title="Menu Item 3"/>
+        <vui-list-item v-if="docked" @click.native="open = false" title="Close"/>
+      </vui-list>
+    </vui-drawer>
 </div>
 </template>
 

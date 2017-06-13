@@ -1,16 +1,16 @@
 <template>
 <div>
-  <mu-raised-button label="操作提示" @click="openToast('center',false,'round-close-fill','操作失败')"/>
-  <mu-raised-button label="上面弹出" @click="openToast('top','happy','' ,'哈哈~我在上面')"/>
-  <mu-raised-button label="下面弹出" @click="openToast('bottom','crying','','下面来抓我呀~')"/>
-  <mu-raised-button label="左边弹出" @click="openToast('left','goofy','','左边左边~~')"/>
-  <mu-raised-button label="右边弹出" @click="openToast('right','rich','','右边辣智障~')"/>
-  <mu-raised-button label="加载层" @click="openLoading"/>
-  <mu-popup :position="toast.position" toast :svgIcon="toast.svgicon" :icon="toast.icon" :overlay="true" :open="toast.show">
+  <vui-raised-button label="操作提示" @click="openToast('center',false,'round-close-fill','操作失败')"/>
+  <vui-raised-button label="上面弹出" @click="openToast('top','happy','' ,'哈哈~我在上面')"/>
+  <vui-raised-button label="下面弹出" @click="openToast('bottom','crying','','下面来抓我呀~')"/>
+  <vui-raised-button label="左边弹出" @click="openToast('left','goofy','','左边左边~~')"/>
+  <vui-raised-button label="右边弹出" @click="openToast('right','rich','','右边辣智障~')"/>
+  <vui-raised-button label="加载层" @click="openLoading"/>
+  <vui-popup :position="toast.position" toast :svgIcon="toast.svgicon" :icon="toast.icon" :overlay="true" :open="toast.show">
   <p>{{toast.msg}}</p>
-  </mu-popup>
-  <mu-popup position="center" :overlay="true" :overlayOpacity="0.2" :loading="loading" :open="loading.show">
-  </mu-popup>
+  </vui-popup>
+  <vui-popup position="center" :overlay="true" :overlayOpacity="0.2" :loading="loading" :open="loading.show">
+  </vui-popup>
 </div>
 </template>
 

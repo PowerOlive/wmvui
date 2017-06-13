@@ -3,7 +3,7 @@ import description from './README_EN.md'
 export default {
   description,
   simpleExample: 'Simple Example',
-  simpleExampleDesc: 'you can use it as the `table` tag, only difference is you are not need to add the `mu-` prefix',
+  simpleExampleDesc: 'you can use it as the `table` tag, only difference is you are not need to add the `vui-` prefix',
   complexExample: 'Complex Example',
   complexExampleDesc: 'you can finish different function by different paramters',
   table: {

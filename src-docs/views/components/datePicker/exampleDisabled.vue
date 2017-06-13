@@ -1,7 +1,7 @@
 <template>
 <div>
-  <mu-date-picker hintText="只能选择工作日" :shouldDisableDate="disableWeekends"/><br/>
-  <mu-date-picker hintText="随机判断哪些日期不可选择" :shouldDisableDate="disableRandomDates"/>
+  <vui-date-picker hintText="只能选择工作日" :shouldDisableDate="disableWeekends"/><br/>
+  <vui-date-picker hintText="随机判断哪些日期不可选择" :shouldDisableDate="disableRandomDates"/>
 </div>
 </template>
 

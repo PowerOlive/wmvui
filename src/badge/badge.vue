@@ -1,7 +1,7 @@
 <template>
-  <div class="mu-badge-container">
+  <div class="vui-badge-container">
     <slot></slot>
-    <em class="mu-badge" :style="badgeStyle" :class="badgeInternalClass">
+    <em class="vui-badge" :style="badgeStyle" :class="badgeInternalClass">
       <slot name="content">
         {{content}}
       </slot>
@@ -12,7 +12,7 @@
 <script>
 import {getColor, convertClass} from '../utils'
 export default {
-  name: 'mu-badge',
+  name: 'vui-badge',
   props: {
     content: {
       type: String,
@@ -48,10 +48,10 @@ export default {
       const {circle, primary, secondary, badgeClass} = this
       const isFloat = this.$slots && this.$slots.default && this.$slots.default.length > 0
       const classNames = []
-      if (circle) classNames.push('mu-badge-circle')
-      if (primary) classNames.push('mu-badge-primary')
-      if (secondary) classNames.push('mu-badge-secondary')
-      if (isFloat) classNames.push('mu-badge-float')
+      if (circle) classNames.push('vui-badge-circle')
+      if (primary) classNames.push('vui-badge-primary')
+      if (secondary) classNames.push('vui-badge-secondary')
+      if (isFloat) classNames.push('vui-badge-float')
       return classNames.concat(convertClass(badgeClass))
     }
   }
@@ -60,11 +60,11 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-badge-container{
+.vui-badge-container{
   display: inline-block;
   position: relative;
 }
-.mu-badge{
+.vui-badge{
   font-size: 10px;
   display: flex;
   justify-content: center;
@@ -79,23 +79,23 @@ export default {
   overflow: hidden;
 }
 
-.mu-badge-float {
+.vui-badge-float {
   position: absolute;
   top: -12px;
   right: -12px;
 }
-.mu-badge-circle {
+.vui-badge-circle {
   border-radius: 50%;
   padding: 0;
   width: 24px;
   height: 24px;
   overflow: hidden;
 }
-.mu-badge-primary {
+.vui-badge-primary {
   background-color: @primaryColor;
 }
 
-.mu-badge-secondary {
+.vui-badge-secondary {
   background-color: @accentColor;
 }
 

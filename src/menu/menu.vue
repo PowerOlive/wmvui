@@ -1,6 +1,6 @@
 <template>
-<div class="mu-menu" tabindex="0" v-clickoutside="clickoutside"  @keydown="handleKeydown" :style="{'width': contentWidth}" >
-  <div ref="list" class="mu-menu-list" :style="{'width': contentWidth, 'max-height': maxHeight + 'px'}" :class="menuListClass">
+<div class="vui-menu" tabindex="0" v-clickoutside="clickoutside"  @keydown="handleKeydown" :style="{'width': contentWidth}" >
+  <div ref="list" class="vui-menu-list" :style="{'width': contentWidth, 'max-height': maxHeight + 'px'}" :class="menuListClass">
     <slot></slot>
   </div>
 </div>
@@ -11,7 +11,7 @@ import {getWidth, convertClass} from '../utils'
 import keycode from 'keycode'
 import clickoutside from '../internal/clickoutside'
 export default {
-  name: 'mu-menu',
+  name: 'vui-menu',
   props: {
     desktop: {
       type: Boolean,
@@ -65,7 +65,7 @@ export default {
     menuListClass () {
       const {desktop, listClass} = this
       const classNames = []
-      if (desktop) classNames.push('mu-menu-destop')
+      if (desktop) classNames.push('vui-menu-destop')
       return classNames.concat(convertClass(listClass))
     }
   },
@@ -226,28 +226,28 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-menu {
+.vui-menu {
   z-index: 90;
   outline: none;
 }
 
-.mu-menu-list {
+.vui-menu-list {
   padding: 8px 0;
   user-select: none;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  > .mu-divider {
+  > .vui-divider {
     margin: 7px 0px 8px;
   }
-  > .mu-sub-header {
+  > .vui-sub-header {
     padding-left: 24px;
     margin-top: -8px
   }
 }
 
-.mu-menu-destop {
+.vui-menu-destop {
   padding: 16px 0;
-  > .mu-sub-header {
+  > .vui-sub-header {
     margin-top: -16px;
   }
 }

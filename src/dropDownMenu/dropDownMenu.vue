@@ -1,19 +1,19 @@
 <template>
-<div class="mu-dropDown-menu" :class="{'disabled': disabled}">
-  <svg viewBox="0 0 24 24"  class="mu-dropDown-menu-icon" :class="iconClass">
+<div class="vui-dropDown-menu" :class="{'disabled': disabled}">
+  <svg viewBox="0 0 24 24"  class="vui-dropDown-menu-icon" :class="iconClass">
     <path d="M7 10l5 5 5-5z"/>
   </svg>
-  <div class="mu-dropDown-menu-text" @click="handleOpen" :class="labelClass">
-    <div class="mu-dropDown-menu-text-overflow">{{label}}</div>
+  <div class="vui-dropDown-menu-text" @click="handleOpen" :class="labelClass">
+    <div class="vui-dropDown-menu-text-overflow">{{label}}</div>
   </div>
-  <div class="mu-dropDown-menu-line" :class="underlineClass"></div>
+  <div class="vui-dropDown-menu-line" :class="underlineClass"></div>
   <popover v-if="!disabled && $slots && $slots.default && $slots.default.length > 0" :scroller="scroller" :open="openMenu" :trigger="trigger" :anchorOrigin="anchorOrigin"  @close="handleClose">
-    <mu-menu :style="{width: menuWidth + 'px'}" @change="change"
+    <vui-menu :style="{width: menuWidth + 'px'}" @change="change"
       :class="menuClass" :listClass="menuListClass" :value="value" :multiple="multiple"
       :autoWidth="autoWidth" @itemClick="itemClick"
       :popover="openMenu" desktop :maxHeight="maxHeight">
       <slot></slot>
-    </mu-menu>
+    </vui-menu>
   </popover>
 </div>
 </template>
@@ -24,7 +24,7 @@ import {menu} from '../menu'
 import {isNull} from '../utils'
 import resize from '../internal/resize'
 export default {
-  name: 'mu-dropDown-menu',
+  name: 'vui-dropDown-menu',
   mixins: [resize],
   props: {
     value: {},
@@ -139,14 +139,14 @@ export default {
   },
   components: {
     popover,
-    'mu-menu': menu
+    'vui-menu': menu
   }
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-dropDown-menu {
+.vui-dropDown-menu {
   display: inline-block;
   font-size: 15px;
   height: 48px;
@@ -160,7 +160,7 @@ export default {
   }
 }
 
-.mu-dropDown-menu-icon{
+.vui-dropDown-menu-icon{
   position: absolute;
   right: 16px;
   top: 16px;
@@ -172,24 +172,24 @@ export default {
   user-select:none
 }
 
-.mu-dropDown-menu-text{
+.vui-dropDown-menu-text{
   padding-left: 24px;
   padding-right: 48px;
   line-height: 56px;
   opacity: 1;
   position: relative;
   color: @textColor;
-  .mu-dropDown-menu.disabled &{
+  .vui-dropDown-menu.disabled &{
     color: @disabledColor;
   }
 }
 
-.mu-dropDown-menu-text-overflow{
+.vui-dropDown-menu-text-overflow{
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
 }
-.mu-dropDown-menu-line {
+.vui-dropDown-menu-line {
   bottom: 1px;
   left: 0px;
   margin: -1px 24px;

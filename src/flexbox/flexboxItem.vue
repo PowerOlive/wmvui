@@ -1,12 +1,12 @@
 <template>
-  <div class="mu-flexbox-item" :style="itemStyle">
+  <div class="vui-flexbox-item" :style="itemStyle">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-flexbox-item',
+  name: 'vui-flexbox-item',
   props: {
     order: {
       type: [Number, String],

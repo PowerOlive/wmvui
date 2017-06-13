@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'mu-col',
+  name: 'vui-col',
   props: {
     width: {
       type: String,

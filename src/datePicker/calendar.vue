@@ -1,22 +1,22 @@
 <template>
-<div class="mu-calendar" :class="{'mu-calendar-landspace': mode === 'landscape'}">
+<div class="vui-calendar" :class="{'vui-calendar-landspace': mode === 'landscape'}">
   <date-display @selectYear="selectYear" @selectMonth="selectMonth" :monthDaySelected="displayMonthDay" :disableYearSelection="disableYearSelection" :selectedDate="selectedDate" :dateTimeFormat="dateTimeFormat"></date-display>
-  <div class="mu-calendar-container">
-    <div class="mu-calendar-monthday-container" v-if="displayMonthDay">
+  <div class="vui-calendar-container">
+    <div class="vui-calendar-monthday-container" v-if="displayMonthDay">
       <calendar-toolbar :slideType="slideType" :nextMonth="nextMonth" :prevMonth="prevMonth" @monthChange="handleMonthChange" :displayDates="displayDates" :dateTimeFormat="dateTimeFormat" />
-      <div class="mu-calendar-week">
-        <span class="mu-calendar-week-day" v-for="weekText, index in weekTexts" :key="index">{{weekText}}</span>
+      <div class="vui-calendar-week">
+        <span class="vui-calendar-week-day" v-for="weekText, index in weekTexts" :key="index">{{weekText}}</span>
       </div>
-      <div class="mu-calendar-monthday">
-        <transition :name="'mu-calendar-slide-' + slideType" v-for="displayDate, index in displayDates" :key="index">
-          <div class="mu-calendar-monthday-slide" :key="displayDate.getTime()" >
+      <div class="vui-calendar-monthday">
+        <transition :name="'vui-calendar-slide-' + slideType" v-for="displayDate, index in displayDates" :key="index">
+          <div class="vui-calendar-monthday-slide" :key="displayDate.getTime()" >
             <calendar-month @selected="handleSelected" :shouldDisableDate="shouldDisableDate" :displayDate="displayDate" :firstDayOfWeek="firstDayOfWeek" :maxDate="maxDate" :minDate="minDate" :selectedDate="selectedDate" />
           </div>
         </transition>
       </div>
     </div>
     <calendar-year @change="handleYearChange" v-if="!displayMonthDay" :selectedDate="selectedDate" :maxDate="maxDate" :minDate="minDate"/>
-    <div class="mu-calendar-actions">
+    <div class="vui-calendar-actions">
       <flat-button :label="cancelLabel"  @click="handleCancel" primary/>
       <flat-button v-if="!autoOk" @click="handleOk" :label="okLabel" primary/>
     </div>
@@ -232,22 +232,22 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-calendar {
+.vui-calendar {
   color: @textColor;
   user-select: none;
   width: 310px;
 }
 
-.mu-calendar-landspace{
+.vui-calendar-landspace{
   width: 479px;
 }
 
-.mu-calendar-container{
+.vui-calendar-container{
   display: flex;
   flex-direction: column;
 }
 
-.mu-calendar-monthday-container {
+.vui-calendar-monthday-container {
   display: flex;
   align-content: space-between;
   justify-content: space-between;
@@ -258,7 +258,7 @@ export default {
   transition: all .45s @easeOutFunction;
 }
 
-.mu-calendar-week {
+.vui-calendar-week {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -269,37 +269,37 @@ export default {
   text-align: center;
 }
 
-.mu-calendar-week-day {
+.vui-calendar-week-day {
   width: 42px;
 }
 
-.mu-calendar-monthday{
+.vui-calendar-monthday{
   position: relative;
   overflow: hidden;
   height: 214px;
 }
 
-.mu-calendar-monthday-slide{
+.vui-calendar-monthday-slide{
   height: 100%;
   width: 100%;
 }
 
-.mu-calendar-actions{
+.vui-calendar-actions{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   margin: 0px;
   max-height: 48px;
   padding: 0px;
-  .mu-flat-button {
+  .vui-flat-button {
     min-width: 64px;
     margin: 4px 8px 8px 0px;
   }
 }
-.mu-calendar-slide-next-enter-active,
-.mu-calendar-slide-next-leave-active,
-.mu-calendar-slide-prev-enter-active,
-.mu-calendar-slide-prev-leave-active {
+.vui-calendar-slide-next-enter-active,
+.vui-calendar-slide-next-leave-active,
+.vui-calendar-slide-prev-enter-active,
+.vui-calendar-slide-prev-leave-active {
   transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
   backface-visibility: hidden;
   position: absolute;
@@ -308,18 +308,18 @@ export default {
   top: 0;
 }
 
-.mu-calendar-slide-next-enter {
+.vui-calendar-slide-next-enter {
   transform: translate3d(100%, 0, 0);
 }
-.mu-calendar-slide-next-leave-active {
+.vui-calendar-slide-next-leave-active {
   transform: translate3d(-100%, 0, 0);
   opacity: 0;
 }
 
-.mu-calendar-slide-prev-enter {
+.vui-calendar-slide-prev-enter {
   transform: translate3d(-100%, 0, 0);
 }
-.mu-calendar-slide-prev-leave-active {
+.vui-calendar-slide-prev-leave-active {
   transform: translate3d(100%, 0, 0);
   opacity: 0;
 }

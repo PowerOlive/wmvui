@@ -1,10 +1,10 @@
 <template>
-  <hr class="mu-divider" :class="{'inset': inset, 'shallow-inset': shallowInset}"/>
+  <hr class="vui-divider" :class="{'inset': inset, 'shallow-inset': shallowInset}"/>
 </template>
 
 <script>
 export default {
-  name: 'mu-divider',
+  name: 'vui-divider',
   props: {
     inset: {
       type: Boolean,
@@ -20,7 +20,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-divider {
+.vui-divider {
   margin: 0;
   height: 1px;
   border: none;

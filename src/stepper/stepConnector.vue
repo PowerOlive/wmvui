@@ -1,6 +1,6 @@
 <template>
-<div class="mu-step-connector">
-  <span class="mu-step-connector-line"></span>
+<div class="vui-step-connector">
+  <span class="vui-step-connector-line"></span>
 </div>
 </template>
 
@@ -11,20 +11,20 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-step-connector{
+.vui-step-connector{
   flex: 1 1 auto;
-  .mu-stepper-vertical &{
+  .vui-stepper-vertical &{
     margin-left: 25px;
   }
 }
 
-.mu-step-connector-line{
+.vui-step-connector-line{
   display: block;
   border-color: @grey400;
   margin-left: -6px;
   border-top-style: solid;
   border-top-width: 1px;
-  .mu-stepper-vertical & {
+  .vui-stepper-vertical & {
     border-top: none;
     border-left-style: solid;
     border-left-width: 1px;

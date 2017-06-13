@@ -1,7 +1,7 @@
 <template>
-<div class="mu-calendar-year-container">
-  <div class="mu-calendar-year" ref="container">
-    <div class="mu-calendar-year-list">
+<div class="vui-calendar-year-container">
+  <div class="vui-calendar-year" ref="container">
+    <div class="vui-calendar-year-list">
       <year-button @click="handleClick(year)" v-for="year in years" :key="'yearButton' + year"  :year="year" :selected="year === selectedDate.getFullYear()"/>
     </div>
   </div>
@@ -55,7 +55,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-calendar-year-container {
+.vui-calendar-year-container {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -65,7 +65,7 @@ export default {
   overflow: hidden;
 }
 
-.mu-calendar-year {
+.vui-calendar-year {
   background-color: @dialogBackgroundColor;
   height: inherit;
   line-height: 35px;
@@ -75,7 +75,7 @@ export default {
   position: relative;
 }
 
-.mu-calendar-year-list {
+.vui-calendar-year-list {
   display: flex;
   flex-direction: column;
   justify-content: center;

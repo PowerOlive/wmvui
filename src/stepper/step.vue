@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'mu-step',
+  name: 'vui-step',
   props: {
     active: {
       type: Boolean,
@@ -34,7 +34,7 @@ export default {
       })
     }
     return h('div', {
-      class: 'mu-step'
+      class: 'vui-step'
     }, children)
   }
 }
@@ -42,10 +42,10 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-step{
+.vui-step{
   flex: 0 0 auto;
   margin-left: -6px;
-  .mu-stepper-vertical & {
+  .vui-stepper-vertical & {
     margin-top: -14px;
     margin-left: 0;
   }

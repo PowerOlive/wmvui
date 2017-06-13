@@ -1,18 +1,18 @@
 <template>
-  <div class="mu-content-block">
+  <div class="vui-content-block">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-content-block'
+  name: 'vui-content-block'
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-content-block{
+.vui-content-block{
   padding: 8px 16px;
   width: 100%;
   /* p{

@@ -1,6 +1,6 @@
 <template>
-  <div class="mu-avatar" @click="handleClick" :style="avatarStyle">
-    <div class="mu-avatar-inner">
+  <div class="vui-avatar" @click="handleClick" :style="avatarStyle">
+    <div class="vui-avatar-inner">
       <icon v-if="icon" :icon="icon" :size="iconSize" :class="iconClass"></icon>
       <img :src="src" v-if="src" :class="imgClass" />
       <slot></slot>
@@ -12,7 +12,7 @@
 import icon from '../icon'
 import {getColor} from '../utils'
 export default {
-  name: 'mu-avatar',
+  name: 'vui-avatar',
   props: {
     backgroundColor: {
       type: String,
@@ -69,7 +69,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-avatar{
+.vui-avatar{
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -85,7 +85,7 @@ export default {
     display: block;
   }
 }
-.mu-avatar-inner{
+.vui-avatar-inner{
   display: flex;
   width: 100%;
   height: 100%;

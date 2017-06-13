@@ -1,11 +1,11 @@
 <template>
-  <mu-paper style="max-width: 376px; ">
-    <mu-bottom-nav :value="bottomNav" shift @change="handleChange">
-      <mu-bottom-nav-item value="movies" title="Movies" icon="like-fill"/>
-      <mu-bottom-nav-item value="music" title="Music" icon="search"/>
-      <mu-bottom-nav-item value="pictures" title="Pictures" icon="more"/>
-    </mu-bottom-nav>
-  </mu-paper>
+  <vui-paper style="max-width: 376px; ">
+    <vui-bottom-nav :value="bottomNav" shift @change="handleChange">
+      <vui-bottom-nav-item value="movies" title="Movies" icon="like-fill"/>
+      <vui-bottom-nav-item value="music" title="Music" icon="search"/>
+      <vui-bottom-nav-item value="pictures" title="Pictures" icon="more"/>
+    </vui-bottom-nav>
+  </vui-paper>
 
 </template>
 

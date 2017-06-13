@@ -11,10 +11,10 @@
   * 修复 Circular Progress 的 size 小于36部分不显示 [#440](https://github.com/museui/muse-ui/issues/440)
   * 修复 table 组件被选中的行被删除时，残留在 selectedRowsIndex 中 [#463](https://github.com/museui/muse-ui/issues/463)
   * Fix autocomplete focus issue [#495](https://github.com/museui/muse-ui/issues/495)
-  * 修复 mu-table unSelectAll() 无效 [#455](https://github.com/museui/muse-ui/issues/455)
+  * 修复 vui-table unSelectAll() 无效 [#455](https://github.com/museui/muse-ui/issues/455)
   * 修复 v-if + tooltip vue warn [#457](https://github.com/museui/muse-ui/issues/457)
   * 修复最新版谷歌浏览器中，日期插件出现无法显示bug [#461](https://github.com/museui/muse-ui/issues/461)
-  * 修复 mu-dialog throws error: Cannot read property 'offsetHeight' of undefined [#447](https://github.com/museui/muse-ui/issues/447)
+  * 修复 vui-dialog throws error: Cannot read property 'offsetHeight' of undefined [#447](https://github.com/museui/muse-ui/issues/447)
   * 修复 toggled list 在展开时会有一个明显的下沉抖动 [#426](https://github.com/museui/muse-ui/issues/426)
 
 ## 2.0.2
@@ -63,8 +63,8 @@
   * 增加yarn的支持
   * 提供引用自定义字体图标解决方案，所有设置icon的地方可以 `':' + 样式名称`
   ```html
-  <mu-icon value=":fa fa-user"/>
-  <mu-raised-button icon=":fa fa-user"/>
+  <vui-icon value=":fa fa-user"/>
+  <vui-raised-button icon=":fa fa-user"/>
   ```
 
 ### Bugs
@@ -229,7 +229,7 @@
 
   * 修复 selectField无法选择 value 为 0 的项
   * 修复 radio,checkbox,switch 鼠标移出后波纹不消失的问题
-  * 修复 mu-text-field设置type为number后，maxLength显示错误
+  * 修复 vui-text-field设置type为number后，maxLength显示错误
 
 ## 2.0.0-alpha.5
 

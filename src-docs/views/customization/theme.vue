@@ -1,96 +1,96 @@
 <template>
 <div class="content-wrapper">
   <markdown-element :text="$t('title')"/>
-  <mu-paper :class="['theme-' + theme, 'demo-theme-paper']">
-    <mu-tabs :value="theme" @change="changeTheme">
-      <mu-tab title="默认" value="default"/>
-      <mu-tab title="亮蓝" value="light"/>
-      <mu-tab title="暗蓝" value="dark"/>
-      <mu-tab title="深灰" value="carbon"/>
-      <mu-tab title="蓝绿" value="teal"/>
-    </mu-tabs>
-    <mu-row>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
+  <vui-paper :class="['theme-' + theme, 'demo-theme-paper']">
+    <vui-tabs :value="theme" @change="changeTheme">
+      <vui-tab title="默认" value="default"/>
+      <vui-tab title="亮蓝" value="light"/>
+      <vui-tab title="暗蓝" value="dark"/>
+      <vui-tab title="深灰" value="carbon"/>
+      <vui-tab title="蓝绿" value="teal"/>
+    </vui-tabs>
+    <vui-row>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item center">
-          <mu-avatar icon="like-fill" :size="56" :iconSize="24"/>
-        </div>
-        <div class="demo-theme-item center">
-          <mu-raised-button label="secondary" secondary/>
+          <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
         </div>
         <div class="demo-theme-item center">
-          <mu-raised-button label="primary" primary/>
+          <vui-raised-button label="secondary" secondary/>
         </div>
         <div class="demo-theme-item center">
-          <mu-raised-button label="default"/>
+          <vui-raised-button label="primary" primary/>
         </div>
-      </mu-col>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <mu-checkbox label="checkbox"/><br/>
-          <mu-checkbox label="disabled checkbox" disabled/>
+        <div class="demo-theme-item center">
+          <vui-raised-button label="default"/>
         </div>
+      </vui-col>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <mu-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
-          <mu-radio name="radio_group" nativeValue="2" label="radio2"/><br/>
-          <mu-radio label="disabled radio" nativeValue="3"  disabled/>
+          <vui-checkbox label="checkbox"/><br/>
+          <vui-checkbox label="disabled checkbox" disabled/>
         </div>
         <div class="demo-theme-item">
-          <mu-switch label="switch"/><br/>
-          <mu-switch label="disabled switch"  disabled/>
-        </div>
-      </mu-col>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <mu-text-field hintText="Text Field" style="width: 100%"/>
+          <vui-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
+          <vui-radio name="radio_group" nativeValue="2" label="radio2"/><br/>
+          <vui-radio label="disabled radio" nativeValue="3"  disabled/>
         </div>
         <div class="demo-theme-item">
-          <mu-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
+          <vui-switch label="switch"/><br/>
+          <vui-switch label="disabled switch"  disabled/>
+        </div>
+      </vui-col>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
+        <div class="demo-theme-item">
+          <vui-text-field hintText="Text Field" style="width: 100%"/>
         </div>
         <div class="demo-theme-item">
-          <mu-dropDown-menu :value="dropDown" @change="changeDropDown" style="width: 100%;">
-            <mu-menu-item :value="1" title="Never" />
-            <mu-menu-item :value="2" title="Every Night" />
-            <mu-menu-item :value="3" title="Weeknights" />
-            <mu-menu-item :value="4" title="Weekends" />
-            <mu-menu-item :value="5" title="Weekly" />
-          </mu-dropDown-menu>
+          <vui-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
         </div>
-      </mu-col>
-    </mu-row>
+        <div class="demo-theme-item">
+          <vui-dropDown-menu :value="dropDown" @change="changeDropDown" style="width: 100%;">
+            <vui-menu-item :value="1" title="Never" />
+            <vui-menu-item :value="2" title="Every Night" />
+            <vui-menu-item :value="3" title="Weeknights" />
+            <vui-menu-item :value="4" title="Weekends" />
+            <vui-menu-item :value="5" title="Weekly" />
+          </vui-dropDown-menu>
+        </div>
+      </vui-col>
+    </vui-row>
     <div class="demo-theme-group-slider">
-      <mu-slider :value="30"/>
+      <vui-slider :value="30"/>
     </div>
-    <mu-row>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
+    <vui-row>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <mu-flat-button label="VIEW DIALOG" @click="openDialog"/>
+          <vui-flat-button label="VIEW DIALOG" @click="openDialog"/>
         </div>
-      </mu-col>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
+      </vui-col>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <mu-flat-button label="VIEW DRAWER" @click="toggleDrawer"/>
+          <vui-flat-button label="VIEW DRAWER" @click="toggleDrawer"/>
         </div>
-      </mu-col>
-      <mu-col class="demo-theme-group" width="100" desktop="33" tablet="33">
+      </vui-col>
+      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <mu-flat-button label="VIEW SNACKBAR" @click="showSnackbar"/>
+          <vui-flat-button label="VIEW SNACKBAR" @click="showSnackbar"/>
         </div>
-      </mu-col>
-    </mu-row>
-    <mu-dialog :open="dialog" title="Dialog" @close="closeDialog">
+      </vui-col>
+    </vui-row>
+    <vui-dialog :open="dialog" title="Dialog" @close="closeDialog">
       {{$t('dialogDesc')}}
-      <mu-flat-button slot="actions" @click="closeDialog" primary :label="$t('cancel')"/>
-      <mu-flat-button slot="actions" primary @click="closeDialog" :label="$t('ok')"/>
-    </mu-dialog>
-    <mu-drawer :open="drawer" :docked="false" @close="toggleDrawer()">
-      <mu-menu @itemClick="toggleDrawer()">
-        <mu-menu-item title="Menu Item 1"/>
-        <mu-menu-item title="Menu Item 2"/>
-        <mu-menu-item title="Menu Item 3"/>
-      </mu-menu>
-    </mu-drawer>
-    <mu-snackbar v-if="snackbar" :message="$t('snackbarDesc')" :action="$t('close')" @actionClick="hideSnackbar" @close="hideSnackbar"/>
-  </mu-paper>
+      <vui-flat-button slot="actions" @click="closeDialog" primary :label="$t('cancel')"/>
+      <vui-flat-button slot="actions" primary @click="closeDialog" :label="$t('ok')"/>
+    </vui-dialog>
+    <vui-drawer :open="drawer" :docked="false" @close="toggleDrawer()">
+      <vui-menu @itemClick="toggleDrawer()">
+        <vui-menu-item title="Menu Item 1"/>
+        <vui-menu-item title="Menu Item 2"/>
+        <vui-menu-item title="Menu Item 3"/>
+      </vui-menu>
+    </vui-drawer>
+    <vui-snackbar v-if="snackbar" :message="$t('snackbarDesc')" :action="$t('close')" @actionClick="hideSnackbar" @close="hideSnackbar"/>
+  </vui-paper>
   <markdown-element :text="$t('themeDoc')"/>
 </div>
 </template>

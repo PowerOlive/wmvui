@@ -1,13 +1,13 @@
 <template>
-<div class="mu-slider" :class="sliderClass" tabindex="0"
+<div class="vui-slider" :class="sliderClass" tabindex="0"
   @focus="handleFocus" @blur="handleBlur" @keydown="handleKeydown"
   @touchstart="handleTouchStart" @touchend="handleTouchEnd"
   @touchcancel="handleTouchEnd"  @mousedown="handleMouseDown"
   @mouseup="handleMouseUp" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
   <input type="hidden" :name="name" :value="inputValue">
-  <div class="mu-slider-track"></div>
-  <div class="mu-slider-fill" :style="fillStyle"></div>
-  <div class="mu-slider-thumb" :style="thumbStyle">
+  <div class="vui-slider-track"></div>
+  <div class="vui-slider-fill" :style="fillStyle"></div>
+  <div class="vui-slider-thumb" :style="thumbStyle">
     <focus-ripple v-if="(focused || hover) && !active"></focus-ripple>
   </div>
 </div>
@@ -17,7 +17,7 @@
 import focusRipple from '../internal/focusRipple'
 import keycode from 'keycode'
 export default {
-  name: 'mu-slider',
+  name: 'vui-slider',
   props: {
     name: {
       type: String
@@ -247,7 +247,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-slider {
+.vui-slider {
   width: 100%;
   position: relative;
   height: 24px;
@@ -259,7 +259,7 @@ export default {
   outline: none;
 }
 
-.mu-slider-track{
+.vui-slider-track{
   position: absolute;
   height: 2px;
   left: 0;
@@ -269,7 +269,7 @@ export default {
   background-color: @lighterPrimaryColor;
 }
 
-.mu-slider-fill{
+.vui-slider-fill{
   position: absolute;
   height: 2px;
   width: 100%;
@@ -277,12 +277,12 @@ export default {
   left: 0;
   top: 50%;
   margin-top: -1px;
-  .mu-slider.disabled & {
+  .vui-slider.disabled & {
     background-color: @lighterPrimaryColor;
   }
 }
 
-.mu-slider-thumb {
+.vui-slider-thumb {
   position: absolute;
   top: 50%;
   width: 12px;
@@ -293,26 +293,26 @@ export default {
   transform: translate(-50%, -50%);
   transition: background 450ms @easeOutFunction, border-color 450ms @easeOutFunction, width 450ms @easeOutFunction, height 450ms @easeOutFunction;
   cursor: pointer;
-  .mu-slider.active &{
+  .vui-slider.active &{
     width: 20px;
     height: 20px;
   }
-  .mu-slider.zero &,
-  .mu-slider.disabled &{
+  .vui-slider.zero &,
+  .vui-slider.disabled &{
     border: 2px solid @lighterPrimaryColor;
     color: @lighterPrimaryColor;
     background-color: @alternateTextColor;
-    .mu-focus-ripple-wrapper {
+    .vui-focus-ripple-wrapper {
       top: -14px;
       left: -14px;
     }
   }
 
-  .mu-slider.disabled & {
+  .vui-slider.disabled & {
     cursor: default;
   }
 
-  .mu-focus-ripple-wrapper {
+  .vui-focus-ripple-wrapper {
     width: 36px;
     height: 36px;
     top: -12px;

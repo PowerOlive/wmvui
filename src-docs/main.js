@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import MuseUI from 'muse-ui'
 // import '../dist/wmvui.css'
-import '../dist/light.min.css'
+import '../dist/wmvui.light.min.css'
 import './assets/scss/WMlib.scss'
 import App from './App.vue'
 import markdownElement from './components/markdownElement'

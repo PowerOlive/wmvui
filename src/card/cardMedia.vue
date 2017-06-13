@@ -1,11 +1,11 @@
 <template>
-<div class="mu-card-media">
+<div class="vui-card-media">
   <slot></slot>
-  <div v-if="title || subTitle" class="mu-card-media-title">
-    <div class="mu-card-title" v-if="title" :class="titleClass">
+  <div v-if="title || subTitle" class="vui-card-media-title">
+    <div class="vui-card-title" v-if="title" :class="titleClass">
       {{title}}
     </div>
-    <div class="mu-card-sub-title" v-if="subTitle" :class="subTitleClass">
+    <div class="vui-card-sub-title" v-if="subTitle" :class="subTitleClass">
       {{subTitle}}
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'mu-card-media',
+  name: 'vui-card-media',
   props: {
     title: {
       type: String
@@ -34,7 +34,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-card-media {
+.vui-card-media {
   position: relative;
   > img {
     width: 100%;
@@ -45,19 +45,19 @@ export default {
   }
 }
 
-.mu-card-media-title {
+.vui-card-media-title {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   padding: 16px;
   background-color: @lightBlack;
-  .mu-card-title {
+  .vui-card-title {
     font-size: 24px;
     color: @darkWhite;
     line-height: 36px;
   }
-  .mu-card-sub-title {
+  .vui-card-sub-title {
     color: @lightWhite;
     font-size: 14px;
   }

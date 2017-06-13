@@ -1,18 +1,18 @@
 <template>
-  <div class="mu-text-field" :class="textFieldClass" :style="isFocused ? errorStyle : {}">
-    <icon  v-if="icon" class="mu-text-field-icon" :class="iconClass" :icon="icon"></icon>
-    <div @click="handleLabelClick" ref="content" class="mu-text-field-content">
+  <div class="vui-text-field" :class="textFieldClass" :style="isFocused ? errorStyle : {}">
+    <icon  v-if="icon" class="vui-text-field-icon" :class="iconClass" :icon="icon"></icon>
+    <div @click="handleLabelClick" ref="content" class="vui-text-field-content">
       <text-field-label v-if="label" :float="float" :focus="isFocused" :normalClass="labelClass" :focusClass="labelFocusClass">{{label}}</text-field-label>
       <text-field-hint v-if="hintText" :text="hintText" :show="showHint" :class="hintTextClass"></text-field-hint>
       <slot>
         <input v-if="!multiLine" ref="input" :name="name" :type="type" :value="inputValue"
           :disabled="disabled" @change="handleChange" @focus="handleFocus" @input="handleInput" @blur="handleBlur"
-          :max="max" :min="min" class="mu-text-field-input" :class="inputClass" :required="required">
+          :max="max" :min="min" class="vui-text-field-input" :class="inputClass" :required="required">
         <enhanced-textarea :name="name" v-if="multiLine" ref="textarea" :normalClass="inputClass":value="inputValue" :disabled="disabled" :rows="rows" :rowsMax="rowsMax" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></enhanced-textarea>
       </slot>
       <underline v-if="underlineShow" :error="!!errorText" :disabled="disabled"
       :errorColor="errorColor" :focus="isFocused" :normalClass="underlineClass" :focusClass="underlineFocusClass"/>
-      <div class="mu-text-field-help" :class="helpTextClass" :style="errorStyle" v-if="errorText || helpText || maxLength > 0">
+      <div class="vui-text-field-help" :class="helpTextClass" :style="errorStyle" v-if="errorText || helpText || maxLength > 0">
           <div>
               {{errorText || helpText}}
           </div>
@@ -32,7 +32,7 @@ import textFieldLabel from './textFieldLabel'
 import {getColor} from '../utils'
 import textFieldHint from './textFieldHint'
 export default {
-  name: 'mu-text-field',
+  name: 'vui-text-field',
   props: {
     name: {
       type: String
@@ -217,7 +217,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-text-field{
+.vui-text-field{
   font-size: 16px;
   width: 256px;
   min-height: 48px;
@@ -242,31 +242,31 @@ export default {
   }
 }
 
-.mu-text-field-icon {
+.vui-text-field-icon {
   position: absolute;
   left: 16px;
   top: 12px;
-  .mu-text-field.has-label & {
+  .vui-text-field.has-label & {
     top: 36px;
   }
 }
 
-.mu-text-field-content{
+.vui-text-field-content{
   display: block;
   height: 100%;
-  .mu-text-field.disabled &{
+  .vui-text-field.disabled &{
     color: @disabledColor;
     cursor: not-allowed;
   }
   padding-bottom: 12px;
   padding-top: 4px;
-  .mu-text-field.has-label &{
+  .vui-text-field.has-label &{
     padding-top: 28px;
     padding-bottom: 12px;
   }
 }
 
-.mu-text-field-input{
+.vui-text-field-input{
   appearance: none;
   outline: none;
   border: none;
@@ -289,7 +289,7 @@ export default {
   position: relative;
 }
 
-.mu-text-field-help {
+.vui-text-field-help {
   position: absolute;
   margin-top: 6px;
   font-size: 12px;
@@ -298,13 +298,13 @@ export default {
   justify-content: space-between;
   left: 0;
   right: 0;
-  .mu-text-field.has-icon & {
+  .vui-text-field.has-icon & {
     left: 56px;
   }
-  .mu-text-field.error &{
+  .vui-text-field.error &{
     color: @red;
   }
-  .mu-text-field.disabled &{
+  .vui-text-field.disabled &{
     color: inherit;
   }
 }

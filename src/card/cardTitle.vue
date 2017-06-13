@@ -1,9 +1,9 @@
 <template>
-<div class="mu-card-title-container">
-  <div class="mu-card-title" :class="titleClass">
+<div class="vui-card-title-container">
+  <div class="vui-card-title" :class="titleClass">
     {{title}}
   </div>
-  <div class="mu-card-sub-title" :class="subTitleClass">
+  <div class="vui-card-sub-title" :class="subTitleClass">
     {{subTitle}}
   </div>
 </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'mu-card-title',
+  name: 'vui-card-title',
   props: {
     title: {
       type: String
@@ -31,15 +31,15 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-card-title-container{
+.vui-card-title-container{
   padding: 16px;
   position: relative;
-  .mu-card-title{
+  .vui-card-title{
     font-size: 24px;
     color: @textColor;
     line-height: 36px;
   }
-  .mu-card-sub-title{
+  .vui-card-sub-title{
     font-size: 14px;
     color: @lightBlack;
     display: block;

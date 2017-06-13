@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <mu-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
-      <mu-icon-button @click="toggleNav" icon="menu" slot="left"/>
-      <mu-icon-button slot="right" href="https://github.com/531431988/wmvui" icon=":mudocs-icon-custom-github"/>
-    </mu-appbar>
+    <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
+      <vui-icon-button @click="toggleNav" icon="menu" slot="left"/>
+      <vui-icon-button slot="right" href="https://github.com/531431988/wmvui" icon=":mudocs-icon-custom-github"/>
+    </vui-appbar>
     <app-nav v-if="!isHomePage" @change="handleMenuChange" @close="toggleNav" :open="open" :docked="docked" />
     <div class="example-content" :class="{'nav-hide': !open, 'home-page': isHomePage}">
       <router-view></router-view>

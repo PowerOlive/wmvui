@@ -1,14 +1,14 @@
 <template>
-<div class="mu-circle-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
-  <div class="mu-circle-spinner active" :class="{'mu-circle-secondary': secondary}" :style="spinnerStyle">
-      <div class="mu-circle-clipper left">
-          <div class="mu-circle" :style="{'border-width': borderWidth + 'px'}"></div>
+<div class="vui-circle-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
+  <div class="vui-circle-spinner active" :class="{'vui-circle-secondary': secondary}" :style="spinnerStyle">
+      <div class="vui-circle-clipper left">
+          <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
-      <div class="mu-circle-gap-patch">
-          <div class="mu-circle"></div>
+      <div class="vui-circle-gap-patch">
+          <div class="vui-circle"></div>
       </div>
-      <div class="mu-circle-clipper right">
-          <div class="mu-circle" :style="{'border-width': borderWidth + 'px'}"></div>
+      <div class="vui-circle-clipper right">
+          <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
   </div>
 </div>
@@ -48,7 +48,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-circle-wrapper {
+.vui-circle-wrapper {
   display: inline-block;
   position: relative;
   width: 48px;
@@ -58,7 +58,7 @@ export default {
     -webkit-animation: container-rotate 1568ms linear infinite;
     animation: container-rotate 1568ms linear infinite;
   }
-  .mu-circle {
+  .vui-circle {
     border-radius: 50%;
   }
 
@@ -73,7 +73,7 @@ export default {
 }
 
 
-.mu-circle-spinner {
+.vui-circle-spinner {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -84,11 +84,11 @@ export default {
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-.mu-circle-secondary{
+.vui-circle-secondary{
   border-color: @accentColor;
 }
 
-.mu-circle-clipper {
+.vui-circle-clipper {
   display: inline-block;
   position: relative;
   width: 50%;
@@ -97,7 +97,7 @@ export default {
   border-color: inherit;
 }
 
-.mu-circle-gap-patch {
+.vui-circle-gap-patch {
   position: absolute;
   top: 0;
   left: 45%;
@@ -107,12 +107,12 @@ export default {
   border-color: inherit;
 }
 
-.mu-circle-gap-patch .mu-circle {
+.vui-circle-gap-patch .vui-circle {
   width: 1000%;
   left: -450%;
 }
 
-.mu-circle-clipper .mu-circle {
+.vui-circle-clipper .vui-circle {
   width: 200%;
   height: 100%;
   border-width: 3px;
@@ -128,24 +128,24 @@ export default {
   bottom: 0;
 }
 
-.mu-circle-spinner.active .mu-circle-clipper.left .mu-circle {
+.vui-circle-spinner.active .vui-circle-clipper.left .vui-circle {
   -webkit-animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-.mu-circle-spinner.active .mu-circle-clipper.right .mu-circle {
+.vui-circle-spinner.active .vui-circle-clipper.right .vui-circle {
     -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-.mu-circle-clipper.left .mu-circle {
+.vui-circle-clipper.left .vui-circle {
   left: 0;
   border-right-color: transparent !important;
   -webkit-transform: rotate(129deg);
   transform: rotate(129deg);
 }
 
-.mu-circle-clipper.right .mu-circle {
+.vui-circle-clipper.right .vui-circle {
     left: -100%;
     border-left-color: transparent !important;
     -webkit-transform: rotate(-129deg);

@@ -1,12 +1,12 @@
 <template>
-  <div class="mu-sub-header" :class="{'inset': inset}">
+  <div class="vui-sub-header" :class="{'inset': inset}">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'mu-sub-header',
+  name: 'vui-sub-header',
   props: {
     inset: {
       type: Boolean,
@@ -18,7 +18,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-sub-header {
+.vui-sub-header {
   color: @secondaryTextColor;
   font-size: 14px;
   line-height: 48px;

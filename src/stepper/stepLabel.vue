@@ -1,11 +1,11 @@
 <template>
-<span class="mu-step-label" :class="{'active': active, 'completed': completed, 'disabled': disabled}">
-  <span class="mu-step-label-icon-container" v-if="num || ($slots.icon && $slots.length > 0)">
+<span class="vui-step-label" :class="{'active': active, 'completed': completed, 'disabled': disabled}">
+  <span class="vui-step-label-icon-container" v-if="num || ($slots.icon && $slots.length > 0)">
     <slot name="icon">
-      <svg v-if="completed" class="mu-step-label-icon" viewBox="0 0 24 24">
+      <svg v-if="completed" class="vui-step-label-icon" viewBox="0 0 24 24">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
       </svg>
-      <div v-if="!completed" class="mu-step-label-circle">
+      <div v-if="!completed" class="vui-step-label-circle">
         {{num}}
       </div>
     </slot>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'mu-step-label',
+  name: 'vui-step-label',
   props: {
     active: {
       type: Boolean
@@ -36,7 +36,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-step-label{
+.vui-step-label{
   height: 72px;
   color: @textColor;
   display: flex;
@@ -44,7 +44,7 @@ export default {
   font-size: 14px;
   padding-left: 14px;
   padding-right: 14px;
-  .mu-stepper-vertical & {
+  .vui-stepper-vertical & {
     height: 64px;
   }
   &.disabled {
@@ -56,30 +56,30 @@ export default {
   }
 }
 
-.mu-step-label-icon-container{
+.vui-step-label-icon-container{
   display: flex;
   align-items: center;
   margin-right: 8px;
   width: 24px;
 }
 
-.mu-step-label-icon {
+.vui-step-label-icon {
   display: block;
   font-size: 24px;
   width: 24px;
   height: 24px;
   color: @grey500;
   fill: currentColor;
-  .mu-step-label.disabled &{
+  .vui-step-label.disabled &{
     color: @grey500;
   }
-  .mu-step-label.completed &,
-  .mu-step-label.active & {
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
     color: @primaryColor;
   }
 }
 
-.mu-step-label-circle{
+.vui-step-label-circle{
   width: 20px;
   height: 20px;
   font-size: 12px;
@@ -89,11 +89,11 @@ export default {
   border-radius: 100%;
   background-color: @grey500;
   color: @alternateTextColor;
-  .mu-step-label.disabled &{
+  .vui-step-label.disabled &{
     background-color: @grey500;
   }
-  .mu-step-label.completed &,
-  .mu-step-label.active & {
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
     background-color: @primaryColor;
   }
 }

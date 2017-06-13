@@ -1,13 +1,13 @@
 <template>
 <div>
-  <mu-icon-menu icon="menu" @change="handleChange" :open="open" @open="handleOpen" @close="handleClose" :value="value">
-    <mu-menu-item value="1" title="Refresh" />
-    <mu-menu-item value="2" title="Send feedback" />
-    <mu-menu-item value="3" title="Settings" />
-    <mu-menu-item value="4" title="Help" />
-    <mu-menu-item value="5" title="Sign out" />
-  </mu-icon-menu>
-  <mu-raised-button label="toggle" @click="toggle"/>
+  <vui-icon-menu icon="menu" @change="handleChange" :open="open" @open="handleOpen" @close="handleClose" :value="value">
+    <vui-menu-item value="1" title="Refresh" />
+    <vui-menu-item value="2" title="Send feedback" />
+    <vui-menu-item value="3" title="Settings" />
+    <vui-menu-item value="4" title="Help" />
+    <vui-menu-item value="5" title="Sign out" />
+  </vui-icon-menu>
+  <vui-raised-button label="toggle" @click="toggle"/>
 </div>
 </template>
 

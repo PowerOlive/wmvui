@@ -1,23 +1,23 @@
 <template>
 <div class="demo-step-container">
-  <mu-stepper :activeStep="activeStep" :linear="false">
-    <mu-step>
-      <mu-step-label>
+  <vui-stepper :activeStep="activeStep" :linear="false">
+    <vui-step>
+      <vui-step-label>
         选择活动地点
-      </mu-step-label>
-    </mu-step>
-    <mu-step>
-      <mu-step-label class="demo-step-label-warning">
-        <mu-icon slot="icon" icon="like-fill" color="red"/>
+      </vui-step-label>
+    </vui-step>
+    <vui-step>
+      <vui-step-label class="demo-step-label-warning">
+        <vui-icon slot="icon" icon="like-fill" color="red"/>
         创建一个群组
-      </mu-step-label>
-    </mu-step>
-    <mu-step>
-      <mu-step-label>
+      </vui-step-label>
+    </vui-step>
+    <vui-step>
+      <vui-step-label>
         宣传活动
-      </mu-step-label>
-    </mu-step>
-  </mu-stepper>
+      </vui-step-label>
+    </vui-step>
+  </vui-stepper>
 </div>
 </template>
 

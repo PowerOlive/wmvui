@@ -1,21 +1,21 @@
 <template>
 <div :style="style">
-  <div class="mu-grid-tile" :class="tileClass">
+  <div class="vui-grid-tile" :class="tileClass">
     <slot></slot>
-    <div class="mu-grid-tile-titlebar" :class="titleBarClass">
-      <div class="mu-grid-tile-title-container">
-        <div class="mu-grid-tile-title">
+    <div class="vui-grid-tile-titlebar" :class="titleBarClass">
+      <div class="vui-grid-tile-title-container">
+        <div class="vui-grid-tile-title">
           <slot name="title">
             {{title}}
           </slot>
         </div>
-        <div class="mu-grid-tile-subtitle">
+        <div class="vui-grid-tile-subtitle">
           <slot name="subTitle">
             {{subTitle}}
           </slot>
         </div>
       </div>
-      <div class="mu-grid-tile-action">
+      <div class="vui-grid-tile-action">
         <slot name="action"></slot>
       </div>
     </div>
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'mu-grid-tile',
+  name: 'vui-grid-tile',
   props: {
     actionPosition: {
       type: String,
@@ -83,7 +83,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-grid-tile {
+.vui-grid-tile {
   position: relative;
   display: block;
   height: 100%;
@@ -96,7 +96,7 @@ export default {
   }
 }
 
-.mu-grid-tile-titlebar{
+.vui-grid-tile-titlebar{
   position: absolute;
   left: 0;
   right: 0;
@@ -106,40 +106,40 @@ export default {
   display: flex;
   align-items: center;
 
-  .mu-grid-tile.multiline &{
+  .vui-grid-tile.multiline &{
     height: 68px;
   }
 
-  .mu-grid-tile.top &{
+  .vui-grid-tile.top &{
     bottom: auto;
     top: 0;
   }
 
 }
 
-.mu-grid-tile-title-container{
+.vui-grid-tile-title-container{
   margin-left: 16px;
   margin-right: 0;
   color: @alternateTextColor;
   flex: 1;
   overflow: hidden;
-  .mu-grid-tile.action-left &{
+  .vui-grid-tile.action-left &{
     margin-right: 16px;
     margin-left: 0;
   }
 }
 
-.mu-grid-tile-action {
+.vui-grid-tile-action {
   order: 1;
-  .mu-grid-tile.action-left & {
+  .vui-grid-tile.action-left & {
     order: -1;
   }
-  .mu-icon {
+  .vui-icon {
     color: @alternateTextColor;
   }
 }
 
-.mu-grid-tile-title {
+.vui-grid-tile-title {
   font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -147,7 +147,7 @@ export default {
   word-wrap: break-word;
 }
 
-.mu-grid-tile-subtitle {
+.vui-grid-tile-subtitle {
   font-size: 12px;
   text-overflow: ellipsis;
   overflow: hidden;

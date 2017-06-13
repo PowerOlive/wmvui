@@ -1,5 +1,5 @@
 <template>
-<div class="mu-time-picker" :class="{'fullWidth': fullWidth}">
+<div class="vui-time-picker" :class="{'fullWidth': fullWidth}">
   <text-field @focus="handleFocus" :name="name" @labelClick="handleClick" :value="inputValue" :fullWidth="fullWidth"
     :inputClass="inputClass" :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
@@ -14,7 +14,7 @@ import textField from '../textField'
 import timePickerDialog from './timePickerDialog'
 import * as timeUtils from './timeUtils'
 export default {
-  name: 'mu-time-picker',
+  name: 'vui-time-picker',
   props: {
     autoOk: {
       type: Boolean,
@@ -158,7 +158,7 @@ export default {
 </script>
 
 <style lang="less">
-.mu-time-picker{
+.vui-time-picker{
   display: inline-block;
   position: relative;
   width: 256px;

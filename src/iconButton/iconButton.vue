@@ -2,7 +2,7 @@
 <abstract-button @click="handleClick"
   @hover="handleHover" @hoverExit="handleHoverExit" @keyboardFocus="handleKeyboardFocus"
   :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
-  :type="type" :href="href" :target="target" :disabled="disabled" :keyboardFocused="keyboardFocused" class="mu-icon-button">
+  :type="type" :href="href" :target="target" :disabled="disabled" :keyboardFocused="keyboardFocused" class="vui-icon-button">
   <slot>
     <icon :icon="icon" :size="iconSize" :color="iconColor" :class="iconClass"></icon>
   </slot>
@@ -16,7 +16,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import tooltip from '../tooltip'
 export default {
-  name: 'mu-icon-button',
+  name: 'vui-icon-button',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -109,7 +109,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-icon-button {
+.vui-icon-button {
   position: relative;
   display: inline-block;
   overflow: visible;
@@ -131,7 +131,7 @@ export default {
   margin: 0;
   outline: 0;
   cursor: pointer;
-  .mu-circle-ripple{
+  .vui-circle-ripple{
     color: @textColor;
   }
   &.disabled{

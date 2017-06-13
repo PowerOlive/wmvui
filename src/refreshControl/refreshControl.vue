@@ -1,6 +1,6 @@
 <template>
-  <div class="mu-refresh-control" :style="refreshStyle" :class="refreshClass">
-    <svg v-show="!refreshing && draging" viewBox="0 0 24 24" class="mu-refresh-svg-icon" :style="circularStyle">
+  <div class="vui-refresh-control" :style="refreshStyle" :class="refreshClass">
+    <svg v-show="!refreshing && draging" viewBox="0 0 24 24" class="vui-refresh-svg-icon" :style="circularStyle">
       <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
     </svg>
     <circular v-show="refreshing" :size="24" :border-width="2"></circular>
@@ -15,7 +15,7 @@ import * as domUtil from '../utils/domUtil'
 const LENGTH = 130 // 下拉最大长度
 const INITY = -68  // 初始化Y轴位置
 export default {
-  name: 'mu-refresh-control',
+  name: 'vui-refresh-control',
   props: {
     refreshing: {
       type: Boolean,
@@ -56,21 +56,21 @@ export default {
         case 'pending':
           break
         case 'ready':
-          classNames.push('mu-refresh-control-noshow')
+          classNames.push('vui-refresh-control-noshow')
           break
         case 'dragStart':
-          classNames.push('mu-refresh-control-hide')
+          classNames.push('vui-refresh-control-hide')
           break
         case 'dragAnimate':
-          classNames.push('mu-refresh-control-animate')
-          classNames.push('mu-refresh-control-hide')
+          classNames.push('vui-refresh-control-animate')
+          classNames.push('vui-refresh-control-hide')
           break
         case 'refreshAnimate':
-          classNames.push('mu-refresh-control-animate')
-          classNames.push('mu-refresh-control-noshow')
+          classNames.push('vui-refresh-control-animate')
+          classNames.push('vui-refresh-control-noshow')
           break
       }
-      if (this.refreshing) classNames.push('mu-refresh-control-refreshing')
+      if (this.refreshing) classNames.push('vui-refresh-control-refreshing')
       return classNames
     }
   },
@@ -175,7 +175,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-refresh-control{
+.vui-refresh-control{
   display: flex;
   margin: 0 auto;
   width: 40px;
@@ -191,13 +191,13 @@ export default {
   margin-left: -18px;
   margin-top: 24px;
   z-index: 90;
-  .mu-icon {
+  .vui-icon {
     display: inline-block;
     vertical-align: middle;
   }
 }
 
-.mu-refresh-svg-icon {
+.vui-refresh-svg-icon {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -205,21 +205,21 @@ export default {
   user-select: none;
 }
 
-.mu-refresh-control-animate{
+.vui-refresh-control-animate{
    transition: all 0.45s ease;
 }
 
-.mu-refresh-control-hide{
+.vui-refresh-control-hide{
   opacity: 1;
   transform: translate3d(0, -68px, 0);
 }
 
-.mu-refresh-control-noshow{
+.vui-refresh-control-noshow{
   opacity: 0;
   transform: scale(0.01);
 }
 
-.mu-refresh-control-refreshing {
+.vui-refresh-control-refreshing {
   transform: scale(1);
   opacity: 1;
 }

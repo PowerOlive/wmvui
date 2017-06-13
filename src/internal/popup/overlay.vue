@@ -1,11 +1,11 @@
 <template>
-  <transition name="mu-overlay-fade">
-    <div class="mu-overlay" v-if="show" @click="handleClick" @touchmove="prevent" :style="overlayStyle" ></div>
+  <transition name="vui-overlay-fade">
+    <div class="vui-overlay" v-if="show" @click="handleClick" @touchmove="prevent" :style="overlayStyle" ></div>
   </transition>
 </template>
 <script>
 export default {
-  name: 'mu-overlay',
+  name: 'vui-overlay',
   props: {
     show: {
       type: Boolean,
@@ -54,7 +54,7 @@ export default {
 }
 </script>
 <style lang="css">
-.mu-overlay {
+.vui-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -65,12 +65,12 @@ export default {
   z-index: 1000;
 }
 
-.mu-overlay-fade-enter-active, .mu-overlay-fade-leave-active {
+.vui-overlay-fade-enter-active, .vui-overlay-fade-leave-active {
   transition: opacity .45s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.mu-overlay-fade-enter,
-.mu-overlay-fade-leave-active {
+.vui-overlay-fade-enter,
+.vui-overlay-fade-leave-active {
   opacity: 0 !important;
 }
 </style>

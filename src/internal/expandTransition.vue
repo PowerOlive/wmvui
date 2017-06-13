@@ -1,5 +1,5 @@
 <template>
-  <transition name="mu-expand"
+  <transition name="vui-expand"
     @before-enter="beforeEnter"
     @enter="enter"
     @after-enter="afterEnter"
@@ -73,8 +73,8 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-expand-enter-active,
-.mu-expand-leave-active {
+.vui-expand-enter-active,
+.vui-expand-leave-active {
   transition: height .45s @easeOutFunction, padding .45s @easeOutFunction;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);

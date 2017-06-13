@@ -1,13 +1,13 @@
 <template>
 <div>
-   <abstract-button  class="mu-menu-item-wrapper" :class="{'active': active}"
+   <abstract-button  class="vui-menu-item-wrapper" :class="{'active': active}"
       :href="href" :target="target" ref="button" :centerRipple="false"
       :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
       :disableFocusRipple="disableFocusRipple" :disabled="disabled" containerElement="div"
       @click="handleClick" @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit">
-     <div class="mu-menu-item" :class="{'have-left-icon': leftIcon || inset}">
-       <icon :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="mu-menu-item-left-icon" :class="leftIconClass"/>
-       <div class="mu-menu-item-title" :class="titleClass">
+     <div class="vui-menu-item" :class="{'have-left-icon': leftIcon || inset}">
+       <icon :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="vui-menu-item-left-icon" :class="leftIconClass"/>
+       <div class="vui-menu-item-title" :class="titleClass">
          <slot name="title">
            {{title}}
          </slot>
@@ -16,16 +16,16 @@
          <span v-if="showAfterText" :class="afterTextClass" style="color:#999;">{{afterText}}</span>
          <slot name="after"></slot>
        </div>
-       <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="mu-menu-item-right-icon" :class="rightIconClass"/>
+       <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
      </div>
    </abstract-button>
    <popover :open="openMenu" v-if="$slots && $slots.default && $slots.default.length > 0" :anchorOrigin="{ vertical: 'top', horizontal: 'right'}"
    @close="close" :trigger="trigger">
-     <mu-menu v-if="openMenu" :desktop="$parent.desktop" popover
+     <vui-menu v-if="openMenu" :desktop="$parent.desktop" popover
       :class="nestedMenuClass" :listClass="nestedMenuListClass"
       :maxHeight="$parent.maxHeight" :value="nestedMenuValue">
        <slot></slot>
-     </mu-menu>
+     </vui-menu>
    </popover>
 </div>
 </template>
@@ -38,7 +38,7 @@ import {getColor, isNotNull} from '../utils'
 import popover from '../popover'
 import menu from './menu'
 export default {
-  name: 'mu-menu-item',
+  name: 'vui-menu-item',
   mixins: [routerMixin],
   props: {
     href: {
@@ -174,14 +174,14 @@ export default {
     'abstract-button': abstractButton,
     icon,
     popover,
-    'mu-menu': menu
+    'vui-menu': menu
   }
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-menu-item-wrapper {
+.vui-menu-item-wrapper {
   display: block;
   font-size: 16px;
   height: 48px;
@@ -191,7 +191,7 @@ export default {
   position: relative;
   cursor: pointer;
   user-select: none;
-  .mu-menu-destop & {
+  .vui-menu-destop & {
     height: 32px;
     line-height: 32px;
     font-size: 15px;
@@ -208,13 +208,13 @@ export default {
   }
 }
 
-.mu-menu-item{
+.vui-menu-item{
   padding: 0px 16px;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .mu-menu-destop & {
+  .vui-menu-destop & {
     padding: 0 24px;
   }
   &.have-left-icon{
@@ -222,33 +222,33 @@ export default {
   }
 }
 
-.mu-menu-item-title{
+.vui-menu-item-title{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
 }
 
-.mu-menu-item-left-icon{
+.vui-menu-item-left-icon{
   position: absolute;
   top: 0;
   left: 4px;
   margin:0 12px;
   color: @grey600;
-  .mu-menu-destop & {
+  .vui-menu-destop & {
     /* top: 4px; */
     left: 24px;
     margin: 0;
   }
 }
 
-.mu-menu-item-right-icon{
+.vui-menu-item-right-icon{
   position: absolute;
   top: 0;
   right: 4px;
   margin: 0 12px;
   color: @grey600;
-  .mu-menu-destop & {
+  .vui-menu-destop & {
     /* top: 4px; */
     right: 24px;
     margin: 0;

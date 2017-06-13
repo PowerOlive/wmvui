@@ -1,10 +1,10 @@
 <template>
-<transition name="mu-snackbar">
-  <div class="mu-snackbar" v-clickoutside="clickOutSide" :style="{'z-index': zIndex}">
-    <div class="mu-snackbar-message">
+<transition name="vui-snackbar">
+  <div class="vui-snackbar" v-clickoutside="clickOutSide" :style="{'z-index': zIndex}">
+    <div class="vui-snackbar-message">
       {{message}}
     </div>
-    <flat-button v-if="action" @click="handleActionClick" class="mu-snackbar-action" :color="actionColor"  rippleColor="#FFF" :rippleOpacity="0.3" secondary :label="action"/>
+    <flat-button v-if="action" @click="handleActionClick" class="vui-snackbar-action" :color="actionColor"  rippleColor="#FFF" :rippleOpacity="0.3" secondary :label="action"/>
   </div>
 </transition>
 </template>
@@ -14,7 +14,7 @@ import flatButton from '../flatButton'
 import {getZIndex} from '../internal/popup/utils'
 import clickoutside from '../internal/clickoutside'
 export default {
-  name: 'mu-snackbar',
+  name: 'vui-snackbar',
   props: {
     action: {
       type: String
@@ -51,7 +51,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-snackbar {
+.vui-snackbar {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -66,11 +66,11 @@ export default {
   max-width: 568px;
 }
 
-.mu-snackbar-action{
+.vui-snackbar-action{
   margin: 0 -16px 0 24px;
 }
 
-.mu-snackbar-message {
+.vui-snackbar-message {
   display: flex;
   flex: 1;
   padding-top: 8px;
@@ -78,7 +78,7 @@ export default {
 }
 
 @media only screen and (max-width: 992px) and (min-width: 601px) {
-  .mu-snackbar {
+  .vui-snackbar {
     width: auto;
     min-width: 288px;
     left: 5%;
@@ -86,7 +86,7 @@ export default {
   }
 }
 @media only screen and (min-width: 993px) {
-  .mu-snackbar {
+  .vui-snackbar {
     width: auto;
     min-width: 8%;
     top: 10%;
@@ -97,13 +97,13 @@ export default {
   }
 }
 
-.mu-snackbar-enter-active,.mu-snackbar-leave-active{
+.vui-snackbar-enter-active,.vui-snackbar-leave-active{
   transition: transform .4s @easeOutFunction, opacity .4s @easeOutFunction;
   backface-visibility: hidden;
 }
 
-.mu-snackbar-enter,
-.mu-snackbar-leave-active{
+.vui-snackbar-enter,
+.vui-snackbar-leave-active{
   transform: translate3d(0, 100%, 0);
   opacity: 0;
 }

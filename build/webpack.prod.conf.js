@@ -16,7 +16,7 @@ var env = process.env.NODE_ENV === 'testing'
 
   var banner =
       '/*!\n' +
-      ' * Muse UI v' + packageJson.version + ' (https://github.com/myronliu347/vue-carbon)\n' +
+      ' * WMVUI v' + packageJson.version + ' (https://github.com/myronliu347/vue-carbon)\n' +
       ' * (c) ' + new Date().getFullYear() + ' Myron Liu \n' +
       ' * Released under the MIT License.\n' +
       ' */';

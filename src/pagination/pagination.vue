@@ -1,7 +1,7 @@
 <template>
-<div class="mu-pagination" v-if="total">
+<div class="vui-pagination" v-if="total">
   <page-item identifier="singleBack" @click="handleClick" :disabled="leftDisabled">
-    <svg viewBox="0 0 24 24" class="mu-pagination-svg-icon">
+    <svg viewBox="0 0 24 24" class="vui-pagination-svg-icon">
       <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
     </svg>
   </page-item>
@@ -15,7 +15,7 @@
   </page-item>
   <page-item :index="totalPageCount" @click="handleClick" :isActive="actualCurrent === totalPageCount" v-if="totalPageCount !== 1"></page-item>
   <page-item identifier="singleForward" @click="handleClick" :disabled="rightDisabled">
-    <svg viewBox="0 0 24 24" class="mu-pagination-svg-icon">
+    <svg viewBox="0 0 24 24" class="vui-pagination-svg-icon">
       <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
     </svg>
   </page-item>
@@ -32,7 +32,7 @@ import selectField from '../selectField'
 import textField from '../textField'
 import menuItem from '../menu/menuItem'
 export default{
-  name: 'mu-pagination',
+  name: 'vui-pagination',
   props: {
     total: {
       type: Number,
@@ -199,13 +199,13 @@ export default{
 
 <style lang="less">
 @import "../styles/import.less";
-.mu-pagination{
+.vui-pagination{
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.mu-pagination-svg-icon{
+.vui-pagination-svg-icon{
   display: inline-block;
   width: 24px;
   height: 24px;

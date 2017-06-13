@@ -2,7 +2,7 @@
 <div class="code-block">
   <div class="code-toolbar" @click="toggle">
     <span class="code-toolBar-title">{{title}}</span>
-    <mu-icon-button touch :tooltip="tooltip" icon="code"/>
+    <vui-icon-button touch :tooltip="tooltip" icon="code"/>
   </div>
   <markdown-element :text="text" class="code-block-code-style" :class="{'hide': !open}"/>
   <markdown-element v-if="description" :text="description" class="code-block-description"/>
