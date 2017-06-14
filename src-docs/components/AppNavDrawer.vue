@@ -31,24 +31,22 @@
       </vui-list-item>
 
       <vui-list-item :title="$t('component')" toggleNested>
-        <vui-sub-header slot="nested" class="exmaples-nav-sub-header">Material Design</vui-sub-header>
-        <vui-list-item slot="nested" value="#/appbar" title="App Bar"/>
-        <vui-list-item slot="nested" value="#/autoComplete" title="Auto Complete"/>
-        <vui-list-item slot="nested" value="#/avatar" title="Avatar"/>
-        <vui-list-item slot="nested" value="#/badge" title="Badge"/>
-        <vui-list-item slot="nested" value="#/bottomNav" title="Bottom Navigation"/>
-        <vui-list-item slot="nested" value="#/bottomSheet" title="Bottom Sheet"/>
-        <vui-list-item slot="nested" title="Buttons" toggleNested>
-          <vui-list-item slot="nested" value="#/flatButton" title="Flat Button"></vui-list-item>
-          <vui-list-item slot="nested" value="#/raisedButton" title="Raised Button"></vui-list-item>
-          <vui-list-item slot="nested" value="#/iconButton" title="Icon Button"></vui-list-item>
-          <vui-list-item slot="nested" value="#/floatButton" title="Floating Action Button"></vui-list-item>
-        </vui-list-item>
-        <vui-list-item slot="nested" value="#/card" title="Card"/>
-        <vui-list-item slot="nested" value="#/chip" title="Chip"/>
-        <vui-list-item slot="nested" value="#/datePicker" title="Date Picker"/>
-        <vui-list-item slot="nested" value="#/dialog" title="Dialog"/>
-        <vui-list-item slot="nested" value="#/divider" title="Divider"/>
+        <vui-list-item slot="nested" value="#/appbar" title="头部"/>
+        <vui-list-item slot="nested" value="#/autoComplete" title="自动补全"/>
+        <vui-list-item slot="nested" value="#/avatar" title="头像"/>
+        <vui-list-item slot="nested" value="#/badge" title="徽章"/>
+        <vui-list-item slot="nested" value="#/bottomNav" title="底导航"/>
+        <vui-list-item slot="nested" value="#/bottomSheet" title="底部面板"/>
+        <vui-list-item slot="nested" value="#/number" title="商品计算"/>
+        <vui-list-item slot="nested" value="#/flatButton" title="默认按钮" />
+        <vui-list-item slot="nested" value="#/raisedButton" title="强调按钮" />
+        <vui-list-item slot="nested" value="#/iconButton" title="图标按钮" />
+        <vui-list-item slot="nested" value="#/floatButton" title="圆形阴影按钮" />
+        <vui-list-item slot="nested" value="#/card" title="卡片"/>
+        <vui-list-item slot="nested" value="#/chip" title="标签"/>
+        <vui-list-item slot="nested" value="#/datePicker" title="日期选择器"/>
+        <vui-list-item slot="nested" value="#/dialog" title="弹窗"/>
+        <vui-list-item slot="nested" value="#/divider" title="分豁线"/>
         <vui-list-item slot="nested" value="#/drawer" title="Drawer"/>
         <vui-list-item slot="nested" value="#/gridList" title="Grid List"/>
         <vui-list-item slot="nested" value="#/icon" title="Icon"/>
@@ -67,7 +65,6 @@
         </vui-list-item>
         <vui-list-item slot="nested" value="#/selectField" title="Select Field"/>
         <vui-list-item slot="nested" title="Selection Controls" toggleNested>
-          <vui-list-item slot="nested" value="#/number" title="Number"/>
           <vui-list-item slot="nested" value="#/checkbox" title="Checkbox"/>
           <vui-list-item slot="nested" value="#/radio" title="Radio"/>
           <vui-list-item slot="nested" value="#/switch" title="Switch"/>

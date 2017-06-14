@@ -1,5 +1,4 @@
-# 基于大牛的Muse UI 在次开发，功能正在完善中，感谢开源，API请查看官方地址或[点击这里](http://wm.wuhao.in/wmvui)
-# [Muse UI](https://api.travis-ci.org/museui/muse-ui.svg?branch=master)
+# 基于大牛的Muse UI 在次开发，功能正在完善中，感谢开源
 [![npm package](https://img.shields.io/npm/v/muse-ui.svg)](https://www.npmjs.org/package/muse-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/muse-ui.svg)](https://npmjs.org/package/muse-ui)
 [![Join the chat at https://gitter.im/muse-ui/muse-ui](https://badges.gitter.im/muse-ui/muse-ui.svg)](https://gitter.im/muse-ui/muse-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -8,9 +7,8 @@
 
 ## Links
 
-* [Home Page](https://www.muse-ui.org/)
-* [中文文档](https://www.muse-ui.org/#/install)
-* [English Docs](https://www.muse-ui.org/?lang=en)
+* [WMVUI 演示](http://wm.wuhao.in/wmvui)
+* [Muse UI官方](https://www.muse-ui.org/#/install)
 
 ## Install
 

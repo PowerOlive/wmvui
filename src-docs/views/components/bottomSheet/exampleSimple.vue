@@ -1,15 +1,14 @@
 <template>
 <div>
-  <vui-raised-button @click="openBottomSheet" label="Open Bottom Sheet" />
+  <vui-raised-button @click="openBottomSheet" label="打开面板" />
   <vui-bottom-sheet :open="bottomSheet" @close="closeBottomSheet">
     <vui-list @itemClick="closeBottomSheet">
       <vui-sub-header>
         请选择一个
       </vui-sub-header>
-      <vui-list-item title="阴阳师"/>
-      <vui-list-item title="贪吃蛇大作战"/>
-      <vui-list-item title="一划到底"/>
-      <vui-list-item title="全民斗地主"/>
+      <vui-list-item title="李白 骚贱浪"/>
+      <vui-list-item title="程咬金 打不死的小强"/>
+      <vui-list-item title="孙悟空 猴三棍"/>
     </vui-list>
   </vui-bottom-sheet>
 </div>

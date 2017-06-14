@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="vui-banner">
-      <img src="images/bg.png" class="vui-banner-image" width="100%" height="100%"/>
       <div class="vui-logo">
         <img src="images/logo.png" class="vui-logo-image" alt="">
       </div>
@@ -9,7 +8,7 @@
         WMVUI
       </h1>
       <h2 class="vui-banner-sub-title">
-        基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index">Muse-UI</a> 的UI组件库再次开发完善<br>集成更多实用组件 感谢大牛们的开源
+        基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index" style="color:yellow">Muse-UI</a> 的UI组件库再次开发<br>部分组件正在开发中 感谢开源
       </h2>
       <div class="vui-banner-actions">
         <vui-raised-button label="文档" to="/install" class="vui-banner-button"/>
@@ -17,7 +16,7 @@
       </div>
     </div>
     <div class="vui-desc-wrapper">
-      <div class="vui-desc">
+      <!-- <div class="vui-desc">
         <div class="vui-desc-content">
           <h2 class="vui-desc-title">组件丰富</h2>
           <h3 class="vui-desc-sub-title">多功能组件，使用无忧</h3>
@@ -48,13 +47,13 @@
           </div>
         </div>
         <img src="images/img3.png" class="vui-desc-image" />
-      </div>
+      </div> -->
     </div>
 
-    <div class="vui-footer">
-      Muse-UI is open source and released under the MIT Licence.<br/>
+    <!-- <div class="vui-footer">
+      WMVUI is open source and released under the MIT Licence.<br/>
       Copyright (c) 2016 myron
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -67,20 +66,12 @@ export default {
 @import "../../src/styles/vars.less";
 .vui-banner{
   z-index: 100;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.vui-banner-image {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background:#2196f3;
 }
 .vui-logo{
   width: 120px;
@@ -88,7 +79,7 @@ export default {
   line-height: 100px;
   text-align: center;
   background-color: @alternateTextColor;
-  margin:  0 auto;
+  margin:  10% auto 0;
   color: @primaryColor;
   font-size: 50px;
   border-radius: 50%;

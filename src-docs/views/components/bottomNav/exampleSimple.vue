@@ -1,9 +1,9 @@
 <template>
 <vui-paper>
   <vui-bottom-nav :value="bottomNav" @change="handleChange">
-    <vui-bottom-nav-item value="recents" title="Recents" icon="like"/>
-    <vui-bottom-nav-item value="favorites" title="Favorites" icon="search"/>
-    <vui-bottom-nav-item value="nearby" title="Nearby" icon="more"/>
+    <vui-bottom-nav-item value="like" title="喜欢" icon="like"/>
+    <vui-bottom-nav-item value="search" title="搜索" icon="search"/>
+    <vui-bottom-nav-item value="more" title="更多" icon="more"/>
   </vui-bottom-nav>
 </vui-paper>
 </template>
@@ -12,7 +12,7 @@
 export default {
   data () {
     return {
-      bottomNav: 'recents'
+      bottomNav: 'like'
     }
   },
   methods: {

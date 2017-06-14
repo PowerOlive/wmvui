@@ -1,25 +1,18 @@
 <template>
 <div class="demo-chip-container">
+  <vui-chip class="demo-chip">默认标签</vui-chip>
+  <vui-chip class="demo-chip"  @delete="handleClose" showDelete>可删除的标签</vui-chip>
   <vui-chip class="demo-chip">
-    default chip
-  </vui-chip>
-  <vui-chip class="demo-chip"  @delete="handleClose" showDelete>
-    delete chip
-  </vui-chip>
-  <vui-chip class="demo-chip">
-    <vui-avatar src="/images/uicon.jpg"/> avatar chip
-  </vui-chip>
+    <vui-avatar src="/images/uicon.jpg"/>带头像的标签</vui-chip>
   <vui-chip class="demo-chip" @delete="handleClose" showDelete>
-    <vui-avatar src="/images/uicon.jpg"/> avatar delete chip
-  </vui-chip>
+    <vui-avatar src="/images/uicon.jpg"/>带头像可删除</vui-chip>
   <vui-chip class="demo-chip" @delete="handleClose" showDelete>
-    <vui-avatar icon="like-fill"/> icon avatar chip
+    <vui-avatar icon="like-fill"/>带图标可删除的标签
   </vui-chip>
-
   <vui-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
-    <vui-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</vui-avatar> custom chip
+    <vui-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</vui-avatar>自定义效果
   </vui-chip>
-  <vui-toast v-model="toast" message="你点击的删除" />
+  <vui-popup position="center" toast :overlay="true" :open="toast">你点击了删除</vui-popup>
 </div>
 </template>
 
@@ -33,6 +26,9 @@ export default {
   methods: {
     handleClose () {
       this.toast = true
+      setTimeout(() => {
+        this.toast = false
+      }, 1000)
     }
   }
 }
