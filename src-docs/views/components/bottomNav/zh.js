@@ -4,7 +4,7 @@ import description from './README.md'
 export default {
   description,
   simpleExample: '简单的使用',
-  shiftExample: 'Shift 模式',
+  shiftExample: '动画模式',
   bottomNav: {
     props: {
       shift: '是否使用 shift 模式',

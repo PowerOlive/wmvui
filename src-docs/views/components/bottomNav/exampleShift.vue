@@ -13,8 +13,8 @@
 export default {
   data () {
     return {
-      bottomNav: 'movies',
-      bottomNavColor: 'movies'
+      bottomNav: 'like',
+      bottomNavColor: 'like'
     }
   },
   methods: {

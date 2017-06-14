@@ -42,7 +42,7 @@ export default {
     if (!icon) return null
     var isMaterial = icon.indexOf(':') !== 0
     return h('i', {
-      class: ['vui-icon ', 'icon-' + (isMaterial ? icon : '')],
+      class: ['vui-icon icon-' + (isMaterial ? icon : '')],
       style: iconStyle,
       on: {
         click: handleClick

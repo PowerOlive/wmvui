@@ -4,7 +4,7 @@ import description from './README.md'
 export default {
   description,
   simpleExample: '简单的使用',
-  simpleExampleDesc: '`Raised Button` 默认、主色、强调色, 不可用、全宽五种不同状态的按钮示例',
+  simpleExampleDesc: ' 默认、主色、强调色, 不可用、全宽五种不同状态的按钮示例',
   complexExample: '稍复杂的使用',
   complexExampleDesc: '配合图标、文件按钮、调整文字位置，自定义样式等',
   props: {

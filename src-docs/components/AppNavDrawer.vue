@@ -37,7 +37,7 @@
         <vui-list-item slot="nested" value="#/badge" title="徽章"/>
         <vui-list-item slot="nested" value="#/bottomNav" title="底导航"/>
         <vui-list-item slot="nested" value="#/bottomSheet" title="底部面板"/>
-        <vui-list-item slot="nested" value="#/number" title="商品计算"/>
+        <vui-list-item slot="nested" value="#/number" title="计数器"/>
         <vui-list-item slot="nested" value="#/flatButton" title="默认按钮" />
         <vui-list-item slot="nested" value="#/raisedButton" title="强调按钮" />
         <vui-list-item slot="nested" value="#/iconButton" title="图标按钮" />
@@ -47,7 +47,7 @@
         <vui-list-item slot="nested" value="#/datePicker" title="日期选择器"/>
         <vui-list-item slot="nested" value="#/dialog" title="弹窗"/>
         <vui-list-item slot="nested" value="#/divider" title="分豁线"/>
-        <vui-list-item slot="nested" value="#/drawer" title="Drawer"/>
+        <vui-list-item slot="nested" value="#/drawer" title="侧边栏"/>
         <vui-list-item slot="nested" value="#/gridList" title="Grid List"/>
         <vui-list-item slot="nested" value="#/icon" title="Icon"/>
         <vui-list-item slot="nested" value="#/svgIcon" title="svg icon"/>

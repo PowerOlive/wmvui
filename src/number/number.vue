@@ -1,16 +1,26 @@
 <template>
   <span class="vui-number">
-    <a @click="sub" class="vui-number-selector vui-number-selector-sub":class="{'vui-number-disabled':disabledMin}">-</a>
+    <vui-icon-button 
+    icon="minus" 
+    @click="sub" 
+    class="vui-number-selector vui-number-selector-sub" 
+    :class="{'vui-number-disabled':disabledMin}"
+     :disabled="disabledMin" />
     <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!fillable" pattern="[0-9]*"/>
-    <a @click="add" class="vui-number-selector vui-number-selector-plus" :class="{'vui-number-disabled':disabledMax}">
-      +
-    </a>
+    <vui-icon-button 
+    icon="plus"
+    @click="add" 
+    class="vui-number-selector vui-number-selector-plus" 
+    :class="{'vui-number-disabled':disabledMax}" 
+    :disabled="disabledMax" />
   </span>
 </template>
 <script>
+import iconButton from '../iconButton'
 export default {
   name: 'vui-number',
   components: {
+    iconButton
   },
   props: {
     min: Number,
@@ -109,7 +119,6 @@ $number-input-border-color:#bbb;
     vertical-align:middle;
 }
 .vui-number-input {
-  font-size:16px;
   appearance: none;
   text-align:center;
 }
@@ -122,19 +131,21 @@ $number-input-border-color:#bbb;
 .vui-number-selector{
   border-radius: 0;
   height:29px;
-  line-height: inherit;
   color: $number-input-font-color;
   float: left;
   display: block;
   border:1px solid $number-input-border-color;
+  .vui-icon{
+    &:before{
+      font-size: 14px;
+      vertical-align: middle;
+    }
+  }
 
 }
 .vui-number-selector{
-    padding: 2px;
+    padding: 0;
     text-align: center;
-    line-height: 1;
-    font-size: 20px;
-    font-weight: 700;
     width: 28px;
 }
 .vui-number-selector-sub {

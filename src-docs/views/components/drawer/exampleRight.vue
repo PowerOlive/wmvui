@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-raised-button label="toggle drawer" @click="toggle()"/>
+  <vui-raised-button label="显示在右边" @click="toggle()"/>
   <vui-drawer right :open="open" @close="toggle()">
     <vui-appbar title="Muse UI"/>
     <vui-list>

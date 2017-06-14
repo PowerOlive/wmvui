@@ -13,14 +13,6 @@ export default {
   data () {
     return {
       value: 2
-      // tableData: [
-      //   {name: 'value',type: 'Number',info:'使用v-model绑定'},
-      //   {name: 'min',type: 'Number',info:'最小值'},
-      //   {name: 'max',type:'Number',info:'最大值'},
-      //   {name: 'step',type:'Number',info:'步长'},
-      //   {name: 'fillable',type:'Boolean',info:'是否可填写'},
-      //   {name: 'width',type:'Number',info:'输入框宽度'},
-      // ]
     }
   }
 }
