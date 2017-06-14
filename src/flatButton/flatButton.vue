@@ -24,21 +24,29 @@
   class="vui-btn"
   wrapperClass="vui-btn-wrapper"
   >
+  
+  <template v-if="label && iconRight">
+    <span 
+    class="vui-btn-label" 
+    :class="labelClass">
+      {{label}}
+    </span>
+    <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
+    <slot></slot>
+  </template>
+  <template v-else>
+    <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
+    <slot></slot>
+    <span 
+    class="vui-btn-label" 
+    :class="labelClass">
+      {{label}}
+    </span>
+    
+  </template>
 
-  <span 
-  class="vui-btn-label" 
-  :class="labelClass" v-if="label && labelPosition === 'before'">
-    {{label}}
-  </span>
 
-  <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
-  <slot></slot>
 
-  <span 
-  class="vui-btn-label" 
-  :class="labelClass" v-if="label && labelPosition === 'after'">
-    {{label}}
-  </span>
 
 </abstract-button>
 </template>
@@ -69,12 +77,14 @@ export default {
       type: String
     },
     text: Boolean,
+    invert: Boolean,
     label: {
       type: String
     },
+    iconRight: Boolean,
     labelPosition: {
       type: String,
-      default: 'after'
+      default: 'left'
     },
     labelClass: {
       type: [String, Array, Object],
@@ -159,9 +169,14 @@ export default {
         'vui-btn-info': this.info,
         'vui-btn-warn': this.warn,
         'vui-btn-danger': this.danger,
-        'label-before': this.labelPosition === 'before',
-        'vui-btn-full': this.fullWidth,
-        'no-label': !this.label
+        'vui-btn-invert': this.invert,
+        'vui-btn-invert-primary': this.invert && this.primary,
+        'vui-btn-invert-success': this.invert && this.success,
+        'vui-btn-invert-info': this.invert && this.info,
+        'vui-btn-invert-warn': this.invert && this.warn,
+        'vui-btn-invert-danger': this.invert && this.danger,
+        'vui-label-right': this.iconRight,
+        'vui-btn-full': this.fullWidth
       }
     }
   },
@@ -180,22 +195,19 @@ export default {
   overflow: hidden;
   position: relative;
   border-radius: 2px;
-  height: 36px;
-  line-height: 36px;
-  min-width: 88px;
   transition-duration: 300ms;
   transition-timing-function: @easeOutFunction;
   transform: translate3d(0, 0, 0);
   text-decoration: none;
   text-transform: uppercase;
-  border: none;
+  border:2px solid transparent;
   appearance: none;
   background: none;
   color: @textColor;
   .flex-shrink(0);
   margin: 0;
   outline: 0;
-  padding: 0;
+  padding:4px 20px;
   cursor: pointer;
   &.hover {
     background-color: fade(@textColor, 10%);
@@ -207,27 +219,12 @@ export default {
   }
   .vui-icon{
     vertical-align: middle;
-    margin-left: 8px;
-    margin-right: 0;
-    + .vui-btn-label {
-      padding-left: 8px;
-    }
-
+    margin-right:6px;
   }
-  &.no-label .vui-icon{
-    margin-left: 0;
-  }
-  .vui-circle-ripple{
-    color: @textColor;
-  }
-  &.label-before {
-    padding-right: 8px;
+  &.vui-label-right {
     .vui-icon{
-      margin-right: 4px;
-      margin-left: 0;
-    }
-    .vui-btn-label {
-      padding-right: 8px;
+      margin-left:6px;
+      margin-right:0;
     }
   }
 }
@@ -279,6 +276,40 @@ export default {
       background-color: lighten(@dangerColor, 6%);
     }
   }
+  &-invert{
+    background:transparent;
+    border-color: fade(@textColor, 10%);
+    &-primary,
+    &-success,
+    &-info,
+    &-warn,
+    &-danger{
+      &:hover{
+        color:#fff;
+        border-color:transparent;
+      }
+    }
+    &-primary{
+      color:@primaryColor;
+      border-color:@primaryColor;
+    }
+    &-success{
+      color:@successColor;
+      border-color:@successColor;
+    }
+    &-info{
+      color:@infoColor;
+      border-color:@infoColor;
+    }
+    &-warn{
+      color:@warnColor;
+      border-color:@warnColor;
+    }
+    &-danger{
+      color:@dangerColor;
+      border-color:@dangerColor;
+    }
+  }
 }
 .vui-btn-text{
   background:transparent;
@@ -293,8 +324,6 @@ export default {
 }
 .vui-btn-label{
   vertical-align: middle;
-  padding-right: 16px;
-  padding-left: 16px;
   font-size: 14px;
 }
 

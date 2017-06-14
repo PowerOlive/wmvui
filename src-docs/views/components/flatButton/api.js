@@ -21,25 +21,30 @@ export default {
     default: '',
     desc: 'props.label'
   }, {
-    name: 'labelPosition',
-    type: 'String',
-    default: '',
-    desc: 'props.labelPosition'
+    name: 'iconRight',
+    type: 'Boolean',
+    default: 'left',
+    desc: 'props.iconRight'
   }, {
     name: 'labelClass',
     type: 'String,Object,Array',
     default: '',
     desc: 'props.labelClass'
   }, {
-    name: 'primary',
+    name: 'text',
     type: 'Boolean',
-    default: 'false',
-    desc: 'props.primary'
+    default: '',
+    desc: 'props.text'
   }, {
-    name: 'secondary',
+    name: '按钮状态',
     type: 'Boolean',
-    default: 'false',
-    desc: 'props.secondary'
+    default: '',
+    desc: 'props.state'
+  }, {
+    name: '反色按钮',
+    type: 'Boolean',
+    default: '',
+    desc: 'props.invert'
   }, {
     name: 'disabled',
     type: 'Boolean',
