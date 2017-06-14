@@ -3,10 +3,10 @@ import description from './README.md'
 
 export default {
   description,
-  simpleExample: '简单使用',
-  simpleExampleDesc: ' 默认、主色、强调色、不可用、四种不同状态的按钮示例',
-  complexExample: '稍复杂的使用',
-  complexExampleDesc: '配合选择文件按钮，图标，定义label的位置',
+  exampleBtnDefault: '默认无背景按钮',
+  exampleBtnDefaultDesc: ' 默认、主色、成功、提示、警告、失败不同状态的按钮示例',
+  exampleBtnState: '带背景按钮',
+  exampleBtnStateDesc: '配合选择文件按钮，图标，定义label的位置',
   props: {
     icon: '按钮上的图标',
     iconSize: '按钮上的图标大小',

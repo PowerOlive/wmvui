@@ -1,16 +1,45 @@
 <template>
 <abstract-button
-  :disabled="disabled" :keyboardFocused="keyboardFocused" wrapperClass="vui-flat-button-wrapper"
-  :type="type" :href="href" :target="target" :style="buttonStyle" class="vui-flat-button"
-  :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
-  @click="handleClick" :rippleColor="rippleColor"
-  @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
+  @click="handleClick" 
+  @keyboardFocus="handleKeyboardFocus" 
+  @hover="handleHover" 
+  @hoverExit="handleHoverExit"
+  :disabled="disabled" 
+  :type="type" 
+  :href="href" 
+  :target="target" 
+  :style="buttonStyle" 
+  :to="to" 
+  :tag="tag" 
+  :activeClass="activeClass" 
+  :event="event" 
+  :exact="exact" 
+  :append="append" 
+  :replace="replace"
+  :rippleColor="rippleColor"
   :rippleOpacity="rippleOpacity"
-  :class="buttonClass" :centerRipple="false">
-  <span class="vui-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
+  :keyboardFocused="keyboardFocused" 
+  :centerRipple="false"
+  :class="buttonClass" 
+  class="vui-btn"
+  wrapperClass="vui-btn-wrapper"
+  >
+
+  <span 
+  class="vui-btn-label" 
+  :class="labelClass" v-if="label && labelPosition === 'before'">
+    {{label}}
+  </span>
+
   <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
   <slot></slot>
-  <span class="vui-flat-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
+
+  <span 
+  class="vui-btn-label" 
+  :class="labelClass" v-if="label && labelPosition === 'after'">
+    {{label}}
+  </span>
+
 </abstract-button>
 </template>
 
@@ -20,7 +49,7 @@ import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import {getColor} from '../utils'
 export default {
-  name: 'vui-flat-button',
+  name: 'vui-button',
   mixins: [routerMixin],
   props: {
     icon: {
@@ -39,6 +68,7 @@ export default {
     type: {
       type: String
     },
+    text: Boolean,
     label: {
       type: String
     },
@@ -50,10 +80,11 @@ export default {
       type: [String, Array, Object],
       default: ''
     },
-    primary: {
-      type: Boolean,
-      default: false
-    },
+    primary: Boolean,
+    success: Boolean,
+    info: Boolean,
+    warn: Boolean,
+    danger: Boolean,
     secondary: {
       type: Boolean,
       default: false
@@ -117,10 +148,19 @@ export default {
     },
     buttonClass () {
       return {
-        'vui-flat-button-primary': this.primary,
-        'vui-flat-button-secondary': this.secondary,
+        'vui-btn-text': this.text,
+        'vui-btn-text-primary': this.text && this.primary,
+        'vui-btn-text-success': this.text && this.success,
+        'vui-btn-text-info': this.text && this.info,
+        'vui-btn-text-warn': this.text && this.warn,
+        'vui-btn-text-danger': this.text && this.danger,
+        'vui-btn-primary': this.primary,
+        'vui-btn-success': this.success,
+        'vui-btn-info': this.info,
+        'vui-btn-warn': this.warn,
+        'vui-btn-danger': this.danger,
         'label-before': this.labelPosition === 'before',
-        'vui-raised-button-full': this.fullWidth,
+        'vui-btn-full': this.fullWidth,
         'no-label': !this.label
       }
     }
@@ -134,7 +174,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-flat-button {
+.vui-btn {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -169,7 +209,7 @@ export default {
     vertical-align: middle;
     margin-left: 8px;
     margin-right: 0;
-    + .vui-flat-button-label {
+    + .vui-btn-label {
       padding-left: 8px;
     }
 
@@ -186,31 +226,72 @@ export default {
       margin-right: 4px;
       margin-left: 0;
     }
-    .vui-flat-button-label {
+    .vui-btn-label {
       padding-right: 8px;
     }
   }
 }
-.vui-flat-button-wrapper{
+.vui-btn-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.vui-raised-button-full{
+.vui-btn-full{
   width: 100%;
   display: block;
 }
-.vui-flat-button-primary{
-  color: @primaryColor;
-}
 
-.vui-flat-button-secondary{
-  color: @accentColor;
+.vui-btn{
+  &-primary{
+    color:#fff;
+    background-color: @primaryColor;
+    &:hover{
+      background-color: lighten(@primaryColor, 10%);
+    }
+  }
+  &-success{
+    color:#fff;
+    background-color: @successColor;
+    &:hover{
+      background-color: lighten(@successColor, 10%);
+    }
+  }
+  &-info{
+    color:#fff;
+    background-color: @infoColor;
+    &:hover{
+      background-color: lighten(@infoColor, 10%);
+    }
+  }
+  &-warn{
+    color:#fff;
+    background-color: @warnColor;
+    &:hover{
+      background-color: lighten(@warnColor, 10%);
+    }
+  }
+  &-danger{
+    color:#fff;
+    background-color: @dangerColor;
+    &:hover{
+      background-color: lighten(@dangerColor, 6%);
+    }
+  }
 }
-
-.vui-flat-button-label{
+.vui-btn-text{
+  background:transparent;
+  &:hover{
+    background-color: fade(@textColor, 10%);
+  }
+  &-primary{ color: @primaryColor }
+  &-success{ color: @successColor }
+  &-info{ color: @infoColor }
+  &-warn{ color: @warnColor }
+  &-danger{ color: @dangerColor }
+}
+.vui-btn-label{
   vertical-align: middle;
   padding-right: 16px;
   padding-left: 16px;

@@ -1,15 +1,46 @@
 <template>
-  <abstract-button @KeyboardFocus="handleKeyboardFocus"
-    @hover="handleHover" @hoverExit="handleHoverExit" @click="handleClick"
-    :type="type" :href="href" :target="target" :style="buttonStyle"
-    :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
-    class="vui-raised-button" :rippleColor="rippleColor":rippleOpacity="rippleOpacity"
-    :disabled="disabled" :keyboardFocused="keyboardFocused"
-    :class="buttonClass" wrapperClass="vui-raised-button-wrapper" :centerRipple="false">
-    <span class="vui-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'before'">{{label}}</span>
+  <abstract-button 
+    @KeyboardFocus="handleKeyboardFocus"
+    @hover="handleHover" 
+    @hoverExit="handleHoverExit" 
+    @click="handleClick"
+    :disabled="disabled" 
+    :type="type" 
+    :href="href" 
+    :target="target" 
+    :style="buttonStyle"
+    :to="to" 
+    :tag="tag" 
+    :activeClass="activeClass" 
+    :event="event" 
+    :exact="exact" 
+    :append="append" 
+    :replace="replace"
+    :rippleColor="rippleColor"
+    :rippleOpacity="rippleOpacity"
+    :keyboardFocused="keyboardFocused"
+    :centerRipple="false"
+    :class="buttonClass" 
+    class="vui-raised-button" 
+    wrapperClass="vui-raised-button-wrapper" 
+    >
+
+    <span 
+    class="vui-raised-button-label" 
+    :class="labelClass" 
+    v-if="label && labelPosition === 'before'">
+      {{label}}
+    </span>
+
     <icon :icon="icon" :class="iconClass"></icon>
     <slot></slot>
-    <span class="vui-raised-button-label" :class="labelClass" v-if="label && labelPosition === 'after'">{{label}}</span>
+
+    <span 
+    class="vui-raised-button-label" 
+    :class="labelClass" v-if="label && labelPosition === 'after'">
+      {{label}}
+    </span>
+    
   </abstract-button>
 </template>
 
