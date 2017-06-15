@@ -1,9 +1,9 @@
 <template>
 <div>
-  <vui-button label="上面弹出" @click="open('top')"/>
-  <vui-button label="下面弹出" @click="open('bottom')"/>
-  <vui-button label="左边弹出" @click="open('left')"/>
-  <vui-button label="右边弹出" @click="open('right')"/>
+  <vui-button info label="上面弹出" @click="open('top')"/>
+  <vui-button info label="下面弹出" @click="open('bottom')"/>
+  <vui-button info label="左边弹出" @click="open('left')"/>
+  <vui-button info label="右边弹出" @click="open('right')"/>
   <vui-popup position="bottom" popupClass="demo-popup-bottom" :open="bottomPopup" @close="close('bottom')">
     <vui-appbar title="弹出">
       <vui-button slot="right" label="关闭" color="white" @click="close('bottom')"/>

@@ -9,7 +9,7 @@
         <p>
           在附近选择一个活动的地点, 最好靠近地铁站公交站，已方便交通，附近设施应尽量完善，最重要的是有Wifi
         </p>
-        <vui-button label="下一步" class="demo-step-button" @click="handleNext" primary/>
+        <vui-button label="下一步" class="demo-step-button" @click="handleNext" info/>
       </vui-step-content>
     </vui-step>
     <vui-step>
@@ -20,7 +20,7 @@
         <p>
           创建群组，50人左右，以18-25单身青年为主。。。。。
         </p>
-        <vui-button label="下一步" class="demo-step-button" @click="handleNext" primary/>
+        <vui-button label="下一步" class="demo-step-button" @click="handleNext" info/>
         <vui-button label="上一步" class="demo-step-button" @click="handlePrev"/>
       </vui-step-content>
     </vui-step>
@@ -32,7 +32,7 @@
         <p>
           多在群里发消息宣传宣传，有事没事多在群里唠唠嗑，确定的话就ok拉
         </p>
-        <vui-button label="完成" class="demo-step-button" @click="handleNext" primary/>
+        <vui-button label="完成" class="demo-step-button" @click="handleNext" info/>
         <vui-button label="上一步" class="demo-step-button" @click="handlePrev"/>
       </vui-step-content>
     </vui-step>

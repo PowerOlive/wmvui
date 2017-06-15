@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-button label="可滚动" primary @click="open"/>
+  <vui-button label="可滚动" info @click="open"/>
   <vui-dialog :open="dialog" @close="close" title="标题" scrollable>
     <vui-menu>
       <vui-menu-item :title="'menu item ' + menu" v-for="menu, index in menus" :key="index"/>

@@ -7,7 +7,7 @@
     <vui-menu-item value="4" title="Help" />
     <vui-menu-item value="5" title="Sign out" />
   </vui-icon-menu>
-  <vui-button label="toggle" @click="toggle"/>
+  <vui-button info label="toggle" @click="toggle"/>
 </div>
 </template>
 

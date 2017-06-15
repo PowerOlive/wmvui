@@ -1,51 +1,61 @@
 <template>
 <div>
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="文本提示" 
   @click="openToast('center',false,'','操作失败','text')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="操作失败" 
   @click="openToast('center',false,'round-close-fill','操作失败~','error')" />
 
-  <vui-button 
+  <vui-button
+  info 
   class="demo-vui-raised-button" 
   label="操作成功" 
   @click="openToast('center',false,'like-fill','操作成功~','success')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="操作提示" 
   @click="openToast('center',false,'like','操作提示~','info')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="操作警告" 
   @click="openToast('center',false,'round-close','操作警告~','warn')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="上面弹出" 
   @click="openToast('top','happy','' ,'操作成功~','')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="下面弹出" 
   @click="openToast('bottom','crying','','操作失败~','')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="左边弹出" 
   @click="openToast('left','goofy','','位置可配置~~','')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="右边弹出" 
   @click="openToast('right','rich','','位置可配置~','')" />
 
   <vui-button 
+  info
   class="demo-vui-raised-button" 
   label="加载层" 
   @click="openLoading" />

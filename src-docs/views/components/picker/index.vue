@@ -4,7 +4,7 @@
   <!-- <code-example :code="exampleCode" :title="$t('simpleExample')" :description="$t('simpleExampleDesc')">
     <example/>
   </code-example> -->
-  <api-view :api="apiData" :i18n="$t.bind(this)"/>
+  <!-- <api-view :api="apiData" :i18n="$t.bind(this)"/> -->
 </div>
 </template>
 

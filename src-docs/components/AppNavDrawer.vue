@@ -50,10 +50,10 @@
         <vui-list-item slot="nested" value="#/svgIcon" title="多色图标"/>
         <vui-list-item slot="nested" value="#/list" title="列表"/>
         <vui-list-item slot="nested" value="#/menu" title="菜单"/>
-        <vui-list-item slot="nested" value="#/iconMenu" title="按钮菜单"/>
+        <vui-list-item slot="nested" value="#/iconMenu" title="图标菜单"/>
         <vui-list-item slot="nested" value="#/dropDownMenu" title="下拉菜单"/>
         <vui-list-item slot="nested" value="#/paper" title="阴影框"/>
-        <vui-list-item slot="nested" value="#/popover" title="弹出层"/>
+        <vui-list-item slot="nested" value="#/popover" title="弹出下拉"/>
         <vui-list-item slot="nested" value="#/linearProgress" title="条形进度条"/>
         <vui-list-item slot="nested" value="#/circularProgress" title="圆形进度条"/>
         <vui-list-item slot="nested" value="#/selectField" title="下拉选择"/>
