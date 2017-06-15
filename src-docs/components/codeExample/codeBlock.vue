@@ -56,7 +56,7 @@ ${this.code}
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  padding: 0 0 0 20px;
+  padding: 0 10px 0 20px;
   background-color: darken(@darkerAccentColor, 5%);
   cursor: pointer;
 }

@@ -79,15 +79,4 @@ export default {
   /* line-height: 56px; */
 }
 
-@media (min-width: 480px) {
-  .vui-appbar-title {
-    /* line-height: 64px; */
-  }
-  .vui-appbar {
-    height: 64px;
-  }
-  .vui-appbar-title {
-    font-size: 24px;
-  }
-}
 </style>

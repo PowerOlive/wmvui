@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
-      <vui-button @click="toggleNav" icon="menu" slot="left"/>
-      <vui-button slot="right" href="https://github.com/531431988/wmvui" icon=":mudocs-icon-custom-github"/>
+      <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
+      <vui-button circle backgroundColor="rgba(255,255,255,.2)" color="#fff" :iconSize="16" href="https://github.com/531431988/wmvui" slot="right" icon="like-fill"/>
     </vui-appbar>
     <app-nav v-if="!isHomePage" @change="handleMenuChange" @close="toggleNav" :open="open" :docked="docked" />
     <div class="example-content" :class="{'nav-hide': !open, 'home-page': isHomePage}">

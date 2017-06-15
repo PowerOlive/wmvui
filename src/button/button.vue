@@ -216,8 +216,8 @@ export default {
 .vui-btn-circle{
   overflow:hidden;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border:none;
   .vui-icon{
     margin-right: 0;

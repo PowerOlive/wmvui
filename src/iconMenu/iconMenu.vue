@@ -1,6 +1,6 @@
 <template>
   <div class="vui-icon-menu">
-    <vui-button icon="like-fill" :tooltip="tooltip" :tooltipPosition="tooltipPosition" :icon="icon" :iconClass="iconClass" @click="handleOpen">
+    <vui-button icon="like-fill" :tooltip="tooltip" :tooltipPosition="tooltipPosition" :icon="icon" :color="color" @click="handleOpen">
       <slot name="icon"></slot>
     </vui-button>
     <popover v-if="$slots && $slots.default && $slots.default.length > 0" :open="openMenu" :trigger="trigger" :scroller="scroller" :anchorOrigin="anchorOrigin"
@@ -24,9 +24,7 @@ export default {
       type: String,
       required: true
     },
-    iconClass: {
-      type: [String, Array, Object]
-    },
+    color: String,
     menuClass: {
       type: [String, Array, Object]
     },
