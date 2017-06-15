@@ -8,8 +8,8 @@
     <clock-hours v-if="mode === 'hour'" :format="format" :initialHours="selectedTime.getHours()" @change="handleChangeHours" />
     <clock-minutes v-if="mode === 'minute'" @change="handleChangeMinutes" :initialMinutes="selectedTime.getMinutes()"/>
     <div class="vui-clock-actions">
-      <flat-button :label="cancelLabel" @click="dismiss" primary/>
-      <flat-button :label="okLabel" @click="accept" primary/>
+      <vui-button :label="cancelLabel" @click="dismiss" primary/>
+      <vui-button :label="okLabel" @click="accept" primary/>
     </div>
   </div>
 </div>
@@ -19,7 +19,7 @@
 import timeDisplay from './timeDisplay'
 import clockHours from './clockHours'
 import clockMinutes from './clockMinutes'
-import flatButton from '../flatButton'
+import button from '../button'
 export default {
   props: {
     autoOk: {
@@ -131,7 +131,7 @@ export default {
     'time-display': timeDisplay,
     'clock-hours': clockHours,
     'clock-minutes': clockMinutes,
-    'flat-button': flatButton
+    'vui-button': button
   }
 }
 </script>

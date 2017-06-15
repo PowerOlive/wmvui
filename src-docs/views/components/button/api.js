@@ -1,6 +1,11 @@
 import router from '../internal/router'
 export default {
   props: [{
+    name: 'label',
+    type: 'String',
+    default: '',
+    desc: 'props.label'
+  }, {
     name: 'icon',
     type: 'String',
     default: '',
@@ -11,50 +16,40 @@ export default {
     default: '',
     desc: 'props.iconSize'
   }, {
-    name: 'iconClass',
-    type: 'String,Object,Array',
-    default: '',
-    desc: 'props.iconClass'
-  }, {
-    name: 'label',
-    type: 'String',
-    default: '',
-    desc: 'props.label'
-  }, {
     name: 'iconRight',
     type: 'Boolean',
     default: 'left',
     desc: 'props.iconRight'
   }, {
-    name: 'labelClass',
-    type: 'String,Object,Array',
+    name: 'circle',
+    type: 'Boolean',
     default: '',
-    desc: 'props.labelClass'
+    desc: 'props.circle'
+  }, {
+    name: 'round',
+    type: 'Boolean',
+    default: '',
+    desc: 'props.round'
   }, {
     name: 'text',
     type: 'Boolean',
     default: '',
     desc: 'props.text'
   }, {
+    name: 'invert',
+    type: 'Boolean',
+    default: '',
+    desc: 'props.invert'
+  }, {
     name: '按钮状态',
     type: 'Boolean',
     default: '',
     desc: 'props.state'
   }, {
-    name: '反色按钮',
-    type: 'Boolean',
-    default: '',
-    desc: 'props.invert'
-  }, {
     name: 'disabled',
     type: 'Boolean',
     default: 'false',
     desc: 'props.disabled'
-  }, {
-    name: 'fullWidth',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.fullWidth'
   }, {
     name: 'type',
     type: 'String',
@@ -65,7 +60,7 @@ export default {
     type: 'String',
     default: '',
     desc: 'props.href'
-  }, ...router, {
+  }, {
     name: 'target',
     type: 'String',
     default: '',
@@ -86,15 +81,20 @@ export default {
     default: '',
     desc: 'props.hoverColor'
   }, {
-    name: 'rippleColor',
+    name: 'fill',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.fill'
+  }, ...router, {
+    name: 'activeColor',
     type: 'String',
     default: '',
-    desc: 'props.rippleColor'
+    desc: 'props.activeColor'
   }, {
-    name: 'rippleOpacity',
+    name: 'activeOpacity',
     type: 'Number',
     default: '',
-    desc: 'props.rippleOpacity'
+    desc: 'props.activeOpacity'
   }],
   slots: [{
     name: 'default',

@@ -13,10 +13,10 @@ import Avatar from './views/components/avatar'
 import Badge from './views/components/badge'
 import BottomNav from './views/components/bottomNav'
 import BottomSheet from './views/components/bottomSheet'
-import FlatButton from './views/components/flatButton'
-import RaisedButton from './views/components/raisedButton'
-import IconButton from './views/components/iconButton'
-import FloatButton from './views/components/floatButton'
+import button from './views/components/button'
+// import RaisedButton from './views/components/raisedButton'
+// import IconButton from './views/components/iconButton'
+// import FloatButton from './views/components/floatButton'
 import Card from './views/components/card'
 import Chip from './views/components/chip'
 import DatePicker from './views/components/datePicker'
@@ -74,10 +74,10 @@ const router = new Router({
     { path: '/badge', component: Badge },
     { path: '/bottomNav', component: BottomNav },
     { path: '/bottomSheet', component: BottomSheet },
-    { path: '/flatButton', component: FlatButton },
-    { path: '/raisedButton', component: RaisedButton },
-    { path: '/iconButton', component: IconButton },
-    { path: '/floatButton', component: FloatButton },
+    { path: '/button', component: button },
+    // { path: '/raisedButton', component: RaisedButton },
+    // { path: '/iconButton', component: IconButton },
+    // { path: '/floatButton', component: FloatButton },
     { path: '/card', component: Card },
     { path: '/chip', component: Chip },
     { path: '/datePicker', component: DatePicker },

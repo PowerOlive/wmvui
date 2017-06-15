@@ -14,8 +14,8 @@
     找到阳光与阴影奏出和谐的旋律。我要用一颗敏感赤诚的心迎接每一缕滑过指尖的阳光！
   </vui-card-text>
   <vui-card-actions>
-    <vui-flat-button label="Action 1"/>
-    <vui-flat-button label="Action 2"/>
+    <vui-button primary label="Action 1"/>
+    <vui-button danger label="Action 2"/>
   </vui-card-actions>
 </vui-card>
 </template>

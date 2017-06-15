@@ -11,8 +11,8 @@
         基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index" style="color:yellow">Muse-UI</a> 的UI组件库再次开发<br>部分组件正在开发中 感谢开源
       </h2>
       <div class="vui-banner-actions">
-        <vui-raised-button label="文档" to="/install" class="vui-banner-button"/>
-        <vui-raised-button label="GITHUB" href="https://github.com/531431988/wmvui" class="vui-banner-button" icon=":mudocs-icon-custom-github"/>
+        <vui-button label="文档" to="/install" backgroundColor="#ffc107" class="vui-banner-button"/>
+        <vui-button label="GITHUB" href="https://github.com/531431988/wmvui" backgroundColor="#ffc107" class="vui-banner-button" icon=":mudocs-icon-custom-github"/>
       </div>
     </div>
     <div class="vui-desc-wrapper">
@@ -115,7 +115,8 @@ export default {
 }
 
 .vui-banner-button{
-  color: @primaryColor;
+  color:#fff;
+  margin: 0 10px;
 }
 
 .vui-banner-actions{

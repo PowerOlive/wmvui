@@ -15,13 +15,13 @@
           <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
         </div>
         <div class="demo-theme-item center">
-          <vui-raised-button label="secondary" secondary/>
+          <vui-button label="secondary" secondary/>
         </div>
         <div class="demo-theme-item center">
-          <vui-raised-button label="primary" primary/>
+          <vui-button label="primary" primary/>
         </div>
         <div class="demo-theme-item center">
-          <vui-raised-button label="default"/>
+          <vui-button label="default"/>
         </div>
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
@@ -63,24 +63,24 @@
     <vui-row>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-flat-button label="VIEW DIALOG" @click="openDialog"/>
+          <vui-button label="VIEW DIALOG" @click="openDialog"/>
         </div>
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-flat-button label="VIEW DRAWER" @click="toggleDrawer"/>
+          <vui-button label="VIEW DRAWER" @click="toggleDrawer"/>
         </div>
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-flat-button label="VIEW SNACKBAR" @click="showSnackbar"/>
+          <vui-button label="VIEW SNACKBAR" @click="showSnackbar"/>
         </div>
       </vui-col>
     </vui-row>
     <vui-dialog :open="dialog" title="Dialog" @close="closeDialog">
       {{$t('dialogDesc')}}
-      <vui-flat-button slot="actions" @click="closeDialog" primary :label="$t('cancel')"/>
-      <vui-flat-button slot="actions" primary @click="closeDialog" :label="$t('ok')"/>
+      <vui-button slot="actions" @click="closeDialog" primary :label="$t('cancel')"/>
+      <vui-button slot="actions" primary @click="closeDialog" :label="$t('ok')"/>
     </vui-dialog>
     <vui-drawer :open="drawer" :docked="false" @close="toggleDrawer()">
       <vui-menu @itemClick="toggleDrawer()">

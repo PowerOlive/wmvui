@@ -5,10 +5,10 @@ import icon from './icon'
 import svgIcon from './svgIcon'
 import badge from './badge'
 import appBar from './appBar'
-import iconButton from './iconButton'
-import flatButton from './flatButton'
-import raisedButton from './raisedButton'
-import floatButton from './floatButton'
+// import iconButton from './iconButton'
+import button from './button'
+// import raisedButton from './raisedButton'
+// import floatButton from './floatButton'
 import contentBlock from './contentBlock'
 import * as list from './list'
 import subHeader from './subHeader'
@@ -63,10 +63,10 @@ const components = {
   svgIcon,
   badge,
   appBar,
-  iconButton,
-  flatButton,
-  raisedButton,
-  floatButton,
+  // iconButton,
+  button,
+  // raisedButton,
+  // floatButton,
   contentBlock,
   ...list,
   subHeader,

@@ -1,8 +1,8 @@
 <template>
   <div class="vui-icon-menu">
-    <icon-button :tooltip="tooltip" :tooltipPosition="tooltipPosition" :icon="icon" :iconClass="iconClass" @click="handleOpen">
+    <vui-button icon="like-fill" :tooltip="tooltip" :tooltipPosition="tooltipPosition" :icon="icon" :iconClass="iconClass" @click="handleOpen">
       <slot name="icon"></slot>
-    </icon-button>
+    </vui-button>
     <popover v-if="$slots && $slots.default && $slots.default.length > 0" :open="openMenu" :trigger="trigger" :scroller="scroller" :anchorOrigin="anchorOrigin"
       :targetOrigin="targetOrigin" @close="handleClose">
       <vui-menu @change="change" :popover="openMenu" :value="value" :class="menuClass" :listClass="menuListClass"
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import iconButton from '../iconButton'
+import button from '../button'
 import popover from '../popover'
 import {menu} from '../menu'
 export default {
@@ -116,7 +116,7 @@ export default {
     }
   },
   components: {
-    'icon-button': iconButton,
+    'vui-button': button,
     popover,
     'vui-menu': menu
   }

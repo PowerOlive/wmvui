@@ -18,6 +18,14 @@
   background-color: #ff4081;
   color: #ffffff;
 }
+body {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, Lato, sans-serif;
+}
+a {
+  color: #ff4081;
+}
 .vui-bottom-nav {
   background-color: #ffffff;
 }
@@ -42,12 +50,20 @@
 .vui-bottom-nav-shift .vui-bottom-item-active .vui-bottom-item-icon {
   color: #ffffff;
 }
-body {
+.vui-bottom-sheet {
   background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: Roboto, Lato, sans-serif;
 }
-a {
+.vui-btn {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: transparent;
+}
+.vui-btn .vui-circle-ripple {
+  color: rgba(0, 0, 0, 0.87);
+}
+.vui-btn-primary {
+  color: #2196f3;
+}
+.vui-btn-secondary {
   color: #ff4081;
 }
 .vui-card {
@@ -76,9 +92,6 @@ a {
 }
 .vui-card-text {
   color: rgba(0, 0, 0, 0.87);
-}
-.vui-bottom-sheet {
-  background-color: #ffffff;
 }
 .vui-checkbox input[type="checkbox"]:checked + .vui-checkbox-wrapper .vui-checkbox-icon-uncheck {
   color: #2196f3;
@@ -177,36 +190,6 @@ a {
 .vui-dropDown-menu-line {
   background-color: rgba(0, 0, 0, 0.12);
 }
-.vui-flat-button {
-  color: rgba(0, 0, 0, 0.87);
-  background-color: transparent;
-}
-.vui-flat-button .vui-circle-ripple {
-  color: rgba(0, 0, 0, 0.87);
-}
-.vui-flat-button-primary {
-  color: #2196f3;
-}
-.vui-flat-button-secondary {
-  color: #ff4081;
-}
-.vui-float-button {
-  background-color: #2196f3;
-  color: #ffffff;
-}
-.vui-float-button.disabled {
-  color: rgba(0, 0, 0, 0.3);
-  cursor: default;
-  background-color: #e0e0e0;
-}
-.vui-float-button.hover .vui-float-button-wrapper,
-.vui-float-button:active .vui-float-button-wrapper {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.vui-float-button-secondary {
-  background-color: #ff4081;
-  color: #ffffff;
-}
 .vui-grid-tile-titlebar {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -290,9 +273,6 @@ a {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.87);
 }
-.vui-popover {
-  background-color: #ffffff;
-}
 .vui-picker {
   background-color: #ffffff;
 }
@@ -308,6 +288,9 @@ a {
 }
 .vui-picker-item.selected {
   color: rgba(0, 0, 0, 0.87);
+}
+.vui-popover {
+  background-color: #ffffff;
 }
 .vui-popup {
   background-color: #ffffff;
@@ -335,23 +318,6 @@ a {
 }
 .vui-radio.disabled .vui-radio-icon-checked {
   color: rgba(0, 0, 0, 0.38);
-}
-.vui-raised-button {
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
-}
-.vui-raised-button.hover .vui-raised-button-wrapper {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.vui-raised-button.disabled {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: #e6e6e6;
-}
-.vui-raised-button-primary {
-  background-color: #2196f3;
-}
-.vui-raised-button-secondary {
-  background-color: #ff4081;
 }
 .vui-refresh-control {
   color: #2196f3;

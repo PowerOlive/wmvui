@@ -25,8 +25,8 @@
         {{content}}
       </p>
       <div>
-        <vui-flat-button class="demo-step-button" label="上一步" :disabled="activeStep === 0 || activeStep == -1" @click="handlePrev"/>
-        <vui-raised-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2 || activeStep == -1" primary @click="handleNext"/>
+        <vui-button class="demo-step-button" label="上一步" :disabled="activeStep === 0 || activeStep == -1" @click="handlePrev"/>
+        <vui-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2 || activeStep == -1" primary @click="handleNext"/>
       </div>
   </div>
 </div>

@@ -4,13 +4,13 @@
     <div class="vui-snackbar-message">
       {{message}}
     </div>
-    <flat-button v-if="action" @click="handleActionClick" class="vui-snackbar-action" :color="actionColor"  rippleColor="#FFF" :rippleOpacity="0.3" secondary :label="action"/>
+    <vui-button v-if="action" @click="handleActionClick" class="vui-snackbar-action" :color="actionColor"  rippleColor="#FFF" :rippleOpacity="0.3" secondary :label="action"/>
   </div>
 </transition>
 </template>
 
 <script>
-import flatButton from '../flatButton'
+import button from '../button'
 import {getZIndex} from '../internal/popup/utils'
 import clickoutside from '../internal/clickoutside'
 export default {
@@ -41,7 +41,7 @@ export default {
     }
   },
   components: {
-    'flat-button': flatButton
+    'vui-button': button
   },
   directives: {
     clickoutside

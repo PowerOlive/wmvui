@@ -1,10 +1,10 @@
 <template>
   <vui-appbar>
-    <vui-icon-button icon="menu" slot="left" />
+    <vui-button icon="menu" slot="left" />
     <vui-text-field icon="search" class="appbar-search-field flex-item" hintText="搜索关键字" fullWidth />
     <div slot="right">
       <vui-badge content="12" circle secondary badgeClass="vui-badge">
-          <vui-icon-button icon="like-fill"/>
+          <vui-button icon="like-fill"/>
       </vui-badge>
     </div>
   </vui-appbar>

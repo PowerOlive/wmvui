@@ -8,13 +8,13 @@
 @badgeSecondaryColor: @accentColor;
 @badgeSecondaryTextColor: @alternateTextColor;
 
+@avatarColor: @alternateTextColor;
+@avatarBackgroundColor: darken(@alternateTextColor, 26%);
+
 @baseFontFamily: @fontFamily;
 @baseTextColor: @textColor;
 @baseBackgroundColor: @backgroundColor;
 @baseLinkColor: @accentColor;
-
-@avatarColor: @alternateTextColor;
-@avatarBackgroundColor: darken(@alternateTextColor, 26%);
 
 @bottomNavBackgroundColor: @dialogBackgroundColor;
 @bottomNavShiftBackgroundColor: @primaryColor;
@@ -24,6 +24,12 @@
 @bottomNavShiftSelectedColor: @alternateTextColor;
 
 @bottomSheetColor: @dialogBackgroundColor;
+
+// flatButton
+@flatButtonColor: transparent;
+@flatButtonTextColor: @textColor;
+@flatButtonPrimaryTextColor: @primaryColor;
+@flatButtonSecondaryTextColor: @accentColor;
 
 @cardBackgroudColor: @backgroundColor;
 @cardTitleColor: fade(@textColor, 87%);
@@ -64,20 +70,6 @@
 @dropDownMenuIconColor: @borderColor;
 @dropDownMenuLineColor: @borderColor;
 
-// flatButton
-@flatButtonColor: transparent;
-@flatButtonTextColor: @textColor;
-@flatButtonPrimaryTextColor: @primaryColor;
-@flatButtonSecondaryTextColor: @accentColor;
-
-// floatButton
-@floatButtonColor: @primaryColor;
-@floatButtonIconColor: @alternateTextColor;
-@floatButtonSecondaryColor: @accentColor;
-@floatButtonSecondaryIconColor: @alternateTextColor;
-@floatButtonDisabledColor: darken(@alternateTextColor, 12%);
-@floatButtonDisabledIconColor: fade(@textColor, 30%);
-
 @gridListTextColor: @white;
 @gridListTitlebarColor: rgba(0, 0, 0, 0.4);
 
@@ -88,6 +80,13 @@
 @linearProgressColor: @lighterPrimaryColor;
 @linearProgressFillColor: @primaryColor;
 
+@menuTextColor: @textColor;
+@menuSelectColor: @accentColor;
+@menuHoverColor: rgba(0, 0, 0, .1);
+@menuDisabledColor: @disabledColor;
+@menuLeftIconColor: @grey600;
+@menuRightIconColor: @grey600;
+
 // listItem
 @listTextColor: @textColor;
 @listHoverColor: fade(@listTextColor, 10%);
@@ -95,13 +94,6 @@
 @listLeftIconColor: @grey600;
 @listRightIconColor: @grey600;
 @listSelectedColor: @primaryColor;
-
-@menuTextColor: @textColor;
-@menuSelectColor: @accentColor;
-@menuHoverColor: rgba(0, 0, 0, .1);
-@menuDisabledColor: @disabledColor;
-@menuLeftIconColor: @grey600;
-@menuRightIconColor: @grey600;
 
 @paginationTextColor: @textColor;
 @paginationHoverBackgroundColor: rgba(0, 0, 0, .1);
@@ -125,14 +117,6 @@
 @radioTextColor: @textColor;
 @radioDisabledColor: @disabledColor;
 @radioCheckedColor: @primaryColor;
-
-// raisedButton
-@raisedButtonColor: @alternateTextColor;
-@raisedButtonTextColor: @textColor;
-@raisedButtonPrimaryColor: @primaryColor;
-@raisedButtonSecondaryColor: @accentColor;
-@raisedButtonDisabledColor: darken(@alternateTextColor, 10%);
-@raisedButtonDisabledTextColor: fade(@textColor, 30%);
 
 @refreshControlColor: @primaryColor;
 
@@ -174,6 +158,11 @@
 @tableRowStripeBackgroundColor: fade(lighten(@primaryColor, 50%), 40%);
 @tableTheadTextColor: @secondaryTextColor;
 
+@tabsBackgroundColor: @primaryColor;
+@tabsLineColor: @accentColor;
+@tabsTextColor: fade(@alternateTextColor, 70%);
+@tabsSelectedTextColor: @alternateTextColor;
+
 @textFieldTextColor: @secondaryTextColor;
 @textFieldInputColor: @textColor;
 @textFieldHintColor: @disabledColor;
@@ -184,11 +173,6 @@
 @textFieldFocusLineColor: @primaryColor;
 @textFieldErrorLineColor: @red;
 @textFieldDisabledLineColor: @disabledColor;
-
-@tabsBackgroundColor: @primaryColor;
-@tabsLineColor: @accentColor;
-@tabsTextColor: fade(@alternateTextColor, 70%);
-@tabsSelectedTextColor: @alternateTextColor;
 
 @timePickerColor: @alternateTextColor;
 @timePickerClockColor: @textColor;

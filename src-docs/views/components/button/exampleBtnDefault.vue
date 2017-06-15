@@ -9,3 +9,9 @@
 </div>
 </template>
 
+<style>
+	.demo-vui-raised-button{
+		margin:8px;
+	}
+</style>
+

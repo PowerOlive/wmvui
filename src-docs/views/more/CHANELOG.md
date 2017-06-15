@@ -64,7 +64,7 @@
   * 提供引用自定义字体图标解决方案，所有设置icon的地方可以 `':' + 样式名称`
   ```html
   <vui-icon value=":fa fa-user"/>
-  <vui-raised-button icon=":fa fa-user"/>
+  <vui-button icon=":fa fa-user"/>
   ```
 
 ### Bugs

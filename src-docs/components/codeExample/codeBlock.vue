@@ -2,7 +2,7 @@
 <div class="code-block">
   <div class="code-toolbar" @click="toggle">
     <span class="code-toolBar-title">{{title}}</span>
-    <vui-icon-button touch :tooltip="tooltip" icon="code"/>
+    <vui-button circle :iconSize="20" icon="code" />
   </div>
   <markdown-element :text="text" class="code-block-code-style" :class="{'hide': !open}"/>
   <markdown-element v-if="description" :text="description" class="code-block-description"/>
@@ -56,7 +56,7 @@ ${this.code}
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  padding: 0px 24px;
+  padding: 0 0 0 20px;
   background-color: darken(@darkerAccentColor, 5%);
   cursor: pointer;
 }

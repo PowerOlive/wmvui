@@ -23,6 +23,16 @@
   color: @badgeSecondaryTextColor;
 }
 
+body {
+  background-color: @baseBackgroundColor;
+  color: @baseTextColor;
+  font-family: @baseFontFamily;
+}
+
+a {
+  color: @baseLinkColor;
+}
+
 .vui-bottom-nav {
   background-color: @bottomNavBackgroundColor;
 }
@@ -53,14 +63,25 @@
   }
 }
 
-body {
-  background-color: @baseBackgroundColor;
-  color: @baseTextColor;
-  font-family: @baseFontFamily;
+.vui-bottom-sheet {
+  background-color: @bottomSheetColor;
 }
 
-a {
-  color: @baseLinkColor;
+// flatbutton
+.vui-btn {
+  color: @flatButtonTextColor;
+  background-color: @flatButtonColor;
+  .vui-circle-ripple {
+    color: @flatButtonTextColor;
+  }
+}
+
+.vui-btn-primary{
+  color: @flatButtonPrimaryTextColor;
+}
+
+.vui-btn-secondary{
+  color: @flatButtonSecondaryTextColor;
 }
 
 .vui-card {
@@ -98,10 +119,6 @@ a {
 
 .vui-card-text{
   color: @cardTextColor;
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
 }
 
 .vui-checkbox {
@@ -234,44 +251,6 @@ a {
   background-color: @dropDownMenuLineColor;
 }
 
-// flatbutton
-.vui-flat-button {
-  color: @flatButtonTextColor;
-  background-color: @flatButtonColor;
-  .vui-circle-ripple {
-    color: @flatButtonTextColor;
-  }
-}
-
-.vui-flat-button-primary{
-  color: @flatButtonPrimaryTextColor;
-}
-
-.vui-flat-button-secondary{
-  color: @flatButtonSecondaryTextColor;
-}
-
-.vui-float-button {
-  background-color: @floatButtonColor;
-  color: @floatButtonIconColor;
-  &.disabled{
-    color: @floatButtonDisabledIconColor;
-    cursor: default;
-    background-color: @floatButtonDisabledColor;
-  }
-  &.hover,
-  &:active{
-    .vui-float-button-wrapper {
-      background-color: fade(@floatButtonIconColor, 30%);
-    }
-  }
-}
-
-.vui-float-button-secondary {
-  background-color: @floatButtonSecondaryColor;
-  color: @floatButtonSecondaryIconColor;
-}
-
 .vui-grid-tile-titlebar{
   background-color: @gridListTitlebarColor;
 }
@@ -382,10 +361,6 @@ a {
   color: @paperColor;
 }
 
-.vui-popover {
-  background-color: @popoverColor;
-}
-
 .vui-picker{
   background-color: @pickerColor;
 }
@@ -407,6 +382,10 @@ a {
   &.selected {
     color: @pickerSelectedTextColor;
   }
+}
+
+.vui-popover {
+  background-color: @popoverColor;
 }
 
 .vui-popup {
@@ -448,31 +427,6 @@ a {
   .vui-radio.disabled & {
      color: @radioDisabledColor;
    }
-}
-
-
-
-// raisedButton
-.vui-raised-button{
-  background-color: @raisedButtonColor;
-  color: @raisedButtonTextColor;
-  &.hover {
-    .vui-raised-button-wrapper {
-      background-color: fade(@raisedButtonTextColor, 10%);
-    }
-  }
-  &.disabled{
-    color: @raisedButtonDisabledTextColor;
-    background-color: @raisedButtonDisabledColor;
-  }
-}
-
-.vui-raised-button-primary{
-  background-color: @raisedButtonPrimaryColor;
-}
-
-.vui-raised-button-secondary{
-  background-color: @raisedButtonSecondaryColor;
 }
 
 .vui-refresh-control {

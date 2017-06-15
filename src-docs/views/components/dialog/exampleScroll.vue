@@ -1,11 +1,11 @@
 <template>
 <div>
-  <vui-raised-button label="scrollable dialog" @click="open"/>
+  <vui-button label="scrollable dialog" @click="open"/>
   <vui-dialog :open="dialog" @close="close" title="Scrollable Dialog" scrollable>
     <vui-menu>
       <vui-menu-item :title="'menu item ' + menu" v-for="menu, index in menus" :key="index"/>
     </vui-menu>
-    <vui-flat-button primary label="关闭" @click="close" slot="actions"/>
+    <vui-button primary label="关闭" @click="close" slot="actions"/>
   </vui-dialog>
 </div>
 </template>

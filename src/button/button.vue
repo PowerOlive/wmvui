@@ -16,8 +16,8 @@
   :exact="exact" 
   :append="append" 
   :replace="replace"
-  :rippleColor="rippleColor"
-  :rippleOpacity="rippleOpacity"
+  :rippleColor="activeColor"
+  :rippleOpacity="activeOpacity"
   :keyboardFocused="keyboardFocused" 
   :centerRipple="false"
   :class="buttonClass" 
@@ -27,22 +27,20 @@
   
   <template v-if="label && iconRight">
     <span 
-    class="vui-btn-label" 
-    :class="labelClass">
+    class="vui-btn-label">
       {{label}}
     </span>
-    <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
+    <icon v-if="icon" :icon="icon" :size="iconSize"></icon>
     <slot></slot>
   </template>
   <template v-else>
-    <icon :icon="icon" :size="iconSize" :class="iconClass"></icon>
+    <icon v-if="icon" :icon="icon" :size="iconSize"></icon>
     <slot></slot>
     <span 
-    class="vui-btn-label" 
-    :class="labelClass">
+    v-if="label"
+    class="vui-btn-label">
       {{label}}
     </span>
-    
   </template>
 
 
@@ -60,53 +58,24 @@ export default {
   name: 'vui-button',
   mixins: [routerMixin],
   props: {
-    icon: {
-      type: String
-    },
-    iconSize: {
-      type: Number
-    },
-    iconClass: {
-      type: [String, Array, Object]
-    },
-    fullWidth: {
-      type: Boolean,
-      default: false
-    },
-    type: {
-      type: String
-    },
+    label: String,
+    icon: [Boolean, String],
+    iconSize: Number,
+    iconRight: Boolean,
+    circle: [Boolean, Number],
+    round: Boolean,
     text: Boolean,
     invert: Boolean,
-    label: {
-      type: String
-    },
-    iconRight: Boolean,
-    labelPosition: {
-      type: String,
-      default: 'left'
-    },
-    labelClass: {
-      type: [String, Array, Object],
-      default: ''
-    },
     primary: Boolean,
     success: Boolean,
     info: Boolean,
     warn: Boolean,
     danger: Boolean,
-    secondary: {
-      type: Boolean,
-      default: false
-    },
     disabled: {
       type: Boolean,
       default: false
     },
-    keyboardFocused: {
-      type: Boolean,
-      default: false
-    },
+    type: String,
     href: {
       type: String,
       default: ''
@@ -126,11 +95,19 @@ export default {
       type: String,
       default: ''
     },
-    rippleColor: {
+    activeColor: {
       type: String
     },
-    rippleOpacity: {
+    activeOpacity: {
       type: Number
+    },
+    fill: {
+      type: Boolean,
+      default: false
+    },
+    keyboardFocused: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -153,7 +130,10 @@ export default {
     buttonStyle () {
       return {
         'background-color': this.hover ? getColor(this.hoverColor) : getColor(this.backgroundColor),
-        'color': getColor(this.color)
+        'color': getColor(this.color),
+        'width': this.circle ? this.circle + 'px' : '',
+        'height': this.circle ? this.circle + 'px' : '',
+        'padding': this.circle ? '0px' : ''
       }
     },
     buttonClass () {
@@ -176,7 +156,9 @@ export default {
         'vui-btn-invert-warn': this.invert && this.warn,
         'vui-btn-invert-danger': this.invert && this.danger,
         'vui-label-right': this.iconRight,
-        'vui-btn-full': this.fullWidth
+        'vui-btn-circle': this.circle,
+        'vui-btn-round': this.round,
+        'vui-btn-fill': this.fill
       }
     }
   },
@@ -192,7 +174,6 @@ export default {
 .vui-btn {
   display: inline-block;
   vertical-align: middle;
-  overflow: hidden;
   position: relative;
   border-radius: 2px;
   transition-duration: 300ms;
@@ -207,11 +188,14 @@ export default {
   .flex-shrink(0);
   margin: 0;
   outline: 0;
-  padding:4px 20px;
+  padding:4px 22px;
   cursor: pointer;
-  &.hover {
+  /* &.hover {
     background-color: fade(@textColor, 10%);
-  }
+  } */
+/*   &.vui-btn-icon.hover{
+  background-color:transparent
+} */
   &.disabled{
     color: @disabledColor;
     cursor: not-allowed;
@@ -228,6 +212,24 @@ export default {
     }
   }
 }
+
+.vui-btn-circle{
+  overflow:hidden;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border:none;
+  .vui-icon{
+    margin-right: 0;
+  }
+/*   &:hover{
+  background:transparent
+} */
+}
+.vui-btn-round{
+  border-radius: 1000px;
+  overflow: hidden;
+}
 .vui-btn-wrapper{
   display: flex;
   justify-content: center;
@@ -235,7 +237,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-.vui-btn-full{
+.vui-btn-fill{
   width: 100%;
   display: block;
 }
@@ -244,51 +246,51 @@ export default {
   &-primary{
     color:#fff;
     background-color: @primaryColor;
-    &:hover{
+    /* &.hover{
       background-color: lighten(@primaryColor, 10%);
-    }
+    } */
   }
   &-success{
     color:#fff;
     background-color: @successColor;
-    &:hover{
+    /* &.hover{
       background-color: lighten(@successColor, 10%);
-    }
+    } */
   }
   &-info{
     color:#fff;
     background-color: @infoColor;
-    &:hover{
+    /* &.hover{
       background-color: lighten(@infoColor, 10%);
-    }
+    } */
   }
   &-warn{
     color:#fff;
     background-color: @warnColor;
-    &:hover{
+    /* &.hover{
       background-color: lighten(@warnColor, 10%);
-    }
+    } */
   }
   &-danger{
     color:#fff;
     background-color: @dangerColor;
-    &:hover{
+    /* &.hover{
       background-color: lighten(@dangerColor, 6%);
-    }
+    } */
   }
   &-invert{
     background:transparent;
     border-color: fade(@textColor, 10%);
-    &-primary,
+    /* &-primary,
     &-success,
     &-info,
     &-warn,
     &-danger{
-      &:hover{
+      &.hover{
         color:#fff;
         border-color:transparent;
       }
-    }
+    } */
     &-primary{
       color:@primaryColor;
       border-color:@primaryColor;
@@ -313,9 +315,9 @@ export default {
 }
 .vui-btn-text{
   background:transparent;
-  &:hover{
+  /* &.hover{
     background-color: fade(@textColor, 10%);
-  }
+  } */
   &-primary{ color: @primaryColor }
   &-success{ color: @successColor }
   &-info{ color: @infoColor }

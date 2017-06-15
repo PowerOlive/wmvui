@@ -31,14 +31,14 @@
           <slot></slot>
         </div>
         <div class="vui-item-right" v-if="showRight">
-          <icon-button @click.stop="handleToggleNested" @mousedown.native="stop" @touchstart.native="stop"  v-if="toggleNested">
+          <vui-button @click.stop="handleToggleNested" @mousedown.native="stop" @touchstart.native="stop"  v-if="toggleNested">
             <svg v-if="nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
               <path d="M6 15L12 9L18 15"/>
             </svg>
             <svg v-if="!nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
               <path d="M6 9L12 15L18 9"/>
             </svg>
-          </icon-button>
+          </vui-button>
           <slot name="right"></slot>
           <slot name="rightAvatar"></slot>
         </div>
@@ -55,7 +55,7 @@
 <script>
 import abstractButton from '../internal/abstractButton'
 import routerMixin from '../internal/routerMixin'
-import iconButton from '../iconButton'
+import button from '../button'
 import list from './list'
 import expandTransition from '../internal/expandTransition'
 import {isNotNull} from '../utils'
@@ -215,7 +215,7 @@ export default {
   components: {
     'abstract-button': abstractButton,
     'vui-list': list,
-    'icon-button': iconButton,
+    'vui-button': button,
     'expand-transition': expandTransition
   }
 }

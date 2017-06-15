@@ -17,8 +17,8 @@
     </div>
     <calendar-year @change="handleYearChange" v-if="!displayMonthDay" :selectedDate="selectedDate" :maxDate="maxDate" :minDate="minDate"/>
     <div class="vui-calendar-actions">
-      <flat-button :label="cancelLabel"  @click="handleCancel" primary/>
-      <flat-button v-if="!autoOk" @click="handleOk" :label="okLabel" primary/>
+      <vui-button :label="cancelLabel"  @click="handleCancel" primary/>
+      <vui-button v-if="!autoOk" @click="handleOk" :label="okLabel" primary/>
     </div>
   </div>
 </div>
@@ -27,7 +27,7 @@
 <script>
 import dateDisplay from './dateDisplay'
 import calendarToolbar from './calendarToolbar'
-import flatButton from '../flatButton'
+import button from '../button'
 import calendarMonth from './calendarMonth'
 import * as dateUtils from './dateUtils'
 import calendarYear from './calendarYear'
@@ -223,7 +223,7 @@ export default {
   components: {
     'date-display': dateDisplay,
     'calendar-toolbar': calendarToolbar,
-    'flat-button': flatButton,
+    'vui-button': button,
     'calendar-month': calendarMonth,
     'calendar-year': calendarYear
   }

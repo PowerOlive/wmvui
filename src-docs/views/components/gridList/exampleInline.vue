@@ -5,7 +5,7 @@
         <img :src="tile.image"/>
         <span slot="title">{{tile.title}}</span>
         <span slot="subTitle">by <b>{{tile.author}}</b></span>
-        <vui-icon-button icon="star_border" slot="action"/>
+        <vui-button icon="star_border" slot="action"/>
       </vui-grid-tile>
     </vui-grid-list>
   </div>

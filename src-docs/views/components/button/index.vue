@@ -2,7 +2,7 @@
 <div class="content-wrapper">
   <markdown-element :text="$t('description')"/>
 
-  <code-example :code="exampleSimpleCode" :title="$t('exampleBtnDefault')" :description="$t('exampleBtnDefaultDesc')">
+  <code-example :code="exampleBtnDefaultCode" :title="$t('exampleBtnDefault')" :description="$t('exampleBtnDefaultDesc')">
     <ex-default/>
   </code-example>
 
@@ -18,6 +18,18 @@
     <ex-icon/>
   </code-example>
 
+  <code-example :code="exampleBtnRoundCode" :title="$t('exampleBtnRound')" :description="$t('exampleBtnRoundDesc')">
+    <ex-round/>
+  </code-example>
+
+  <code-example :code="exampleBtnCircleCode" :title="$t('exampleBtnCircle')" :description="$t('exampleBtnCircleDesc')">
+    <ex-circle/>
+  </code-example>
+
+  <code-example :code="exampleBtnFillCode" :title="$t('exampleBtnFill')" :description="$t('exampleBtnFillDesc')">
+    <ex-fill/>
+  </code-example>
+
   <api-view :api="apiData" :i18n="$t.bind(this)"/>
 </div>
 </template>
@@ -31,6 +43,12 @@ import exampleBtnInvert from './exampleBtnInvert'
 import exampleBtnInvertCode from '!raw!./exampleBtnInvert'
 import exampleBtnIcon from './exampleBtnIcon'
 import exampleBtnIconCode from '!raw!./exampleBtnIcon'
+import exampleBtnRound from './exampleBtnRound'
+import exampleBtnRoundCode from '!raw!./exampleBtnRound'
+import exampleBtnCircle from './exampleBtnCircle'
+import exampleBtnCircleCode from '!raw!./exampleBtnCircle'
+import exampleBtnFill from './exampleBtnFill'
+import exampleBtnFillCode from '!raw!./exampleBtnFill'
 
 // import exampleComplex from './exampleComplex'
 // import exampleComplexCode from '!raw!./exampleComplex'
@@ -44,6 +62,9 @@ export default {
       exampleBtnStateCode,
       exampleBtnInvertCode,
       exampleBtnIconCode,
+      exampleBtnRoundCode,
+      exampleBtnCircleCode,
+      exampleBtnFillCode,
       apiData
     }
   },
@@ -51,7 +72,10 @@ export default {
     'ex-default': exampleBtnDefault,
     'ex-state': exampleBtnState,
     'ex-invert': exampleBtnInvert,
-    'ex-icon': exampleBtnIcon
+    'ex-icon': exampleBtnIcon,
+    'ex-round': exampleBtnRound,
+    'ex-circle': exampleBtnCircle,
+    'ex-fill': exampleBtnFill
   },
   locales: {
     zh,

@@ -1,13 +1,13 @@
 <template>
   <span class="vui-number">
-    <vui-icon-button 
+    <vui-button 
     icon="minus" 
     @click="sub" 
     class="vui-number-selector vui-number-selector-sub" 
     :class="{'vui-number-disabled':disabledMin}"
      :disabled="disabledMin" />
     <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!fillable" pattern="[0-9]*"/>
-    <vui-icon-button 
+    <vui-button 
     icon="plus"
     @click="add" 
     class="vui-number-selector vui-number-selector-plus" 
@@ -16,11 +16,11 @@
   </span>
 </template>
 <script>
-import iconButton from '../iconButton'
+import button from '../button'
 export default {
   name: 'vui-number',
   components: {
-    iconButton
+    'vui-button': button
   },
   props: {
     min: Number,

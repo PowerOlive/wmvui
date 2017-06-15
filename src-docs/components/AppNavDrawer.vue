@@ -6,12 +6,12 @@
   </vui-appbar>
   <vui-divider/>
   <div class="exmaple-drawer-content">
-    <!-- <div class="vui-version-box">
+    <div class="vui-version-box">
       <span class="vui-version-text">Version: </span>
       <vui-dropDown-menu :value="version" @change="handleVersionChange" v-if="versions.length > 0">
         <vui-menu-item v-for="vtext in versions" :key="'version-' + vtext" :value="vtext" :title="vtext"/>
       </vui-dropDown-menu>
-    </div> -->
+    </div>
     <!-- <div class="vui-lang-box">
       <span class="vui-lang-title">Lang: </span>
       <span class="vui-lang-select">
@@ -38,10 +38,7 @@
         <vui-list-item slot="nested" value="#/bottomNav" title="底导航"/>
         <vui-list-item slot="nested" value="#/bottomSheet" title="底部面板"/>
         <vui-list-item slot="nested" value="#/number" title="计数器"/>
-        <vui-list-item slot="nested" value="#/flatButton" title="默认按钮" />
-        <vui-list-item slot="nested" value="#/raisedButton" title="强调按钮" />
-        <vui-list-item slot="nested" value="#/iconButton" title="图标按钮" />
-        <vui-list-item slot="nested" value="#/floatButton" title="圆形阴影按钮" />
+        <vui-list-item slot="nested" value="#/button" title="按钮" />
         <vui-list-item slot="nested" value="#/card" title="卡片"/>
         <vui-list-item slot="nested" value="#/chip" title="标签"/>
         <vui-list-item slot="nested" value="#/datePicker" title="日期选择器"/>

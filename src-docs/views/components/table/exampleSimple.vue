@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-raised-button label="unselect" @click="unselect"/>
+  <vui-button label="unselect" @click="unselect"/>
   <vui-table multiSelectable enableSelectAll ref="table">
     <vui-thead>
       <vui-tr>

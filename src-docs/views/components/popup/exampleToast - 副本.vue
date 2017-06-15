@@ -1,11 +1,11 @@
 <template>
 <div>
-  <vui-raised-button label="操作提示" @click="openToast('center',false,'round-close-fill','操作失败')"/>
-  <vui-raised-button label="上面弹出" @click="openToast('top','happy','' ,'哈哈~我在上面')"/>
-  <vui-raised-button label="下面弹出" @click="openToast('bottom','crying','','下面来抓我呀~')"/>
-  <vui-raised-button label="左边弹出" @click="openToast('left','goofy','','左边左边~~')"/>
-  <vui-raised-button label="右边弹出" @click="openToast('right','rich','','右边辣智障~')"/>
-  <vui-raised-button label="加载层" @click="openLoading"/>
+  <vui-button label="操作提示" @click="openToast('center',false,'round-close-fill','操作失败')"/>
+  <vui-button label="上面弹出" @click="openToast('top','happy','' ,'哈哈~我在上面')"/>
+  <vui-button label="下面弹出" @click="openToast('bottom','crying','','下面来抓我呀~')"/>
+  <vui-button label="左边弹出" @click="openToast('left','goofy','','左边左边~~')"/>
+  <vui-button label="右边弹出" @click="openToast('right','rich','','右边辣智障~')"/>
+  <vui-button label="加载层" @click="openLoading"/>
   <vui-popup :position="toast.position" toast :svgIcon="toast.svgicon" :icon="toast.icon" :overlay="true" :open="toast.show">
   <p>{{toast.msg}}</p>
   </vui-popup>

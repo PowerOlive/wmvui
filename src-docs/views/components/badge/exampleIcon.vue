@@ -4,7 +4,7 @@
     <vui-icon icon="like-fill" :size="24" />
   </vui-badge>
   <vui-badge content="12" circle secondary>
-    <vui-icon-button icon="like-fill" />
+    <vui-button icon="like-fill" />
   </vui-badge>
 </div>
 </template>
