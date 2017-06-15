@@ -130,10 +130,10 @@ export default {
     default: '',
     desc: 'props.iconClass'
   }, {
-    name: 'fullWidth',
+    name: 'fill',
     type: 'Boolean',
     default: 'false',
-    desc: 'props.fullWidth'
+    desc: 'props.fill'
   }, {
     name: 'underlineShow',
     type: 'Boolean',

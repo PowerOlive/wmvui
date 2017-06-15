@@ -100,7 +100,7 @@ export default {
       type: Boolean,
       default: false
     },
-    fullWidth: {
+    fill: {
       type: Boolean,
       default: false
     },
@@ -142,7 +142,7 @@ export default {
         'error': this.errorText,
         'multi-line': this.multiLine,
         'disabled': this.disabled,
-        'full-width': this.fullWidth
+        'full-width': this.fill
       }
     },
     float () {
@@ -219,15 +219,15 @@ export default {
 @import "../styles/import.less";
 .vui-text-field{
   font-size: 16px;
-  width: 256px;
-  min-height: 48px;
-  display: inline-block;
+  /* width: 256px; */
+  /* min-height: 48px; */
+  display: block;
   position: relative;
   color: @secondaryTextColor;
   margin-bottom: 8px;
-  &.full-width {
-    width: 100%;
-  }
+/*   &.full-width {
+  width: 100%;
+} */
   &.has-icon {
     padding-left: 56px;
   }
@@ -258,7 +258,6 @@ export default {
     color: @disabledColor;
     cursor: not-allowed;
   }
-  padding-bottom: 12px;
   padding-top: 4px;
   .vui-text-field.has-label &{
     padding-top: 28px;

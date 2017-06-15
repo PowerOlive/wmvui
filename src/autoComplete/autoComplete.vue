@@ -1,11 +1,11 @@
 <template>
-<div class="vui-auto-complete" :class="{'fullWidth': fullWidth}">
+<div class="vui-auto-complete" :class="{'fill': fill}">
   <text-field @focus="handleFocus" v-model="searchText" @input="handleInput"
     @keydown.native="handleKeyDown" ref="textField"
     @blur="handleBlur" :value="searchText" :disabled="disabled" :inputClass="inputClass"
     :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
-    :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconClass="iconClass" :fullWidth="fullWidth"
+    :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconClass="iconClass" :fill="fill"
     :underlineShow="underlineShow" :underlineClass="underlineClass" :underlineFocusClass="underlineFocusClass"/>
   <popover :overlay="false" :autoPosition="false" :scroller="scroller" :open="open && list.length > 0"  @close="handleClose" :trigger="anchorEl" :anchorOrigin="anchorOrigin" :targetOrigin="targetOrigin">
     <vui-menu v-if="open" :maxHeight="maxHeight" :style="{'width': (menuWidth && menuWidth > inputWidth ? menuWidth : inputWidth) + 'px'}" :disableAutoFocus="focusTextField"
@@ -123,7 +123,7 @@ export default {
     inputClass: {
       type: [String, Array, Object]
     },
-    fullWidth: {
+    fill: {
       type: Boolean,
       default: false
     },
@@ -313,7 +313,7 @@ export default {
   display: inline-block;
   position: relative;
   width: 256px;
-  &.fullWidth {
+  &.fill {
     width: 100%;
   }
 }

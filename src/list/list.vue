@@ -28,7 +28,6 @@ export default {
 @import "../styles/import.less";
 .vui-list {
   padding: 8px 0;
-  width: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: visible;

@@ -26,7 +26,7 @@ export default {
     helpTextClass: 'style of help text, the binding way is same with the `class`',
     errorText: 'error text, the input box will become to error status when this parameters is not empty, thus the effect of style will be updated.',
     errorColor: 'color of error status, default to red',
-    fullWidth: 'whether the width is 100% or not, default to 256px',
+    fill: 'whether the width is 100% or not, default to 256px',
     underlineShow: 'whether it will display bottom line or not',
     underlineClass: 'style of bottom line, the binding way is same with the `class`',
     underlineFocusClass: 'style of bottom line when the input box is focusing, the binding way is same with the `class`',

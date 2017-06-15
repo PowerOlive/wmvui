@@ -43,7 +43,7 @@
         <vui-list-item slot="nested" value="#/chip" title="标签"/>
         <vui-list-item slot="nested" value="#/datePicker" title="日期选择器"/>
         <vui-list-item slot="nested" value="#/dialog" title="弹窗"/>
-        <vui-list-item slot="nested" value="#/divider" title="分豁线"/>
+        <vui-list-item slot="nested" value="#/divider" title="分割线"/>
         <vui-list-item slot="nested" value="#/drawer" title="侧边栏"/>
         <vui-list-item slot="nested" value="#/gridList" title="Grid List"/>
         <vui-list-item slot="nested" value="#/icon" title="Icon"/>

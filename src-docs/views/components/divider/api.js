@@ -1,13 +1,13 @@
 export default {
   props: [{
     name: 'inset',
-    type: 'Boolean',
-    default: 'false',
+    type: 'String',
+    default: '0',
     desc: 'props.inset'
   }, {
-    name: 'shallowInset',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.shallowInset'
+    name: 'title',
+    type: 'String',
+    default: '',
+    desc: 'props.title'
   }]
 }

@@ -39,7 +39,7 @@ export default {
     errorColor: 'the color of error status, default to red',
     icon: 'icon',
     iconClass: 'the style of icon, the binding way is same with `class`',
-    fullWidth: 'whether the width is 100%, default to 256px',
+    fill: 'whether the width is 100%, default to 256px',
     underlineShow: 'whether it is display the underline',
     underlineClass: 'the style of underline, the binding way is same with `class`',
     underlineFocusClass: 'the style of underline when the input box is focuding, the binding way is same with `class`',

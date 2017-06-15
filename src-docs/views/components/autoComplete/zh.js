@@ -33,7 +33,7 @@ export default {
     errorColor: '错误状态的时的颜色，默认为红色',
     icon: '显示图标',
     iconClass: '图标的样式, 同 `class` 绑定方式一致',
-    fullWidth: '是否将宽度设置为 100%, 默认 256px',
+    fill: '是否将宽度设置为 100%, 默认 256px',
     underlineShow: '是否显示底部的横线',
     underlineClass: '底部横线样式, 同 `class` 绑定方式一致',
     underlineFocusClass: '输入框获取焦点时底部横线样式, 同 `class` 绑定方式一致',

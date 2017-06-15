@@ -26,7 +26,7 @@ export default {
     helpTextClass: '帮助文字样式, 同 `class` 绑定方式一致',
     errorText: '错误提醒文字，如果此参数有值，那么输入框会转为错误的状态, 显示效果将会更改',
     errorColor: '错误状态的时的颜色，默认为红色',
-    fullWidth: '是否将宽度设置为 100%, 默认 256px',
+    fill: '是否将宽度设置为 100%, 默认 256px',
     underlineShow: '是否显示底部的横线',
     underlineClass: '底部横线样式, 同 `class` 绑定方式一致',
     underlineFocusClass: '输入框获取焦点时底部横线样式, 同 `class` 绑定方式一致',

@@ -21,10 +21,10 @@
     更新成功
   </vui-popup>
   <vui-popup position="left" popupClass="demo-popup-left" :open="leftPopup" @close="close('left')">
-    <vui-button label="关闭弹框" @click="close('left')" primary fullWidth/>
+    <vui-button label="关闭弹框" @click="close('left')" primary fill/>
   </vui-popup>
   <vui-popup position="right" popupClass="demo-popup-right" :open="rightPopup" @close="close('right')">
-    <vui-button label="关闭弹框" @click="close('right')" primary fullWidth/>
+    <vui-button label="关闭弹框" @click="close('right')" primary fill/>
   </vui-popup>
 </div>
 </template>

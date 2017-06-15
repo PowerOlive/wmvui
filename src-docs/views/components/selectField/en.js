@@ -24,7 +24,7 @@ export default {
     errorColor: 'color of error status, default to red',
     icon: 'display icon',
     iconClass: 'style of icon, the binding way is same with the `class`',
-    fullWidth: 'whether the width is 100% or not, default to 256px',
+    fill: 'whether the width is 100% or not, default to 256px',
     underlineShow: 'whether it will display bottom line or not',
     underlineClass: 'style of bottom line, the binding way is same with the `class`',
     underlineFocusClass: 'style of bottom line when the input box is focusing, the binding way is same with the `class`',

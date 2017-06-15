@@ -1,7 +1,7 @@
 <template>
 <text-field ref="textField" class="vui-select-field" :label="label" :labelFloat="labelFloat" :underlineShow="underlineShow"
   :labelClass="labelClass" :labelFocusClass="labelFocusClass" :underlineClass="underlineClass" :underlineFocusClass="underlineFocusClass"
-  :fullWidth="fullWidth" :hintText="hintText" :hintTextClass="hintTextClass"
+  :fill="fill" :hintText="hintText" :hintTextClass="hintTextClass"
   :helpText="helpText" :helpTextClass="helpTextClass" :icon="icon" :iconClass="iconClass"
   :value="inputValue instanceof Array ? inputValue.join('') : inputValue"
   :disabled="disabled" :errorText="errorText" :errorColor="errorColor">
@@ -73,7 +73,7 @@ export default {
       type: Boolean,
       default: false
     },
-    fullWidth: {
+    fill: {
       type: Boolean,
       default: false
     },

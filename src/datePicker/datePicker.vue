@@ -1,6 +1,6 @@
 <template>
-<div class="vui-date-picker" :class="{'fullWidth': fullWidth}">
-  <text-field @focus="handleFocus" @labelClick="handleClick" :value="inputValue" :disabled="disabled" :fullWidth="fullWidth"
+<div class="vui-date-picker" :class="{'fill': fill}">
+  <text-field @focus="handleFocus" @labelClick="handleClick" :value="inputValue" :disabled="disabled" :fill="fill"
     :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
     :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconClass="iconClass" :inputClass="inputClass"
@@ -111,7 +111,7 @@ export default {
     inputClass: {
       type: [String, Array, Object]
     },
-    fullWidth: {
+    fill: {
       type: Boolean,
       default: false
     },
@@ -188,7 +188,7 @@ export default {
   display: inline-block;
   position: relative;
   width: 256px;
-  &.fullWidth {
+  &.fill {
     width: 100%
   }
 }
