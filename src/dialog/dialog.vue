@@ -152,18 +152,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 24px 20px;
+  padding:10px 20px;
   margin: 0;
   font-size: 22px;
   font-weight: normal;
-  line-height: 32px;
   color: @textColor;
-  + .vui-dialog-body{
-    padding-top: 0;
-  }
-  &.scrollable{
-    border-bottom: 1px solid @borderColor;
-  }
+  /* border-bottom: 1px solid @borderColor; */
 }
 .vui-dialog-body {
   padding: 24px 24px 20px;
@@ -171,16 +165,22 @@ export default {
 }
 
 .vui-dialog-actions {
-  min-height: 48px;
-  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  .vui-raised-button + .vui-raised-button{
-    margin-left: 10px;
-  }
-  &.scrollable{
-    border-top: 1px solid @borderColor;
+  border-top:1px solid @borderColor;
+  .vui-btn{
+    border:none;
+    padding-top:8px; 
+    padding-bottom:8px; 
+    flex: 1;
+    width: 0%;
+    &:not(:only-child){
+      border-right:1px solid @borderColor;
+      &:first-child{
+        color:@textColor
+      }
+    }
   }
 }
 

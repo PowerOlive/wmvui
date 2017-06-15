@@ -17,8 +17,8 @@
     </div>
     <calendar-year @change="handleYearChange" v-if="!displayMonthDay" :selectedDate="selectedDate" :maxDate="maxDate" :minDate="minDate"/>
     <div class="vui-calendar-actions">
-      <vui-button :label="cancelLabel"  @click="handleCancel" primary/>
-      <vui-button v-if="!autoOk" @click="handleOk" :label="okLabel" primary/>
+      <vui-button :label="cancelLabel"  @click="handleCancel" text primary/>
+      <vui-button v-if="!autoOk" @click="handleOk" :label="okLabel" text primary/>
     </div>
   </div>
 </div>

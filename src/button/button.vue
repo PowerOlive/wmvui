@@ -189,7 +189,7 @@ export default {
   .flex-shrink(0);
   margin: 0;
   outline: 0;
-  padding:4px 22px;
+  padding:5px 22px;
   cursor: pointer;
   /* &.hover {
     background-color: fade(@textColor, 10%);
