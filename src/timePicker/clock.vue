@@ -8,8 +8,8 @@
     <clock-hours v-if="mode === 'hour'" :format="format" :initialHours="selectedTime.getHours()" @change="handleChangeHours" />
     <clock-minutes v-if="mode === 'minute'" @change="handleChangeMinutes" :initialMinutes="selectedTime.getMinutes()"/>
     <div class="vui-clock-actions">
-      <vui-button :label="cancelLabel" @click="dismiss" primary/>
-      <vui-button :label="okLabel" @click="accept" primary/>
+      <vui-button text primary :label="cancelLabel" @click="dismiss" primary/>
+      <vui-button text primary :label="okLabel" @click="accept" primary/>
     </div>
   </div>
 </div>

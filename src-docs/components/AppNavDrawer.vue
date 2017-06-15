@@ -45,45 +45,38 @@
         <vui-list-item slot="nested" value="#/dialog" title="弹窗"/>
         <vui-list-item slot="nested" value="#/divider" title="分割线"/>
         <vui-list-item slot="nested" value="#/drawer" title="侧边栏"/>
-        <vui-list-item slot="nested" value="#/gridList" title="Grid List"/>
-        <vui-list-item slot="nested" value="#/icon" title="Icon"/>
-        <vui-list-item slot="nested" value="#/svgIcon" title="svg icon"/>
-        <vui-list-item slot="nested" value="#/list" title="List"/>
-        <vui-list-item slot="nested" title="Menus" toggleNested>
-          <vui-list-item slot="nested" value="#/menu" title="Menu"/>
-          <vui-list-item slot="nested" value="#/iconMenu" title="Icon Menu"/>
-          <vui-list-item slot="nested" value="#/dropDownMenu" title="DropDown Menu"/>
-        </vui-list-item>
-        <vui-list-item slot="nested" value="#/paper" title="Paper"/>
-        <vui-list-item slot="nested" value="#/popover" title="Popover"/>
-        <vui-list-item slot="nested" title="Progress" toggleNested>
-          <vui-list-item slot="nested" value="#/linearProgress" title="Linear Progress"/>
-          <vui-list-item slot="nested" value="#/circularProgress" title="Circular Progress"/>
-        </vui-list-item>
-        <vui-list-item slot="nested" value="#/selectField" title="Select Field"/>
-        <vui-list-item slot="nested" title="Selection Controls" toggleNested>
-          <vui-list-item slot="nested" value="#/checkbox" title="Checkbox"/>
-          <vui-list-item slot="nested" value="#/radio" title="Radio"/>
-          <vui-list-item slot="nested" value="#/switch" title="Switch"/>
-        </vui-list-item>
-        <vui-list-item slot="nested" value="#/slider" title="Slider"/>
+        <vui-list-item slot="nested" value="#/gridList" title="网格列表"/>
+        <vui-list-item slot="nested" value="#/icon" title="图标"/>
+        <vui-list-item slot="nested" value="#/svgIcon" title="多色图标"/>
+        <vui-list-item slot="nested" value="#/list" title="列表"/>
+        <vui-list-item slot="nested" value="#/menu" title="菜单"/>
+        <vui-list-item slot="nested" value="#/iconMenu" title="按钮菜单"/>
+        <vui-list-item slot="nested" value="#/dropDownMenu" title="下拉菜单"/>
+        <vui-list-item slot="nested" value="#/paper" title="阴影框"/>
+        <vui-list-item slot="nested" value="#/popover" title="弹出层"/>
+        <vui-list-item slot="nested" value="#/linearProgress" title="条形进度条"/>
+        <vui-list-item slot="nested" value="#/circularProgress" title="圆形进度条"/>
+        <vui-list-item slot="nested" value="#/selectField" title="下拉选择"/>
+        <vui-list-item slot="nested" value="#/checkbox" title="复选框"/>
+        <vui-list-item slot="nested" value="#/radio" title="单选框"/>
+        <vui-list-item slot="nested" value="#/switch" title="开关控件"/>
+        <vui-list-item slot="nested" value="#/slider" title="滑块控件"/>
         <!-- <vui-list-item slot="nested" value="#/snackbarToast" title="SnackBar & Toast"/> -->
-        <vui-list-item slot="nested" value="#/stepper" title="Stepper"/>
-        <vui-list-item slot="nested" value="#/subHeader" title="Sub Header"/>
+        <vui-list-item slot="nested" value="#/stepper" title="步骤导航"/>
+        <vui-list-item slot="nested" value="#/subHeader" title="副标题"/>
         <!-- <vui-list-item slot="nested" value="#/table" title="Table"/> -->
-        <vui-list-item slot="nested" value="#/tabs" title="Tabs"/>
-        <vui-list-item slot="nested" value="#/textField" title="Text Field"/>
-        <vui-list-item slot="nested" value="#/timePicker" title="Time Picker"/>
-        <vui-list-item slot="nested" value="#/tooltip" title="Tooltip"/>
-        <vui-sub-header slot="nested" class="exmaples-nav-sub-header">Others</vui-sub-header>
-        <vui-list-item slot="nested" value="#/contentBlock" title="Content Block"/>
+        <vui-list-item slot="nested" value="#/tabs" title="标签页"/>
+        <vui-list-item slot="nested" value="#/textField" title="输入框"/>
+        <vui-list-item slot="nested" value="#/timePicker" title="时间选择"/>
+        <!-- <vui-list-item slot="nested" value="#/tooltip" title="Tooltip"/> -->
+        <vui-list-item slot="nested" value="#/contentBlock" title="简单内容块"/>
         <vui-list-item slot="nested" value="#/flexbox" title="Flex Box"/>
-        <vui-list-item slot="nested" value="#/grid" title="Grid"/>
-        <vui-list-item slot="nested" value="#/infiniteScroll" title="Infinite Scroll"/>
+        <!-- <vui-list-item slot="nested" value="#/grid" title="网格"/> -->
+        <vui-list-item slot="nested" value="#/infiniteScroll" title="无限滚动"/>
         <!-- <vui-list-item slot="nested" value="#/pagination" title="Pagination"/> -->
-        <vui-list-item slot="nested" value="#/picker" title="Picker"/>
-        <vui-list-item slot="nested" value="#/popup" title="Popup & Toast"/>
-        <vui-list-item slot="nested" value="#/refreshControl" title="Refresh Control"/>
+        <vui-list-item slot="nested" value="#/picker" title="Picker 选择器"/>
+        <vui-list-item slot="nested" value="#/popup" title="提示层"/>
+        <vui-list-item slot="nested" value="#/refreshControl" title="下拉刷新"/>
       </vui-list-item>
       <!-- <vui-list-item :title="$t('more')" toggleNested>
         <vui-list-item slot="nested" :title="$t('changeLog')" value="#/changeLog"/>

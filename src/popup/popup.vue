@@ -101,7 +101,7 @@ export default {
 @import "../styles/import.less";
 .vui-popup {
   position: fixed;
-  background-color: @textColor;
+  background-color: @dialogBackgroundColor;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
