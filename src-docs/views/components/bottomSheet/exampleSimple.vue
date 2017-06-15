@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-button @click="openBottomSheet" label="打开面板" />
+  <vui-button primary @click="openBottomSheet" label="打开面板" />
   <vui-bottom-sheet :open="bottomSheet" @close="closeBottomSheet">
     <vui-list @itemClick="closeBottomSheet">
       <vui-sub-header>

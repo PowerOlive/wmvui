@@ -27,6 +27,7 @@ export default {
     text: '无背景按钮 可配置状态 ',
     invert: '是否显示成反色按钮 需要配合对应的`按钮状态`',
     state: '按钮状态可选值 `primary` `success` `info` `warn` `danger`',
+    padding: '按钮填充大小，允许传2个值 上下 与 左右',
     disabled: '按钮是否不可用',
     type: '相当于button元素的type属性',
     href: '相当于 a 标签的 href属性，设置之后会渲染成 a 标签，默认是使用button标签',

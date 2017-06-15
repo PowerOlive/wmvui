@@ -71,6 +71,7 @@ export default {
     info: Boolean,
     warn: Boolean,
     danger: Boolean,
+    padding: Array,
     disabled: {
       type: Boolean,
       default: false
@@ -133,7 +134,7 @@ export default {
         'color': getColor(this.color),
         'width': this.circle ? this.circle + 'px' : '',
         'height': this.circle ? this.circle + 'px' : '',
-        'padding': this.circle ? '0px' : ''
+        'padding': this.padding ? (this.padding[0] + ' ' + this.padding[1]) : ''
       }
     },
     buttonClass () {
@@ -219,6 +220,7 @@ export default {
   width: 36px;
   height: 36px;
   border:none;
+  padding:0;
   .vui-icon{
     margin-right: 0;
   }

@@ -46,6 +46,11 @@ export default {
     default: '',
     desc: 'props.state'
   }, {
+    name: 'padding',
+    type: 'Array',
+    default: '4px 20px',
+    desc: 'props.padding'
+  }, {
     name: 'disabled',
     type: 'Boolean',
     default: 'false',

@@ -136,6 +136,7 @@ $number-input-border-color:#bbb;
   display: block;
   border:1px solid $number-input-border-color;
   .vui-icon{
+    margin:0;
     &:before{
       font-size: 14px;
       vertical-align: middle;
