@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="vui-wrapper">
-    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item" :zDepth="1">
+  <div id="app" class="vui-wrapper" :class="{'nav-hide': !open, 'home-page': isHomePage}">
+    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item demo-meun" :zDepth="1">
       <div class="vui-flex vui-flex-ver">
         <vui-appbar :zDepth="0" class="exmaples-nav-appbar">
           <span class="exmaples-appbar-title">WMVUI基于Muse-UI</span>
@@ -60,7 +60,7 @@
         </div>
       </div>
     </vui-drawer>
-    <div class="vui-flex vui-flex-ver example-content" :class="{'nav-hide': !open, 'home-page': isHomePage}">
+    <div class="vui-flex vui-flex-ver example-content">
       <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
       <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
       <vui-button circle color="#fff" :iconSize="16" href="https://github.com/531431988/wmvui" slot="right" icon="like-fill"/>
@@ -151,9 +151,6 @@ function isDesktop () {
   top: 0;
   width: auto;
   transition: all .45s @easeOutFunction;
-  &.nav-hide {
-    left: 0;
-  }
 }
 .exmaple-drawer-content{
   overflow: auto;
@@ -162,19 +159,18 @@ function isDesktop () {
   padding-top: 56px;
   padding-left: 256px;
   transition: all .45s @easeOutFunction;
-  &.nav-hide {
+}
+.nav-hide {
+  .example-appbar{
+    left:0;
+  }
+  .example-content{
     padding-left: 0;
   }
 }
 
 .content-wrapper{
   padding: 48px 72px;
-}
-
-@media (min-width: 480px) {
-  .example-content{
-    /* padding-top: 64px; */
-  }
 }
 
 @media (max-width: 993px) {
@@ -189,7 +185,9 @@ function isDesktop () {
   }
 }
 .home-page{
-  padding: 0;
+  .demo-meun{
+    display: none;
+  }
   .example-content {
     transition-duration: 0s;
   }
