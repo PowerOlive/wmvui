@@ -5,7 +5,6 @@
     <vui-tabs :value="theme" @change="changeTheme">
       <vui-tab title="默认" value="default"/>
       <vui-tab title="亮蓝" value="light"/>
-      <vui-tab title="暗蓝" value="dark"/>
       <vui-tab title="深灰" value="carbon"/>
       <vui-tab title="蓝绿" value="teal"/>
     </vui-tabs>
@@ -14,15 +13,12 @@
         <div class="demo-theme-item center">
           <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
         </div>
-        <div class="demo-theme-item center">
-          <vui-button label="secondary" secondary/>
-        </div>
-        <div class="demo-theme-item center">
-          <vui-button label="primary" primary/>
-        </div>
-        <div class="demo-theme-item center">
-          <vui-button label="default"/>
-        </div>
+        <vui-button label="默认" class="demo-vui-raised-button" />
+        <vui-button label="重要" primary class="demo-vui-raised-button" />
+        <vui-button label="成功" success class="demo-vui-raised-button" />
+        <vui-button label="提示" info class="demo-vui-raised-button" />
+        <vui-button label="警告" warn class="demo-vui-raised-button" />
+        <vui-button label="危险" danger class="demo-vui-raised-button" />
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
@@ -63,24 +59,24 @@
     <vui-row>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-button label="VIEW DIALOG" @click="openDialog"/>
+          <vui-button label="弹层" info @click="openDialog"/>
         </div>
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-button label="VIEW DRAWER" @click="toggleDrawer"/>
+          <vui-button label="侧边栏" info @click="toggleDrawer"/>
         </div>
       </vui-col>
       <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
         <div class="demo-theme-item">
-          <vui-button label="VIEW SNACKBAR" @click="showSnackbar"/>
+          <vui-button label="提示层" info @click="showSnackbar"/>
         </div>
       </vui-col>
     </vui-row>
     <vui-dialog :open="dialog" title="Dialog" @close="closeDialog">
       {{$t('dialogDesc')}}
-      <vui-button slot="actions" @click="closeDialog" primary :label="$t('cancel')"/>
-      <vui-button slot="actions" primary @click="closeDialog" :label="$t('ok')"/>
+      <vui-button slot="actions" @click="closeDialog" text primary :label="$t('cancel')"/>
+      <vui-button slot="actions" text primary @click="closeDialog" :label="$t('ok')"/>
     </vui-dialog>
     <vui-drawer :open="drawer" :docked="false" @close="toggleDrawer()">
       <vui-menu @itemClick="toggleDrawer()">
@@ -98,7 +94,6 @@
 <script>
 import _default from 'raw!less!../../assets/themes/theme-default.less'
 import light from 'raw!less!../../assets/themes/theme-light.less'
-import dark from 'raw!less!../../assets/themes/theme-dark.less'
 import carbon from 'raw!less!../../assets/themes/theme-carbon.less'
 import teal from 'raw!less!../../assets/themes/theme-teal.less'
 import zh from './zh'
@@ -106,7 +101,6 @@ import en from './en'
 
 const themes = {
   light,
-  dark,
   carbon,
   teal,
   default: _default
@@ -150,7 +144,7 @@ export default {
       styleEl.innerHTML = themes[theme] || ''
     },
     getThemeStyle () {
-      const themeId = 'muse-theme'
+      const themeId = 'wmvui-theme'
       let styleEl = document.getElementById(themeId)
       if (styleEl) return styleEl
       styleEl = document.createElement('style')
