@@ -115,7 +115,7 @@ export default {
       this.desktop = desktop
     },
     handleItemClick (event) {
-      console.log(event.value)
+      this.menuVal = event.value
       this.$router.push(event.value)
       if (!this.desktop) this.open = false
     },
