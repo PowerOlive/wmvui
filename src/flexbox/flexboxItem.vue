@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'vui-flexbox-item',
+  name: 'vui-flex-item',
   props: {
     order: {
       type: [Number, String],

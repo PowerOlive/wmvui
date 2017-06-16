@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'vui-flexbox',
+  name: 'vui-flex',
   props: {
     gutter: {
       type: Number,
