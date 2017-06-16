@@ -1,5 +1,5 @@
 <template>
-  <div class="vui-flexbox" :class="{'vui-flex-col': orient === 'vertical', 'vui-flex-row': orient === 'horizontal'}" :style="styles">
+  <div class="vui-flex" :class="{'vui-flex-col': orient === 'vertical', 'vui-flex-row': orient === 'horizontal'}" :style="styles">
     <slot></slot>
   </div>
 </template>
@@ -33,22 +33,51 @@ export default {
 </script>
 
 <style lang="less">
-.vui-flexbox{
-  width: 100%;
-  text-align: left;
+.vui-flex{
   display: flex;
-  box-align: center;
+}
+.vui-flex-ver {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.vui-flex-start{
+  justify-content:flex-start
+}
+.vui-flex-end{
+  justify-content:flex-end
+}
+.vui-flex-center{
+  justify-content: center;
+}
+.vui-flex-top{
+  align-items:flex-start
+}
+.vui-flex-bottom{
+  align-items:flex-end
+}
+.vui-flex-middle{
   align-items: center;
 }
-.vui-flexbox .vui-flexbox-item {
-  flex: 1;
-  min-width: 20px;
-  width: 0%;
+.vui-flex-between{
+  justify-content: space-between;
 }
-.vui-flexbox-item > .vui-flexbox {
+.vui-flex-around{
+  justify-content: space-around;
+}
+.vui-flex-item {
+  flex: 1;
+  /* width: 0%; */
+}
+.vui-flex-item > .vui-flex {
   width: 100%;
 }
-.vui-flexbox .vui-flexbox-item:first-child{
+.vui-flex .vui-flex-item:first-child{
   margin-left: 0!important;
   margin-top: 0!important;
 }
@@ -57,7 +86,7 @@ export default {
   flex-direction: column;
 }
 
-.vui-flex-col > .vui-flexbox-item {
+.vui-flex-col > .vui-flex-item {
   width: 100%;
 }
 
@@ -66,4 +95,5 @@ export default {
   box-orient: horizontal;
   flex-direction: row;
 }
+
 </style>

@@ -20,10 +20,10 @@ export default {
     default: '',
     desc: 'props.step'
   }, {
-    name: 'fillable',
+    name: 'disabled',
     type: 'Boolean',
     default: 'true',
-    desc: 'props.fillable'
+    desc: 'props.disabled'
   }, {
     name: 'width',
     type: 'Number',

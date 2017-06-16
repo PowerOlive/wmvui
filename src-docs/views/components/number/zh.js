@@ -9,7 +9,7 @@ export default {
     min: '最小值',
     max: '最大值',
     step: '步长',
-    fillable: '是否可填写',
+    disabled: '是否可填写',
     width: '输入框宽度'
   },
   events: {

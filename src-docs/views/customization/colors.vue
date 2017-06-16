@@ -42,6 +42,10 @@ export default {
       palettes
     }
   },
+  created () {
+    window.scrollTo(0, 0)
+    console.log(1111)
+  },
   methods: {
     hasColor (color, palette) {
       const cssColor = color.replace(' ', '').replace(color.charAt(0), color.charAt(0).toLowerCase())

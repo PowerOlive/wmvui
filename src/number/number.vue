@@ -6,7 +6,7 @@
     class="vui-number-selector vui-number-selector-sub" 
     :class="{'vui-number-disabled':disabledMin}"
      :disabled="disabledMin" />
-    <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!fillable" pattern="[0-9]*"/>
+    <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!disabled" pattern="[0-9]*"/>
     <vui-button 
     icon="plus"
     @click="add" 
@@ -41,7 +41,7 @@ export default {
       default: 0
     },
     name: String,
-    fillable: {
+    disabled: {
       type: Boolean,
       default: true
     },
@@ -135,6 +135,7 @@ $number-input-border-color:#bbb;
   float: left;
   display: block;
   border:1px solid $number-input-border-color;
+  vertical-align:top;
   .vui-icon{
     margin:0;
     &:before{

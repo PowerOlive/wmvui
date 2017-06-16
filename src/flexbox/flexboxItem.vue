@@ -1,5 +1,5 @@
 <template>
-  <div class="vui-flexbox-item" :style="itemStyle">
+  <div class="vui-flex-item" :style="itemStyle">
     <slot></slot>
   </div>
 </template>

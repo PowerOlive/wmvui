@@ -1,12 +1,8 @@
 <template>
-  <div id="app">
-    <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
-      <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
-      <vui-button circle color="#fff" :iconSize="16" href="https://github.com/531431988/wmvui" slot="right" icon="like-fill"/>
-    </vui-appbar>
-    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="app-drawer" :zDepth="1">
+  <div id="app" class="vui-wrapper">
+    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item" :zDepth="1">
       <vui-appbar :zDepth="0" class="exmaples-nav-appbar">
-        <a href="#/index" class="exmaples-appbar-title">WMVUI基于Muse-UI</a>
+        <span class="exmaples-appbar-title">WMVUI基于Muse-UI</span>
       </vui-appbar>
       <vui-divider/>
       <div class="exmaple-drawer-content">
@@ -63,8 +59,12 @@
         </vui-list>
       </div>
     </vui-drawer>
-    <div class="example-content" :class="{'nav-hide': !open, 'home-page': isHomePage}">
-      <router-view></router-view>
+    <div class="vui-flex vui-flex-ver example-content" :class="{'nav-hide': !open, 'home-page': isHomePage}">
+      <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
+      <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
+      <vui-button circle color="#fff" :iconSize="16" href="https://github.com/531431988/wmvui" slot="right" icon="like-fill"/>
+    </vui-appbar>
+      <router-view class="vui-container vui-flex-item"></router-view>
     </div>
   </div>
 </template>
@@ -170,7 +170,7 @@ function isDesktop () {
 
 @media (min-width: 480px) {
   .example-content{
-    padding-top: 64px;
+    /* padding-top: 64px; */
   }
 }
 
