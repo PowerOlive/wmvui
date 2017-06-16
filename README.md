@@ -1,4 +1,4 @@
-# 基于大牛的Muse UI 在次开发，功能正在完善中，感谢开源
+# 基于大牛的Muse UI 在次开发，功能正在完善中(本人是个菜逼不喜绕道)，感谢开源
 [![npm package](https://img.shields.io/npm/v/muse-ui.svg)](https://www.npmjs.org/package/muse-ui)
 [![NPM downloads](http://img.shields.io/npm/dm/muse-ui.svg)](https://npmjs.org/package/muse-ui)
 [![Join the chat at https://gitter.im/muse-ui/muse-ui](https://badges.gitter.im/muse-ui/muse-ui.svg)](https://gitter.im/muse-ui/muse-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

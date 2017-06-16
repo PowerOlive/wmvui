@@ -7,7 +7,7 @@
   <code-example :code="exampleListCode" :title="$t('exampleList')">
     <ex-list />
   </code-example>
-  <code-example :code="exampleMenuCode" :title="$t('exampleTitle')">
+  <code-example :code="exampleTitleCode" :title="$t('exampleTitle')">
     <ex-title />
   </code-example>
   <api-view :api="apiData" :i18n="$t.bind(this)"/>

@@ -158,6 +158,9 @@ export default {
   font-weight: normal;
   color: @textColor;
   /* border-bottom: 1px solid @borderColor; */
+  &+.vui-dialog-body{
+    padding-top:10px;
+  }
 }
 .vui-dialog-body {
   padding: 24px 24px 20px;

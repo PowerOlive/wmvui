@@ -48,7 +48,7 @@ import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
 import * as stepper from './stepper'
-import autoComplete from './autoComplete'
+// import autoComplete from './autoComplete'
 // import pagination from './pagination'
 
 import number from './number'   // 自定义
@@ -105,7 +105,7 @@ const components = {
   datePicker,
   timePicker,
   ...stepper,
-  autoComplete,
+  // autoComplete,
   ...grid,
   ...flexbox
   // pagination

@@ -6,6 +6,14 @@
   color: #303030;
   background-color: #727272;
 }
+body {
+  background-color: #303030;
+  color: #ffffff;
+  font-family: Roboto, Lato, sans-serif;
+}
+a {
+  color: #ff4081;
+}
 .vui-badge {
   background-color: #757575;
   color: #303030;
@@ -17,14 +25,6 @@
 .vui-badge-secondary {
   background-color: #ff4081;
   color: #303030;
-}
-body {
-  background-color: #303030;
-  color: #ffffff;
-  font-family: Roboto, Lato, sans-serif;
-}
-a {
-  color: #ff4081;
 }
 .vui-bottom-nav {
   background-color: #424242;
@@ -293,7 +293,7 @@ a {
   background-color: #424242;
 }
 .vui-popup {
-  background-color: #424242;
+  background-color: #fff;
 }
 .vui-radio input[type="radio"]:checked + .vui-radio-wrapper .vui-radio-icon-uncheck {
   color: #1976d2;

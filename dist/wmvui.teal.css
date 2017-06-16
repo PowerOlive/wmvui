@@ -6,6 +6,14 @@
   color: #ffffff;
   background-color: #bdbdbd;
 }
+body {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto, Lato, sans-serif;
+}
+a {
+  color: #ff4081;
+}
 .vui-badge {
   background-color: #bdbdbd;
   color: #ffffff;
@@ -17,14 +25,6 @@
 .vui-badge-secondary {
   background-color: #ff4081;
   color: #ffffff;
-}
-body {
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.87);
-  font-family: Roboto, Lato, sans-serif;
-}
-a {
-  color: #ff4081;
 }
 .vui-bottom-nav {
   background-color: #ffffff;
@@ -293,7 +293,7 @@ a {
   background-color: #ffffff;
 }
 .vui-popup {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .vui-radio input[type="radio"]:checked + .vui-radio-wrapper .vui-radio-icon-uncheck {
   color: #009688;

@@ -229,7 +229,7 @@ export default {
   width: 100%;
 } */
   &.has-icon {
-    padding-left: 56px;
+    padding-left: 46px;
   }
   &.focus-state {
     color: @primaryColor;
@@ -245,7 +245,7 @@ export default {
 .vui-text-field-icon {
   position: absolute;
   left: 16px;
-  top: 12px;
+  top: 6px;
   .vui-text-field.has-label & {
     top: 36px;
   }

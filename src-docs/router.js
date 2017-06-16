@@ -8,7 +8,7 @@ import Contributing from './views/more/contributing'
 import Colors from './views/customization/colors'
 import Theme from './views/customization/theme'
 import AppBar from './views/components/appbar'
-import AutoComplete from './views/components/autoComplete'
+// import AutoComplete from './views/components/autoComplete'
 import Avatar from './views/components/avatar'
 import Badge from './views/components/badge'
 import BottomNav from './views/components/bottomNav'
@@ -69,7 +69,7 @@ const router = new Router({
     { path: '/colors', component: Colors },
     { path: '/theme', component: Theme },
     { path: '/appbar', component: AppBar },
-    { path: '/autoComplete', component: AutoComplete },
+    // { path: '/autoComplete', component: AutoComplete },
     { path: '/avatar', component: Avatar },
     { path: '/badge', component: Badge },
     { path: '/bottomNav', component: BottomNav },
