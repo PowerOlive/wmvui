@@ -1,5 +1,5 @@
 <template>
-  <div class="vui-flex" :class="{'vui-flex-col': orient === 'vertical', 'vui-flex-row': orient === 'horizontal'}" :style="styles">
+  <div class="vui-flex" :class="itemClass" :style="styles">
     <slot></slot>
   </div>
 </template>
@@ -12,20 +12,72 @@ export default {
       type: Number,
       default: 8
     },
-    orient: {
-      type: String,
-      default: 'horizontal'
+    vertical: {
+      type: Boolean,
+      default: false
     },
-    justify: String,
-    align: String,
-    wrap: String
+    level: {
+      type: Boolean,
+      default: true
+    },
+    // justify: String,
+    // align: String,
+    wrap: {
+      type: Boolean,
+      default: false
+    },
+    start: {
+      type: Boolean,
+      default: true
+    },
+    end: {
+      type: Boolean,
+      default: false
+    },
+    center: {
+      type: Boolean,
+      default: false
+    },
+    top: {
+      type: Boolean,
+      default: false
+    },
+    bottom: {
+      type: Boolean,
+      default: false
+    },
+    middle: {
+      type: Boolean,
+      default: false
+    },
+    between: {
+      type: Boolean,
+      default: false
+    },
+    around: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     styles () {
       return {
-        'justify-content': this.justify,
-        'align-items': this.align,
-        'flex-wrap': this.wrap
+        // 'justify-content': this.justify,
+        // 'align-items': this.align,
+        'flex-wrap': this.wrap ? 'wrap' : 'nowrap'
+      }
+    },
+    itemClass () {
+      return {
+        'vui-flex-vertical': this.vertical,
+        'vui-flex-start': this.start,
+        'vui-flex-end': this.end,
+        'vui-flex-center': this.center,
+        'vui-flex-top': this.top,
+        'vui-flex-bottom': this.bottom,
+        'vui-flex-middle': this.middle,
+        'vui-flex-between': this.between,
+        'vui-flex-around': this.around
       }
     }
   }
@@ -47,7 +99,7 @@ export default {
     overflow: hidden;
 }
 .vui-flex-start{
-  justify-content:flex-start
+  justify-content:flex-start;
 }
 .vui-flex-end{
   justify-content:flex-end
@@ -77,23 +129,23 @@ export default {
 .vui-flex-item > .vui-flex {
   width: 100%;
 }
-.vui-flex .vui-flex-item:first-child{
+.vui-flex div[flex]:first-child{
   margin-left: 0!important;
   margin-top: 0!important;
 }
-.vui-flex-col {
+.vui-flex-vertical {
   box-orient: vertical;
   flex-direction: column;
 }
 
-.vui-flex-col > .vui-flex-item {
+.vui-flex-vertical > .vui-flex-item {
   width: 100%;
 }
 
-.vui-flex-row {
-  box-direction: row;
+.vui-flex-horizontal {
+  /* box-direction: row;
   box-orient: horizontal;
-  flex-direction: row;
+  flex-direction: row; */
 }
 
 </style>

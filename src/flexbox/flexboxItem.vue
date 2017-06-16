@@ -1,5 +1,5 @@
 <template>
-  <div class="vui-flex-item" :style="itemStyle">
+  <div flex :style="itemStyle" :class="itemClass">
     <slot></slot>
   </div>
 </template>
@@ -12,27 +12,36 @@ export default {
       type: [Number, String],
       default: 0
     },
-    grow: {
-      type: [Number, String],
-      default: 1
-    },
-    shrink: {
-      type: [Number, String],
-      default: 1
-    },
-    basis: {
-      type: [Number, String],
-      default: 'auto'
+    // grow: {
+    //   type: [Number, String],
+    //   default: 1
+    // },
+    // shrink: {
+    //   type: [Number, String],
+    //   default: 1
+    // },
+    // basis: {
+    //   type: [Number, String],
+    //   default: 1
+    // },
+    auto: {
+      type: Boolean,
+      default: true
     }
   },
   computed: {
     itemStyle () {
       let styles = {}
-      let marginName = this.$parent.orient === 'horizontal' ? 'marginLeft' : 'marginTop'
+      let marginName = this.$parent.vertical ? 'marginTop' : 'marginLeft'
       styles[marginName] = `${this.$parent.gutter}px`
-      styles['flex'] = `${this.grow} ${this.shrink} ${this.basis}`
+      // styles['flex'] = `${this.grow} ${this.shrink} ${this.basis}`
       styles['order'] = this.order
       return styles
+    },
+    itemClass () {
+      return {
+        'vui-flex-item': this.auto
+      }
     }
   }
 }

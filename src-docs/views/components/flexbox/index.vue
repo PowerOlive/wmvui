@@ -6,7 +6,7 @@
   </code-example>
 
   <api-view :api="apiData.flexbox" title="Flexbox API" :i18n="$t.bind(this)"/>
-  <api-view :api="apiData.flexboxItem" title="FlexboxItem API" :i18n="$t.bind(this)"/>
+  <api-view :api="apiData.flexItem" title="FlexboxItem API" :i18n="$t.bind(this)"/>
 </div>
 </template>
 
