@@ -35,6 +35,11 @@ export default {
     default: '3',
     desc: 'props.width'
   }, {
+    name: 'showValue',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.showValue'
+  }, {
     name: 'color',
     type: 'String',
     default: '',

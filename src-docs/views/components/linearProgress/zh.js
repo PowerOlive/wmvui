@@ -8,8 +8,10 @@ export default {
   props: {
     mode: '进度指示器的模式， indeterminate 不确定进度模式，这时 value、min、max 无效, determinate 需要通过改变value值来改变进度显示',
     value: '进度条的 `value` 值',
-    max: '最大值',
-    min: '最小值',
+    state: '可选状态 success info warn danger',
+    // max: '最大值',
+    // min: '最小值',
+    showValue: '显示数值',
     size: '进度条的大小(高度)',
     color: '进度条的颜色'
   }

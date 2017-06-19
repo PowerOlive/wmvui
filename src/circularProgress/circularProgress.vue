@@ -11,7 +11,7 @@
       stroke-miterlimit="20" :stroke-width="width"
       :style="circularPathStyle"
     ></circle>
-    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="16">{{value}}%</text>
+    <text v-if="showValue" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="16">{{value}}%</text>
   </svg>
 </div>
 </template>
@@ -50,6 +50,7 @@ export default {
       type: Number,
       default: 24
     },
+    showValue: Boolean,
     width: {
       type: Number,
       default: 3
