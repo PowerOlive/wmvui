@@ -27,10 +27,10 @@ import dialog from './dialog'
 import snackbar from './snackbar'
 import popup from './popup'
 import * as menu from './menu'
-import bottomSheet from './bottomSheet'
+// import bottomSheet from './bottomSheet'
 import popover from './popover'
 import iconMenu from './iconMenu'
-import dropDownMenu from './dropDownMenu'
+// import dropDownMenu from './dropDownMenu'
 import drawer from './drawer'
 import picker from './picker'
 import tooltip from './tooltip'
@@ -85,10 +85,10 @@ const components = {
   snackbar,
   popup,
   ...menu,
-  bottomSheet,
+  // bottomSheet,
   popover,
   iconMenu,
-  dropDownMenu,
+  // dropDownMenu,
   drawer,
   picker,
   tooltip,

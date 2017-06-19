@@ -1,8 +1,13 @@
 <template>
 <div class="vui-dropDown-menu" :class="{'disabled': disabled}">
-  <svg viewBox="0 0 24 24"  class="vui-dropDown-menu-icon" :class="iconClass">
-    <path d="M7 10l5 5 5-5z"/>
-  </svg>
+  <template v-if="icon">
+    <icon :icon="icon" class="vui-dropDown-menu-icon" />
+  </template>
+  <template v-else>
+    <svg viewBox="0 0 24 24"  class="vui-dropDown-menu-icon">
+      <path d="M7 10l5 5 5-5z"/>
+    </svg>
+  </template>
   <div class="vui-dropDown-menu-text" @click="handleOpen" :class="labelClass">
     <div class="vui-dropDown-menu-text-overflow">{{label}}</div>
   </div>
@@ -23,6 +28,7 @@ import popover from '../popover'
 import {menu} from '../menu'
 import {isNull} from '../utils'
 import resize from '../internal/resize'
+import icon from '../icon'
 export default {
   name: 'vui-dropDown-menu',
   mixins: [resize],
@@ -55,8 +61,8 @@ export default {
     underlineClass: {
       type: [String, Array, Object]
     },
-    iconClass: {
-      type: [String, Array, Object]
+    icon: {
+      type: String
     },
     openImmediately: {
       type: Boolean,
@@ -139,6 +145,7 @@ export default {
   },
   components: {
     popover,
+    icon,
     'vui-menu': menu
   }
 }

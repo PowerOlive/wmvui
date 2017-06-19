@@ -1,6 +1,6 @@
 <template>
 <div class="vui-circle-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
-  <div class="vui-circle-spinner active" :class="{'vui-circle-secondary': secondary}" :style="spinnerStyle">
+  <div class="vui-circle-spinner active" :class="circleClass" :style="spinnerStyle">
       <div class="vui-circle-clipper left">
           <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
@@ -31,15 +31,21 @@ export default {
       type: Number,
       default: 3
     },
-    secondary: {
-      type: Boolean,
-      default: false
-    }
+    state: ''
   },
   computed: {
     spinnerStyle () {
       return {
         'border-color': getColor(this.color)
+      }
+    },
+    circleClass () {
+      const {state} = this
+      return {
+        'vui-circle-success': state === 'success',
+        'vui-circle-info': state === 'info',
+        'vui-circle-warn': state === 'warn',
+        'vui-circle-danger': state === 'danger'
       }
     }
   }
@@ -84,9 +90,10 @@ export default {
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-.vui-circle-secondary{
-  border-color: @accentColor;
-}
+.vui-circle-success{border-color: @successColor}
+.vui-circle-info{border-color: @infoColor}
+.vui-circle-warn{border-color: @warnColor}
+.vui-circle-danger{border-color: @dangerColor}
 
 .vui-circle-clipper {
   display: inline-block;

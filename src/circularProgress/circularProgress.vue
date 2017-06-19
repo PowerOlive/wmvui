@@ -1,14 +1,17 @@
 <template>
-<div class="vui-circular-progress" :style="{'width': size + 'px', 'height': size + 'px'}">
-  <circular v-if="mode === 'indeterminate'" :size="size" :color="color" :borderWidth="strokeWidth" />
-  <svg class="vui-circular-progress-determinate"
+<div class="vui-circle-progress" :style="{'width': size + 'px', 'height': size + 'px'}">
+  <circular v-if="mode === 'indeterminate'" :size="size" :state="getState" :color="color" :borderWidth="width" />
+  <svg class="vui-circle-progress-determinate"
     :viewBox="'0 0 ' + size + ' ' + size" :style="circularSvgStyle"
     v-if="mode === 'determinate'">
-    <circle class="vui-circular-progress-determinate-path"
+    <circle 
+      class="vui-circle-progress-determinate-path"
+      :class="circleClass"
       :r="radius" :cx="size / 2" :cy="size / 2" fill="none"
-      stroke-miterlimit="20" :stroke-width="strokeWidth"
+      stroke-miterlimit="20" :stroke-width="width"
       :style="circularPathStyle"
     ></circle>
+    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="16">{{value}}%</text>
   </svg>
 </div>
 </template>
@@ -38,21 +41,23 @@ export default {
       type: Number,
       default: 0
     },
-    color: {
-      type: String
-    },
+    success: Boolean,
+    info: Boolean,
+    warn: Boolean,
+    danger: Boolean,
+    color: String,
     size: {
       type: Number,
       default: 24
     },
-    strokeWidth: {
+    width: {
       type: Number,
       default: 3
     }
   },
   computed: {
     radius () {
-      return (this.size - this.strokeWidth) / 2
+      return (this.size - this.width) / 2
     },
     circularSvgStyle () {
       return {
@@ -66,12 +71,37 @@ export default {
         stroke: getColor(this.color),
         'stroke-dasharray': `${this.getArcLength(relVal)}, ${this.getArcLength(1)}`
       }
+    },
+    circleClass () {
+      const {success, info, warn, danger} = this
+      return {
+        'vui-circle-progress-success': success,
+        'vui-circle-progress-info': info,
+        'vui-circle-progress-warn': warn,
+        'vui-circle-progress-danger': danger
+      }
+    },
+    getState () {
+      var s = ''
+      const {success, info, warn, danger} = this
+      if (success) {
+        s = 'success'
+      } else if (info) {
+        s = 'info'
+      } else if (warn) {
+        s = 'warn'
+      } else if (danger) {
+        s = 'danger'
+      } else {
+        s = 'primary'
+      }
+      return s
     }
   },
   methods: {
     // material ui 两个计算方法
     getArcLength (fraction) {
-      return fraction * Math.PI * (this.size - this.strokeWidth)
+      return fraction * Math.PI * (this.size - this.width)
     },
     getRelativeValue () {
       const {value, min, max} = this
@@ -87,19 +117,23 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-circular-progress {
+.vui-circle-progress{
   display: inline-block;
   position: relative;
   overflow: hidden;
-}
 
-.vui-circular-progress-determinate{
-  position: relative;
-}
+  &-determinate{
+    position: relative;
+    &-path{
+      stroke: @primaryColor;
+      stroke-linecap: round;
+      transition: all 0.3s linear;
+    }
+  }
 
-.vui-circular-progress-determinate-path{
-  stroke: @primaryColor;
-  stroke-linecap: round;
-  transition: all 0.3s linear;
+  &-success{stroke: @successColor}
+  &-info{stroke: @infoColor}
+  &-warn{stroke: @warnColor}
+  &-danger{stroke: @dangerColor}
 }
 </style>

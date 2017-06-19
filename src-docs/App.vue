@@ -24,14 +24,14 @@
               <vui-list-item value="/dialog" title="弹窗"/>
               <vui-list-item value="/popup" title="无敌的弹层"/>
               <vui-list-item value="/divider" title="分割线"/>
-              <!-- <vui-list-item value="/drawer" title="侧边栏"/> -->
+              <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/gridList" title="网格列表"/>
               <vui-list-item value="/icon" title="图标"/>
               <vui-list-item value="/svgIcon" title="多色图标"/>
               <vui-list-item value="/list" title="列表"/>
               <vui-list-item value="/menu" title="菜单"/>
               <vui-list-item value="/iconMenu" title="图标菜单"/>
-              <vui-list-item value="/dropDownMenu" title="下拉菜单"/>
+              <!-- <vui-list-item value="/dropDownMenu" title="下拉菜单"/> -->
               <vui-list-item value="/paper" title="阴影框"/>
               <vui-list-item value="/popover" title="弹出下拉"/>
               <vui-list-item value="/linearProgress" title="条形进度条"/>

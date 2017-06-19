@@ -1,8 +1,10 @@
 <template>
 <div>
-  <vui-circular-progress mode="determinate" :size="40" :value="value"/>
-  <vui-circular-progress mode="determinate" :size="60" :strokeWidth="5" :value="value"/>
-  <vui-circular-progress mode="determinate" :size="90" color="red" :value="value"/>
+  <vui-circular-progress mode="determinate" :size="50" :width="2" :value="20" />
+  <vui-circular-progress mode="determinate" :size="70" :width="5" :value="20"  success/>
+  <vui-circular-progress mode="determinate" :size="90" :width="7" :value="30"  info/>
+  <vui-circular-progress mode="determinate" :size="70" :width="5" :value="40"  warn/>
+  <vui-circular-progress mode="determinate" :size="60" :width="2" :value="value" danger/>
 </div>
 </template>
 
@@ -15,12 +17,15 @@ export default {
   },
   mounted () {
     this.timer = setInterval(() => {
-      this.value += 10
-      if (this.value > 100) this.value = 0
-    }, 1000)
+      this.value += 5
+      if (this.value > 100) {
+        this.value = 100
+        clearInterval(this.timer)
+      }
+    }, 100)
   },
   beforeDestroy () {
-    clearInterval(this.timer)
+    // clearInterval(this.timer)
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-<paper class="vui-drawer" :style="drawerStyle" :class="{'open': open, 'right': right}" :zDepth="zDepth">
+<paper class="vui-drawer" :style="drawerStyle" :class="{'open': open, 'right': right}" :level="level">
   <slot></slot>
 </paper>
 </template>
@@ -29,7 +29,7 @@ export default {
     width: {
       type: [Number, String]
     },
-    zDepth: {
+    level: {
       type: Number,
       default: 2
     }

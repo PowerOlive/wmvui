@@ -7,7 +7,7 @@ export default {
   rightExample: '打开右边的 Drawer',
   props: {
     width: 'drawer 的宽度',
-    zDepth: '阴影的深度',
+    level: '阴影的深度',
     open: '是否打开',
     docked: '是否固定 drawer， 设为 `true`， 将不会显示遮盖层，也不会触发 `close` 事件',
     right: '是否从右边弹出'

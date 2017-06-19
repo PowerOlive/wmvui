@@ -5,10 +5,10 @@ export default {
     default: '',
     desc: 'props.width'
   }, {
-    name: 'zDepth',
+    name: 'level',
     type: 'Number',
     default: '2',
-    desc: 'props.zDepth'
+    desc: 'props.level'
   }, {
     name: 'open',
     type: 'Boolean',
