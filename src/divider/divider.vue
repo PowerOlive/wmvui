@@ -54,6 +54,7 @@ export default {
       background: #fff;
       z-index: 1;
       max-width: 30%;
+      height:100%;
     }
 
   }
@@ -64,10 +65,10 @@ export default {
   margin-left: 16px;
 } */
   html.pixel-ratio-2 & {
-    .transform(scaleY(0.5));
+    /* .transform(scaleY(0.5)) */;
   }
   html.pixel-ratio-3 & {
-    .transform(scaleY(0.33));
+    /* .transform(scaleY(0.33)) */;
   }
 }
 </style>
