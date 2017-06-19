@@ -1,11 +1,9 @@
 <template>
-  <span>
-    <transition name="vui-bottom-sheet" @after-enter="show()" @after-leave="hide()">
-      <div class="vui-bottom-sheet" :class="sheetClass" ref="popup" v-show="open" :style="{'z-index': zIndex}">
-        <slot></slot>
-      </div>
-    </transition>
-  </span>
+  <transition name="vui-bottom-sheet" @after-enter="show()" @after-leave="hide()">
+    <div class="vui-bottom-sheet" :class="sheetClass" ref="popup" v-show="open" :style="{'z-index': zIndex}">
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>

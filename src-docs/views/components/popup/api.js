@@ -25,10 +25,10 @@ export default {
     default: 'false',
     desc: 'props.loading'
   }, {
-    name: 'popupClass',
-    type: 'String,Object,Array',
-    default: '',
-    desc: 'props.popupClass'
+    name: 'fill',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.fill'
   }, {
     name: 'popupTransition',
     type: 'String',

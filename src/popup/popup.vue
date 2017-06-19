@@ -44,7 +44,8 @@ export default {
     position: {
       type: String,
       default: ''
-    }
+    },
+    fill: Boolean
   },
   data () {
     return {
@@ -59,9 +60,10 @@ export default {
   },
   computed: {
     popupCss () {
-      const {position, popupClass, toast, loading} = this
+      const {position, popupClass, toast, loading, fill} = this
       let classNames = []
       if (position) classNames.push('vui-popup-' + position)
+      if (fill) classNames.push('vui-popup-fill')
       if (toast) {
         classNames.push('vui-popup-toast')
         if (toast.type === 'error') {
@@ -119,70 +121,73 @@ export default {
       font-size: 50px;
     }
   }
-  &.vui-popup-toast,
-  &.vui-popup-loading{
+  &-toast,
+  &-loading{
     background-color:rgba(0,0,0,.8);
     border-radius: 20px;
   }
-  &.vui-popup-toast{
+  &-toast{
     color:#fff;
     padding:10px 20px;
   }
-  &.vui-popup-loading{
+  &-loading{
     padding:24px;
   }
-  &.vui-popup-toast-error{
+  &-toast-error{
     color: @red
   }
-  &.vui-popup-toast-success{
+  &-toast-success{
     color: @lightGreenA700
   }
-  &.vui-popup-toast-info{
+  &-toast-info{
     color: @blue500
   }
-  &.vui-popup-toast-warn{
+  &-toast-warn{
     color: @deepOrange500
   }
-  &.vui-popup-toast-text{
+  &-toast-text{
     color: #fff
   }
-}
-.vui-popup-top {
-  top: 0;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-}
+  &-top {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
 
-.vui-popup-right {
-  top: 50%;
-  right: 0;
-  bottom: auto;
-  left: auto;
-  transform: translate3d(0, -50%, 0);
-}
-.vui-popup-bottom {
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-}
+  &-right {
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: translate3d(0, -50%, 0);
+  }
+  &-bottom {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
 
-.vui-popup-left {
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 0;
-  transform: translate3d(0, -50%, 0);
-}
-.vui-popup-center {
-  top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  transform: translate3d(-50%,-50%,0);
+  &-left {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  &-center {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+  }
+  &-fill{
+    width:100%;
+  }
 }
 
 .popup-slide-top-enter-active,

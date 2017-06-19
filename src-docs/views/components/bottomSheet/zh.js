@@ -2,7 +2,7 @@ import description from './README.md'
 
 export default {
   description,
-  simpleExample: '简单的使用',
+  exampleSimple: '简单的使用',
   props: {
     open: '是否打开',
     sheetClass: 'bottomSheet 样式, 同 `class` 绑定方式一致',

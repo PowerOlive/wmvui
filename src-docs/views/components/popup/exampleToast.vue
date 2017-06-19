@@ -60,7 +60,7 @@
   label="加载层" 
   @click="openLoading" />
 
-  <vui-popup :position="popup.position" :toast="toast" :overlayOpacity="0" :svgIcon="popup.svgicon" :icon="popup.icon" :overlay="true" :open="popup.show">
+  <vui-popup :position="popup.position" :toast="toast" :svgIcon="popup.svgicon" :icon="popup.icon" :overlay="true" :open="popup.show">
   {{popup.msg}}
   </vui-popup>
   <vui-popup position="center" :overlay="true" :overlayOpacity="0.2" :loading="loading" :open="loading.show">
@@ -101,7 +101,7 @@ export default {
       })
       setTimeout(() => {
         this.popup.show = false
-      }, 1000)
+      }, 500)
     },
     openLoading () {
       this.loading.show = true

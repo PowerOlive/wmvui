@@ -36,7 +36,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-paper {
-  padding-bottom:1px;
+  /* padding-bottom:1px; */
   transition: all .45s @easeOutFunction;
   color: @textColor;
   background-color: @dialogBackgroundColor;

@@ -15,13 +15,14 @@
               <vui-list-item value="/avatar" title="头像"/>
               <vui-list-item value="/badge" title="徽章"/>
               <vui-list-item value="/bottomNav" title="底导航"/>
-              <vui-list-item value="/bottomSheet" title="底部面板"/>
+              <!-- <vui-list-item value="/bottomSheet" title="底部面板"/> -->
               <vui-list-item value="/number" title="计数器"/>
               <vui-list-item value="/button" title="按钮" />
               <vui-list-item value="/card" title="卡片"/>
               <vui-list-item value="/chip" title="标签"/>
               <vui-list-item value="/datePicker" title="日期选择器"/>
               <vui-list-item value="/dialog" title="弹窗"/>
+              <vui-list-item value="/popup" title="无敌的弹层"/>
               <vui-list-item value="/divider" title="分割线"/>
               <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/gridList" title="网格列表"/>
@@ -54,7 +55,6 @@
               <vui-list-item value="/infiniteScroll" title="无限滚动"/>
               <!-- <vui-list-item value="/pagination" title="Pagination"/> -->
               <vui-list-item value="/picker" title="Picker 选择器"/>
-              <vui-list-item value="/popup" title="提示层"/>
               <vui-list-item value="/refreshControl" title="下拉刷新"/>
           </vui-list>
         </div>

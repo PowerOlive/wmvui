@@ -1,10 +1,10 @@
 <template>
 <div class="content-wrapper">
   <markdown-element :text="$t('description')"/>
-  <code-example :code="exampleSimpleCode" :title="$t('simpleExample')">
+  <code-example :code="exampleSimpleCode" :title="$t('exampleSimple')">
     <ex-simple />
   </code-example>
-  <code-example :code="exampleShiftCode" :title="$t('shiftExample')">
+  <code-example :code="exampleShiftCode" :title="$t('exampleShift')">
     <ex-shift />
   </code-example>
   <api-view :api="apiData.bottomNav" title="BottomNav API" :i18n="$t.bind(this)"/>
