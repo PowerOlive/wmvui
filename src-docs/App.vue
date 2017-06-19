@@ -24,7 +24,7 @@
               <vui-list-item value="/dialog" title="弹窗"/>
               <vui-list-item value="/popup" title="无敌的弹层"/>
               <vui-list-item value="/divider" title="分割线"/>
-              <vui-list-item value="/drawer" title="侧边栏"/>
+              <!-- <vui-list-item value="/drawer" title="侧边栏"/> -->
               <vui-list-item value="/gridList" title="网格列表"/>
               <vui-list-item value="/icon" title="图标"/>
               <vui-list-item value="/svgIcon" title="多色图标"/>

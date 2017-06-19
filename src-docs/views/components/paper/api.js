@@ -5,15 +5,20 @@ export default {
     default: 'false',
     desc: 'props.circle'
   }, {
-    name: 'rounded',
+    name: 'round',
     type: 'Boolean',
-    default: 'true',
-    desc: 'props.rounded'
+    default: 'false',
+    desc: 'props.round'
   }, {
-    name: 'zDepth',
+    name: 'size',
+    type: 'String',
+    default: '',
+    desc: 'props.size'
+  }, {
+    name: 'level',
     type: 'Number',
     default: '1',
-    desc: 'props.zDepth'
+    desc: 'props.level'
   }],
   slots: [{
     name: 'default',

@@ -1,18 +1,10 @@
 <template>
 <div>
-  <vui-paper class="demo-paper" :zDepth="1" />
-  <vui-paper class="demo-paper" :zDepth="2" />
-  <vui-paper class="demo-paper" :zDepth="3" />
-  <vui-paper class="demo-paper" :zDepth="4" />
-  <vui-paper class="demo-paper" :zDepth="5" />
+  <vui-paper size="48px" class="demo-paper" :level="1" />
+  <vui-paper size="64px" class="demo-paper" :level="2" />
+  <vui-paper round size="88px" class="demo-paper" :level="3" />
+  <vui-paper size="64px" class="demo-paper" :level="4" />
+  <vui-paper size="48px" class="demo-paper" :level="5" />
 </div>
 </template>
-<style lang="css">
-.demo-paper {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  margin: 20px;
-  text-align: center;
-}
-</style>
+
