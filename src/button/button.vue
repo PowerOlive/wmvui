@@ -182,7 +182,8 @@ export default {
   transform: translate3d(0, 0, 0);
   text-decoration: none;
   text-transform: uppercase;
-  border:2px solid transparent;
+  border:none;
+  /* border:2px solid transparent; */
   appearance: none;
   background: none;
   color: @textColor;
@@ -282,7 +283,8 @@ export default {
   }
   &-invert{
     background:transparent;
-    border-color: fade(@textColor, 10%);
+    border:2px solid fade(@textColor, 10%);
+    padding: 3px 22px;
     /* &-primary,
     &-success,
     &-info,
