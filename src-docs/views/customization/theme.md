@@ -1,16 +1,5 @@
-### 主题的使用
 
-WMVUI 预设 4 种主题 `light`, `dark`, `carbon`, `teal` 只需要在组件后面引入即可
-
-```js
-import Vue from 'vue'
-import MuseUI from 'wuvui'
-import 'wuvui/dist/wuvui.css'
-import 'wuvui/dist/theme-carbon.css' // 使用 carbon 主题
-Vue.use(MuseUI)
-```
-
-动态的切换主题,需要依赖 `webpack` 的 `raw-loader` 加载器
+<!-- 动态的切换主题,需要依赖 `webpack` 的 `raw-loader` 加载器
 
 ```html
 <template>
@@ -22,10 +11,10 @@ Vue.use(MuseUI)
 </vui-tabs>
 </template>
 <script>
-import light from 'wuvui/dist/theme-default.css'
-import dark from 'wuvui/dist/theme-dark.css'
-import carbon from 'wuvui/dist/theme-carbon.css'
-import teal from 'wuvui/dist/theme-teal.css'
+import light from 'wmvui/dist/theme-default.css'
+import dark from 'wmvui/dist/theme-dark.css'
+import carbon from 'wmvui/dist/theme-carbon.css'
+import teal from 'wmvui/dist/theme-teal.css'
 export default {
   data () {
     return {
@@ -56,17 +45,20 @@ export default {
   }
 }
 </script>
-```
+``` -->
 
 ### 自定义主题
-
-目前只支持 `less`, 黑色的主题配置 `dark.less`
+目前只支持 `less`, 如黑色的主题配置如下所示 `dark.less`
+```js
+import Vue from 'vue'
+import MuseUI from 'wuvui'
+import 'wmvui/dist/wuvui.css'
+@import "path/theme.less"; // 引入自定义主题(path)路径
+Vue.use(MuseUI)
+```
 
 ```less
-@import "wuvui/less/vars.less"; // 默认基础的变量
-
 // 修改基础变量
-
 @primaryColor: @lightBlue700;
 @darkerPrimaryColor: @lightBlue700;
 @lighterPrimaryColor: @grey600;
@@ -90,7 +82,7 @@ export default {
 @activeIconColor: fade(@fullWhite, 100%);
 @inActiveIconColor: fade(@fullWhite, 50%);
 
-@import "wuvui/less/theme-vars.less";  // 默认组件变量
+@import "wmvui/less/theme-vars.less";  // 默认组件变量
 
 // 修改组件变量
 @avatarBackgroundColor: lighten(@alternateTextColor, 26%);
@@ -104,7 +96,7 @@ export default {
 @tableRowHoverBackgroundColor: fade(@textColor, 10%);
 @tableRowSelectedBackgroundColor: fade(@textColor, 5%);
 
-@import "wuvui/less/theme.less"; // 主题相关的样式
+@import "wmvui/less/theme.less"; // 主题相关的样式
 
 ```
 
@@ -112,7 +104,7 @@ export default {
 
 主题的颜色变量，来源于 [material design colors](https://material.google.com/style/color.html#color-text-background-colors)
 
-```less
+<!-- ```less
 @fontFamily: Roboto, Lato, sans-serif;  // 字体
 
 // 主色和强调色
@@ -140,3 +132,4 @@ export default {
 @activeIconColor: fade(@fullBlack, 54%);
 @inActiveIconColor: fade(@fullBlack, 38%);
 ```
+ -->
