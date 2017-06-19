@@ -22,18 +22,25 @@ export default {
       type: String,
       default: ''
     },
-    primary: {
-      type: Boolean,
-      default: false
-    },
-    secondary: {
-      type: Boolean,
-      default: false
-    },
+    primary: Boolean,
+    success: Boolean,
+    info: Boolean,
+    warn: Boolean,
+    danger: Boolean,
+    // primary: {
+    //   type: Boolean,
+    //   default: false
+    // },
+    // secondary: {
+    //   type: Boolean,
+    //   default: false
+    // },
+    round: Boolean,
     circle: {
       type: Boolean,
       default: false
     },
+    size: String,
     badgeClass: {
       type: [String, Object, Array]
     }
@@ -41,16 +48,22 @@ export default {
   computed: {
     badgeStyle () {
       return {
-        'background-color': getColor(this.color)
+        'background-color': getColor(this.color),
+        'width': this.circle ? this.size : '',
+        'height': this.circle ? this.size : ''
       }
     },
     badgeInternalClass () {
-      const {circle, primary, secondary, badgeClass} = this
+      const {circle, round, primary, success, info, warn, danger, badgeClass} = this
       const isFloat = this.$slots && this.$slots.default && this.$slots.default.length > 0
       const classNames = []
       if (circle) classNames.push('vui-badge-circle')
+      if (round) classNames.push('vui-badge-round')
       if (primary) classNames.push('vui-badge-primary')
-      if (secondary) classNames.push('vui-badge-secondary')
+      if (success) classNames.push('vui-badge-success')
+      if (info) classNames.push('vui-badge-info')
+      if (warn) classNames.push('vui-badge-warn')
+      if (danger) classNames.push('vui-badge-danger')
       if (isFloat) classNames.push('vui-badge-float')
       return classNames.concat(convertClass(badgeClass))
     }
@@ -60,12 +73,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-badge-container{
-  display: inline-block;
-  position: relative;
-}
 .vui-badge{
-  font-size: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,28 +83,33 @@ export default {
   font-style: normal;
   background-color: @lighterPrimaryColor;
   color: @alternateTextColor;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
+  &-container{
+    display: inline-block;
+    position: relative;
+  }
+  &-float {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+  }
+  &-round{
+    border-radius:10000px;
+  }
+  &-circle {
+    border-radius: 50%;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  &-primary {background-color: @primaryColor;}
+  &-success {background-color: @successColor;}
+  &-info {background-color: @infoColor;}
+  &-warn {background-color: @warnColor;}
+  &-danger {background-color: @dangerColor;}
 }
 
-.vui-badge-float {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-}
-.vui-badge-circle {
-  border-radius: 50%;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-}
-.vui-badge-primary {
-  background-color: @primaryColor;
-}
-
-.vui-badge-secondary {
-  background-color: @accentColor;
-}
 
 </style>

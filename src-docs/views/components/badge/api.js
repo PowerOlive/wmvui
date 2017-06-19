@@ -5,30 +5,25 @@ export default {
     default: '',
     desc: 'props.content'
   }, {
-    name: 'color',
+    name: '颜色',
     type: 'String',
     default: '',
     desc: 'props.color'
-  }, {
-    name: 'primary',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.primary'
-  }, {
-    name: 'secondary',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.secondary'
   }, {
     name: 'circle',
     type: 'Boolean',
     default: 'false',
     desc: 'props.circle'
   }, {
-    name: 'badgeClass',
-    type: 'String,Object,Array',
+    name: 'round',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.round'
+  }, {
+    name: 'size',
+    type: 'String',
     default: '',
-    desc: 'props.badgeClass'
+    desc: 'props.size'
   }],
   slots: [{
     name: 'content',
