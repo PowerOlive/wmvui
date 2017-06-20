@@ -26,14 +26,14 @@ import Drawer from './views/components/drawer'
 import GridList from './views/components/gridList'
 import Icon from './views/components/icon'
 import svgIcon from './views/components/svgIcon'
-import LinearProgress from './views/components/linearProgress'
-import CircularProgress from './views/components/circularProgress'
+import progress from './views/components/progress'
+import loading from './views/components/loading'
 import List from './views/components/list'
 import Menu from './views/components/menu'
 import IconMenu from './views/components/iconMenu'
-import DropDownMenu from './views/components/dropDownMenu'
+// import DropDownMenu from './views/components/dropDownMenu'
 import Paper from './views/components/paper'
-import Popover from './views/components/popover'
+// import Popover from './views/components/popover'
 import SelectField from './views/components/selectField'
 import number from './views/components/number'
 import Checkbox from './views/components/checkbox'
@@ -87,14 +87,14 @@ const router = new Router({
     { path: '/gridList', component: GridList },
     { path: '/icon', component: Icon },
     { path: '/svgIcon', component: svgIcon },
-    { path: '/linearProgress', component: LinearProgress },
-    { path: '/circularProgress', component: CircularProgress },
+    { path: '/progress', component: progress },
+    { path: '/loading', component: loading },
     { path: '/list', component: List },
     { path: '/menu', component: Menu },
     { path: '/iconMenu', component: IconMenu },
-    { path: '/dropDownMenu', component: DropDownMenu },
+    // { path: '/dropDownMenu', component: DropDownMenu },
     { path: '/paper', component: Paper },
-    { path: '/popover', component: Popover },
+    // { path: '/popover', component: Popover },
     { path: '/selectField', component: SelectField },
     { path: '/number', component: number },
     { path: '/checkbox', component: Checkbox },

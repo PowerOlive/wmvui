@@ -1,28 +1,17 @@
 <template>
-  <div class="vui-loading">
-    <template v-if="type === 0">
-      <div class="vui-circle-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
-        <div class="vui-circle-spinner active" :class="circleClass" :style="spinnerStyle">
-            <div class="vui-circle-clipper left">
-                <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
-            </div>
-            <div class="vui-circle-gap-patch">
-                <div class="vui-circle"></div>
-            </div>
-            <div class="vui-circle-clipper right">
-                <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
-            </div>
-        </div>
+<div class="vui-circle-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
+  <div class="vui-circle-spinner active" :style="spinnerStyle">
+      <div class="vui-circle-clipper left">
+          <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
-    </template>
-    <template v-else-if="type === 1">
-      <span class="line" :class="lineClass"></span>
-      <span class="line" :class="lineClass"></span>
-      <span class="line" :class="lineClass"></span>
-      <span class="line" :class="lineClass"></span>
-      <span class="line" :class="lineClass"></span>
-    </template>
+      <div class="vui-circle-gap-patch">
+          <div class="vui-circle"></div>
+      </div>
+      <div class="vui-circle-clipper right">
+          <div class="vui-circle" :style="{'border-width': borderWidth + 'px'}"></div>
+      </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -38,29 +27,15 @@ export default {
       type: String,
       default: ''
     },
-    type: {
-      type: Number,
-      default: 0
-    },
     borderWidth: {
       type: Number,
       default: 3
-    },
-    state: ''
+    }
   },
   computed: {
     spinnerStyle () {
       return {
         'border-color': getColor(this.color)
-      }
-    },
-    circleClass () {
-      const {state} = this
-      return {
-        'vui-circle-success': state === 'success',
-        'vui-circle-info': state === 'info',
-        'vui-circle-warn': state === 'warn',
-        'vui-circle-danger': state === 'danger'
       }
     },
     lineClass () {
@@ -108,11 +83,6 @@ export default {
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
-
-.vui-circle-success{border-color: @successColor}
-.vui-circle-info{border-color: @infoColor}
-.vui-circle-warn{border-color: @warnColor}
-.vui-circle-danger{border-color: @dangerColor}
 .vui-circle-clipper {
   display: inline-block;
   position: relative;
@@ -232,47 +202,4 @@ export default {
     transform: rotate(360deg);
   }
 }
-
-.vui-loading{
-  height:100%;
-  .line{
-    height:100%;
-    background-color:@primaryColor;
-    display: inline-block;
-    width:calc(100 / 10%);
-    animation-fill-mode: both;
-    &:nth-child(1){ 
-      animation:line-scale 1s .1s infinite cubic-bezier(0.4, 0, 0.2, 1)
-    }
-    &:nth-child(2){
-      animation:line-scale 1s .2s infinite cubic-bezier(0.4, 0, 0.2, 1)
-    }
-    &:nth-child(3){ 
-      animation:line-scale 1s .3s infinite cubic-bezier(0.4, 0, 0.2, 1)
-    }
-    &:nth-child(4){
-      animation:line-scale 1s .4s infinite cubic-bezier(0.4, 0, 0.2, 1)
-    }
-    &:nth-child(5){
-      animation:line-scale 1s .5s infinite cubic-bezier(0.4, 0, 0.2, 1)
-    }
-  }
-  .vui-line-success{background-color: @successColor}
-  .vui-line-info{background-color: @infoColor}
-  .vui-line-warn{background-color: @warnColor}
-  .vui-line-danger{background-color: @dangerColor}
-}
-@keyframes line-scale {
-  0%{
-    transform: scaley(1)
-  }
-  50% {
-    transform: scaley(.4)
-  }
-  100% {
-    transform: scaley(1)
-  }
-}
-
-
 </style>

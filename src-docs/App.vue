@@ -38,8 +38,8 @@
               <!-- <vui-list-item value="/popover" title="弹出下拉"/> -->
               <!-- <vui-list-item value="/dropDownMenu" title="下拉菜单"/> -->
               <vui-list-item value="/tabs" title="标签页"/>
-              <vui-list-item value="/linearProgress" title="条形进度条"/>
-              <vui-list-item value="/circularProgress" title="圆形进度条"/>
+              <vui-list-item value="/progress" title="进度条"/>
+              <vui-list-item value="/loading" title="加载动画"/>
               <vui-list-item value="/textField" title="输入框"/>
               <vui-list-item value="/selectField" title="下拉选择"/>
               <vui-list-item value="/radio" title="单选框"/>

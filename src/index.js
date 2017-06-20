@@ -41,8 +41,10 @@ import checkbox from './checkbox'
 import radio from './radio'
 import _switch from './switch'
 import slider from './slider'
-import linearProgress from './linearProgress'
-import circularProgress from './circularProgress'
+import progress from './progress'
+import loading from './loading'
+// import linearProgress from './linearProgress'
+// import circularProgress from './circularProgress'
 import * as gridList from './gridList'
 import * as table from './table'
 import datePicker from './datePicker'
@@ -98,8 +100,10 @@ const components = {
   radio,
   _switch,
   slider,
-  linearProgress,
-  circularProgress,
+  progress,
+  loading,
+  // linearProgress,
+  // circularProgress,
   ...gridList,
   ...table,
   datePicker,
