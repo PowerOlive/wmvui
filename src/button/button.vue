@@ -213,39 +213,35 @@ export default {
       margin-right:0;
     }
   }
-}
-
-.vui-btn-circle{
-  overflow:hidden;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  border:none;
-  padding:0;
-  .vui-icon{
-    margin-right: 0;
+  &-circle{
+    overflow:hidden;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border:none;
+    padding:0;
+    .vui-icon{
+      margin-right: 0;
+    }
+  /*   &:hover{
+    background:transparent
+  } */
   }
-/*   &:hover{
-  background:transparent
-} */
-}
-.vui-btn-round{
-  border-radius: 1000px;
-  overflow: hidden;
-}
-.vui-btn-wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-.vui-btn-fill{
-  width: 100%;
-  display: block;
-}
-
-.vui-btn{
+  &-round{
+    border-radius: 1000px;
+    overflow: hidden;
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &-fill{
+    width: 100%;
+    display: block;
+  }
   &-primary{
     color:#fff;
     background-color: @primaryColor;
@@ -316,21 +312,23 @@ export default {
       border-color:@dangerColor;
     }
   }
+  &-text{
+    background:transparent;
+    /* &.hover{
+      background-color: fade(@textColor, 10%);
+    } */
+    &-primary{ color: @primaryColor }
+    &-success{ color: @successColor }
+    &-info{ color: @infoColor }
+    &-warn{ color: @warnColor }
+    &-danger{ color: @dangerColor }
+  }
+  &-label{
+    vertical-align: middle;
+    font-size: 14px;
+  }
 }
-.vui-btn-text{
-  background:transparent;
-  /* &.hover{
-    background-color: fade(@textColor, 10%);
-  } */
-  &-primary{ color: @primaryColor }
-  &-success{ color: @successColor }
-  &-info{ color: @infoColor }
-  &-warn{ color: @warnColor }
-  &-danger{ color: @dangerColor }
-}
-.vui-btn-label{
-  vertical-align: middle;
-  font-size: 14px;
-}
+
+
 
 </style>

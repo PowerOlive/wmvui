@@ -7,8 +7,12 @@
         </vui-appbar>
         <div class="vui-flex-item exmaple-drawer-content">
           <vui-list :value="menuVal" @itemClick="handleItemClick">
-              <vui-list-item value="/install" title="安装"/>
-              <vui-list-item value="/usage" title="使用"/>
+            <template v-for="item in list">
+                <vui-list-item :value="item.value" :title="item.title">
+                  <vui-icon slot="left" :icon="item.icon" :size="18" />
+                </vui-list-item>
+            </template>
+              <!-- <vui-list-item value="/usage" title="使用"/>
               <vui-list-item value="/theme" title="主题"/>
               <vui-list-item value="/colors" title="颜色"/>
               <vui-list-item value="/appbar" title="头部"/>
@@ -17,7 +21,7 @@
               <vui-list-item value="/icon" title="图标"/>
               <vui-list-item value="/svgIcon" title="多色图标"/>
               <vui-list-item value="/bottomNav" title="底导航"/>
-              <!-- <vui-list-item value="/bottomSheet" title="底部面板"/> -->
+              <vui-list-item value="/bottomSheet" title="底部面板"/>
               <vui-list-item value="/number" title="计数器"/>
               <vui-list-item value="/button" title="按钮" />
               <vui-list-item value="/card" title="卡片"/>
@@ -29,14 +33,14 @@
               <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/dialog" title="弹窗"/>
               <vui-list-item value="/popup" title="无敌的弹层"/>
-              <!-- <vui-list-item value="/grid" title="网格"/> -->
+              <vui-list-item value="/grid" title="网格"/>
               <vui-list-item value="/gridList" title="网格列表"/>
               <vui-list-item value="/list" title="列表"/>
               <vui-list-item value="/menu" title="菜单"/>
               <vui-list-item value="/flexbox" title="Flex Box"/>
               <vui-list-item value="/iconMenu" title="图标菜单"/>
-              <!-- <vui-list-item value="/popover" title="弹出下拉"/> -->
-              <!-- <vui-list-item value="/dropDownMenu" title="下拉菜单"/> -->
+              <vui-list-item value="/popover" title="弹出下拉"/>
+              <vui-list-item value="/dropDownMenu" title="下拉菜单"/>
               <vui-list-item value="/tabs" title="标签页"/>
               <vui-list-item value="/progress" title="进度条"/>
               <vui-list-item value="/loading" title="加载动画"/>
@@ -46,16 +50,16 @@
               <vui-list-item value="/checkbox" title="复选框"/>
               <vui-list-item value="/switch" title="开关控件"/>
               <vui-list-item value="/slider" title="滑块控件"/>
-              <!-- <vui-list-item value="/snackbarToast" title="SnackBar & Toast"/> -->
+              <vui-list-item value="/snackbarToast" title="SnackBar & Toast"/>
               <vui-list-item value="/stepper" title="步骤导航"/>
-              <!-- <vui-list-item value="/table" title="Table"/> -->
-              <!-- <vui-list-item value="/tooltip" title="Tooltip"/> -->
-              <!-- <vui-list-item value="/pagination" title="Pagination"/> -->
+              <vui-list-item value="/table" title="Table"/>
+              <vui-list-item value="/tooltip" title="Tooltip"/>
+              <vui-list-item value="/pagination" title="Pagination"/>
               <vui-list-item value="/datePicker" title="日期选择器"/>
               <vui-list-item value="/timePicker" title="时间选择"/>
               <vui-list-item value="/picker" title="Picker 选择器"/>
               <vui-list-item value="/infiniteScroll" title="无限滚动"/>
-              <vui-list-item value="/refreshControl" title="下拉刷新"/>
+              <vui-list-item value="/refreshControl" title="下拉刷新"/> -->
           </vui-list>
         </div>
       </div>
@@ -79,7 +83,172 @@ export default {
       open: desktop,
       docked: desktop,
       desktop: desktop,
-      title: ''
+      title: '',
+      list: [{
+        title: '安装',
+        value: '/install',
+        icon: 'install'
+      }, {
+        title: '使用',
+        value: '/usage',
+        icon: 'book'
+      }, {
+        title: '主题',
+        value: '/theme',
+        icon: 'theme'
+      }, {
+        title: '颜色',
+        value: '/colors',
+        icon: 'color'
+      }, {
+        title: '头部',
+        value: '/appbar',
+        icon: 'header'
+      }, {
+        title: '头像',
+        value: '/avatar',
+        icon: 'user'
+      }, {
+        title: '徽章',
+        value: '/badge',
+        icon: 'dot'
+      }, {
+        title: '图标',
+        value: '/icon',
+        icon: 'icon'
+      }, {
+        title: '多色图标',
+        value: '/svgicon',
+        icon: 'face'
+      }, {
+      //   title: '底导航',
+      //   value: '/bottomNav',
+      //   icon: 'dot'
+      // }, {
+        title: '计数器',
+        value: '/number',
+        icon: 'calc'
+      }, {
+        title: '按钮',
+        value: '/button',
+        icon: 'button'
+      }, {
+        title: '卡片',
+        value: '/card',
+        icon: 'card'
+      }, {
+        title: '标签',
+        value: '/chip',
+        icon: 'tag'
+      }, {
+        title: '副标题',
+        value: '/subHeader',
+        icon: 'title'
+      }, {
+        title: '分割线',
+        value: '/divider',
+        icon: 'divider'
+      }, {
+        title: '简单内容块',
+        value: '/contentBlock',
+        icon: 'content'
+      }, {
+        title: '阴影框',
+        value: '/paper',
+        icon: 'paper'
+      }, {
+        title: '侧边栏',
+        value: '/drawer',
+        icon: 'sidebar'
+      }, {
+        title: '弹窗',
+        value: '/dialog',
+        icon: 'dialog'
+      }, {
+        title: '无敌的弹层',
+        value: '/popup',
+        icon: 'layer'
+      }, {
+        title: '网格列表',
+        value: '/gridList',
+        icon: 'grid'
+      }, {
+        title: '列表',
+        value: '/list',
+        icon: 'list'
+      }, {
+        title: '菜单',
+        value: '/menu',
+        icon: 'menu'
+      }, {
+        title: '图标菜单',
+        value: '/iconMenu',
+        icon: 'icon-menu'
+      }, {
+        title: 'Flex Box',
+        value: '/flexbox',
+        icon: 'dialog'
+      }, {
+        title: '标签页',
+        value: '/tabs',
+        icon: 'tag'
+      }, {
+        title: '进度条',
+        value: '/progress',
+        icon: 'progress'
+      }, {
+        title: '加载动画',
+        value: '/loading',
+        icon: 'loading'
+      }, {
+        title: '输入框',
+        value: '/textField',
+        icon: 'input'
+      }, {
+        title: '下拉选择',
+        value: '/selectField',
+        icon: 'vertical-more'
+      }, {
+        title: '单选框',
+        value: '/radio',
+        icon: 'radio'
+      }, {
+        title: '复选框',
+        value: '/checkbox',
+        icon: 'checkbox'
+      }, {
+        title: '开关控件',
+        value: '/switch',
+        icon: 'switch'
+      }, {
+        title: '滑块控件',
+        value: '/slider',
+        icon: 'slider'
+      }, {
+        title: '步骤导航',
+        value: '/stepper',
+        icon: 'stepper'
+      }, {
+        title: '日期选择',
+        value: '/datePicker',
+        icon: 'date'
+      }, {
+        title: '时间选择',
+        value: '/timePicker',
+        icon: 'clock'
+      }, {
+        title: '选择器',
+        value: '/picker',
+        icon: 'picker'
+      }, {
+        title: '无限滚动',
+        value: '/infiniteScroll',
+        icon: 'double-arrow-top'
+      }, {
+        title: '下拉刷新',
+        value: '/refreshControl',
+        icon: 'double-arrow-bottom'
+      }]
     }
   },
   computed: {

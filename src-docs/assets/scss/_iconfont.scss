@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_kzzmv78n9slfecdi.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_kzzmv78n9slfecdi.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_kzzmv78n9slfecdi.woff') format('woff'), /* chrome, firefox */
-  url('//at.alicdn.com/t/font_kzzmv78n9slfecdi.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_kzzmv78n9slfecdi.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_m89ik8f4jvzk6gvi.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_m89ik8f4jvzk6gvi.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_m89ik8f4jvzk6gvi.woff') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_m89ik8f4jvzk6gvi.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_m89ik8f4jvzk6gvi.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 [class^=icon-]:before,
@@ -17,17 +17,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-vertical-more:before { content: "\e629"; }
+
 .icon-like-fill:before { content: "\e668"; }
 
 .icon-like:before { content: "\e669"; }
 
+.icon-nav:before { content: "\e794"; }
+
+.icon-clock:before { content: "\e61b"; }
+
 .icon-phone-fill:before { content: "\e810"; }
 
+.icon-radio:before { content: "\e725"; }
+
 .icon-left:before { content: "\e63d"; }
+
+.icon-app-fill:before { content: "\e64d"; }
+
+.icon-user:before { content: "\e64a"; }
 
 .icon-plus:before { content: "\e626"; }
 
 .icon-minus:before { content: "\e627"; }
+
+.icon-book:before { content: "\e7cd"; }
+
+.icon-icon-menu:before { content: "\e69b"; }
+
+.icon-tag:before { content: "\e619"; }
+
+.icon-install:before { content: "\e60b"; }
 
 .icon-date:before { content: "\e641"; }
 
@@ -37,9 +58,43 @@
 
 .icon-code:before { content: "\e606"; }
 
-.icon-app-fill:before { content: "\e650"; }
+.icon-slider:before { content: "\e6a2"; }
+
+.icon-face:before { content: "\e6fc"; }
+
+.icon-picker:before { content: "\e613"; }
+
+.icon-calc:before { content: "\e787"; }
+
+.icon-list:before { content: "\e600"; }
+
+.icon-card:before { content: "\e67b"; }
+
+.icon-paper:before { content: "\e772"; }
+
+.icon-color:before { content: "\e6f3"; }
+
+.icon-header:before { content: "\e612"; }
+
+.icon-loading:before { content: "\e6eb"; }
+
+.icon-grid:before { content: "\e756"; }
+
+.icon-title:before { content: "\e603"; }
+
+.icon-input:before { content: "\e60c"; }
+
+.icon-dialog:before { content: "\e8c6"; }
+
+.icon-double-arrow-bottom:before { content: "\e607"; }
+
+.icon-checkbox:before { content: "\e602"; }
+
+.icon-double-arrow-top:before { content: "\e604"; }
 
 .icon-more:before { content: "\e7f6"; }
+
+.icon-tab:before { content: "\e61f"; }
 
 .icon-search:before { content: "\e614"; }
 
@@ -47,4 +102,32 @@
 
 .icon-round-close-fill:before { content: "\e80f"; }
 
+.icon-icon:before { content: "\e74a"; }
+
+.icon-swiper:before { content: "\e605"; }
+
+.icon-button:before { content: "\e620"; }
+
+.icon-stepper:before { content: "\e635"; }
+
+.icon-progress:before { content: "\e62a"; }
+
+.icon-use:before { content: "\e67c"; }
+
+.icon-content:before { content: "\e69a"; }
+
 .icon-email-fill:before { content: "\e616"; }
+
+.icon-divider:before { content: "\e601"; }
+
+.icon-theme:before { content: "\e672"; }
+
+.icon-layout:before { content: "\e63c"; }
+
+.icon-switch:before { content: "\e655"; }
+
+.icon-layer:before { content: "\e60e"; }
+
+.icon-dot:before { content: "\e628"; }
+
+.icon-sidebar:before { content: "\e60d"; }

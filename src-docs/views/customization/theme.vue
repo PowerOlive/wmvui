@@ -4,75 +4,70 @@
   <vui-paper :class="['theme-' + theme, 'demo-theme-paper']">
     <vui-tabs :value="theme" @change="changeTheme">
       <vui-tab title="默认" value="default"/>
-      <vui-tab title="亮蓝" value="light"/>
       <vui-tab title="深灰" value="carbon"/>
       <vui-tab title="蓝绿" value="teal"/>
     </vui-tabs>
-    <vui-row>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item center">
-          <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
-        </div>
-        <vui-button label="默认" class="demo-vui-raised-button" />
-        <vui-button label="重要" primary class="demo-vui-raised-button" />
-        <vui-button label="成功" success class="demo-vui-raised-button" />
-        <vui-button label="提示" info class="demo-vui-raised-button" />
-        <vui-button label="警告" warn class="demo-vui-raised-button" />
-        <vui-button label="危险" danger class="demo-vui-raised-button" />
-      </vui-col>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <vui-checkbox label="checkbox"/><br/>
-          <vui-checkbox label="disabled checkbox" disabled/>
-        </div>
-        <div class="demo-theme-item">
-          <vui-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
-          <vui-radio name="radio_group" nativeValue="2" label="radio2"/><br/>
-          <vui-radio label="disabled radio" nativeValue="3"  disabled/>
-        </div>
-        <div class="demo-theme-item">
-          <vui-switch label="switch"/><br/>
-          <vui-switch label="disabled switch"  disabled/>
-        </div>
-      </vui-col>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <vui-text-field hintText="Text Field" style="width: 100%"/>
-        </div>
-        <div class="demo-theme-item">
-          <vui-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
-        </div>
-        <div class="demo-theme-item">
-          <vui-dropDown-menu :value="dropDown" @change="changeDropDown" style="width: 100%;">
-            <vui-menu-item :value="1" title="Never" />
-            <vui-menu-item :value="2" title="Every Night" />
-            <vui-menu-item :value="3" title="Weeknights" />
-            <vui-menu-item :value="4" title="Weekends" />
-            <vui-menu-item :value="5" title="Weekly" />
-          </vui-dropDown-menu>
-        </div>
-      </vui-col>
-    </vui-row>
-    <div class="demo-theme-group-slider">
+    <vui-content-block :padding="['20px']">
+      <vui-flex>
+        <vui-flex-item>
+          <div class="demo-theme-item center">
+            <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
+          </div>
+          <vui-button label="默认" class="demo-vui-raised-button" />
+          <vui-button label="重要" primary class="demo-vui-raised-button" />
+          <vui-button label="成功" success class="demo-vui-raised-button" />
+          <vui-button label="提示" info class="demo-vui-raised-button" />
+          <vui-button label="警告" warn class="demo-vui-raised-button" />
+          <vui-button label="危险" danger class="demo-vui-raised-button" />
+        </vui-flex-item>
+        <vui-flex-item>
+          <div class="demo-theme-item">
+            <vui-checkbox label="checkbox"/><br/>
+            <vui-checkbox label="disabled checkbox" disabled/>
+          </div>
+          <div class="demo-theme-item">
+            <vui-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
+            <vui-radio name="radio_group" nativeValue="2" label="radio2"/><br/>
+            <vui-radio label="disabled radio" nativeValue="3"  disabled/>
+          </div>
+          <div class="demo-theme-item">
+            <vui-switch label="switch"/><br/>
+            <vui-switch label="disabled switch"  disabled/>
+          </div>
+        </vui-flex-item>
+        <vui-flex-item>
+          <div class="demo-theme-item">
+            <vui-text-field hintText="Text Field" style="width: 100%"/>
+          </div>
+          <div class="demo-theme-item">
+            <vui-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
+          </div>
+          <div class="demo-theme-item">
+            <vui-select-field v-model="selectVal">
+              <vui-menu-item value="1" title="阴阳师"/>
+              <vui-menu-item value="2" title="影之刃"/>
+              <vui-menu-item value="3" title="天下HD"/>
+              <vui-menu-item value="4" title="穿越火线"/>
+              <vui-menu-item value="5" title="英雄联盟"/>
+              <vui-menu-item value="6" title="王者荣耀"/>
+            </vui-select-field>
+          </div>
+        </vui-flex-item>
+      </vui-flex>
       <vui-slider :value="30"/>
-    </div>
-    <vui-row>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <vui-button label="弹层" info @click="openDialog"/>
-        </div>
-      </vui-col>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <vui-button label="侧边栏" info @click="toggleDrawer"/>
-        </div>
-      </vui-col>
-      <vui-col class="demo-theme-group" width="100" desktop="33" tablet="33">
-        <div class="demo-theme-item">
-          <vui-button label="提示层" info @click="showSnackbar"/>
-        </div>
-      </vui-col>
-    </vui-row>
+      <vui-flex>
+        <vui-flex-item>
+          <div class="demo-theme-item">
+            <vui-button label="弹层" primary @click="openDialog"/>
+          </div>
+        </vui-flex-item>
+        <vui-flex-item>
+          <div class="demo-theme-item">
+            <vui-button label="侧边栏" primary @click="toggleDrawer"/>
+          </div>
+        </vui-flex-item>
+      </vui-flex>
+    </vui-content-block>
     <vui-dialog :open="dialog" title="Dialog" @close="closeDialog">
       {{$t('dialogDesc')}}
       <vui-button slot="actions" @click="closeDialog" text primary :label="$t('cancel')"/>
@@ -93,14 +88,12 @@
 
 <script>
 import _default from 'raw!less!../../assets/themes/theme-default.less'
-import light from 'raw!less!../../assets/themes/theme-light.less'
 import carbon from 'raw!less!../../assets/themes/theme-carbon.less'
 import teal from 'raw!less!../../assets/themes/theme-teal.less'
 import zh from './zh'
 import en from './en'
 
 const themes = {
-  light,
   carbon,
   teal,
   default: _default
@@ -113,7 +106,8 @@ export default {
       drawer: false,
       snackbar: false,
       dropDown: 3,
-      theme: theme
+      theme: theme,
+      selectVal: ''
     }
   },
   methods: {
