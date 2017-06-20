@@ -53,7 +53,7 @@ import * as stepper from './stepper'
 
 import number from './number'   // 自定义
 
-import * as grid from './grid'
+// import * as grid from './grid'
 
 import * as flexbox from './flexbox'
 import config from './config'
@@ -106,7 +106,7 @@ const components = {
   timePicker,
   ...stepper,
   // autoComplete,
-  ...grid,
+  // ...grid,
   ...flexbox
   // pagination
 }

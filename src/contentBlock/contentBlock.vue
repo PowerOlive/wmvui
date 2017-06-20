@@ -1,12 +1,28 @@
 <template>
-  <div class="vui-content-block">
+  <div class="vui-content-block" :style="contentStyle" :class="contentClass">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'vui-content-block'
+  name: 'vui-content-block',
+  props: {
+    padding: Array,
+    border: Boolean
+  },
+  computed: {
+    contentStyle () {
+      return {
+        'padding': this.padding ? this.padding.join(' ') : ''
+      }
+    },
+    contentClass () {
+      return {
+        'vui-content-block-border': this.border
+      }
+    }
+  }
 }
 </script>
 
@@ -15,6 +31,9 @@ export default {
 .vui-content-block{
   padding: 8px 16px;
   width: 100%;
+  &-border{
+    border:1px solid @borderColor;
+  }
   /* p{
     margin-top: 1em;
     margin-bottom: 1em;

@@ -4,35 +4,27 @@
   <code-example :code="exampleCode" :title="$t('simpleExample')" :description="$t('simpleExampleDesc')">
     <example/>
   </code-example>
+  <api-view :api="apiData" :i18n="$t.bind(this)"/>
 </div>
 </template>
 
 <script>
-import description from './README.md'
-import descriptionEn from './README_EN.md'
 import example from './example'
 import exampleCode from '!raw!./example'
+import apiData from './api'
+import zh from './zh'
 export default {
   data () {
     return {
-      description,
-      exampleCode
+      exampleCode,
+      apiData
     }
   },
   components: {
     example
   },
   locales: {
-    zh: {
-      description,
-      simpleExample: '使用示例',
-      simpleExampleDesc: 'contentBlock 是一个普通的内容块，只是调整了padding'
-    },
-    en: {
-      description: descriptionEn,
-      simpleExample: 'Simple Example',
-      simpleExampleDesc: 'contentBlock is content block，only set padding'
-    }
+    zh
   }
 }
 </script>

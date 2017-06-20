@@ -22,39 +22,39 @@
               <vui-list-item value="/button" title="按钮" />
               <vui-list-item value="/card" title="卡片"/>
               <vui-list-item value="/chip" title="标签"/>
-              <vui-list-item value="/datePicker" title="日期选择器"/>
+              <vui-list-item value="/subHeader" title="副标题"/>
+              <vui-list-item value="/divider" title="分割线"/>
+              <vui-list-item value="/contentBlock" title="简单内容块"/>
+              <vui-list-item value="/paper" title="阴影框"/>
               <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/dialog" title="弹窗"/>
               <vui-list-item value="/popup" title="无敌的弹层"/>
-              <vui-list-item value="/divider" title="分割线"/>
+              <!-- <vui-list-item value="/grid" title="网格"/> -->
               <vui-list-item value="/gridList" title="网格列表"/>
               <vui-list-item value="/list" title="列表"/>
               <vui-list-item value="/menu" title="菜单"/>
+              <vui-list-item value="/flexbox" title="Flex Box"/>
               <vui-list-item value="/iconMenu" title="图标菜单"/>
+              <!-- <vui-list-item value="/popover" title="弹出下拉"/> -->
               <!-- <vui-list-item value="/dropDownMenu" title="下拉菜单"/> -->
-              <vui-list-item value="/paper" title="阴影框"/>
-              <vui-list-item value="/popover" title="弹出下拉"/>
+              <vui-list-item value="/tabs" title="标签页"/>
               <vui-list-item value="/linearProgress" title="条形进度条"/>
               <vui-list-item value="/circularProgress" title="圆形进度条"/>
+              <vui-list-item value="/textField" title="输入框"/>
               <vui-list-item value="/selectField" title="下拉选择"/>
-              <vui-list-item value="/checkbox" title="复选框"/>
               <vui-list-item value="/radio" title="单选框"/>
+              <vui-list-item value="/checkbox" title="复选框"/>
               <vui-list-item value="/switch" title="开关控件"/>
               <vui-list-item value="/slider" title="滑块控件"/>
               <!-- <vui-list-item value="/snackbarToast" title="SnackBar & Toast"/> -->
               <vui-list-item value="/stepper" title="步骤导航"/>
-              <vui-list-item value="/subHeader" title="副标题"/>
               <!-- <vui-list-item value="/table" title="Table"/> -->
-              <vui-list-item value="/tabs" title="标签页"/>
-              <vui-list-item value="/textField" title="输入框"/>
-              <vui-list-item value="/timePicker" title="时间选择"/>
               <!-- <vui-list-item value="/tooltip" title="Tooltip"/> -->
-              <vui-list-item value="/contentBlock" title="简单内容块"/>
-              <vui-list-item value="/flexbox" title="Flex Box"/>
-              <!-- <vui-list-item value="/grid" title="网格"/> -->
-              <vui-list-item value="/infiniteScroll" title="无限滚动"/>
               <!-- <vui-list-item value="/pagination" title="Pagination"/> -->
+              <vui-list-item value="/datePicker" title="日期选择器"/>
+              <vui-list-item value="/timePicker" title="时间选择"/>
               <vui-list-item value="/picker" title="Picker 选择器"/>
+              <vui-list-item value="/infiniteScroll" title="无限滚动"/>
               <vui-list-item value="/refreshControl" title="下拉刷新"/>
           </vui-list>
         </div>
