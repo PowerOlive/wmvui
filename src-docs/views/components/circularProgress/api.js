@@ -15,6 +15,11 @@ export default {
     default: 'primary',
     desc: 'props.state'
   }, {
+    name: 'type',
+    type: 'Number',
+    default: '0',
+    desc: 'props.type'
+  }, {
   //   name: 'max',
   //   type: 'Number',
   //   default: '100',

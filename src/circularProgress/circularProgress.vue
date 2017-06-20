@@ -1,6 +1,6 @@
 <template>
 <div class="vui-circle-progress" :style="{'width': size + 'px', 'height': size + 'px'}">
-  <circular v-if="mode === 'indeterminate'" :size="size" :state="getState" :color="color" :borderWidth="width" />
+  <circular v-if="mode === 'indeterminate'" :type="type" :size="size" :state="getState" :color="color" :borderWidth="width" />
   <svg class="vui-circle-progress-determinate"
     :viewBox="'0 0 ' + size + ' ' + size" :style="circularSvgStyle"
     v-if="mode === 'determinate'">
@@ -36,6 +36,10 @@ export default {
       validator (val) {
         return ['indeterminate', 'determinate'].indexOf(val) !== -1
       }
+    },
+    type: {
+      type: Number,
+      default: 0
     },
     value: {
       type: Number,
