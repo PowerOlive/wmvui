@@ -15,6 +15,16 @@ export default {
     default: '',
     desc: 'props.size'
   }, {
+    name: 'showText',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.showText'
+  }, {
+    name: 'text',
+    type: 'String',
+    default: '加载中',
+    desc: 'props.text'
+  }, {
     name: 'width',
     type: 'Number',
     default: '3',
