@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="vui-wrapper" :class="{'nav-hide': !open, 'home-page': isHomePage}">
-    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item demo-meun" :zDepth="1">
+    <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item demo-meun">
       <div class="vui-flex vui-flex-ver">
         <vui-appbar :zDepth="0" class="exmaples-nav-appbar">
           <span class="exmaples-appbar-title">WMVUI基于Muse-UI</span>
@@ -14,6 +14,8 @@
               <vui-list-item value="/appbar" title="头部"/>
               <vui-list-item value="/avatar" title="头像"/>
               <vui-list-item value="/badge" title="徽章"/>
+              <vui-list-item value="/icon" title="图标"/>
+              <vui-list-item value="/svgIcon" title="多色图标"/>
               <vui-list-item value="/bottomNav" title="底导航"/>
               <!-- <vui-list-item value="/bottomSheet" title="底部面板"/> -->
               <vui-list-item value="/number" title="计数器"/>
@@ -21,13 +23,11 @@
               <vui-list-item value="/card" title="卡片"/>
               <vui-list-item value="/chip" title="标签"/>
               <vui-list-item value="/datePicker" title="日期选择器"/>
+              <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/dialog" title="弹窗"/>
               <vui-list-item value="/popup" title="无敌的弹层"/>
               <vui-list-item value="/divider" title="分割线"/>
-              <vui-list-item value="/drawer" title="侧边栏"/>
               <vui-list-item value="/gridList" title="网格列表"/>
-              <vui-list-item value="/icon" title="图标"/>
-              <vui-list-item value="/svgIcon" title="多色图标"/>
               <vui-list-item value="/list" title="列表"/>
               <vui-list-item value="/menu" title="菜单"/>
               <vui-list-item value="/iconMenu" title="图标菜单"/>

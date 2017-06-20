@@ -3,11 +3,13 @@
   <vui-chip class="demo-chip">默认标签</vui-chip>
   <vui-chip class="demo-chip"  @delete="handleClose" showDelete>可删除的标签</vui-chip>
   <vui-chip class="demo-chip">
-    <vui-avatar src="/images/uicon.jpg"/>带头像的标签</vui-chip>
+    <vui-avatar src="/images/uicon.jpg"/>带头像的标签
+  </vui-chip>
   <vui-chip class="demo-chip" @delete="handleClose" showDelete>
-    <vui-avatar src="/images/uicon.jpg"/>带头像可删除</vui-chip>
-  <vui-chip class="demo-chip" @delete="handleClose" showDelete>
-    <vui-avatar icon="like-fill"/>带图标可删除的标签
+    <vui-svg-icon icon="love" :size="42"/>SVG多彩图标
+  </vui-chip>
+  <vui-chip class="demo-chip" @delete="handleClose" showDelete icon="phone-fill" :iconSize="24">
+    <vui-avatar icon="email-fill" :size="48" />给我打电话
   </vui-chip>
   <vui-chip class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
     <vui-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</vui-avatar>自定义效果

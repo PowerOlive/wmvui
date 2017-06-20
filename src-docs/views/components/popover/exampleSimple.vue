@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-button info label="点这里" ref="button" @click="toggle"/>
+  <vui-button primary label="点这里" ref="button" @click="toggle"/>
   <vui-popover :trigger="trigger" :open="open" @close="handleClose">
     <vui-menu>
       <vui-menu-item title="Refresh" />

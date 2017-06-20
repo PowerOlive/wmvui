@@ -69,7 +69,7 @@ export default {
   &.disabled{
     height: auto;
     background-color: transparent;
-    border-bottom: 2px dotted @disabledColor;
+    border-bottom: 1px dashed @disabledColor;
   }
 }
 

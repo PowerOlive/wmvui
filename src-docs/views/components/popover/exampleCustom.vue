@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-button info label="点这里" ref="button" @click="toggle"/>
+  <vui-button primary label="点这里" ref="button" @click="toggle"/>
   <h3 class="demo-popover-title">当前设置</h3>
   <pre>anchorOrigin: {{stringify(anchorOrigin)}}
 targetOrigin: {{stringify(targetOrigin)}}</pre>

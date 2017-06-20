@@ -89,10 +89,13 @@ export default {
   height: 100%;
   overflow: hidden;
   > img {
-    height: 100%;
+    display: block;
+    margin:auto;
+    max-height: 100%;
+    /* height: 100%;
     transform: translateX(-50%);
     position: relative;
-    left: 50%;
+    left: 50%; */
   }
 }
 

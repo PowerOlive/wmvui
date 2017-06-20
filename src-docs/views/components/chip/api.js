@@ -4,11 +4,11 @@ export default {
     type: 'Boolean',
     default: 'false',
     desc: 'props.showDelete'
-  }, {
-    name: 'deleteIconClass',
-    type: 'String',
-    default: '',
-    desc: 'props.deleteIconClass'
+  // }, {
+  //   name: 'deleteIconClass',
+  //   type: 'String',
+  //   default: '',
+  //   desc: 'props.deleteIconClass'
   }, {
     name: 'disabled',
     type: 'Boolean',

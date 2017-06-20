@@ -12,8 +12,7 @@ export default {
   computed: {
     dividerStyle () {
       return {
-        'margin-left': this.inset ? this.inset : '',
-        'height': this.title ? '40px' : ''
+        'margin-left': this.inset ? this.inset : ''
       }
     },
     dividerClass () {

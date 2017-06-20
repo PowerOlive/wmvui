@@ -1,6 +1,6 @@
 <template>
 <div>
-  <vui-button label="对话框" info @click="open"/>
+  <vui-button label="对话框" primary @click="open"/>
   <vui-dialog :open="dialog" title="Dialog" @close="close">
     这是一个简单的弹出框
     <vui-button slot="actions" @click="close" text primary label="取消"/>

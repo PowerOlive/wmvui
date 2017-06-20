@@ -1,5 +1,5 @@
-## Paper
+## 阴影框
 
-[Paper](https://material.google.com/layout/principles.html#principles-how-paper-works), 一个阴影效果的容器。
+一个阴影效果的容器。
 
 ### 示例

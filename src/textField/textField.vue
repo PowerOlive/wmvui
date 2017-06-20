@@ -1,6 +1,6 @@
 <template>
   <div class="vui-text-field" :class="textFieldClass" :style="isFocused ? errorStyle : {}">
-    <icon  v-if="icon" class="vui-text-field-icon" :class="iconClass" :icon="icon"></icon>
+    <icon  v-if="icon" class="vui-text-field-icon" :size="iconSize" :icon="icon"></icon>
     <div @click="handleLabelClick" ref="content" class="vui-text-field-content">
       <text-field-label v-if="label" :float="float" :focus="isFocused" :normalClass="labelClass" :focusClass="labelFocusClass">{{label}}</text-field-label>
       <text-field-hint v-if="hintText" :text="hintText" :show="showHint" :class="hintTextClass"></text-field-hint>
@@ -43,9 +43,7 @@ export default {
     icon: {
       type: String
     },
-    iconClass: {
-      type: [String, Array, Object]
-    },
+    iconSize: Number,
     label: {
       type: String
     },
@@ -256,7 +254,7 @@ export default {
   height: 100%;
   .vui-text-field.disabled &{
     color: @disabledColor;
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
   }
   padding-top: 4px;
   .vui-text-field.has-label &{
@@ -298,7 +296,7 @@ export default {
   left: 0;
   right: 0;
   .vui-text-field.has-icon & {
-    left: 56px;
+    left: 46px;
   }
   .vui-text-field.error &{
     color: @red;

@@ -1,5 +1,5 @@
-## Time Picker
+## 日间选择
 
-[time picker](https://material.google.com/components/pickers.html#pickers-time-pickers) 用来在手机上选择单个的时间（小时：分钟）
+用来在手机上选择单个的时间（小时：分钟）
 
 ### 示例

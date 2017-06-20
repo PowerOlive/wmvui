@@ -1,9 +1,9 @@
-## Icon
+## 字体图标
 
-[icon](https://material.google.com/style/icons.html#icons-system-icons), 使用 [material design](http://google.github.io/material-design-icons/) 的字体图标集，需要在 html 中引入。
+字体图标集，需要CSS中引入需要的样式及font 可参考 [iconfont](http://www.iconfont.cn)。
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_kzzmv78n9slfecdi.css">
 ```
 
 ### 示例

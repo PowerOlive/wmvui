@@ -1,5 +1,5 @@
-## Icon Menu
+## 图标菜单
 
-[Icon Menu](https://material.google.com/components/menus.html#menus-usage), 用图标按钮打开的菜单。
+用图标按钮打开的菜单。
 
 ### 示例

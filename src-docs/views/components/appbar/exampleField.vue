@@ -3,7 +3,7 @@
     <vui-button :circle="36" color="#fff" :iconSize="16" icon="menu" slot="left"/>
     <vui-text-field icon="search" class="appbar-search-field flex-item" hintText="搜索关键字" fill />
     <div slot="right">
-      <vui-badge content="12" circle secondary badgeClass="vui-badge">
+      <vui-badge content="12" circle danger badgeClass="vui-badge">
           <vui-button :circle="36" color="#fff" :iconSize="16" icon="like-fill"/>
       </vui-badge>
     </div>

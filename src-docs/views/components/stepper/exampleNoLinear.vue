@@ -23,7 +23,7 @@
       </p>
       <div>
         <vui-button class="demo-step-button" label="上一步" :disabled="activeStep === 0" @click="handlePrev"/>
-        <vui-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2" info @click="handleNext"/>
+        <vui-button class="demo-step-button" label="下一步" :disabled="activeStep >= 2" primary @click="handleNext"/>
       </div>
   </div>
 </div>

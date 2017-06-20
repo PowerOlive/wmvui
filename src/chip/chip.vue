@@ -3,29 +3,40 @@
       @mouseleave="onMouseleave" @touchstart="onTouchstart" @click= "handleClick"
       @touchend="onTouchend" @touchcancel="onTouchend" :class="classNames" class="vui-chip" :style="style">
     <slot></slot>
-    <svg class="vui-chip-delete-icon" viewBox="0 0 24 24"
-      v-if="showDelete && !disabled" @click.stop="handleDelete" :class="deleteIconClass">
-      <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
-    </svg>
+    <template v-if="icon">
+      <icon :icon="icon" :size="iconSize"></icon>
+    </template>
+    <template v-else>
+      <svg class="vui-chip-delete-icon" viewBox="0 0 24 24"
+        v-if="showDelete && !disabled" @click.stop="handleDelete">
+        <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+      </svg>
+    </template>
   </div>
 </template>
 
 <script>
 import {isPc, getColor} from '../utils'
+import icon from '../icon'
 export default {
   name: 'vui-chip',
+  components: {
+    icon
+  },
   props: {
     showDelete: {
       type: Boolean,
       default: false
     },
+    icon: String,
+    iconSize: Number,
     disabled: {
       type: Boolean,
       default: false
     },
-    deleteIconClass: {
-      type: [Array, String, Object]
-    },
+    // deleteIconClass: {
+    //   type: [Array, String, Object]
+    // },
     backgroundColor: {
       type: String
     },
@@ -91,7 +102,8 @@ export default {
   color: fade(@textColor, 87%);
   padding: 0 12px;
   cursor: default;
-  .vui-avatar:first-child{
+  .vui-avatar:first-child,
+  .vui-svg-icon{
     margin-left: -12px;
     margin-right: 4px;
   }
@@ -106,15 +118,20 @@ export default {
     cursor: pointer;
   }
 }
+.vui-chip>.vui-icon,
 .vui-chip-delete-icon{
   display: inline-block;
   margin-right: -8px;
   margin-left: 4px;
   color: fade(@textColor, 26%);
+  transition: all 450ms @easeOutFunction;
+}
+.vui-chip-delete-icon{
   fill: currentColor;
   height: 24px;
   width: 24px;
   user-select: none;
-  transition: all 450ms @easeOutFunction;
+
 }
+
 </style>
