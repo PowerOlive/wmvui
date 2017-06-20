@@ -43,7 +43,6 @@ export default {
   transition: all .45s @easeOutFunction;
   color: @textColor;
   background-color: @dialogBackgroundColor;
-  .depth(1);
   &-round {
     border-radius: 10px;
   }
