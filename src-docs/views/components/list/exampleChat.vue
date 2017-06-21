@@ -1,7 +1,7 @@
 <template>
 <mobile-tear-sheet>
   <vui-list>
-    <vui-sub-header>最近聊天记录</vui-sub-header>
+    <vui-sub-header color="blue">最近聊天记录</vui-sub-header>
     <vui-list-item title="小明">
       <vui-avatar src="/images/avatar1.jpg" slot="leftAvatar"/>
       <vui-icon icon="right" slot="right"/>
@@ -25,7 +25,7 @@
   </vui-list>
   <vui-divider/>
   <vui-list>
-    <vui-sub-header>历史聊天记录</vui-sub-header>
+    <vui-sub-header fontSize="16px" color="red">历史聊天记录</vui-sub-header>
     <vui-list-item title="小明">
       <vui-avatar src="/images/avatar5.jpg" slot="leftAvatar"/>
       <vui-icon icon="right" slot="right"/>

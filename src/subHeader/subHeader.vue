@@ -1,16 +1,25 @@
 <template>
-  <div class="vui-sub-header" :class="{'inset': inset}">
+  <div class="vui-sub-header" :style="dividerStyle">
     <slot></slot>
   </div>
 </template>
 
 <script>
+import {getColor} from '../utils'
 export default {
   name: 'vui-sub-header',
   props: {
-    inset: {
-      type: Boolean,
-      default: false
+    inset: String,
+    fontSize: String,
+    color: String
+  },
+  computed: {
+    dividerStyle () {
+      return {
+        'margin-left': this.inset ? this.inset : '',
+        'font-size': this.fontSize ? this.fontSize : '',
+        'color': getColor(this.color)
+      }
     }
   }
 }
@@ -24,8 +33,5 @@ export default {
   line-height: 48px;
   padding-left: 16px;
   width: 100%;
-  &.inset{
-    padding-left: 72px;
-  }
 }
 </style>
