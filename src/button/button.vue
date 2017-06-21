@@ -198,10 +198,10 @@ export default {
 /*   &.vui-btn-icon.hover{
   background-color:transparent
 } */
-  &.disabled{
-    color: @disabledColor;
+  &.disabled,
+  &[disabled]{
     cursor: not-allowed;
-    background: none;
+    opacity:.5;
   }
   .vui-icon{
     vertical-align: middle;

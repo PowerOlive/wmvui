@@ -3,7 +3,7 @@
   :event="event" :exact="exact" :append="append" :replace="replace" :disabled="disabled"
   :center-ripple="false" :class="{'vui-tabs-active': active}" @click="tabClick" :style="activeStyle">
   <slot>
-    <icon :icon="icon" :size="size" :class="iconClass"/>
+    <icon :icon="icon" :size="iconSize" />
   </slot>
   <vui-badge 
   v-if="badge" 
@@ -36,12 +36,12 @@ export default {
       type: String,
       default: ''
     },
-    size: {
+    iconSize: {
       type: Number
     },
-    iconClass: {
-      type: [String, Object, Array]
-    },
+    // iconClass: {
+    //   type: [String, Object, Array]
+    // },
     title: {
       type: String,
       default: ''
@@ -55,7 +55,6 @@ export default {
     disabled: {
       type: Boolean
     },
-    activeColor: String,
     value: {}
   },
   computed: {

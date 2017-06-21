@@ -1,15 +1,20 @@
 export default {
   tabs: {
     props: [{
-      name: 'lineClass',
-      type: 'String,Object,Array',
+      name: 'lineHeight',
+      type: 'String',
       default: '',
-      desc: 'tabs.props.lineClass'
+      desc: 'tabs.props.lineHeight'
     }, {
       name: 'value',
       type: '',
       default: '',
       desc: 'tabs.props.value'
+    }, {
+      name: 'color',
+      type: '',
+      default: '',
+      desc: 'tabs.props.color'
     }],
     slots: [{
       name: 'default',
@@ -26,11 +31,6 @@ export default {
       type: 'String',
       default: '',
       desc: 'tab.props.icon'
-    }, {
-      name: 'iconClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'tab.props.iconClass'
     }, {
       name: 'title',
       type: 'String',
@@ -56,6 +56,11 @@ export default {
       type: 'Boolean',
       default: 'false',
       desc: 'tab.props.disabled'
+    }, {
+      name: 'badge',
+      type: 'Object',
+      default: '',
+      desc: 'tab.props.badge'
     }],
     events: [{
       name: 'active',

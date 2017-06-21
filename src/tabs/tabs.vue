@@ -10,9 +10,9 @@ import {getColor} from '../utils'
 export default {
   name: 'vui-tabs',
   props: {
-    lineClass: {
-      type: [String, Object, Array]
-    },
+    // lineClass: {
+    //   type: [String, Object, Array]
+    // },
     lineHeight: Number,
     value: {},
     color: String
@@ -98,7 +98,11 @@ export default {
     align-items: center;
     color: fade(@textColor, 80%);
     transition: all .45s @easeInOutFunction;
-    cursor: pointer;
+      &.disabled,
+      &[disabled]{
+        cursor: not-allowed;
+        opacity:.5;
+      }
   }
   &-text{
     &.has-icon {
@@ -122,7 +126,7 @@ export default {
   .vui-badge-container{
     position: absolute;
     right:20%;
-    top: 0;
+    top:5%;
   }
 }
 </style>

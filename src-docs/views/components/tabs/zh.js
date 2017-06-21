@@ -7,8 +7,9 @@ export default {
   iconTextExample: '图标 + 文字',
   tabs: {
     props: {
-      lineClass: '高亮线的样式，同 `class` 绑定方式一致',
-      value: '必需，需要和子组件 tab 配合'
+      lineHeight: '高亮线的样式，同 `class` 绑定方式一致',
+      value: '必需，需要和子组件 tab 配合',
+      color: '选中颜色'
     },
     slots: {
       default: '用于放置 tab 组件'
@@ -19,8 +20,10 @@ export default {
   },
   tab: {
     props: {
+      badge: '如 :badge="{\'content\':\'1\',\'danger\':true}"',
       icon: 'tab 上的图标',
-      iconClass: '图标的样式，同 `class` 绑定方式一致',
+      iconSize: '图标大小',
+      // iconClass: '图标的样式，同 `class` 绑定方式一致',
       title: 'tab 上的文字',
       titleClass: '标题的样式，同 `class` 绑定方式一致',
       value: '必需，当value 与父组件的 value值相等时，会变成选中状态',
