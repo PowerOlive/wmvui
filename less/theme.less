@@ -8,16 +8,6 @@
   background-color: @avatarBackgroundColor;
 }
 
-body {
-  background-color: @baseBackgroundColor;
-  color: @baseTextColor;
-  font-family: @baseFontFamily;
-}
-
-a {
-  color: @baseLinkColor;
-}
-
 .vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -31,6 +21,20 @@ a {
 .vui-badge-secondary {
   background-color: @badgeSecondaryColor;
   color: @badgeSecondaryTextColor;
+}
+
+body {
+  background-color: @baseBackgroundColor;
+  color: @baseTextColor;
+  font-family: @baseFontFamily;
+}
+
+a {
+  color: @baseLinkColor;
+}
+
+.vui-bottom-sheet {
+  background-color: @bottomSheetColor;
 }
 
 .vui-bottom-nav {
@@ -61,10 +65,6 @@ a {
       color: @bottomNavShiftSelectedColor;
     }
   }
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
 }
 
 .vui-card {
@@ -169,6 +169,25 @@ a {
   color: @chipDeleteColor;
 }
 
+.vui-dialog {
+  background-color: @dialogColor;
+}
+
+.vui-dialog-footer,
+.vui-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
+  }
+}
+
+.vui-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.vui-dialog-body {
+  color: @dialogBodyColor
+}
+
 .vui-calendar {
   color: @datePickerCalendarTextColor;
 }
@@ -221,25 +240,6 @@ a {
 
 .vui-dropDown-menu-line {
   background-color: @dropDownMenuLineColor;
-}
-
-.vui-dialog {
-  background-color: @dialogColor;
-}
-
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
 }
 
 .vui-grid-tile-titlebar{
@@ -300,7 +300,6 @@ a {
   color: @listSecondaryTextColor;
 }
 
-
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -322,11 +321,6 @@ a {
   color: @menuRightIconColor;
 }
 
-.vui-paper {
-  background-color: @paperBackgroundColor;
-  color: @paperColor;
-}
-
 .vui-pagination-item{
   color: @paginationTextColor;
   &.hover {
@@ -339,6 +333,12 @@ a {
   &.disabled {
     color: @paginationDisabledColor;
   }
+}
+
+
+.vui-paper {
+  background-color: @paperBackgroundColor;
+  color: @paperColor;
 }
 
 .vui-picker{
@@ -364,10 +364,6 @@ a {
   }
 }
 
-.vui-circular-progress-determinate-path{
-  stroke: @circularProgressColor;
-}
-
 .vui-popup {
   background-color: @popupColor;
 }
@@ -376,13 +372,8 @@ a {
   background-color: @popoverColor;
 }
 
-.vui-snackbar {
-  color: @snackbarTextColor;
-  background-color: @snackbarColor;
-}
-
-.vui-refresh-control {
-  color: @refreshControlColor;
+.vui-circular-progress-determinate-path{
+  stroke: @circularProgressColor;
 }
 
 .vui-radio {
@@ -422,6 +413,10 @@ a {
    }
 }
 
+.vui-refresh-control {
+  color: @refreshControlColor;
+}
+
 .vui-slider-track {
   background-color: @sliderTrackColor;
 }
@@ -443,6 +438,11 @@ a {
     color: @sliderDisabledColor;
     background-color: @sliderZeroColor;
   }
+}
+
+.vui-snackbar {
+  color: @snackbarTextColor;
+  background-color: @snackbarColor;
 }
 
 .vui-step-button {
@@ -574,11 +574,60 @@ a {
   }
 }
 
-.vui-btn {
-  /* color: @buttonTextColor; */
-  /* background-color: @buttonColor; */
-  .vui-circle-ripple {
-    color: @buttonTextColor;
+.vui-badge{
+  &-primary {background-color: @primaryColor;}
+  &-success {background-color: @successColor;}
+  &-info {background-color: @infoColor;}
+  &-warn {background-color: @warnColor;}
+  &-danger {background-color: @dangerColor;}
+}
+
+.vui-loading{
+  &-line{
+    background-color:@primaryColor;
+  }
+  &-success{
+    .vui-loading-line{background-color: @successColor}
+    .vui-circle{border-color: @successColor}
+  }
+  &-info{
+    .vui-loading-line{background-color: @infoColor}
+    .vui-circle{border-color: @infoColor}
+  }
+  &-warn{
+    .vui-loading-line{background-color: @warnColor}
+    .vui-circle{border-color: @warnColor}
+  }
+  &-danger{
+    .vui-loading-line{background-color: @dangerColor}
+    .vui-circle{border-color: @dangerColor}
+  }
+  .vui-circle-spinner{
+    border-color: @primaryColor;
+  }
+}
+.vui-progress{
+  &-circle{
+    &-determinate{
+      position: relative;
+      &-path{
+        stroke: @primaryColor;
+      }
+    }
+    &-success{stroke: @successColor}
+    &-info{stroke: @infoColor}
+    &-warn{stroke: @warnColor}
+    &-danger{stroke: @dangerColor}
+  }
+  &-line{
+    &-indeterminate,
+    &-determinate{
+      background-color: @primaryColor;
+    }
+    &-success{background-color: @successColor}
+    &-info{background-color: @infoColor}
+    &-warn{background-color: @warnColor}
+    &-danger{background-color: @dangerColor}
   }
 }
 
@@ -832,6 +881,9 @@ a {
 
 .vui-item-left{
   color: @listLeftIconColor;
+  .vui-item.selected &{
+    color: @primaryColor;
+  }
 }
 
 .vui-item-right{
@@ -1206,45 +1258,6 @@ a {
   }
 }
 
-.vui-tabs{
-  background-color: @tabsBackgroundColor;
-}
-.vui-tab-link-highlight {
-  background-color: @tabsLineColor;
-}
-.vui-tab-link{
-  color: @tabsTextColor;
-}
-.vui-tab-active {
-  color: @tabsSelectedTextColor;
-}
-
-.vui-clock-circle {
-  background-color: @timePickerClockCircleColor;
-}
-
-.vui-time-display {
-  background-color: @timePickerHeaderColor;
-  color: @timePickerColor;
-}
-
-.vui-clock-number{
-  &.selected {
-    background-color: @timePickerSelectColor;
-    color: @timePickerSelectTextColor;
-  }
-}
-
-.vui-clock-pointer {
-  background-color: @timePickerSelectColor;
-
-}
-
-.vui-clock-pointer-mark {
-  background-color: @timePickerSelectTextColor;
-  border-color:  @timePickerSelectColor;
-}
-
 .vui-text-field{
   color: @textFieldTextColor;
   &.focus-state {
@@ -1291,6 +1304,45 @@ a {
   .vui-text-field.has-label &.float {
     color: @textFieldHintColor
   }
+}
+
+.vui-tabs{
+  background-color: @tabsBackgroundColor;
+}
+.vui-tab-link-highlight {
+  background-color: @tabsLineColor;
+}
+.vui-tab-link{
+  color: @tabsTextColor;
+}
+.vui-tab-active {
+  color: @tabsSelectedTextColor;
+}
+
+.vui-clock-circle {
+  background-color: @timePickerClockCircleColor;
+}
+
+.vui-time-display {
+  background-color: @timePickerHeaderColor;
+  color: @timePickerColor;
+}
+
+.vui-clock-number{
+  &.selected {
+    background-color: @timePickerSelectColor;
+    color: @timePickerSelectTextColor;
+  }
+}
+
+.vui-clock-pointer {
+  background-color: @timePickerSelectColor;
+
+}
+
+.vui-clock-pointer-mark {
+  background-color: @timePickerSelectTextColor;
+  border-color:  @timePickerSelectColor;
 }
 
 .vui-tooltip{

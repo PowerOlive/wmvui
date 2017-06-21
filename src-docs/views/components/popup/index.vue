@@ -1,10 +1,10 @@
 <template>
 <div class="content-wrapper">
   <markdown-element :text="$t('description')" />
-  <code-example :code="exampleCode" :title="$t('exampleToast')">
+  <code-example :code="exampleToastCode" :title="$t('exampleToast')">
     <exampleToast/>
   </code-example>
-  <code-example :code="exampleCode" :title="$t('examplePopup')">
+  <code-example :code="examplePopupCode" :title="$t('examplePopup')">
     <examplePopup/>
   </code-example>
   <api-view :api="apiData" :i18n="$t.bind(this)"/>
@@ -12,21 +12,23 @@
 </template>
 <script>
 import exampleToast from './exampleToast'
+import exampleToastCode from '!raw!./exampleToast'
 import examplePopup from './examplePopup'
-import exampleCode from '!raw!./exampleToast'
+import examplePopupCode from '!raw!./examplePopup'
 import apiData from './api'
 import zh from './zh'
 import en from './en'
 export default {
   data () {
     return {
-      exampleCode,
+      exampleToastCode,
+      examplePopupCode,
       apiData
     }
   },
   components: {
-    examplePopup,
-    exampleToast
+    exampleToast,
+    examplePopup
   },
   locales: {
     zh,

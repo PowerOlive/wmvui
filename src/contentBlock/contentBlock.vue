@@ -30,7 +30,6 @@ export default {
 @import "../styles/import.less";
 .vui-content-block{
   padding: 8px 16px;
-  width: 100%;
   &-border{
     border:1px solid @borderColor;
   }
