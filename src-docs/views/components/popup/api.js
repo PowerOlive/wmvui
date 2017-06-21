@@ -22,7 +22,7 @@ export default {
   }, {
     name: 'loading',
     type: 'Object',
-    default: 'false',
+    default: '',
     desc: 'props.loading'
   }, {
     name: 'fill',

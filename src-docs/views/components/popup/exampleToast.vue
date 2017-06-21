@@ -4,55 +4,19 @@
   primary
   class="demo-vui-raised-button" 
   label="文本提示" 
-  @click="openToast('center',false,'','操作失败','text')" />
+  @click="openToast('center',false,'','只显示文字~~','text')" />
 
   <vui-button 
-  primary
+  danger
   class="demo-vui-raised-button" 
-  label="操作失败" 
-  @click="openToast('center',false,'round-close-fill','操作失败~','error')" />
-
-  <vui-button
-  primary 
-  class="demo-vui-raised-button" 
-  label="操作成功" 
-  @click="openToast('center',false,'like-fill','操作成功~','success')" />
+  label="图标演示" 
+  @click="openToast('center',false,'error-fill','操作失败~','error')" />
 
   <vui-button 
-  primary
+  success
   class="demo-vui-raised-button" 
-  label="操作提示" 
-  @click="openToast('center',false,'like','操作提示~','info')" />
-
-  <vui-button 
-  primary
-  class="demo-vui-raised-button" 
-  label="操作警告" 
-  @click="openToast('center',false,'round-close','操作警告~','warn')" />
-
-  <vui-button 
-  primary
-  class="demo-vui-raised-button" 
-  label="上面弹出" 
-  @click="openToast('top','happy','' ,'操作成功~','')" />
-
-  <vui-button 
-  primary
-  class="demo-vui-raised-button" 
-  label="下面弹出" 
-  @click="openToast('bottom','crying','','操作失败~','')" />
-
-  <vui-button 
-  primary
-  class="demo-vui-raised-button" 
-  label="左边弹出" 
-  @click="openToast('left','goofy','','位置可配置~~','')" />
-
-  <vui-button 
-  primary
-  class="demo-vui-raised-button" 
-  label="右边弹出" 
-  @click="openToast('right','rich','','位置可配置~','')" />
+  label="SVG图标演示" 
+  @click="openToast('top','crying','' ,'操作成功~','')" />
 
   <vui-button 
   primary
@@ -82,8 +46,11 @@ export default {
       },
       loading: {
         show: false,
-        size: 50,
-        color: 'red'
+        type: 'line',
+        color: 'yellow',
+        size: 32
+        // text: '加载中',
+        // showText: true
       }
     }
   },

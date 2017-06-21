@@ -2,7 +2,7 @@
 <span>
   <transition :name="transition" @after-enter="show()" @after-leave="hide()">
     <div class="vui-popup" ref="popup" v-if="open" :class="popupCss" :style="{'z-index': zIndex}">
-      <circular v-if="loading" :size="loading.size" :color="loading.color" :strokeWidth="loading.strokeWidth"  />
+      <loading v-if="loading" :type="loading.type" :showText="loading.showText" :color="loading.color" :size="loading.size"  />
       <icon v-if="icon" :icon="icon" />
       <svg-icon v-if="svgIcon" :icon="svgIcon"  />
       <slot></slot>
@@ -13,7 +13,7 @@
 
 <script>
 import Popup from '../internal/popup'
-import circular from '../internal/circular'
+import loading from '../loading'
 import {convertClass} from '../utils'
 import svgIcon from '../svgIcon'
 import icon from '../icon'
@@ -23,7 +23,7 @@ export default {
   components: {
     svgIcon,
     icon,
-    circular
+    loading
   },
   props: {
     popupClass: {
@@ -32,7 +32,9 @@ export default {
     toast: {
       type: [Boolean, Object]
     },
-    loading: Object,
+    loading: {
+      type: [Boolean, Object]
+    },
     icon: String,
     svgIcon: {
       type: [String, Boolean]
@@ -132,18 +134,19 @@ export default {
   }
   &-loading{
     padding:24px;
+    color:#fff;
   }
   &-toast-error{
-    color: @red
+    color: @dangerColor
   }
   &-toast-success{
-    color: @lightGreenA700
+    color: @successColor
   }
   &-toast-info{
-    color: @blue500
+    color: @infoColor
   }
   &-toast-warn{
-    color: @deepOrange500
+    color: @warnColor
   }
   &-toast-text{
     color: #fff

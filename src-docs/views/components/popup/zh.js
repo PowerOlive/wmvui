@@ -7,7 +7,7 @@ export default {
   props: {
     open: '是否打开',
     toast: '是否显示为toast常规4种状态 error success info warn',
-    loading: '是否显示为loading',
+    loading: '显示为<a href="#/loading">loading</a>参数 type showText color size ',
     icon: '可选 是否显示图标',
     svgIcon: ' 可选 是否显示彩色SVG图标',
     fill: 'popup 宽100%',
