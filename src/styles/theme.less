@@ -78,11 +78,60 @@ a {
   }
 }
 
-.vui-btn {
-  /* color: @buttonTextColor; */
-  /* background-color: @buttonColor; */
-  .vui-circle-ripple {
-    color: @buttonTextColor;
+.vui-badge{
+  &-primary {background-color: @primaryColor;}
+  &-success {background-color: @successColor;}
+  &-info {background-color: @infoColor;}
+  &-warn {background-color: @warnColor;}
+  &-danger {background-color: @dangerColor;}
+}
+
+.vui-loading{
+  &-line{
+    background-color:@primaryColor;
+  }
+  &-success{
+    .vui-loading-line{background-color: @successColor}
+    .vui-circle{border-color: @successColor}
+  }
+  &-info{
+    .vui-loading-line{background-color: @infoColor}
+    .vui-circle{border-color: @infoColor}
+  }
+  &-warn{
+    .vui-loading-line{background-color: @warnColor}
+    .vui-circle{border-color: @warnColor}
+  }
+  &-danger{
+    .vui-loading-line{background-color: @dangerColor}
+    .vui-circle{border-color: @dangerColor}
+  }
+  .vui-circle-spinner{
+    border-color: @primaryColor;
+  }
+}
+.vui-progress{
+  &-circle{
+    &-determinate{
+      position: relative;
+      &-path{
+        stroke: @primaryColor;
+      }
+    }
+    &-success{stroke: @successColor}
+    &-info{stroke: @infoColor}
+    &-warn{stroke: @warnColor}
+    &-danger{stroke: @dangerColor}
+  }
+  &-line{
+    &-indeterminate,
+    &-determinate{
+      background-color: @primaryColor;
+    }
+    &-success{background-color: @successColor}
+    &-info{background-color: @infoColor}
+    &-warn{background-color: @warnColor}
+    &-danger{background-color: @dangerColor}
   }
 }
 
@@ -336,6 +385,9 @@ a {
 
 .vui-item-left{
   color: @listLeftIconColor;
+  .vui-item.selected &{
+    color: @primaryColor;
+  }
 }
 
 .vui-item-right{

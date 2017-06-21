@@ -59,7 +59,26 @@ Vue.use(MuseUI)
 
 ```less
 // 修改基础变量
-@primaryColor: @lightBlue700;
+@primaryColor: @blue500;  // 主色
+@darkerPrimaryColor: @blue700;
+@lighterPrimaryColor: @grey400;
+
+// success
+@successColor: @green500;
+@darkerSuccessColor: @green600; 
+
+// info
+@infoColor: @blue300;
+@darkerInfoColor: @blue500; 
+
+// warn
+@warnColor: @orange400;
+@darkerWarnColor: @orange600; 
+
+// danger
+@dangerColor: @red400;
+@darkerDangerColor: @red600; 
+
 ……
 
 @import "wmvui/less/theme-vars.less";  // 默认组件变量

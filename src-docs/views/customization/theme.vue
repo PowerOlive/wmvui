@@ -3,15 +3,17 @@
   <markdown-element :text="$t('title')"/>
   <vui-paper :class="['theme-' + theme, 'demo-theme-paper']">
     <vui-tabs :value="theme" @change="changeTheme">
-      <vui-tab title="默认" value="default"/>
-      <vui-tab title="深灰" value="carbon"/>
-      <!-- <vui-tab title="蓝绿" value="teal"/> -->
+      <vui-tab title="default" value="default"/>
+      <vui-tab title="carbon" value="carbon"/>
+      <vui-tab title="teal" value="teal"/>
+      <vui-tab title="pink" value="pink"/>
     </vui-tabs>
     <vui-content-block :padding="['20px']">
       <vui-flex>
         <vui-flex-item>
           <div class="demo-theme-item center">
-            <vui-avatar icon="like-fill" :size="56" :iconSize="24"/>
+            <vui-loading :width="2"  class="demo-loading"/>
+            <vui-loading type="line"  class="demo-loading"/>
           </div>
           <vui-button label="默认" class="demo-vui-raised-button" />
           <vui-button label="重要" primary class="demo-vui-raised-button" />
@@ -51,10 +53,13 @@
               <vui-menu-item value="5" title="英雄联盟"/>
               <vui-menu-item value="6" title="王者荣耀"/>
             </vui-select-field>
+            <vui-badge content="1" circle primary />
           </div>
         </vui-flex-item>
       </vui-flex>
       <vui-slider :value="30"/>
+      <vui-progress type="line" mode="determinate" :value="40" />
+      <br>
       <vui-flex>
         <vui-flex-item>
           <div class="demo-theme-item">
@@ -89,13 +94,15 @@
 <script>
 import _default from 'raw!less!../../assets/themes/theme-default.less'
 import carbon from 'raw!less!../../assets/themes/theme-carbon.less'
-// import teal from 'raw!less!../../assets/themes/theme-teal.less'
+import teal from 'raw!less!../../assets/themes/theme-teal.less'
+import pink from 'raw!less!../../assets/themes/theme-pink.less'
 import zh from './zh'
 import en from './en'
 
 const themes = {
   carbon,
-  // teal,
+  teal,
+  pink,
   default: _default
 }
 let theme = 'default'
