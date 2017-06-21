@@ -175,7 +175,7 @@ export default {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   left: 0;
   top: 0;
   width: 100%;

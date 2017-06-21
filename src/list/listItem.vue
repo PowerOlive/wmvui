@@ -324,7 +324,7 @@ export default {
 }
 .vui-item-after{
   margin-left: auto;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   display: flex;
   align-items: center;
 }
@@ -342,7 +342,7 @@ export default {
   max-width: 100%;
   text-overflow: ellipsis;
   word-break: break-all;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
 }
 
 .vui-item-svg-icon {

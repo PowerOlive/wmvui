@@ -221,7 +221,7 @@ export default {
   /* min-height: 48px; */
   display: block;
   position: relative;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   margin-bottom: 8px;
 /*   &.full-width {
   width: 100%;

@@ -69,7 +69,7 @@ ${this.code}
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
 }
 
 .code-block-code-style {

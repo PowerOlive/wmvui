@@ -66,7 +66,7 @@ export default {
   padding-right: 24px;
   height: 56px;
   text-align: left;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   position: relative;
 }
 

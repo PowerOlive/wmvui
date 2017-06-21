@@ -75,7 +75,7 @@ only support the `less` now, the black theme is `dark.less`
 @lighterAccentColor: @pinkA100;
 
 @textColor: @fullWhite;
-@secondaryTextColor: fade(@fullWhite, 70%);
+@primaryTextColor: fade(@fullWhite, 70%);
 @alternateTextColor: #303030;
 @borderColor: fade(@fullWhite, 30%);
 @disabledColor: fade(@fullWhite, 30%);
@@ -125,7 +125,7 @@ the color variable of theme，refer to [material design colors](https://material
 
 // text color
 @textColor: @darkBlack;
-@secondaryTextColor: fade(@fullBlack, 54%);
+@primaryTextColor: fade(@fullBlack, 54%);
 @alternateTextColor: @white;
 @borderColor: fade(@fullBlack, 12%);
 @disabledColor: fade(@fullBlack, 38%);

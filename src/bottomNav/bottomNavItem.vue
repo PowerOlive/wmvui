@@ -82,7 +82,7 @@ export default {
   max-width: 168px;
   position: relative;
   height: 100%;
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   padding: 0;
   background: none;
   appearance: none;

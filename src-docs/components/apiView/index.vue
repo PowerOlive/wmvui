@@ -115,7 +115,7 @@ export default {
     background-color: @primaryColor;
   }
   .vui-tab-link{
-    color: @secondaryTextColor;
+    color: @primaryTextColor;
   }
 
   .vui-tab-active{

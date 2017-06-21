@@ -89,7 +89,7 @@ Vue.use(MuseUI)
 
 // 文本颜色
 @textColor: @darkBlack;
-@secondaryTextColor: fade(@fullBlack, 54%);
+@primaryTextColor: fade(@fullBlack, 54%);
 @alternateTextColor: @white;
 @borderColor: fade(@fullBlack, 12%);
 @disabledColor: fade(@fullBlack, 38%);

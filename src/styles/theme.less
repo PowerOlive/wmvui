@@ -18,11 +18,6 @@ a {
   color: @baseLinkColor;
 }
 
-.vui-badge {
-  /* background-color: @badgeColor; */
-  color: @badgeTextColor;
-}
-
 
 .vui-btn{
   &-primary{
@@ -83,41 +78,6 @@ a {
   }
 }
 
-
-.vui-bottom-nav {
-  background-color: @bottomNavBackgroundColor;
-}
-
-.vui-bottom-nav-shift{
-  background-color: @bottomNavShiftBackgroundColor;
-}
-
-.vui-buttom-item {
-  color: @bottomNavUnselectedColor;
-  .vui-bottom-nav-shift & {
-    color: @bottomNavShiftUnselectedColor;
-  }
-}
-
-.vui-bottom-item-active{
-  .vui-bottom-item-text {
-    color: @bottomNavSelectedColor;
-    .vui-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
-  .vui-bottom-item-icon {
-    color: @bottomNavSelectedColor;
-    .vui-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
-}
-
 .vui-btn {
   /* color: @buttonTextColor; */
   /* background-color: @buttonColor; */
@@ -128,40 +88,40 @@ a {
 
 .vui-card {
   background-color: @cardBackgroudColor;
+  &-header-title{
+    .vui-card-title{
+      color: @cardTitleColor;
+    }
+    .vui-card-sub-title{
+      color: @cardSubtitleColor;
+    }
+  }
+  &-media-title {
+    background-color: @cardMediaOverlayContentBackground;
+    .vui-card-title {
+      color: @cardMediaTitleColor;
+    }
+    .vui-card-sub-title {
+      color: @cardMediaSubtitleColor;
+    }
+  }
+  &-title-container{
+    .vui-card-title{
+      color: @cardTitleColor;
+    }
+    .vui-card-sub-title{
+      color: @cardSubtitleColor;
+    }
+  }
+  &-text{
+    color: @cardTextColor;
+  }
 }
 
-.vui-card-header-title{
-  .vui-card-title{
-    color: @cardTitleColor;
-  }
-  .vui-card-sub-title{
-    color: @cardSubtitleColor;
-  }
-}
 
 
-.vui-card-media-title {
-  background-color: @cardMediaOverlayContentBackground;
-  .vui-card-title {
-    color: @cardMediaTitleColor;
-  }
-  .vui-card-sub-title {
-    color: @cardMediaSubtitleColor;
-  }
-}
 
-.vui-card-title-container{
-  .vui-card-title{
-    color: @cardTitleColor;
-  }
-  .vui-card-sub-title{
-    color: @cardSubtitleColor;
-  }
-}
 
-.vui-card-text{
-  color: @cardTextColor;
-}
 
 .vui-checkbox {
   input[type="checkbox"] {
@@ -177,28 +137,62 @@ a {
 
     }
   }
-}
-
-.vui-checkbox-label {
-  color: @checkboxTextColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
+  &-label {
+    color: @checkboxTextColor;
+    .vui-checkbox.disabled & {
+      color: @checkboxDisabledColor;
+    }
+  }
+  &-icon-uncheck {
+    color: @checkboxColor;
+    .vui-checkbox.disabled & {
+      color: @checkboxDisabledColor;
+    }
+  }
+  &-icon-checked {
+    color: @checkboxCheckedColor;
+    .vui-checkbox.disabled & {
+      color: @checkboxDisabledColor;
+    }
   }
 }
 
-.vui-checkbox-icon-uncheck {
-  color: @checkboxColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
+
+.vui-radio {
+  input[type="radio"] {
+    &:checked {
+      + .vui-radio-wrapper {
+        .vui-radio-icon-uncheck{
+          color: @radioCheckedColor;
+        }
+        .vui-radio-ripple-wrapper{
+          color: @radioCheckedColor;
+        }
+      }
+
+    }
+  }
+  &-label {
+    color: @radioTextColor;
+    .vui-radio.disabled & {
+      color: @radioDisabledColor;
+    }
+  }
+  &-icon-uncheck {
+    color: @radioColor;
+    .vui-radio.disabled & {
+      color: @radioDisabledColor;
+    }
+  }
+
+  &-icon-checked {
+    color: @radioCheckedColor;
+    .vui-radio.disabled & {
+       color: @radioDisabledColor;
+     }
   }
 }
 
-.vui-checkbox-icon-checked {
-  color: @checkboxCheckedColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
 
 .vui-chip {
   background-color: @chipColor;
@@ -210,14 +204,9 @@ a {
     background-color: @chipHoverColor;
     cursor: pointer;
   }
-}
-
-.vui-chip-delete-icon{
-  color: @chipDeleteColor;
-}
-
-.vui-circular-progress-determinate-path{
-  stroke: @circularProgressColor;
+  &-delete-icon{
+    color: @chipDeleteColor;
+  }
 }
 
 .vui-calendar {
@@ -227,7 +216,6 @@ a {
 .vui-calendar-year {
   background-color: @datePickerCalendarYearBackgroundColor;
 }
-
 
 .vui-date-display{
   background-color: @datePickerHeaderColor;
@@ -264,22 +252,21 @@ a {
 
 .vui-dialog {
   background-color: @dialogColor;
-}
+  &-footer,
+  &-header {
+    &.scrollable{
+      border-bottom-color: @dialogBorderColor;
+    }
+  }
+  &-title{
+    color: @dialogTitleColor;
+  }
 
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
+  &-body {
+    color: @dialogBodyColor
   }
 }
 
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
-}
 
 .vui-dropDown-menu-text {
   color: @dropDownMenuTextColor;
@@ -384,19 +371,6 @@ a {
   color: @menuRightIconColor;
 }
 
-.vui-pagination-item{
-  color: @paginationTextColor;
-  &.hover {
-    background-color: @paginationHoverBackgroundColor;
-  }
-  &.active {
-    color: @paginationActiveColor;
-    background-color: @paginationActiveBackgroundColor;
-  }
-  &.disabled {
-    color: @paginationDisabledColor;
-  }
-}
 
 .vui-paper {
   background-color: @paperBackgroundColor;
@@ -434,42 +408,6 @@ a {
   background-color: @popupColor;
 }
 
-.vui-radio {
-  input[type="radio"] {
-    &:checked {
-      + .vui-radio-wrapper {
-        .vui-radio-icon-uncheck{
-          color: @radioCheckedColor;
-        }
-        .vui-radio-ripple-wrapper{
-          color: @radioCheckedColor;
-        }
-      }
-
-    }
-  }
-}
-
-.vui-radio-label {
-  color: @radioTextColor;
-  .vui-radio.disabled & {
-    color: @radioDisabledColor;
-  }
-}
-
-.vui-radio-icon-uncheck {
-  color: @radioColor;
-  .vui-radio.disabled & {
-    color: @radioDisabledColor;
-  }
-}
-
-.vui-radio-icon-checked {
-  color: @radioCheckedColor;
-  .vui-radio.disabled & {
-     color: @radioDisabledColor;
-   }
-}
 
 .vui-refresh-control {
   color: @refreshControlColor;
@@ -584,73 +522,38 @@ a {
       }
     }
   }
-}
-
-
-.vui-switch-label {
-  color: @switchTextColor;
-  .vui-switch.disabled & {
-    color: @switchTextDisabledColor;
-  }
-}
-
-.vui-switch-track {
-  background-color: @switchTrackOffColor;
-  .vui-switch.disabled & {
-    background-color: @switchTrackDisabledColor;
-  }
-}
-
-.vui-switch-thumb {
-  color: @switchTextColor;
-  background-color: @switchThumbOffColor;
-  .vui-switch.disabled & {
-    background-color: @switchThumbDisabledColor;
-  }
-}
-
-.vui-table {
-  background-color: @tableBackgroundColor;
-}
-
-.vui-thead {
-  border-bottom-color: @tableBorderColor;
-}
-
-.vui-th {
-  color: @tableTheadTextColor;
-}
-
-.vui-tr {
-  border-bottom-color: @tableBorderColor;
-  color: @tableTextColor;
-  &.selected {
-    background-color: @tableRowSelectedBackgroundColor;
-  }
-  &.hover {
-    background-color: @tableRowHoverBackgroundColor;
-  }
-  &.stripe {
-    background-color: @tableRowStripeBackgroundColor;
+  &-label {
+    color: @switchTextColor;
+    .vui-switch.disabled & {
+      color: @switchTextDisabledColor;
+    }
   }
 
-  .vui-tfoot & {
-    border-top-color: @tableBorderColor;
+  &-track {
+    background-color: @switchTrackOffColor;
+    .vui-switch.disabled & {
+      background-color: @switchTrackDisabledColor;
+    }
+  }
+
+  &-thumb {
+    color: @switchTextColor;
+    background-color: @switchThumbOffColor;
+    .vui-switch.disabled & {
+      background-color: @switchThumbDisabledColor;
+    }
   }
 }
 
 .vui-tabs{
-  background-color: @tabsBackgroundColor;
+  &-active{
+    color: @primaryColor;;
+  }
+  &-line{
+    background-color: @primaryColor;
+  }
 }
-.vui-tab-link-highlight {
-  background-color: @tabsLineColor;
-}
-.vui-tab-link{
-  color: @tabsTextColor;
-}
-.vui-tab-active {
-  color: @tabsSelectedTextColor;
-}
+
 
 .vui-text-field{
   color: @textFieldTextColor;
@@ -663,40 +566,33 @@ a {
   &.disabled {
     color: @textFieldDisabledTextColor;
   }
-}
-
-.vui-text-field-input {
-  color: @textFieldInputColor;
-}
-
-
-.vui-text-field-help {
-  .vui-text-field.error &{
-    color: @textFieldErrorTextColor;
+  &-input {
+    color: @textFieldInputColor;
   }
-}
-
-.vui-text-field-line {
-  background-color: @textFieldLineColor;
-  &.disabled {
-    border-color: @textFieldDisabledLineColor;
+  &-help {
+    .vui-text-field.error &{
+      color: @textFieldErrorTextColor;
+    }
   }
-}
-
-.vui-text-field-focus-line{
-  background-color: @textFieldFocusLineColor;
-  &.error {
-    background-color: @textFieldErrorLineColor;
+  &-line {
+    background-color: @textFieldLineColor;
+    &.disabled {
+      border-color: @textFieldDisabledLineColor;
+    }
   }
-}
-
-
-.vui-text-field-hint {
-  color: @textFieldHintColor;
-}
-.vui-text-field-label {
-  .vui-text-field.has-label &.float {
-    color: @textFieldHintColor
+  &-focus-line{
+    background-color: @textFieldFocusLineColor;
+    &.error {
+      background-color: @textFieldErrorLineColor;
+    }
+  }
+  &-hint {
+    color: @textFieldHintColor;
+  }
+  &-label {
+    .vui-text-field.has-label &.float {
+      color: @textFieldHintColor
+    }
   }
 }
 
@@ -726,10 +622,3 @@ a {
   border-color:  @timePickerSelectColor;
 }
 
-.vui-tooltip{
-  color: @tooltipTextColor;
-}
-
-.vui-tooltip-ripple.when-shown {
-  background-color: @tooltipRippleColor;
-}

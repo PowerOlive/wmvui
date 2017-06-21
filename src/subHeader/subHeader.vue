@@ -28,7 +28,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-sub-header {
-  color: @secondaryTextColor;
+  color: @primaryTextColor;
   font-size: 14px;
   line-height: 48px;
   padding-left: 16px;
