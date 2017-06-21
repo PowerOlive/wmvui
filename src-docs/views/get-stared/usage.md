@@ -71,3 +71,16 @@ import avatar from 'wmvui/src/avatar'
 Vue.component(appBar.name, appBar)
 Vue.component(avatar.name, avatar)
 ```
+
+### 局部引用
+
+**app.vue**
+
+```javascript
+import appBar from '~MuseUI/appBar'
+export default {
+  components: {
+    'vui-appbar':appBar
+  }
+}
+```

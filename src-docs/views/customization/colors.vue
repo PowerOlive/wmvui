@@ -3,23 +3,29 @@
   <h2 class="demo-head-title">UI Color Palette</h2>
   <p v-html="$t('color')"></p>
   <div class="demo-colors-wrapper">
-    <vui-row>
+    <div v-for="color in mainColors" class="demo-color-group">
+      <div class="demo-color" :style="getColorInfo(color, '500').style">
+        <span class="demo-color-title">{{color}}</span>
+        <div class="demo-color-container">
+          {{getColorInfo(color, '500').key}}
+        </div>
+        <div class="demo-color-container">
+          {{getColorInfo(color, '500').value}}
+        </div>
+      </div>
+      <div class="demo-color" v-for="palette, index in palettes" :key="index" v-if="hasColor(color, palette)"  :style="getColorInfo(color, palette).style">
+        <div class="demo-color-container">
+          {{getColorInfo(color, palette).key}}
+        </div>
+        <div class="demo-color-container">
+          {{getColorInfo(color, palette).value}}
+        </div>
+      </div>
+    </div>
+    <!-- <vui-row>
       <vui-col v-for="color in mainColors" :key="color" width="50" desktop="25" tablet="33" class="demo-color-group">
-        <div class="demo-color" :style="getColorInfo(color, '500').style">
-          <span class="demo-color-title">{{color}}</span>
-          <div class="demo-color-container">
-            <span>{{getColorInfo(color, '500').key}}</span>
-            <span>{{getColorInfo(color, '500').value}}</span>
-          </div>
-        </div>
-        <div class="demo-color" v-for="palette, index in palettes" :key="index" v-if="hasColor(color, palette)"  :style="getColorInfo(color, palette).style">
-          <div class="demo-color-container">
-            <span>{{getColorInfo(color, palette).key}}</span>
-            <span>{{getColorInfo(color, palette).value}}</span>
-          </div>
-        </div>
       </vui-col>
-    </vui-row>
+    </vui-row> -->
   </div>
 </div>
 </template>
@@ -85,12 +91,13 @@ export default {
   margin-bottom: 12px;
 }
 .demo-color-group{
-  padding-top: 16px;
-  padding-bottom: 16px;
+  width: 50%;
+  margin-top: 20px;
+  display: inline-block;
 }
 
 .demo-color {
-  padding: 15px;
+  padding: 10px;
 }
 
 .demo-color-container {
@@ -100,6 +107,12 @@ export default {
 
 .demo-color-title{
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 48rem){
+  .demo-color-group{
+    width: 25%;
+  }
+
 }
 </style>

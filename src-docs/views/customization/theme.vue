@@ -5,7 +5,7 @@
     <vui-tabs :value="theme" @change="changeTheme">
       <vui-tab title="默认" value="default"/>
       <vui-tab title="深灰" value="carbon"/>
-      <vui-tab title="蓝绿" value="teal"/>
+      <!-- <vui-tab title="蓝绿" value="teal"/> -->
     </vui-tabs>
     <vui-content-block :padding="['20px']">
       <vui-flex>
@@ -89,13 +89,13 @@
 <script>
 import _default from 'raw!less!../../assets/themes/theme-default.less'
 import carbon from 'raw!less!../../assets/themes/theme-carbon.less'
-import teal from 'raw!less!../../assets/themes/theme-teal.less'
+// import teal from 'raw!less!../../assets/themes/theme-teal.less'
 import zh from './zh'
 import en from './en'
 
 const themes = {
   carbon,
-  teal,
+  // teal,
   default: _default
 }
 let theme = 'default'
