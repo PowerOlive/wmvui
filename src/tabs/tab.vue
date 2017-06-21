@@ -1,11 +1,21 @@
 <template>
-<abstract-button class="vui-tab-link" :href="href" :to="to" :tag="tag" :activeClass="activeClass"
+<abstract-button class="vui-tabs-item" :href="href" :to="to" :tag="tag" :activeClass="activeClass"
   :event="event" :exact="exact" :append="append" :replace="replace" :disabled="disabled"
-  :center-ripple="false" :class="{'vui-tab-active': active}" @click="tabClick">
+  :center-ripple="false" :class="{'vui-tabs-active': active}" @click="tabClick" :style="activeStyle">
   <slot>
     <icon :icon="icon" :size="size" :class="iconClass"/>
   </slot>
-  <div class="vui-tab-text" :class="textClass" v-if="title">{{title}}</div>
+  <vui-badge 
+  v-if="badge" 
+  circle size="18px" 
+  :content="badge.content" 
+  :primary="badge.primary"
+  :success="badge.success"
+  :info="badge.info"
+  :warn="badge.warn"
+  :danger="badge.danger"
+   />
+  <div class="vui-tabs-text" :class="textClass" v-if="title">{{title}}</div>
 </abstract-button>
 </template>
 
@@ -13,11 +23,15 @@
 import abstractButton from '../internal/abstractButton'
 import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
+import badge from '../badge'
 import {isNotNull, convertClass} from '../utils'
 export default {
   name: 'vui-tab',
   mixins: [routerMixin],
   props: {
+    badge: {
+      type: [Object, Array]
+    },
     icon: {
       type: String,
       default: ''
@@ -41,11 +55,17 @@ export default {
     disabled: {
       type: Boolean
     },
+    activeColor: String,
     value: {}
   },
   computed: {
     active () {
       return isNotNull(this.value) && this.$parent.value === this.value
+    },
+    activeStyle () {
+      return {
+        'color': this.active ? this.$parent.color : ''
+      }
     },
     textClass () {
       const {icon, titleClass} = this
@@ -68,41 +88,12 @@ export default {
   },
   components: {
     'abstract-button': abstractButton,
-    icon
+    icon,
+    badge
   }
 }
 </script>
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-tab-link{
-  min-height: 48px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 14px;
-  background: none;
-  appearance: none;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  flex: 1;
-  color: inherit;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: normal;
-  align-items: center;
-  color: fade(@alternateTextColor, 70%);
-  transition: all .45s @easeInOutFunction;
-  cursor: pointer;
-}
-.vui-tab-active{
-  color: @alternateTextColor;
-}
-.vui-tab-text{
-  &.has-icon {
-    margin-top: 8px;
-  }
-}
 </style>

@@ -1,18 +1,21 @@
 <template>
   <div class="vui-tabs">
     <slot></slot>
-    <span class="vui-tab-link-highlight" ref="highlight" :class="lineClass"></span>
+    <span class="vui-tabs-line" ref="tabsline" :style="activeLine"></span>
   </div>
 </template>
 
 <script>
+import {getColor} from '../utils'
 export default {
   name: 'vui-tabs',
   props: {
     lineClass: {
       type: [String, Object, Array]
     },
-    value: {}
+    lineHeight: Number,
+    value: {},
+    color: String
   },
   data () {
     return {
@@ -24,6 +27,15 @@ export default {
   },
   updated () {
     this.setTabLightStyle()
+  },
+  computed: {
+    activeLine () {
+      return {
+        'background-color': getColor(this.color),
+        'height': this.lineHeight + 'px',
+        'bottom': -this.lineHeight + 'px'
+      }
+    }
   },
   methods: {
     handleTabClick (value, tab) {
@@ -45,7 +57,7 @@ export default {
     setTabLightStyle () {
       const x = this.getActiveIndex() * 100
       const len = this.$children.length
-      const el = this.$refs.highlight
+      const el = this.$refs.tabsline
       el.style.width = len > 0 ? (100 / len).toFixed(4) + '%' : '100%'
       el.style.transform = 'translate3d(' + x + '%, 0, 0)'
     }
@@ -62,22 +74,55 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: @primaryColor;
-  color: #FFF;
   text-align: center;
   position: relative;
   z-index: 100;
   width: 100%;
+  &-item{
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    background: none;
+    appearance: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    flex: 1;
+    color: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: normal;
+    align-items: center;
+    color: fade(@textColor, 80%);
+    transition: all .45s @easeInOutFunction;
+    cursor: pointer;
+  }
+  &-text{
+    &.has-icon {
+      margin-top: 8px;
+    }
+  }
+  &-line{
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    transition: transform .3s;
+    backface-visibility: hidden;
+  }
+  &-active{
+    color: @primaryColor;;
+  }
+  &-line{
+    background-color: @primaryColor;
+  }
+  .vui-badge-container{
+    position: absolute;
+    right:20%;
+    top: 0;
+  }
 }
-
-.vui-tab-link-highlight{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  background-color: @accentColor;
-  transition: transform .3s;
-  backface-visibility: hidden;
-}
-
 </style>

@@ -189,9 +189,9 @@ export default {
         value: '/flexbox',
         icon: 'dialog'
       }, {
-        title: '标签页',
+        title: '选项卡',
         value: '/tabs',
-        icon: 'tag'
+        icon: 'tab'
       }, {
         title: '进度条',
         value: '/progress',

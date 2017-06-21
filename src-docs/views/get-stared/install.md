@@ -10,7 +10,7 @@ wmvui 没有集成图标，可根据需求引入 [iconfont](http://www.iconfont.
 <link rel="stylesheet" href="//at.alicdn.com/t/font_znoqxlhv1z66flxr.css">
 ```
 
-### npm / yarn 安装
+### npm 安装
 
 ```bash
 npm install --save wmvui
