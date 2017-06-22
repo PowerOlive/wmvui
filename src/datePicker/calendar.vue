@@ -239,7 +239,7 @@ export default {
 }
 
 .vui-calendar-landspace{
-  width: 479px;
+  width: 100%;
 }
 
 .vui-calendar-container{
@@ -287,10 +287,9 @@ export default {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0px;
-  padding: 10px 0;
-  .vui-flat-button {
+  .vui-btn {
     min-width: 64px;
-    margin: 4px 8px 8px 0px;
+    margin: 10px 8px;
   }
 }
 .vui-calendar-slide-next-enter-active,

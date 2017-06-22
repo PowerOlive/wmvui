@@ -143,10 +143,9 @@ export default {
 .vui-date-picker-dialog {
    width: 280px;
   &.landscape {
-    width: 479px;
+    width: 400px;
     .vui-dialog-body {
-      min-height: 330px;
-      min-width: 479px;
+      height: 100%;
     }
   }
   .vui-dialog-body {

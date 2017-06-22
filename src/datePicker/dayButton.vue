@@ -79,12 +79,11 @@ export default {
   text-decoration: none;
   cursor: pointer;
   margin: 0px;
-  padding: 4px 0px;
   font-size: inherit;
   font-weight: 400;
   position: relative;
   border: 10px;
-  width: calc(100% / 8);
+  width: 34px;
   &.disabled{
     opacity: .4;
   }
@@ -92,21 +91,20 @@ export default {
 
 .vui-day-empty {
   font-weight: 400;
-  padding: 4px 0px;
   position: relative;
-  width: calc(100% / 8);
+  width: 34px;
 }
 .vui-day-button-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 34px;
+  top: 1px;
+  left: 1px;
+  height: 32px;
+  width: 32px;
   background-color: @primaryColor;
   border-radius: 50%;
   opacity: 0;
   transform: scale(0);
   transition: all .45s @easeOutFunction;
-  width: 34px;
   .vui-day-button.hover &,
   .vui-day-button.selected &{
     transform: scale(1);

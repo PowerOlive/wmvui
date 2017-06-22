@@ -61,7 +61,7 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   width: 100%;
-  height: 272px;
+  height: 248px;
   overflow: hidden;
 }
 

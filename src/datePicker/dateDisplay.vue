@@ -88,8 +88,8 @@ export default {
   color: @alternateTextColor;
   padding: 20px;
   .vui-calendar-landspace & {
-    width: 165px;
-    height: 330px;
+    width: 150px;
+    height: 310px;
     float: left;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2px;
