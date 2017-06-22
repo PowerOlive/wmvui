@@ -58,18 +58,18 @@ export default {
     }, {
       name: 'describeLine',
       type: 'Number',
-      default: '2',
+      default: '1',
       desc: 'listItem.props.describeLine'
     }, {
       name: 'describeTextClass',
       type: 'String,Object,Array',
       default: '',
       desc: 'listItem.props.describeTextClass'
-    }, {
-      name: 'inset',
-      type: 'Boolean',
-      default: 'false',
-      desc: 'listItem.props.inset'
+    // }, {
+    //   name: 'inset',
+    //   type: 'Boolean',
+    //   default: 'false',
+    //   desc: 'listItem.props.inset'
     }, {
       name: 'disabled',
       type: 'Boolean',

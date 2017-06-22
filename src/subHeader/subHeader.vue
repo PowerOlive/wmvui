@@ -39,7 +39,7 @@ export default {
   color: @primaryTextColor;
   font-size: 14px;
   line-height: 48px;
-  padding-left: 16px;
+  /* padding-left: 16px; */
   width: 100%;
 }
 </style>

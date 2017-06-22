@@ -13,11 +13,11 @@
     </vui-list>
     <vui-list>
       <vui-sub-header>通知设置</vui-sub-header>
-      <vui-list-item disableRipple @click="handleToggle('notifications')"  title="通知">
-        <vui-checkbox v-model="notifications" slot="left"/>
+      <vui-list-item disableRipple @click="handleToggle('notifications')">
+        <vui-checkbox label="通知" v-model="notifications" slot="left"/>
       </vui-list-item>
-      <vui-list-item disableRipple @click="handleToggle('sounds')"  title="声音">
-        <vui-checkbox v-model="sounds" slot="left"/>
+      <vui-list-item disableRipple @click="handleToggle('sounds')" >
+        <vui-checkbox label="声音" v-model="sounds" slot="left"/>
       </vui-list-item>
     </vui-list>
   </div>

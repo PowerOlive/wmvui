@@ -4,11 +4,12 @@
       :href="href" :disabled="disabled" :disableFocusRipple="disableRipple"  :disableTouchRipple="disableRipple" :target="target"
       :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
       @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
-      class="vui-item-wrapper" :wrapperStyle="itemStyle" :style="disabled ? itemStyle : {}" :centerRipple="false">
+      class="vui-item-wrapper" :wrapperStyle="itemStyle" :centerRipple="false">
       <div :class="itemClass">
         <div class="vui-item-left" v-if="showLeft">
           <slot name="left"></slot>
           <slot name="leftAvatar"></slot>
+          <slot name="leftImg"></slot>
         </div>
         <div class="vui-item-content">
           <div class="vui-item-title-row" v-if="showTitleRow">
@@ -41,6 +42,7 @@
           </vui-button>
           <slot name="right"></slot>
           <slot name="rightAvatar"></slot>
+          <slot name="rightImg"></slot>
         </div>
       </div>
     </abstract-button>
@@ -92,12 +94,12 @@ export default {
     },
     describeLine: {
       type: Number,
-      default: 2
+      default: 1
     },
-    inset: {
-      type: Boolean,
-      default: false
-    },
+    // inset: {
+    //   type: Boolean,
+    //   default: false
+    // },
     nestedListClass: {
       type: [String, Object, Array]
     },
@@ -131,14 +133,17 @@ export default {
     hasAvatar () {
       return this.$slots && ((this.$slots.leftAvatar && this.$slots.leftAvatar.length > 0) || (this.$slots.rightAvatar && this.$slots.rightAvatar.length > 0))
     },
+    hasImg () {
+      return this.$slots && ((this.$slots.leftImg && this.$slots.leftImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0))
+    },
     nestedLevel () {
       return this.$parent.nestedLevel + 1
     },
     showLeft () {
-      return this.$slots && ((this.$slots.left && this.$slots.left.length > 0) || (this.$slots.leftAvatar && this.$slots.leftAvatar.length > 0))
+      return this.$slots && (((this.$slots.left && this.$slots.left.length > 0) || (this.$slots.leftAvatar && this.$slots.leftAvatar.length > 0)) || ((this.$slots.leftImg && this.$slots.leftImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0)))
     },
     showRight () {
-      return this.toggleNested || (this.$slots && ((this.$slots.right && this.$slots.right.length > 0) || (this.$slots.rightAvatar && this.$slots.rightAvatar.length > 0)))
+      return this.toggleNested || (this.$slots && (((this.$slots.right && this.$slots.right.length > 0) || (this.$slots.rightAvatar && this.$slots.rightAvatar.length > 0)) || ((this.$slots.rightImg && this.$slots.rightImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0))))
     },
     showTitleRow () {
       return this.title || (this.$slots && this.$slots.title && this.$slots.title.length > 0) ||
@@ -149,9 +154,10 @@ export default {
     },
     itemClass () {
       var arr = ['vui-item']
-      if (this.showLeft || this.inset) arr.push('show-left')
+      // if (this.showLeft || this.inset) arr.push('show-left')
       if (this.showRight) arr.push('show-right')
       if (this.hasAvatar) arr.push('has-avatar')
+      if (this.hasImg) arr.push('has-img')
       if (this.selected) arr.push('selected')
       return arr.join(' ')
     },
@@ -238,19 +244,23 @@ export default {
 }
 
 .vui-item {
+  padding: 5px;
   min-height: 48px;
   display: flex;
   color: @textColor;
   position: relative;
-  padding: 4px 12px;
   &.show-left{
-    padding-left: 15px;
+    /* padding-left: 15px; */
   }
   &.show-right{
     /* padding-right: 4px; */
   }
   &.has-avatar {
     min-height: 56px;
+    /* padding: 5px */
+  }
+  &.has-img{
+    /* padding:5px; */
   }
   &.selected {
     color: @primaryColor;
@@ -273,7 +283,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 40px;
+  /* width: 40px; */
   color: @grey600;
   .vui-icon{
     display: block;
@@ -295,11 +305,16 @@ export default {
   > .vui-icon-menu {
     align-self: flex-start;
   }
+  .vui-btn{
+    padding-left:10px;
+    padding-right:10px;
+  }
 }
 
 .vui-item-content{
   width: 100%;
   align-self: center;
+  flex:1;
 }
 
 .vui-item-title-row{

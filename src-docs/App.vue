@@ -315,7 +315,7 @@ function isDesktop () {
     padding-left: 0;
   }
   .content-wrapper {
-    padding: 24px 36px;
+    padding: 20px;
   }
 }
 .home-page{

@@ -4,12 +4,18 @@
   <code-example :code="exampleSimpleCode" :title="$t('simpleList')" :description="$t('simpleListDesc')">
     <ex-simple/>
   </code-example>
-  <code-example :code="exampleChatCode" :title="$t('chatList')" :description="$t('chatListDesc')">
+
+  <code-example :code="exampleMessageCode" :title="$t('messageList')" :description="$t('messageListDesc')">
+    <ex-message />
+  </code-example>
+<!--   <code-example :code="exampleChatCode" :title="$t('chatList')" :description="$t('chatListDesc')">
     <ex-chat />
-  </code-example>
-  <code-example :code="exampleContactCode" :title="$t('contactList')" :description="$t('contactListDesc')">
-    <ex-contact />
-  </code-example>
+  </code-example> -->
+  
+
+<!--   <code-example :code="exampleContactCode" :title="$t('contactList')" :description="$t('contactListDesc')">
+  <ex-contact />
+</code-example> -->
   <code-example :code="exampleFolderCode" :title="$t('folderList')">
     <ex-folder />
   </code-example>
@@ -22,9 +28,7 @@
   <code-example :code="examplePhoneCode" :title="$t('addressList')">
     <ex-phone />
   </code-example>
-  <code-example :code="exampleMessageCode" :title="$t('messageList')" :description="$t('messageListDesc')">
-    <ex-message />
-  </code-example>
+
   <code-example :code="exampleSelectableCode" :title="$t('selectableList')" :description="$t('selectableListDesc')">
     <ex-selectable />
   </code-example>
@@ -37,10 +41,10 @@
 <script>
 import exampleSimple from './exampleSimple'
 import exampleSimpleCode from '!raw!./exampleSimple'
-import exampleChat from './exampleChat'
-import exampleChatCode from '!raw!./exampleChat'
-import exampleContact from './exampleContact'
-import exampleContactCode from '!raw!./exampleContact'
+// import exampleChat from './exampleChat'
+// import exampleChatCode from '!raw!./exampleChat'
+// import exampleContact from './exampleContact'
+// import exampleContactCode from '!raw!./exampleContact'
 import exampleFolder from './exampleFolder'
 import exampleFolderCode from '!raw!./exampleFolder'
 import exampleNested from './exampleNested'
@@ -60,8 +64,8 @@ export default {
   data () {
     return {
       exampleSimpleCode,
-      exampleChatCode,
-      exampleContactCode,
+      // exampleChatCode,
+      // exampleContactCode,
       exampleFolderCode,
       exampleNestedCode,
       exampleSettingCode,
@@ -73,8 +77,8 @@ export default {
   },
   components: {
     'ex-simple': exampleSimple,
-    'ex-chat': exampleChat,
-    'ex-contact': exampleContact,
+    // 'ex-chat': exampleChat,
+    // 'ex-contact': exampleContact,
     'ex-folder': exampleFolder,
     'ex-nested': exampleNested,
     'ex-setting': exampleSetting,

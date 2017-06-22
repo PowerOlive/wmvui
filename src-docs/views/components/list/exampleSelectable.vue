@@ -1,21 +1,17 @@
 <template>
-  <div>
-    <vui-list :value="value" @change="handleChange">
-    <vui-list-item :value="1" title="李白">
-      <vui-avatar src="/images/avatar1.jpg" slot="leftAvatar"/>
+<vui-list :value="value" @change="handleChange">
+  <vui-list-item  :value="2" title="可折叠菜单" toggleNested :open="false">
+    <div slot="nested" class="pd10">
+      Myron Liu -周末要来你这里出差，要不要一起吃个饭呀，实在编不下去了,哈哈哈哈哈哈
+    </div>
+  </vui-list-item>
+  <vui-list-item :value="6" title="王召君" toggleNested :open="false">
+    <vui-avatar src="/images/avatar3.jpg" slot="leftAvatar"/>
+    <vui-list-item slot="nested" class="pd10">
+      Myron Liu -周末要来你这里出差，要不要一起吃个饭呀，实在编不下去了,哈哈哈哈哈哈
     </vui-list-item>
-    <vui-list-item  :value="2" title="程咬金" inset toggleNested>
-      <vui-avatar src="/images/avatar2.jpg" slot="leftAvatar"/>
-      <vui-list-item :value="3"  title="阿柯" slot="nested">
-        <vui-avatar src="/images/uicon.jpg" slot="leftAvatar"/>
-      </vui-list-item>
-      </vui-list-item>
-    </vui-list-item>
-    <vui-list-item :value="6" title="王召君" inset>
-      <vui-avatar src="/images/avatar3.jpg" slot="leftAvatar"/>
-    </vui-list-item>
-  </vui-list>
-  </div>
+  </vui-list-item>
+</vui-list>
 </template>
 
 <script>

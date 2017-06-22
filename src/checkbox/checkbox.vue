@@ -177,7 +177,7 @@ export default {
   height: 24px;
   vertical-align: middle;
   position: relative;
-  margin-right: 16px;
+  margin-right: 12px;
   .vui-checkbox.label-left &{
     margin-right: 0;
     margin-left: 16px;
