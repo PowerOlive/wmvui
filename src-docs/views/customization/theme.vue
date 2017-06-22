@@ -4,7 +4,7 @@
   <vui-paper :class="['theme-' + theme, 'demo-theme-paper']">
     <vui-tabs :value="theme" @change="changeTheme">
       <vui-tab title="default" value="default"/>
-      <vui-tab title="carbon" value="carbon"/>
+      <vui-tab title="darkly" value="darkly"/>
       <vui-tab title="teal" value="teal"/>
       <vui-tab title="pink" value="pink"/>
     </vui-tabs>
@@ -93,14 +93,14 @@
 
 <script>
 import _default from 'raw!less!../../assets/themes/theme-default.less'
-import carbon from 'raw!less!../../assets/themes/theme-carbon.less'
+import darkly from 'raw!less!../../assets/themes/theme-darkly.less'
 import teal from 'raw!less!../../assets/themes/theme-teal.less'
 import pink from 'raw!less!../../assets/themes/theme-pink.less'
 import zh from './zh'
 import en from './en'
 
 const themes = {
-  carbon,
+  darkly,
   teal,
   pink,
   default: _default

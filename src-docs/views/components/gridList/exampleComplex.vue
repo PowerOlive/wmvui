@@ -17,37 +17,37 @@ export default {
   data () {
     return {
       list: [{
-        image: '/images/breakfast.jpg',
+        image: './images/breakfast.jpg',
         title: 'Breakfast',
         author: 'Myron',
         featured: true
       }, {
-        image: '/images/burger.jpg',
+        image: './images/burger.jpg',
         title: 'Burger',
         author: 'Linyu'
       }, {
-        image: '/images/camera.jpg',
+        image: './images/camera.jpg',
         title: 'Camera',
         author: 'ruolin'
       }, {
-        image: '/images/hats.jpg',
+        image: './images/hats.jpg',
         title: 'Hats',
         author: 'kakali'
       }, {
-        image: '/images/honey.jpg',
+        image: './images/honey.jpg',
         title: 'Honey',
         author: 'yuyang'
       }, {
-        image: '/images/morning.jpg',
+        image: './images/morning.jpg',
         title: 'Morning',
         author: 'mokayi',
         featured: true
       }, {
-        image: '/images/vegetables.jpg',
+        image: './images/vegetables.jpg',
         title: 'Vegetables',
         author: 'NUyyyyyyy'
       }, {
-        image: '/images/water-plant.jpg',
+        image: './images/water-plant.jpg',
         title: 'water',
         author: 'TDDyyyyyyy'
       }]
