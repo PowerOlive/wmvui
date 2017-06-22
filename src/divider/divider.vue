@@ -6,18 +6,28 @@
 export default {
   name: 'vui-divider',
   props: {
-    inset: String,
-    title: String
+    top: String,
+    right: String,
+    bottom: String,
+    left: String,
+    padding: Array,
+    title: String,
+    dotted: Boolean
   },
   computed: {
     dividerStyle () {
       return {
-        'margin-left': this.inset ? this.inset : ''
+        'padding': this.padding ? this.padding.join(' ') : '',
+        'margin-top': this.top ? this.top : '',
+        'margin-right': this.right ? this.right : '',
+        'margin-bottom': this.bottom ? this.bottom : '',
+        'margin-left': this.left ? this.left : ''
       }
     },
     dividerClass () {
       return {
-        'vui-divider-title': this.title
+        'vui-divider-title': this.title,
+        'vui-divider-dotted': this.dotted
       }
     }
   }
@@ -56,6 +66,13 @@ export default {
       height:100%;
     }
 
+  }
+  &-dotted{
+    &:after{
+      height:0;
+      border-top:1px dotted @borderColor;
+      background:none;
+    }
   }
 /*   &.inset{
   margin-left: 72px;

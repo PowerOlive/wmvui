@@ -15,9 +15,9 @@
       <vui-icon icon="right" slot="right"/>
     </vui-list-item>
   </vui-list>
-  <vui-divider inset/>
+  <vui-divider/>
   <vui-list>
-    <vui-sub-header inset>Files</vui-sub-header>
+    <vui-sub-header>Files</vui-sub-header>
     <vui-list-item title="文件夹" describeText="2017-06-12">
       <vui-avatar icon="like-fill" backgroundColor="blue" slot="leftAvatar" />
       <vui-icon icon="right" slot="right"/>

@@ -15,7 +15,7 @@
       <vui-avatar src="/images/avatar4.jpg" slot="rightAvatar"/>
     </vui-list-item>
   </vui-list>
-  <vui-divider style="margin:10px 0"/>
+  <vui-divider :padding="['10px','0']"/>
   <vui-list>
     <vui-list-item title="菜单">
       <vui-avatar src="/images/uicon.jpg" slot="rightAvatar"/>

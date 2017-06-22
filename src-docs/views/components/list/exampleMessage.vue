@@ -13,7 +13,7 @@
         <vui-menu-item title="删除" />
       </vui-icon-menu>
     </vui-list-item>
-    <vui-divider style="margin:10px 0"/>
+    <vui-divider :padding="['10px','0']"/>
     <vui-list-item title="Alex Qin">
       <vui-avatar src="/images/avatar2.jpg" slot="leftAvatar"/>
       <span slot="describe">
@@ -26,7 +26,7 @@
         <vui-menu-item title="删除" />
       </vui-icon-menu>
     </vui-list-item>
-    <vui-divider style="margin:10px 0"/>
+    <vui-divider :padding="['10px','0']"/>
     <vui-list-item title="LOL">
       <vui-avatar src="/images/avatar3.jpg" slot="leftAvatar"/>
       <span slot="describe">
@@ -39,7 +39,7 @@
         <vui-menu-item title="删除" />
       </vui-icon-menu>
     </vui-list-item>
-    <vui-divider style="margin:10px 0"/>
+    <vui-divider :padding="['10px','0']"/>
     <vui-list-item title="Myron Liu">
       <vui-avatar src="/images/uicon.jpg" slot="leftAvatar"/>
       <span slot="describe">
