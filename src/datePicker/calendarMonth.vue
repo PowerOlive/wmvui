@@ -69,7 +69,6 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   font-weight: 400;
-  height: 228px;
   line-height: 2;
   position: relative;
   text-align: center;

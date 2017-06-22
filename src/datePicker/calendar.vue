@@ -235,7 +235,7 @@ export default {
 .vui-calendar {
   color: @textColor;
   user-select: none;
-  width: 310px;
+  width: 100%;
 }
 
 .vui-calendar-landspace{
@@ -263,8 +263,6 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   font-weight: 500;
-  height: 20px;
-  line-height: 15px;
   opacity: 0.5;
   text-align: center;
 }
@@ -276,7 +274,7 @@ export default {
 .vui-calendar-monthday{
   position: relative;
   overflow: hidden;
-  height: 214px;
+  height:190px
 }
 
 .vui-calendar-monthday-slide{
@@ -289,8 +287,7 @@ export default {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0px;
-  max-height: 48px;
-  padding: 0px;
+  padding: 10px 0;
   .vui-flat-button {
     min-width: 64px;
     margin: 4px 8px 8px 0px;

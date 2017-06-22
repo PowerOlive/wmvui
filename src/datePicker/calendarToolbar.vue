@@ -61,7 +61,7 @@ export default {
 .vui-calendar-toolbar {
   display: flex;
   justify-content: space-between;
-  height: 48px;
+  height:48px;
 }
 
 .vui-calendar-toolbar-title-wrapper {
@@ -75,6 +75,7 @@ export default {
 }
 
 .vui-calendar-toolbar-title {
+  line-height: 48px;
   position: absolute;
   height: 100%;
   width: 100%;

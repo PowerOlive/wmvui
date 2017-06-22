@@ -12,9 +12,7 @@
   <div class="vui-date-display-monthday" @click="handleSelectMonth">
     <transition :name="'vui-date-display-' +  slideType" v-for="displayDate, index in displayDates" :key="index">
       <div class="vui-date-display-slideIn-wrapper" :key="dateTimeFormat.formatDisplay(displayDate)" >
-        <div class="vui-date-display-monthday-title">
-          {{dateTimeFormat.formatDisplay(displayDate)}}
-        </div>
+        <div class="vui-date-display-monthday-title">{{dateTimeFormat.formatDisplay(displayDate)}}</div>
       </div>
     </transition>
   </div>
@@ -104,8 +102,7 @@ export default {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
-  line-height: 16px;
-  height: 16px;
+  height:20px;
   opacity: 0.7;
   transition: all .45s @easeOutFunction;
   margin-bottom: 10px;

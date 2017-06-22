@@ -141,7 +141,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-date-picker-dialog {
-   width: 310px;
+   width: 280px;
   &.landscape {
     width: 479px;
     .vui-dialog-body {
@@ -151,8 +151,6 @@ export default {
   }
   .vui-dialog-body {
     padding: 0;
-    min-height: 434px;
-    min-width: 310px;
   }
 }
 </style>

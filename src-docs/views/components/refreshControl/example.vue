@@ -46,7 +46,6 @@ export default {
 
 <style>
 .demo-refresh-container{
-  width: 256px;
   height: 300px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;

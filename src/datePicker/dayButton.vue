@@ -84,7 +84,7 @@ export default {
   font-weight: 400;
   position: relative;
   border: 10px;
-  width: 42px;
+  width: calc(100% / 8);
   &.disabled{
     opacity: .4;
   }
@@ -94,12 +94,12 @@ export default {
   font-weight: 400;
   padding: 4px 0px;
   position: relative;
-  width: 42px;
+  width: calc(100% / 8);
 }
 .vui-day-button-bg {
   position: absolute;
   top: 0;
-  left: 4px;
+  left: 0;
   height: 34px;
   background-color: @primaryColor;
   border-radius: 50%;

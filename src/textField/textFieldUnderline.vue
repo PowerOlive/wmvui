@@ -64,7 +64,7 @@ export default {
   right: 0;
   position: absolute;
   .vui-text-field.has-icon & {
-    left: 56px;
+    left: 46px;
   }
   &.disabled{
     height: auto;
@@ -85,7 +85,7 @@ export default {
   transform: scaleX(0);
   transition: transform .45s @easeOutFunction;
   .vui-text-field.has-icon & {
-    left: 56px;
+    left: 46px;
   }
   &.focus {
     transform: scaleX(1);

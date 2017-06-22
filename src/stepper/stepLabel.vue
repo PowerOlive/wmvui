@@ -60,7 +60,7 @@ export default {
   display: flex;
   align-items: center;
   margin-right: 8px;
-  width: 24px;
+  /* width: 24px; */
 }
 
 .vui-step-label-icon {
@@ -84,7 +84,7 @@ export default {
   height: 20px;
   font-size: 12px;
   line-height: 20px;
-  text-align: center;
+  padding: 0 4px;
   overflow: hidden;
   border-radius: 100%;
   background-color: @grey500;

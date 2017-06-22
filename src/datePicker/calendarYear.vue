@@ -60,7 +60,7 @@ export default {
   justify-content: space-between;
   flex-direction: column;
   margin-top: 10px;
-  width: 310px;
+  width: 100%;
   height: 272px;
   overflow: hidden;
 }

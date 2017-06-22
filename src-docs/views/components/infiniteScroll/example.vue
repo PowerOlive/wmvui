@@ -44,7 +44,6 @@ export default {
 
 <style lang="css">
 .demo-infinite-container{
-  width: 256px;
   height: 300px;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
