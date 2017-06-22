@@ -9,54 +9,51 @@
       <vui-tab title="pink" value="pink"/>
     </vui-tabs>
     <vui-content-block :padding="['20px']">
-      <vui-flex>
-        <vui-flex-item>
-          <div class="demo-theme-item center">
-            <vui-loading :width="2"  class="demo-loading"/>
-            <vui-loading type="line"  class="demo-loading"/>
-          </div>
-          <vui-button label="默认" class="demo-vui-raised-button" />
-          <vui-button label="重要" primary class="demo-vui-raised-button" />
-          <vui-button label="成功" success class="demo-vui-raised-button" />
-          <vui-button label="提示" info class="demo-vui-raised-button" />
-          <vui-button label="警告" warn class="demo-vui-raised-button" />
-          <vui-button label="危险" danger class="demo-vui-raised-button" />
-        </vui-flex-item>
-        <vui-flex-item>
-          <div class="demo-theme-item">
-            <vui-checkbox label="checkbox"/><br/>
-            <vui-checkbox label="disabled checkbox" disabled/>
-          </div>
-          <div class="demo-theme-item">
-            <vui-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
-            <vui-radio name="radio_group" nativeValue="2" label="radio2"/><br/>
-            <vui-radio label="disabled radio" nativeValue="3"  disabled/>
-          </div>
-          <div class="demo-theme-item">
-            <vui-switch label="switch"/><br/>
-            <vui-switch label="disabled switch"  disabled/>
-          </div>
-        </vui-flex-item>
-        <vui-flex-item>
-          <div class="demo-theme-item">
-            <vui-text-field hintText="Text Field" style="width: 100%"/>
-          </div>
-          <div class="demo-theme-item">
-            <vui-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
-          </div>
-          <div class="demo-theme-item">
-            <vui-select-field v-model="selectVal">
-              <vui-menu-item value="1" title="阴阳师"/>
-              <vui-menu-item value="2" title="影之刃"/>
-              <vui-menu-item value="3" title="天下HD"/>
-              <vui-menu-item value="4" title="穿越火线"/>
-              <vui-menu-item value="5" title="英雄联盟"/>
-              <vui-menu-item value="6" title="王者荣耀"/>
-            </vui-select-field>
-            <vui-badge content="1" circle primary />
-          </div>
-        </vui-flex-item>
-      </vui-flex>
+      <div class="demo-theme-group">
+        <div class="demo-theme-item center">
+          <vui-loading :width="2"  class="demo-loading"/>
+          <vui-loading type="line"  class="demo-loading"/>
+        </div>
+        <vui-button label="默认" class="demo-vui-raised-button" />
+        <vui-button label="重要" primary class="demo-vui-raised-button" />
+        <vui-button label="成功" success class="demo-vui-raised-button" />
+        <vui-button label="提示" info class="demo-vui-raised-button" />
+        <vui-button label="警告" warn class="demo-vui-raised-button" />
+        <vui-button label="危险" danger class="demo-vui-raised-button" />
+      </div>
+      <div class="demo-theme-group">
+        <div class="demo-theme-item">
+          <vui-checkbox label="checkbox"/><br/>
+          <vui-checkbox label="disabled checkbox" disabled/>
+        </div>
+        <div class="demo-theme-item">
+          <vui-radio name="radio_group" nativeValue="1" label="radio1"/><br/>
+          <vui-radio label="disabled radio" nativeValue="3"  disabled/>
+        </div>
+        <div class="demo-theme-item">
+          <vui-switch label="switch"/><br/>
+          <vui-switch label="disabled switch" disabled/>
+        </div>
+      </div>
+      <div class="demo-theme-group">
+        <div class="demo-theme-item">
+          <vui-text-field hintText="Text Field" style="width: 100%"/>
+        </div>
+        <div class="demo-theme-item">
+          <vui-date-picker hintText="Landspace Dialog" style="width: 100%; overflow:hidden;"/>
+        </div>
+        <div class="demo-theme-item">
+          <vui-select-field v-model="selectVal">
+            <vui-menu-item value="1" title="阴阳师"/>
+            <vui-menu-item value="2" title="影之刃"/>
+            <vui-menu-item value="3" title="天下HD"/>
+            <vui-menu-item value="4" title="穿越火线"/>
+            <vui-menu-item value="5" title="英雄联盟"/>
+            <vui-menu-item value="6" title="王者荣耀"/>
+          </vui-select-field>
+          <vui-badge content="1" circle primary />
+        </div>
+      </div>
       <vui-slider :value="30"/>
       <vui-progress type="line" mode="determinate" :value="40" />
       <br>
@@ -166,10 +163,7 @@ export default {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-.demo-theme-group{
-  margin-top: 16px;
-  padding: 0 50px;
-}
+
 
 .demo-theme-item {
   margin-bottom: 16px;
@@ -182,6 +176,16 @@ export default {
 
 .demo-theme-group-slider {
   padding: 24px 50px 48px;
+}
+.demo-theme-group{
+  margin-top: 20px;
+}
+@media only screen and (min-width: 48rem){
+  .demo-theme-group{
+    display: inline-block;
+    width: 33%;
+  }
+
 }
 
 </style>

@@ -295,6 +295,9 @@ export default {
   .vui-item.selected &{
     color: @primaryColor;
   }
+  >.vui-icon{
+    margin-left:5px;
+  }
 }
 
 .vui-item-right{

@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Index from './views'
 import Install from './views/get-stared/install'
 import Usage from './views/get-stared/usage'
-import ChangeLog from './views/more/changeLog'
-import Contributing from './views/more/contributing'
+// import ChangeLog from './views/more/changeLog'
+// import Contributing from './views/more/contributing'
 import Colors from './views/customization/colors'
 import Theme from './views/customization/theme'
 import AppBar from './views/components/appbar'
@@ -64,8 +64,8 @@ const router = new Router({
     { path: '/index', component: Index },
     { path: '/install', component: Install },
     { path: '/usage', component: Usage },
-    { path: '/changeLog', component: ChangeLog },
-    { path: '/contributing', component: Contributing },
+    // { path: '/changeLog', component: ChangeLog },
+    // { path: '/contributing', component: Contributing },
     { path: '/colors', component: Colors },
     { path: '/theme', component: Theme },
     { path: '/appbar', component: AppBar },
