@@ -116,7 +116,7 @@
           <div>90后女孩整容 获胸模大赛亚军~~</div>
           <div>2017-06-22</div>
         </div>
-        <vui-icon icon="right" />
+        <vui-icon icon="right" class="pd20" />
       </li>
     </ul>
   </div>

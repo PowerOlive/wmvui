@@ -1,9 +1,29 @@
 export default {
   props: [{
-    name: 'inset',
+    name: 'top',
     type: 'String',
     default: '0',
-    desc: 'props.inset'
+    desc: 'props.top'
+  }, {
+    name: 'right',
+    type: 'String',
+    default: '0',
+    desc: 'props.right'
+  }, {
+    name: 'bottom',
+    type: 'String',
+    default: '0',
+    desc: 'props.bottom'
+  }, {
+    name: 'left',
+    type: 'String',
+    default: '0',
+    desc: 'props.top'
+  }, {
+    name: 'padding',
+    type: 'Array',
+    default: '0',
+    desc: 'props.padding'
   }, {
     name: 'fontSize',
     type: 'String',

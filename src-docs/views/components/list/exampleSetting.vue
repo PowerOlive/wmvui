@@ -1,19 +1,14 @@
 <template>
-  <mobile-tear-sheet>
+  <div>
     <vui-list>
       <vui-list-item disabled title="通知与信息设置" describeText="总是中断"/>
-    </vui-list>
-    <vui-divider />
-    <vui-list>
+      <vui-divider top="10px" bottom="20px" />
       <vui-sub-header>声音开启设置</vui-sub-header>
       <vui-list-item disableRipple @click="handleToggle('events')" title="事件和提醒">
         <vui-switch v-model="events"  slot="right"/>
       </vui-list-item>
       <vui-list-item disableRipple @click="handleToggle('calls')" title="电话">
         <vui-switch v-model="calls" slot="right"/>
-      </vui-list-item>
-      <vui-list-item disableRipple @click="handleToggle('messages')" title="信息">
-        <vui-switch v-model="messages" slot="right"/>
       </vui-list-item>
     </vui-list>
     <vui-list>
@@ -24,15 +19,11 @@
       <vui-list-item disableRipple @click="handleToggle('sounds')"  title="声音">
         <vui-checkbox v-model="sounds" slot="left"/>
       </vui-list-item>
-      <vui-list-item disableRipple @click="handleToggle('videoSounds')" title="视频的声音">
-        <vui-checkbox v-model="videoSounds" slot="left"/>
-      </vui-list-item>
     </vui-list>
-  </mobile-tear-sheet>
+  </div>
 </template>
 
 <script>
-import mobileTearSheet from '../../../components/mobileTearSheet'
 export default {
   data () {
     return {
@@ -50,7 +41,6 @@ export default {
     }
   },
   components: {
-    'mobile-tear-sheet': mobileTearSheet
   }
 }
 </script>

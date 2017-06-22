@@ -9,14 +9,22 @@ import {getColor} from '../utils'
 export default {
   name: 'vui-sub-header',
   props: {
-    inset: String,
+    padding: Array,
+    top: String,
+    right: String,
+    bottom: String,
+    left: String,
     fontSize: String,
     color: String
   },
   computed: {
     dividerStyle () {
       return {
-        'margin-left': this.inset ? this.inset : '',
+        'padding': this.padding ? this.padding.join(' ') : '',
+        'margin-top': this.top ? this.top : '',
+        'margin-right': this.right ? this.right : '',
+        'margin-bottom': this.bottom ? this.bottom : '',
+        'margin-left': this.left ? this.left : '',
         'font-size': this.fontSize ? this.fontSize : '',
         'color': getColor(this.color)
       }
