@@ -18,7 +18,7 @@ import exampleCustom from './exampleCustom'
 import exampleCustomCode from '!raw!./exampleCustom'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-custom': exampleCustom
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

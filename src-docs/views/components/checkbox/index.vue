@@ -18,7 +18,7 @@ import exampleControl from './exampleControl'
 import exampleControlCode from '!raw!./exampleControl'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-control': exampleControl
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

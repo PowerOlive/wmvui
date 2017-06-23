@@ -18,7 +18,7 @@ import exampleLineLoading from './exampleLineLoading'
 import exampleLineLoadingCode from '!raw!./exampleLineLoading'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-line': exampleLineLoading
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

@@ -18,7 +18,7 @@ import exampleRight from './exampleRight'
 import exampleRightCode from '!raw!./exampleRight'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-right': exampleRight
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

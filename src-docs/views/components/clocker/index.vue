@@ -13,7 +13,7 @@ import exampleSimple from './exampleSimple'
 import exampleSimpleCode from '!raw!./exampleSimple'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -25,8 +25,7 @@ export default {
     'ex-simple': exampleSimple
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

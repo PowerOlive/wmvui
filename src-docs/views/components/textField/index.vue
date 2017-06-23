@@ -33,7 +33,7 @@ import exampleInputLength from './exampleInputLength'
 import exampleInputLengthCode from '!raw!./exampleInputLength'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -53,8 +53,7 @@ export default {
     'ex-input-length': exampleInputLength
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

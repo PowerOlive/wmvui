@@ -23,7 +23,7 @@ import exampleScroll from './exampleScroll'
 import exampleScrollCode from '!raw!./exampleScroll'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -39,8 +39,7 @@ export default {
     'ex-scroll': exampleScroll
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

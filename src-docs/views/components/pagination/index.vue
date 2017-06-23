@@ -23,7 +23,7 @@ import pageSizeChange from './pageSizeChange'
 import pageSizeChangeCode from '!raw!./pageSizeChange'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -39,8 +39,7 @@ export default {
     'ex-pageSizeChange': pageSizeChange
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

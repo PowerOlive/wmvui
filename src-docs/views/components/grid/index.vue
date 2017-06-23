@@ -14,7 +14,7 @@ import example from './example'
 import exampleCode from '!raw!./example'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -26,8 +26,7 @@ export default {
     example
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

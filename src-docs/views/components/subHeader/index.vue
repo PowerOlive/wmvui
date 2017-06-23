@@ -26,7 +26,7 @@ import exampleGridList from '../gridList/exampleSimple'
 import exampleGridListCode from '!raw!../gridList/exampleSimple'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -42,8 +42,7 @@ export default {
     'ex-grid-list': exampleGridList
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

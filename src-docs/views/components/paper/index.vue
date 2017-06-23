@@ -18,7 +18,7 @@ import exampleCircle from './exampleCircle'
 import exampleCircleCode from '!raw!./exampleCircle'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-circle': exampleCircle
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

@@ -13,7 +13,6 @@
   <api-view :api="apiData" :i18n="$t.bind(this)"/>
 </div>
 </template>
-
 <script>
 import exampleSimple from './exampleSimple'
 import exampleSimpleCode from '!raw!./exampleSimple'
@@ -23,7 +22,7 @@ import exampleFilter from './exampleFilter'
 import exampleFilterCode from '!raw!./exampleFilter'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -39,8 +38,7 @@ export default {
     'ex-filter': exampleFilter
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

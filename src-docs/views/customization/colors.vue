@@ -39,7 +39,7 @@ const mainColors = [
 const palettes = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'A100', 'A200', 'A400', 'A700']
 import * as colors from 'muse-ui/utils/colors'
 import zh from './zh'
-import en from './en'
+
 import {getContrastRatio} from './colorManipulator'
 export default {
   data () {
@@ -77,8 +77,7 @@ export default {
     }
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

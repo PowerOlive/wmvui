@@ -19,7 +19,6 @@ import exampleShift from './exampleShift'
 import exampleShiftCode from '!raw!./exampleShift'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
 export default {
   data () {
     return {
@@ -33,8 +32,7 @@ export default {
     'ex-shift': exampleShift
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

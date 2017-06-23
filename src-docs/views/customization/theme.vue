@@ -94,8 +94,6 @@ import darkly from 'raw!less!../../assets/themes/theme-darkly.less'
 import teal from 'raw!less!../../assets/themes/theme-teal.less'
 import pink from 'raw!less!../../assets/themes/theme-pink.less'
 import zh from './zh'
-import en from './en'
-
 const themes = {
   darkly,
   teal,
@@ -152,8 +150,7 @@ export default {
     }
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

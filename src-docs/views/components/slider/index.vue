@@ -23,7 +23,7 @@ import exampleStep from './exampleStep'
 import exampleStepCode from '!raw!./exampleStep'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -39,8 +39,7 @@ export default {
     'ex-step': exampleStep
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

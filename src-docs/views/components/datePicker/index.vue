@@ -33,7 +33,7 @@ import exampleLocale from './exampleLocale'
 import exampleLocaleCode from '!raw!./exampleLocale'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -53,8 +53,7 @@ export default {
     'ex-locale': exampleLocale
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

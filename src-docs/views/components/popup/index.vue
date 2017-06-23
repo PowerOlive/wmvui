@@ -17,7 +17,7 @@ import examplePopup from './examplePopup'
 import examplePopupCode from '!raw!./examplePopup'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -31,8 +31,7 @@ export default {
     examplePopup
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

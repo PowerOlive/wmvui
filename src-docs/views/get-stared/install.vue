@@ -6,11 +6,10 @@
 
 <script>
 import zh from './zh'
-import en from './en'
+
 export default {
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

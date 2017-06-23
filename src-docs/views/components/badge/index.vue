@@ -23,7 +23,6 @@ import exampleContent from './exampleContent'
 import exampleContentCode from '!raw!./exampleContent'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
 export default {
   data () {
     return {
@@ -39,8 +38,7 @@ export default {
     'ex-content': exampleContent
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

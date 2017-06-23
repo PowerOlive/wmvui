@@ -24,7 +24,7 @@ import exampleInline from './exampleInline'
 import exampleInlineCode from '!raw!./exampleInline'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -40,8 +40,7 @@ export default {
     'ex-inline': exampleInline
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

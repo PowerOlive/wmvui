@@ -18,7 +18,7 @@ import exampleCircleProgress from './exampleCircleProgress'
 import exampleCircleProgressCode from '!raw!./exampleCircleProgress'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -32,8 +32,7 @@ export default {
     'ex-cricle': exampleCircleProgress
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>

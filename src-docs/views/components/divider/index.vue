@@ -23,7 +23,7 @@ import exampleTitle from './exampleTitle'
 import exampleTitleCode from '!raw!./exampleTitle'
 import apiData from './api'
 import zh from './zh'
-import en from './en'
+
 export default {
   data () {
     return {
@@ -39,8 +39,7 @@ export default {
     'ex-title': exampleTitle
   },
   locales: {
-    zh,
-    en
+    zh
   }
 }
 </script>
