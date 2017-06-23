@@ -208,6 +208,10 @@ export default {
         value: '/picker',
         icon: 'picker'
       }, {
+        title: '数字动画',
+        value: '/magicSum',
+        icon: 'picker'
+      }, {
         title: '无限滚动',
         value: '/infiniteScroll',
         icon: 'double-arrow-top'

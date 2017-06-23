@@ -57,6 +57,7 @@ import DatePicker from './views/components/datePicker'
 import TimePicker from './views/components/timePicker'
 import Countdown from './views/components/countdown'
 import Clocker from './views/components/clocker'
+import MagicSum from './views/components/magicSum'
 // import Pagination from './views/components/pagination'
 Vue.use(Router)
 
@@ -121,6 +122,7 @@ const router = new Router({
     { path: '/timePicker', component: TimePicker },
     { path: '/countdown', component: Countdown },
     { path: '/clocker', component: Clocker },
+    { path: '/magicSum', component: MagicSum },
     { path: '*', redirect: '/index' }
   ]
 })

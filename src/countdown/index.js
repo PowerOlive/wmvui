@@ -1,1 +1,1 @@
-export {default} from './countdown'
+export {default} from './countDown'
