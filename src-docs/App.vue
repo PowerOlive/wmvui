@@ -196,6 +196,10 @@ export default {
         value: '/timePicker',
         icon: 'clock'
       }, {
+        title: '计时器',
+        value: '/clocker',
+        icon: 'clock'
+      }, {
         title: '选择器',
         value: '/picker',
         icon: 'picker'

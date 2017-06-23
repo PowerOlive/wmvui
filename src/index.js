@@ -33,7 +33,7 @@ import iconMenu from './iconMenu'
 // import dropDownMenu from './dropDownMenu'
 import drawer from './drawer'
 import picker from './picker'
-import tooltip from './tooltip'
+// import tooltip from './tooltip'
 
 import textField from './textField'
 import selectField from './selectField'
@@ -49,6 +49,7 @@ import * as gridList from './gridList'
 import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
+import clocker from './clocker'
 import * as stepper from './stepper'
 // import autoComplete from './autoComplete'
 // import pagination from './pagination'
@@ -93,7 +94,7 @@ const components = {
   // dropDownMenu,
   drawer,
   picker,
-  tooltip,
+  // tooltip,
   textField,
   selectField,
   checkbox,
@@ -108,6 +109,7 @@ const components = {
   ...table,
   datePicker,
   timePicker,
+  clocker,
   ...stepper,
   // autoComplete,
   // ...grid,
@@ -118,6 +120,7 @@ const components = {
 const install = function () {
   Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key])
+    // console.log(components[key].name)
   })
   retina()
 }

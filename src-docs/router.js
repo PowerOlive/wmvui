@@ -19,7 +19,6 @@ import button from './views/components/button'
 // import FloatButton from './views/components/floatButton'
 import Card from './views/components/card'
 import Chip from './views/components/chip'
-import DatePicker from './views/components/datePicker'
 import Dialog from './views/components/dialog'
 import Divider from './views/components/divider'
 import Drawer from './views/components/drawer'
@@ -46,8 +45,7 @@ import SubHeader from './views/components/subHeader'
 // import Table from './views/components/table'
 import Tabs from './views/components/tabs'
 import TextField from './views/components/textField'
-import TimePicker from './views/components/timePicker'
-import Tooltip from './views/components/tooltip'
+// import Tooltip from './views/components/tooltip'
 import ContentBlock from './views/components/contentBlock'
 import Flexbox from './views/components/flexbox'
 import Grid from './views/components/grid'
@@ -55,6 +53,9 @@ import InfiniteScroll from './views/components/infiniteScroll'
 import Picker from './views/components/picker'
 import Popup from './views/components/popup'
 import RefreshControl from './views/components/refreshControl'
+import DatePicker from './views/components/datePicker'
+import TimePicker from './views/components/timePicker'
+import Clocker from './views/components/clocker'
 // import Pagination from './views/components/pagination'
 Vue.use(Router)
 
@@ -80,7 +81,6 @@ const router = new Router({
     // { path: '/floatButton', component: FloatButton },
     { path: '/card', component: Card },
     { path: '/chip', component: Chip },
-    { path: '/datePicker', component: DatePicker },
     { path: '/dialog', component: Dialog },
     { path: '/divider', component: Divider },
     { path: '/drawer', component: Drawer },
@@ -107,8 +107,7 @@ const router = new Router({
     // { path: '/table', component: Table },
     { path: '/tabs', component: Tabs },
     { path: '/textField', component: TextField },
-    { path: '/timePicker', component: TimePicker },
-    { path: '/tooltip', component: Tooltip },
+    // { path: '/tooltip', component: Tooltip },
     { path: '/contentBlock', component: ContentBlock },
     { path: '/flexbox', component: Flexbox },
     { path: '/grid', component: Grid },
@@ -117,6 +116,9 @@ const router = new Router({
     { path: '/picker', component: Picker },
     { path: '/popup', component: Popup },
     { path: '/refreshControl', component: RefreshControl },
+    { path: '/datePicker', component: DatePicker },
+    { path: '/timePicker', component: TimePicker },
+    { path: '/clocker', component: Clocker },
     { path: '*', redirect: '/index' }
   ]
 })
