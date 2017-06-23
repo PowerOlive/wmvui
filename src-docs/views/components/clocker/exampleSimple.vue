@@ -1,9 +1,9 @@
 <template>
   <div>
-    格式化倒计时： <vui-clocker time="2018-05-23 12:00" slot="value" format="%H 小时 %M 分" @on-finish="onFinish"/>
+    格式化倒计时： <vui-clocker time="2018-05-23 12:00" format="%H 小时 %M 分" @finish="finish"/>
     <br>
     <br>
-    格式化倒计时： <vui-clocker time="2018-06-23 12:00" slot="value" format="%D天 %H 小时 %M 分" />
+    格式化倒计时： <vui-clocker time="2018-06-23 12:00" format="%D天 %H 小时 %M 分" />
     <br>
     <br>
     自定义样式 ：
@@ -23,7 +23,7 @@ export default {
     }
   },
   methods: {
-    onFinish () {
+    finish () {
       console.log(111)
     }
   }

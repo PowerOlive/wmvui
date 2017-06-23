@@ -101,10 +101,11 @@ export default {
 @import "../styles/import.less";
 .vui-switch {
   position: relative;
+  vertical-align: middle;
   display: inline-block;
-  height: 24px;
+  /* height: 24px;
   line-height: 24px;
-  cursor: pointer;
+  cursor: pointer; */
   user-select: none;
   input[type="checkbox"] {
     display: none;

@@ -200,6 +200,10 @@ export default {
         value: '/clocker',
         icon: 'clock'
       }, {
+        title: '倒计时',
+        value: '/countdown',
+        icon: 'clock'
+      }, {
         title: '选择器',
         value: '/picker',
         icon: 'picker'

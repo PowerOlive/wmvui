@@ -55,6 +55,7 @@ import Popup from './views/components/popup'
 import RefreshControl from './views/components/refreshControl'
 import DatePicker from './views/components/datePicker'
 import TimePicker from './views/components/timePicker'
+import Countdown from './views/components/countdown'
 import Clocker from './views/components/clocker'
 // import Pagination from './views/components/pagination'
 Vue.use(Router)
@@ -118,6 +119,7 @@ const router = new Router({
     { path: '/refreshControl', component: RefreshControl },
     { path: '/datePicker', component: DatePicker },
     { path: '/timePicker', component: TimePicker },
+    { path: '/countdown', component: Countdown },
     { path: '/clocker', component: Clocker },
     { path: '*', redirect: '/index' }
   ]

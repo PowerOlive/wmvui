@@ -10,15 +10,11 @@ export default {
     default: '%D 天 %H 小时 %M 分 %S 秒',
     desc: 'props.format'
   }],
-  slots: [{
-    name: 'value',
-    desc: 'slots.value'
-  }],
   events: [{
-  //   name: 'on-tick',
-  //   desc: 'events.onTick'
+  //   name: 'tick',
+  //   desc: 'events.tick'
   // }, {
-    name: 'on-finish',
-    desc: 'events.onFinish'
+    name: 'finish',
+    desc: 'events.finish'
   }]
 }

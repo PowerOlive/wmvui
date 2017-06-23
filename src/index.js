@@ -49,6 +49,7 @@ import * as gridList from './gridList'
 import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
+import countdown from './countdown'
 import clocker from './clocker'
 import * as stepper from './stepper'
 // import autoComplete from './autoComplete'
@@ -109,6 +110,7 @@ const components = {
   ...table,
   datePicker,
   timePicker,
+  countdown,
   clocker,
   ...stepper,
   // autoComplete,

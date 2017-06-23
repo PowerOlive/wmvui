@@ -40,11 +40,11 @@ export default {
       this.clocker = new Clocker(this.time)
       .on('tick', event => {
         this.update(event)
-        this.$emit('on-tick', event)
+        this.$emit('tick', event)
       })
       .on('finish', () => {
         this.timeString = '00:00:00'
-        this.$emit('on-finish')
+        this.$emit('finish')
       })
       .start()
     },
