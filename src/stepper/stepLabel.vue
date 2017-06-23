@@ -1,15 +1,6 @@
 <template>
-<span class="vui-step-label" :class="{'active': active, 'completed': completed, 'disabled': disabled}">
-  <span class="vui-step-label-icon-container" v-if="num || ($slots.icon && $slots.length > 0)">
-    <slot name="icon">
-      <svg v-if="completed" class="vui-step-label-icon" viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-      </svg>
-      <div v-if="!completed" class="vui-step-label-circle">
-        {{num}}
-      </div>
-    </slot>
-  </span>
+<span class="vui-step-label" :class="{'active': active, 'completed': completed, 'disabled': disabled}" :data-label="label">
+  <div class="vui-step-label-circle" :data-num="num"></div>
   <slot></slot>
 </span>
 </template>
@@ -27,6 +18,7 @@ export default {
     disabled: {
       type: Boolean
     },
+    label: String,
     num: {
       type: [String, Number]
     }
@@ -37,64 +29,72 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-step-label{
-  height: 72px;
-  color: @textColor;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  padding-left: 14px;
-  padding-right: 14px;
-  .vui-stepper-vertical & {
-    height: 64px;
-  }
-  &.disabled {
-    color: @disabledColor;
-    cursor: not-allowed;
-  }
-  &.active {
-    font-weight: 500;
-  }
-}
-
-.vui-step-label-icon-container{
-  display: flex;
-  align-items: center;
-  margin-right: 8px;
-  /* width: 24px; */
-}
-
-.vui-step-label-icon {
   display: block;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  color: @grey500;
-  fill: currentColor;
-  .vui-step-label.disabled &{
-    color: @grey500;
+  color: @textColor;
+  font-size: 14px;
+  position: relative;
+  &:before{
+    content:attr(data-label);
+    position: absolute;
+    top:100%;
+    left:0;
+    right:0;
   }
-  .vui-step-label.completed &,
-  .vui-step-label.active & {
-    color: @primaryColor;
+  &:after{
+    content:'';
+    position: absolute;
+    top:50%;
+    left:0;
+    right:0;
+    height:1px;
+    background-color:@grey400;
+  }
+  .vui-stepper-vertical & {
+    /* height: 64px;
+    display: flex;
+    align-items: center;
+    box-orient: vertical;
+    flex-direction: column; */
+    padding-left: 15px;
+    text-align: left;
+    width:auto;
   }
 }
-
 .vui-step-label-circle{
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  line-height: 20px;
-  padding: 0 4px;
+  position: relative;
+  z-index:9;
+  text-align: center;
+  height:22px;
+  width: 22px;
+  line-height: 22px;
+  margin: auto;
   overflow: hidden;
   border-radius: 100%;
   background-color: @grey500;
   color: @alternateTextColor;
+  &:before{
+    content:attr(data-num);
+  }
   .vui-step-label.disabled &{
     background-color: @grey500;
+    cursor: not-allowed;
   }
   .vui-step-label.completed &,
   .vui-step-label.active & {
     background-color: @primaryColor;
+  }
+  .vui-step-label.completed &:before{
+    position:absolute;
+    content:'';
+    border: 2px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 8px;
+    margin-top:-2px;
+    transform: translate3d(-50%,-50%,0) rotate(-45deg) scale(1);
   }
 }
 </style>

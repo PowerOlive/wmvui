@@ -2,20 +2,15 @@
 <div class="demo-vsteper-container">
   <vui-stepper :activeStep="activeStep" orientation="vertical">
     <vui-step>
-      <vui-step-label>
-        选择活动地点
-      </vui-step-label>
+      <vui-step-label label="地点" />
       <vui-step-content>
-        <p>
-          在附近选择一个活动的地点, 最好靠近地铁站公交站，已方便交通，附近设施应尽量完善，最重要的是有Wifi
+        <p>在附近选择一个活动的地点, 最好靠近地铁站公交站，已方便交通，附近设施应尽量完善，最重要的是有Wifi
         </p>
         <vui-button label="下一步" class="demo-step-button" @click="handleNext" primary/>
       </vui-step-content>
     </vui-step>
     <vui-step>
-      <vui-step-label>
-        创建一个群组
-      </vui-step-label>
+      <vui-step-label label="群组" />
       <vui-step-content>
         <p>
           创建群组，50人左右，以18-25单身青年为主。。。。。
@@ -25,9 +20,7 @@
       </vui-step-content>
     </vui-step>
     <vui-step>
-      <vui-step-label>
-        宣传活动
-      </vui-step-label>
+      <vui-step-label label="活动" />
       <vui-step-content>
         <p>
           多在群里发消息宣传宣传，有事没事多在群里唠唠嗑，确定的话就ok拉
@@ -68,16 +61,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css">
-.demo-vsteper-container{
-  max-width: 380px;
-  max-height: 400px;
-  margin: auto;
-}
-
-.demo-step-button {
-  margin-top: 12px;
-  margin-right: 12px;
-}
-</style>

@@ -63,5 +63,21 @@ export default {
 .vui-stepper-vertical{
   flex-direction: column;
   align-items: stretch;
+  .vui-step{
+    text-align: left;
+    width:auto;
+  }
+  .vui-step-label{
+    &:after{
+      content:initial
+    }
+    &:before{
+      top:0;
+      left:40px;
+    }
+  }
+  .vui-step-label-circle{
+    margin:0;
+  }
 }
 </style>

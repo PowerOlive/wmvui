@@ -2,19 +2,13 @@
 <div class="demo-step-container">
   <vui-stepper :activeStep="activeStep">
     <vui-step>
-      <vui-step-label>
-        选择活动地点
-      </vui-step-label>
+      <vui-step-label label="已付款" />
     </vui-step>
     <vui-step>
-      <vui-step-label>
-        创建一个群组
-      </vui-step-label>
+      <vui-step-label label="已发货" />
     </vui-step>
     <vui-step>
-      <vui-step-label>
-        宣传活动
-      </vui-step-label>
+      <vui-step-label label="完成" />
     </vui-step>
   </vui-stepper>
   <div class="demo-step-content">
@@ -81,12 +75,11 @@ export default {
 <style>
 .demo-step-container {
   width: 100%;
-  max-width: 700px;
-  margin: auto;
+  margin:auto;
 }
 
 .demo-step-content {
-  margin: 0  16px;
+  margin:30px 0;
 }
 
 .demo-step-button {

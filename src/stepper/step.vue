@@ -43,14 +43,26 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-step{
-  flex: 0 0 auto;
-  margin-left: -6px;
+  text-align: center;
+  width: 60px;
   .vui-stepper-vertical & {
     margin-top: -14px;
     margin-left: 0;
   }
   &:first-child {
-    margin-left: 0;
+    .vui-step-label{
+      &:after{
+        left:50%;
+      }
+    }
+  }
+  &:last-child {
+    .vui-step-label{
+      &:after{
+        right:50%;
+      }
+    }
   }
 }
+
 </style>

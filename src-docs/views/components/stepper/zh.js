@@ -45,23 +45,6 @@ export default {
       default: '放置步骤标题文字'
     }
   },
-  stepButton: {
-    props: {
-      active: '是否是当前步骤',
-      completed: '是否已完成',
-      disabled: '是否被禁用',
-      num: '步骤序号',
-      last: '是否是最后一步',
-      childrenInLabel: '子节点是否都在 `stepLabel` 组件内'
-    },
-    slots: {
-      icon: '用于自定义左边的icon',
-      default: '放置步骤标题文字'
-    },
-    events: {
-      click: '点击事件'
-    }
-  },
   stepContent: {
     props: {
       active: '是否是当前步骤',

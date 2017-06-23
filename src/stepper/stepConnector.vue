@@ -12,7 +12,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-step-connector{
-  flex: 1 1 auto;
+  flex: 1;
   .vui-stepper-vertical &{
     margin-left: 25px;
   }
@@ -21,7 +21,6 @@ export default {
 .vui-step-connector-line{
   display: block;
   border-color: @grey400;
-  margin-left: -6px;
   border-top-style: solid;
   border-top-width: 1px;
   .vui-stepper-vertical & {

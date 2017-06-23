@@ -31,10 +31,8 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-step-content{
-  margin-top: -14px;
   margin-left: 25px;
-  padding-left: 21px;
-  padding-right: 16px;
+  padding:10px 0 10px 20px;
   overflow: hidden;
   .vui-stepper-vertical & {
     border-left: 1px solid @grey400;

@@ -83,50 +83,6 @@ export default {
       desc: 'stepLabel.slots.default'
     }]
   },
-  stepButton: {
-    props: [{
-      name: 'active',
-      type: 'Boolean',
-      default: 'false',
-      desc: 'stepButton.props.active'
-    }, {
-      name: 'completed',
-      type: 'Boolean',
-      default: 'false',
-      desc: 'stepButton.props.completed'
-    }, {
-      name: 'disabled',
-      type: 'Boolean',
-      default: 'false',
-      desc: 'stepButton.props.disabled'
-    }, {
-      name: 'num',
-      type: 'Number',
-      default: '',
-      desc: 'stepButton.props.num'
-    }, {
-      name: 'last',
-      type: 'Boolean',
-      default: 'false',
-      desc: 'stepButton.props.last'
-    }, {
-      name: 'childrenInLabel',
-      type: 'Boolean',
-      default: 'true',
-      desc: 'stepButton.props.childrenInLabel'
-    }],
-    slots: [{
-      name: 'icon',
-      desc: 'stepButton.slots.icon'
-    }, {
-      name: 'default',
-      desc: 'stepButton.slots.default'
-    }],
-    events: [{
-      name: 'click',
-      desc: 'stepButton.events.click'
-    }]
-  },
   stepContent: {
     props: [{
       name: 'active',
