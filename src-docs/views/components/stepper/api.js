@@ -6,11 +6,6 @@ export default {
       default: '0',
       desc: 'stepper.props.activeStep'
     }, {
-      name: 'linear',
-      type: 'Boolean',
-      default: 'true',
-      desc: 'stepper.props.linear'
-    }, {
       name: 'orientation',
       type: 'String',
       default: 'horizontal',

@@ -14,7 +14,6 @@ export default {
   stepper: {
     props: {
       activeStep: '当前步骤',
-      linear: '是否为线性步骤导航，设置为 false，将不再控制 `step` 组件的 completed 和 disabled 属性',
       orientation: 'horizontal: 水平步骤导航, vertical: 垂直的步骤导航'
     },
     slots: {

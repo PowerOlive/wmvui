@@ -1,6 +1,6 @@
 <template>
 <div class="demo-step-container">
-  <vui-stepper :activeStep="activeStep">
+  <vui-stepper :activeStep="activeStep" linear>
     <vui-step>
       <vui-step-label label="已付款" />
     </vui-step>
