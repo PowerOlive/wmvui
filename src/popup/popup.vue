@@ -20,7 +20,12 @@
             </vui-flex-item>
           </vui-flex>
         </div>
-        <picker :data="data" v-model="value" :columns="columns" @on-change="pickerChange" />
+        <template v-if="address">
+          <picker :data="data" v-model="value" :columns="3" @change="pickerChange" />
+        </template>
+        <template v-else>
+          <picker :data="data" v-model="value" @change="pickerChange" />
+        </template>
       </template>
     </div>
   </transition>
@@ -54,7 +59,7 @@ export default {
       type: String,
       default: '请选择'
     },
-    columns: Number,
+    address: Boolean,
     popupClass: {
       type: [String, Object, Array]
     },

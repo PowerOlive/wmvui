@@ -1,19 +1,14 @@
 export default {
   props: [{
-    name: 'visibleItemCount',
-    type: 'Number',
-    default: '5',
-    desc: 'props.visibleItemCount'
-  }, {
-    name: 'values',
+    name: 'data',
     type: 'Array',
-    default: '[]',
-    desc: 'props.values'
+    default: '',
+    desc: 'props.data'
   }, {
-    name: 'slots',
+    name: 'value',
     type: 'Array',
-    default: '[]',
-    desc: 'props.slots'
+    default: '',
+    desc: 'props.data'
   }],
   events: [{
     name: 'change',

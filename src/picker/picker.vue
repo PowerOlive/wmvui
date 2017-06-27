@@ -85,7 +85,7 @@ export default {
           onSelect (value) {
             _this.$set(_this.currentValue, i, value)
             if (!this.columns || (this.columns && _this.getValue().length === _this.store.count)) {
-              _this.$emit('on-change', _this.getNameValues(), _this.getValue())
+              _this.$emit('change', _this.getNameValues(), _this.getValue())
             }
             if (_this.columns !== 0) {
               _this.renderChain(i + 1)
@@ -115,7 +115,7 @@ export default {
         itemClass: _this.item_class,
         onSelect (value) {
           _this.$set(_this.currentValue, i, value)
-          _this.$emit('on-change', _this.getNameValues(), _this.getValue())
+          _this.$emit('change', _this.getNameValues(), _this.getValue())
           _this.renderChain(i + 1)
         }
       })
@@ -135,7 +135,7 @@ export default {
     },
     emitValueChange (name, val) {
       if (!this.columns || (this.columns && val.length === this.store.count)) {
-        this.$emit('on-change', name, val)
+        this.$emit('change', name, val)
       }
     }
   },
