@@ -26,6 +26,7 @@ import Preview from './views/components/preview'
 import GridList from './views/components/gridList'
 import Icon from './views/components/icon'
 import svgIcon from './views/components/svgIcon'
+import star from './views/components/star'
 import progress from './views/components/progress'
 import loading from './views/components/loading'
 import List from './views/components/list'
@@ -92,6 +93,7 @@ const router = new Router({
     { path: '/gridList', component: GridList },
     { path: '/icon', component: Icon },
     { path: '/svgIcon', component: svgIcon },
+    { path: '/star', component: star },
     { path: '/progress', component: progress },
     { path: '/loading', component: loading },
     { path: '/list', component: List },

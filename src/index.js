@@ -3,6 +3,7 @@ import Vue from 'vue'
 import {retina} from './utils'
 import icon from './icon'
 import svgIcon from './svgIcon'
+import star from './star'
 import badge from './badge'
 import appBar from './appBar'
 // import iconButton from './iconButton'
@@ -68,6 +69,7 @@ const components = {
   number,
   icon,
   svgIcon,
+  star,
   badge,
   appBar,
   // iconButton,

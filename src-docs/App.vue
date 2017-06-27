@@ -80,6 +80,10 @@ export default {
         value: '/svgicon',
         icon: 'face'
       }, {
+        title: '评星',
+        value: '/star',
+        icon: 'star'
+      }, {
       //   title: '底导航',
       //   value: '/bottomNav',
       //   icon: 'dot'
