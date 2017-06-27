@@ -1,7 +1,7 @@
 <template>
   <div>
   <vui-flex>
-    <vui-flex-item v-for="(item, index) in list">
+    <vui-flex-item :key="index" v-for="(item, index) in list">
       <img class="preview-img" :src="item.src" width="100%" height="100%" @click="show(index)">
     </vui-flex-item>
   </vui-flex>

@@ -59,6 +59,7 @@ import TimePicker from './views/components/timePicker'
 import Countdown from './views/components/countdown'
 import Clocker from './views/components/clocker'
 import MagicSum from './views/components/magicSum'
+import Marquee from './views/components/marquee'
 // import Pagination from './views/components/pagination'
 Vue.use(Router)
 
@@ -125,6 +126,7 @@ const router = new Router({
     { path: '/countdown', component: Countdown },
     { path: '/clocker', component: Clocker },
     { path: '/magicSum', component: MagicSum },
+    { path: '/marquee', component: Marquee },
     { path: '*', redirect: '/index' }
   ]
 })

@@ -216,6 +216,10 @@ export default {
         value: '/magicSum',
         icon: 'picker'
       }, {
+        title: '滚动消息',
+        value: '/marquee',
+        icon: 'picker'
+      }, {
         title: '无限滚动',
         value: '/infiniteScroll',
         icon: 'double-arrow-top'

@@ -62,6 +62,7 @@ import number from './number'   // 自定义
 // import * as grid from './grid'
 
 import * as flexbox from './flexbox'
+import * as marquee from './marquee'
 import config from './config'
 const components = {
   number,
@@ -119,7 +120,8 @@ const components = {
   ...stepper,
   // autoComplete,
   // ...grid,
-  ...flexbox
+  ...flexbox,
+  ...marquee
   // pagination
 }
 
