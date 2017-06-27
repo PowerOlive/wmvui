@@ -124,6 +124,10 @@ export default {
         value: '/dialog',
         icon: 'dialog'
       }, {
+        title: '图片画廊',
+        value: '/preview',
+        icon: 'swiper'
+      }, {
         title: '无敌的弹层',
         value: '/popup',
         icon: 'layer'

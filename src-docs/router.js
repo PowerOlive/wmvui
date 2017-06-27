@@ -22,6 +22,7 @@ import Chip from './views/components/chip'
 import Dialog from './views/components/dialog'
 import Divider from './views/components/divider'
 import Drawer from './views/components/drawer'
+import Preview from './views/components/preview'
 import GridList from './views/components/gridList'
 import Icon from './views/components/icon'
 import svgIcon from './views/components/svgIcon'
@@ -86,6 +87,7 @@ const router = new Router({
     { path: '/dialog', component: Dialog },
     { path: '/divider', component: Divider },
     { path: '/drawer', component: Drawer },
+    { path: '/preview', component: Preview },
     { path: '/gridList', component: GridList },
     { path: '/icon', component: Icon },
     { path: '/svgIcon', component: svgIcon },

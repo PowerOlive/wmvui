@@ -26,6 +26,7 @@ import dialog from './dialog'
 // import toast from './toast'
 import snackbar from './snackbar'
 import popup from './popup'
+import preview from './preview'
 import * as menu from './menu'
 // import bottomSheet from './bottomSheet'
 import popover from './popover'
@@ -49,7 +50,7 @@ import * as gridList from './gridList'
 import * as table from './table'
 import datePicker from './datePicker'
 import timePicker from './timePicker'
-import countDown from './countDown'
+import countDown from './countdown'
 import clocker from './clocker'
 import magicSum from './magicSum'
 import * as stepper from './stepper'
@@ -86,6 +87,7 @@ const components = {
   chip,
   overlay,
   dialog,
+  preview,
   // toast,
   snackbar,
   popup,
