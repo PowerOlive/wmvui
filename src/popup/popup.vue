@@ -6,6 +6,22 @@
       <icon v-if="icon" :icon="icon" />
       <svg-icon v-if="svgIcon" :icon="svgIcon"  />
       <slot></slot>
+      <template v-if="data && value">
+        <div class="vui-picker-hd">
+          <vui-flex center>
+            <vui-flex-item :auto="false">
+              <vui-button label="取消" danger @click.native="cancel" />
+            </vui-flex-item>
+            <vui-flex-item>
+              {{title}}
+            </vui-flex-item>
+            <vui-flex-item :auto="false">
+              <vui-button label="确定" primary @click.native="ok"  />
+            </vui-flex-item>
+          </vui-flex>
+        </div>
+        <picker :data="data" v-model="value" :columns="columns" @on-change="pickerChange" />
+      </template>
     </div>
   </transition>
 </span>
@@ -14,6 +30,9 @@
 <script>
 import Popup from '../internal/popup'
 import loading from '../loading'
+import picker from '../picker'
+import flexbox from '../flexbox/flexbox'
+import flexboxItem from '../flexbox/flexboxItem'
 import {convertClass} from '../utils'
 import svgIcon from '../svgIcon'
 import icon from '../icon'
@@ -23,9 +42,19 @@ export default {
   components: {
     svgIcon,
     icon,
-    loading
+    loading,
+    picker,
+    'vui-flex': flexbox,
+    'vui-flex-item': flexboxItem
   },
   props: {
+    data: [Array, Object],
+    value: Array,
+    title: {
+      type: String,
+      default: '请选择'
+    },
+    columns: Number,
     popupClass: {
       type: [String, Object, Array]
     },
@@ -52,7 +81,9 @@ export default {
   data () {
     return {
       popupShow: false,
-      transition: this.popupTransition
+      transition: this.popupTransition,
+      pickerVal: [],
+      pickerName: []
     }
   },
   created () {
@@ -90,6 +121,16 @@ export default {
     },
     hide () {
       this.$emit('hide')
+    },
+    cancel () {
+      this.$emit('cancel')
+    },
+    ok () {
+      this.$emit('ok', this.pickerName, this.pickerVal)
+    },
+    pickerChange (name, val) {
+      this.pickerVal = val
+      this.pickerName = name
     }
   },
   watch: {
@@ -122,6 +163,12 @@ export default {
     &:before{
       font-size: 50px;
     }
+  }
+  .vui-picker-hd{
+    padding:10px;
+    text-align: center;
+    font-size: 16px;
+
   }
   &-toast,
   &-loading{

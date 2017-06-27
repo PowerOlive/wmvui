@@ -85,7 +85,7 @@ export default {
           onSelect (value) {
             _this.$set(_this.currentValue, i, value)
             if (!this.columns || (this.columns && _this.getValue().length === _this.store.count)) {
-              _this.$emit('on-change', _this.getValue())
+              _this.$emit('on-change', _this.getNameValues(), _this.getValue())
             }
             if (_this.columns !== 0) {
               _this.renderChain(i + 1)
@@ -115,7 +115,7 @@ export default {
         itemClass: _this.item_class,
         onSelect (value) {
           _this.$set(_this.currentValue, i, value)
-          _this.$emit('on-change', _this.getValue())
+          _this.$emit('on-change', _this.getNameValues(), _this.getValue())
           _this.renderChain(i + 1)
         }
       })
@@ -133,9 +133,9 @@ export default {
       }
       return data
     },
-    emitValueChange (val) {
+    emitValueChange (name, val) {
       if (!this.columns || (this.columns && val.length === this.store.count)) {
-        this.$emit('on-change', val)
+        this.$emit('on-change', name, val)
       }
     }
   },
@@ -189,7 +189,7 @@ export default {
           this.render(newData, this.currentValue)
           // emit on-change after rerender
           this.$nextTick(() => {
-            this.emitValueChange(this.getValue())
+            this.emitValueChange(this.getNameValues(), this.getValue())
             if (JSON.stringify(this.getValue()) !== JSON.stringify(this.currentValue)) {
               if (!this.columns || (this.columns && this.getValue().length === this.store.count)) {
                 this.currentValue = this.getValue()
@@ -222,7 +222,7 @@ export default {
 .scroller-component {
   display: block;
   position: relative;
-  height: 238px;
+  height: 180px;
   overflow: hidden;
   width: 100%;
 }
@@ -251,7 +251,7 @@ export default {
     linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.6)),
     linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0.6));
   background-position: top, bottom;
-  background-size: 100% 102px;
+  background-size: 100% 68px;
   background-repeat: no-repeat;
 }
 
@@ -268,7 +268,7 @@ export default {
   height: 34px;
   position: absolute;
   left: 0;
-  top: 102px;
+  top: 68px;
   z-index: 3;
   background-image:
     -webkit-linear-gradient(top, #d0d0d0, #d0d0d0, transparent, transparent),
