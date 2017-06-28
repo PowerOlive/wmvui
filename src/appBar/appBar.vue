@@ -1,5 +1,5 @@
 <template>
-<div class="vui-appbar" :class="['vui-paper-' + zDepth ]">
+<div class="vui-appbar" :class="['vui-paper-' + zDepth ]" :style="barStyle">
   <div class="left">
     <slot name="left"></slot>
   </div>
@@ -25,9 +25,18 @@ export default {
     titleClass: {
       type: [String, Array, Object]
     },
+    theme: Object,
     zDepth: {
       type: Number,
       default: 1
+    }
+  },
+  computed: {
+    barStyle () {
+      return {
+        'background-color': this.theme ? this.theme.background : '',
+        'color': this.theme ? this.theme.color : ''
+      }
     }
   }
 }
@@ -55,10 +64,8 @@ export default {
     align-items: center;
     height: 100%;
   }
-  .vui-icon-button {
-    color: inherit;
-  }
-  .vui-flat-button {
+  .vui-btn,
+  .vui-icon-menu{
     color: inherit;
     height: 100%;
     line-height: 100%;

@@ -231,9 +231,10 @@ export default {
 
 .vui-menu-item-left-icon{
   position: absolute;
-  top: 0;
-  left: 4px;
-  margin:0 12px;
+  top: 50%;
+  left: 10px;
+  /* margin: 0 12px; */
+  transform: translateY(-50%);
   color: @grey600;
   .vui-menu-destop & {
     /* top: 4px; */

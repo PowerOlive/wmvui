@@ -77,7 +77,7 @@ export default {
   margin: 0;
   height: 2px;
   border: none;
-  background-color: @primaryColor;
+  background-color: #fff;
   position: absolute;
   left: 0;
   right: 0;

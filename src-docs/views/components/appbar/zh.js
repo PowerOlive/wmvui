@@ -2,12 +2,13 @@ import description from './README.md'
 export default {
   description,
   simpleExample: '简单的使用',
-  iconMenu: '配合 IconMenu 加入菜单',
+  iconMenu: '自定义主题',
   addSearch: '加入搜索框和按钮',
   props: {
     title: '标题, 显示在中间',
     titleClass: '标题样式，同 `class` 绑定方式一致',
-    zDepth: '阴影等级,设置为 0就没有阴影效果'
+    zDepth: '阴影等级,设置为 0就没有阴影效果',
+    theme: '可定义背景色 与 文本颜色'
   },
   slots: {
     left: '用于分发 appbar 左边的内容',

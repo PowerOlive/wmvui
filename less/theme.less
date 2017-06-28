@@ -3,6 +3,16 @@
   color: @appbarTextColor;
 }
 
+body {
+  background-color: @baseBackgroundColor;
+  color: @baseTextColor;
+  font-family: @baseFontFamily;
+}
+
+a {
+  color: @baseLinkColor;
+}
+
 .vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -23,14 +33,8 @@
   background-color: @avatarBackgroundColor;
 }
 
-body {
-  background-color: @baseBackgroundColor;
-  color: @baseTextColor;
-  font-family: @baseFontFamily;
-}
-
-a {
-  color: @baseLinkColor;
+.vui-bottom-sheet {
+  background-color: @bottomSheetColor;
 }
 
 .vui-bottom-nav {
@@ -61,10 +65,6 @@ a {
       color: @bottomNavShiftSelectedColor;
     }
   }
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
 }
 
 // button
@@ -257,16 +257,6 @@ a {
 }
 
 
-// circle
-.vui-circle-spinner{
-  border-color: @circleColor;
-}
-
-.vui-circle-secondary {
-  border-color: @circleSecondaryColor;
-}
-
-
 // list
 .vui-item-wrapper{
   &.hover {
@@ -300,6 +290,17 @@ a {
   color: @listSecondaryTextColor;
 }
 
+
+
+// circle
+.vui-circle-spinner{
+  border-color: @circleColor;
+}
+
+.vui-circle-secondary {
+  border-color: @circleSecondaryColor;
+}
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -321,7 +322,6 @@ a {
   color: @menuRightIconColor;
 }
 
-
 .vui-pagination-item{
   color: @paginationTextColor;
   &.hover {
@@ -336,34 +336,6 @@ a {
   }
 }
 
-.vui-paper {
-  background-color: @paperBackgroundColor;
-  color: @paperColor;
-}
-
-.vui-picker{
-  background-color: @pickerColor;
-}
-
-.vui-picker-center-highlight {
-  &::before,
-  &::after {
-    background-color: @pickerBorderColor;
-  }
-}
-
-
-.vui-picker-slot.vui-picker-slot-divider {
-  color: @pickerSelectedTextColor;
-}
-
-.vui-picker-item{
-  color: @pickerTextColor;
-  &.selected {
-    color: @pickerSelectedTextColor;
-  }
-}
-
 .vui-popover {
   background-color: @popoverColor;
 }
@@ -372,8 +344,9 @@ a {
   background-color: @popupColor;
 }
 
-.vui-circular-progress-determinate-path{
-  stroke: @circularProgressColor;
+.vui-paper {
+  background-color: @paperBackgroundColor;
+  color: @paperColor;
 }
 
 .vui-radio {
@@ -415,6 +388,10 @@ a {
 
 .vui-refresh-control {
   color: @refreshControlColor;
+}
+
+.vui-circular-progress-determinate-path{
+  stroke: @circularProgressColor;
 }
 
 .vui-slider-track {
@@ -1170,10 +1147,44 @@ a {
   border-color:  @timePickerSelectColor;
 }
 
-
+  .vui-magic-sum{color: @primaryColor}
+  .vui-magic-sum-success{color: @successColor}
+  .vui-magic-sum-info{color: @infoColor}
+  .vui-magic-sum-warn{color: @warnColor}
+  .vui-magic-sum-danger{color: @dangerColor}
 // subheader
 .vui-sub-title{
   color: @subHeaderColor;
+}
+
+.vui-table {
+  background-color: @tableBackgroundColor;
+}
+
+.vui-thead {
+  border-bottom-color: @tableBorderColor;
+}
+
+.vui-th {
+  color: @tableTheadTextColor;
+}
+
+.vui-tr {
+  border-bottom-color: @tableBorderColor;
+  color: @tableTextColor;
+  &.selected {
+    background-color: @tableRowSelectedBackgroundColor;
+  }
+  &.hover {
+    background-color: @tableRowHoverBackgroundColor;
+  }
+  &.stripe {
+    background-color: @tableRowStripeBackgroundColor;
+  }
+
+  .vui-tfoot & {
+    border-top-color: @tableBorderColor;
+  }
 }
 
 .vui-switch {
@@ -1225,36 +1236,6 @@ a {
   background-color: @switchThumbOffColor;
   .vui-switch.disabled & {
     background-color: @switchThumbDisabledColor;
-  }
-}
-
-.vui-table {
-  background-color: @tableBackgroundColor;
-}
-
-.vui-thead {
-  border-bottom-color: @tableBorderColor;
-}
-
-.vui-th {
-  color: @tableTheadTextColor;
-}
-
-.vui-tr {
-  border-bottom-color: @tableBorderColor;
-  color: @tableTextColor;
-  &.selected {
-    background-color: @tableRowSelectedBackgroundColor;
-  }
-  &.hover {
-    background-color: @tableRowHoverBackgroundColor;
-  }
-  &.stripe {
-    background-color: @tableRowStripeBackgroundColor;
-  }
-
-  .vui-tfoot & {
-    border-top-color: @tableBorderColor;
   }
 }
 
