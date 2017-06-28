@@ -1,13 +1,3 @@
-.vui-appbar{
-  background-color: @appbarColor;
-  color: @appbarTextColor;
-}
-
-.vui-avatar {
-  color: @avatarColor;
-  background-color: @avatarBackgroundColor;
-}
-
 .vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -31,6 +21,28 @@ body {
 
 a {
   color: @baseLinkColor;
+}
+
+.vui-appbar{
+  background-color: @appbarColor;
+  color: @appbarTextColor;
+}
+
+// button
+.vui-btn {
+  color: @buttonTextColor;
+  .vui-circle-ripple {
+    color: @buttonTextColor;
+  }
+}
+
+.vui-btn-primary{
+  color: @buttonPrimaryTextColor;
+}
+
+.vui-avatar {
+  color: @avatarColor;
+  background-color: @avatarBackgroundColor;
 }
 
 .vui-bottom-nav {
@@ -61,59 +73,6 @@ a {
       color: @bottomNavShiftSelectedColor;
     }
   }
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
-}
-
-// button
-.vui-btn {
-  color: @buttonTextColor;
-  .vui-circle-ripple {
-    color: @buttonTextColor;
-  }
-}
-
-.vui-btn-primary{
-  color: @buttonPrimaryTextColor;
-}
-
-.vui-card {
-  background-color: @cardBackgroudColor;
-}
-
-.vui-card-header-title{
-  .vui-card-title{
-    color: @cardTitleColor;
-  }
-  .vui-card-sub-title{
-    color: @cardSubtitleColor;
-  }
-}
-
-
-.vui-card-media-title {
-  background-color: @cardMediaOverlayContentBackground;
-  .vui-card-title {
-    color: @cardMediaTitleColor;
-  }
-  .vui-card-sub-title {
-    color: @cardMediaSubtitleColor;
-  }
-}
-
-.vui-card-title-container{
-  .vui-card-title{
-    color: @cardTitleColor;
-  }
-  .vui-card-sub-title{
-    color: @cardSubtitleColor;
-  }
-}
-
-.vui-card-text{
-  color: @cardTextColor;
 }
 
 .vui-checkbox {
@@ -169,6 +128,29 @@ a {
   color: @chipDeleteColor;
 }
 
+.vui-bottom-sheet {
+  background-color: @bottomSheetColor;
+}
+
+.vui-dialog {
+  background-color: @dialogColor;
+}
+
+.vui-dialog-footer,
+.vui-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
+  }
+}
+
+.vui-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.vui-dialog-body {
+  color: @dialogBodyColor
+}
+
 .vui-calendar {
   color: @datePickerCalendarTextColor;
 }
@@ -211,25 +193,6 @@ a {
   }
 }
 
-.vui-dialog {
-  background-color: @dialogColor;
-}
-
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
-}
-
 .vui-dropDown-menu-text {
   color: @dropDownMenuTextColor;
 }
@@ -242,28 +205,41 @@ a {
   background-color: @dropDownMenuLineColor;
 }
 
-.vui-grid-tile-titlebar{
-  background-color: @gridListTitlebarColor;
+.vui-card {
+  background-color: @cardBackgroudColor;
 }
 
-.vui-grid-tile-title-container{
-  color: @gridListTextColor;
-}
-
-.vui-grid-tile-action {
-  .vui-icon {
-    color: @gridListTextColor;
+.vui-card-header-title{
+  .vui-card-title{
+    color: @cardTitleColor;
+  }
+  .vui-card-sub-title{
+    color: @cardSubtitleColor;
   }
 }
 
 
-// circle
-.vui-circle-spinner{
-  border-color: @circleColor;
+.vui-card-media-title {
+  background-color: @cardMediaOverlayContentBackground;
+  .vui-card-title {
+    color: @cardMediaTitleColor;
+  }
+  .vui-card-sub-title {
+    color: @cardMediaSubtitleColor;
+  }
 }
 
-.vui-circle-secondary {
-  border-color: @circleSecondaryColor;
+.vui-card-title-container{
+  .vui-card-title{
+    color: @cardTitleColor;
+  }
+  .vui-card-sub-title{
+    color: @cardSubtitleColor;
+  }
+}
+
+.vui-card-text{
+  color: @cardTextColor;
 }
 
 
@@ -301,6 +277,53 @@ a {
 }
 
 
+.vui-pagination-item{
+  color: @paginationTextColor;
+  &.hover {
+    background-color: @paginationHoverBackgroundColor;
+  }
+  &.active {
+    color: @paginationActiveColor;
+    background-color: @paginationActiveBackgroundColor;
+  }
+  &.disabled {
+    color: @paginationDisabledColor;
+  }
+}
+
+.vui-grid-tile-titlebar{
+  background-color: @gridListTitlebarColor;
+}
+
+.vui-grid-tile-title-container{
+  color: @gridListTextColor;
+}
+
+.vui-grid-tile-action {
+  .vui-icon {
+    color: @gridListTextColor;
+  }
+}
+
+.vui-paper {
+  background-color: @paperBackgroundColor;
+  color: @paperColor;
+}
+
+
+// circle
+.vui-circle-spinner{
+  border-color: @circleColor;
+}
+
+.vui-circle-secondary {
+  border-color: @circleSecondaryColor;
+}
+
+.vui-popup {
+  background-color: @popupColor;
+}
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -320,33 +343,6 @@ a {
 
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
-}
-
-.vui-pagination-item{
-  color: @paginationTextColor;
-  &.hover {
-    background-color: @paginationHoverBackgroundColor;
-  }
-  &.active {
-    color: @paginationActiveColor;
-    background-color: @paginationActiveBackgroundColor;
-  }
-  &.disabled {
-    color: @paginationDisabledColor;
-  }
-}
-
-.vui-paper {
-  background-color: @paperBackgroundColor;
-  color: @paperColor;
-}
-
-.vui-popover {
-  background-color: @popoverColor;
-}
-
-.vui-popup {
-  background-color: @popupColor;
 }
 
 .vui-circular-progress-determinate-path{
@@ -422,6 +418,10 @@ a {
   background-color: @snackbarColor;
 }
 
+.vui-popover {
+  background-color: @popoverColor;
+}
+
 .vui-step-button {
   background-color: @stepperBackgroundColor;
   &.hover {
@@ -474,6 +474,157 @@ a {
 // subheader
 .vui-sub-title{
   color: @subHeaderColor;
+}
+
+.vui-switch {
+  input[type="checkbox"] {
+    &:checked {
+      + .vui-switch-wrapper {
+        .vui-switch-track{
+          background-color: @switchTrackOnColor;
+        }
+        .vui-switch-thumb{
+          background-color: @switchThumbOnColor;
+          color: @switchThumbOnColor;
+        }
+      }
+
+    }
+  }
+  &.disabled {
+    input[type="checkbox"]:checked{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
+          background-color: @switchTrackDisabledColor;
+        }
+        .vui-switch-thumb{
+          background-color: @switchThumbDisabledColor;
+        }
+      }
+    }
+  }
+}
+
+
+.vui-switch-label {
+  color: @switchTextColor;
+  .vui-switch.disabled & {
+    color: @switchTextDisabledColor;
+  }
+}
+
+.vui-switch-track {
+  background-color: @switchTrackOffColor;
+  .vui-switch.disabled & {
+    background-color: @switchTrackDisabledColor;
+  }
+}
+
+.vui-switch-thumb {
+  color: @switchTextColor;
+  background-color: @switchThumbOffColor;
+  .vui-switch.disabled & {
+    background-color: @switchThumbDisabledColor;
+  }
+}
+
+.vui-table {
+  background-color: @tableBackgroundColor;
+}
+
+.vui-thead {
+  border-bottom-color: @tableBorderColor;
+}
+
+.vui-th {
+  color: @tableTheadTextColor;
+}
+
+.vui-tr {
+  border-bottom-color: @tableBorderColor;
+  color: @tableTextColor;
+  &.selected {
+    background-color: @tableRowSelectedBackgroundColor;
+  }
+  &.hover {
+    background-color: @tableRowHoverBackgroundColor;
+  }
+  &.stripe {
+    background-color: @tableRowStripeBackgroundColor;
+  }
+
+  .vui-tfoot & {
+    border-top-color: @tableBorderColor;
+  }
+}
+
+.vui-tabs{
+  background-color: @tabsBackgroundColor;
+}
+.vui-tab-link-highlight {
+  background-color: @tabsLineColor;
+}
+.vui-tab-link{
+  color: @tabsTextColor;
+}
+.vui-tab-active {
+  color: @tabsSelectedTextColor;
+}
+
+.vui-text-field{
+  color: @textFieldTextColor;
+  &.focus-state {
+    color: @textFieldFocusTextColor;
+    &.error{
+      color: @textFieldErrorTextColor;
+    }
+  }
+  &.disabled {
+    color: @textFieldDisabledTextColor;
+  }
+}
+
+.vui-text-field-input {
+  color: @textFieldInputColor;
+}
+
+
+.vui-text-field-help {
+  .vui-text-field.error &{
+    color: @textFieldErrorTextColor;
+  }
+}
+
+.vui-text-field-line {
+  background-color: @textFieldLineColor;
+  &.disabled {
+    border-color: @textFieldDisabledLineColor;
+  }
+}
+
+.vui-text-field-focus-line{
+  background-color: @textFieldFocusLineColor;
+  &.error {
+    background-color: @textFieldErrorLineColor;
+  }
+}
+
+
+.vui-text-field-hint {
+  color: @textFieldHintColor;
+}
+.vui-text-field-label {
+  .vui-text-field.has-label &.float {
+    color: @textFieldHintColor
+  }
+}
+
+.vui-tooltip{
+  color: @tooltipTextColor;
+}
+
+.vui-tooltip-ripple.when-shown {
+  background-color: @tooltipRippleColor;
 }
 
 .vui-appbar{
@@ -1157,149 +1308,6 @@ a {
   .vui-magic-sum-info{color: @infoColor}
   .vui-magic-sum-warn{color: @warnColor}
   .vui-magic-sum-danger{color: @dangerColor}
-.vui-switch {
-  input[type="checkbox"] {
-    &:checked {
-      + .vui-switch-wrapper {
-        .vui-switch-track{
-          background-color: @switchTrackOnColor;
-        }
-        .vui-switch-thumb{
-          background-color: @switchThumbOnColor;
-          color: @switchThumbOnColor;
-        }
-      }
-
-    }
-  }
-  &.disabled {
-    input[type="checkbox"]:checked{
-      + .vui-switch-wrapper {
-        .vui-switch-track{
-          background-color: @switchTrackDisabledColor;
-        }
-        .vui-switch-thumb{
-          background-color: @switchThumbDisabledColor;
-        }
-      }
-    }
-  }
-}
-
-
-.vui-switch-label {
-  color: @switchTextColor;
-  .vui-switch.disabled & {
-    color: @switchTextDisabledColor;
-  }
-}
-
-.vui-switch-track {
-  background-color: @switchTrackOffColor;
-  .vui-switch.disabled & {
-    background-color: @switchTrackDisabledColor;
-  }
-}
-
-.vui-switch-thumb {
-  color: @switchTextColor;
-  background-color: @switchThumbOffColor;
-  .vui-switch.disabled & {
-    background-color: @switchThumbDisabledColor;
-  }
-}
-
-.vui-table {
-  background-color: @tableBackgroundColor;
-}
-
-.vui-thead {
-  border-bottom-color: @tableBorderColor;
-}
-
-.vui-th {
-  color: @tableTheadTextColor;
-}
-
-.vui-tr {
-  border-bottom-color: @tableBorderColor;
-  color: @tableTextColor;
-  &.selected {
-    background-color: @tableRowSelectedBackgroundColor;
-  }
-  &.hover {
-    background-color: @tableRowHoverBackgroundColor;
-  }
-  &.stripe {
-    background-color: @tableRowStripeBackgroundColor;
-  }
-
-  .vui-tfoot & {
-    border-top-color: @tableBorderColor;
-  }
-}
-
-.vui-tabs{
-  background-color: @tabsBackgroundColor;
-}
-.vui-tab-link-highlight {
-  background-color: @tabsLineColor;
-}
-.vui-tab-link{
-  color: @tabsTextColor;
-}
-.vui-tab-active {
-  color: @tabsSelectedTextColor;
-}
-
-.vui-text-field{
-  color: @textFieldTextColor;
-  &.focus-state {
-    color: @textFieldFocusTextColor;
-    &.error{
-      color: @textFieldErrorTextColor;
-    }
-  }
-  &.disabled {
-    color: @textFieldDisabledTextColor;
-  }
-}
-
-.vui-text-field-input {
-  color: @textFieldInputColor;
-}
-
-
-.vui-text-field-help {
-  .vui-text-field.error &{
-    color: @textFieldErrorTextColor;
-  }
-}
-
-.vui-text-field-line {
-  background-color: @textFieldLineColor;
-  &.disabled {
-    border-color: @textFieldDisabledLineColor;
-  }
-}
-
-.vui-text-field-focus-line{
-  background-color: @textFieldFocusLineColor;
-  &.error {
-    background-color: @textFieldErrorLineColor;
-  }
-}
-
-
-.vui-text-field-hint {
-  color: @textFieldHintColor;
-}
-.vui-text-field-label {
-  .vui-text-field.has-label &.float {
-    color: @textFieldHintColor
-  }
-}
-
 .vui-clock-circle {
   background-color: @timePickerClockCircleColor;
 }
@@ -1324,12 +1332,4 @@ a {
 .vui-clock-pointer-mark {
   background-color: @timePickerSelectTextColor;
   border-color:  @timePickerSelectColor;
-}
-
-.vui-tooltip{
-  color: @tooltipTextColor;
-}
-
-.vui-tooltip-ripple.when-shown {
-  background-color: @tooltipRippleColor;
 }

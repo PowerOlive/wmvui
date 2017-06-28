@@ -177,7 +177,7 @@ export default {
   }
   &-toast,
   &-loading{
-    background-color:rgba(0,0,0,.8);
+    background-color:rgba(0,0,0,.5) !important;
     border-radius: 20px;
   }
   &-toast{
