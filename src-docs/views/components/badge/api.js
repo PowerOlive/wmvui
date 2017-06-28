@@ -21,7 +21,7 @@ export default {
     desc: 'props.round'
   }, {
     name: 'size',
-    type: 'String',
+    type: 'Number',
     default: '',
     desc: 'props.size'
   }],

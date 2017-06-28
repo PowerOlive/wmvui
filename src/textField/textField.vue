@@ -243,7 +243,8 @@ export default {
 .vui-text-field-icon {
   position: absolute;
   left: 16px;
-  top: 6px;
+  top: 50%;
+  transform: translateY(-50%);
   .vui-text-field.has-label & {
     top: 36px;
   }

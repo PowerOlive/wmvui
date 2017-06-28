@@ -27,20 +27,12 @@ export default {
     info: Boolean,
     warn: Boolean,
     danger: Boolean,
-    // primary: {
-    //   type: Boolean,
-    //   default: false
-    // },
-    // secondary: {
-    //   type: Boolean,
-    //   default: false
-    // },
     round: Boolean,
     circle: {
       type: Boolean,
       default: false
     },
-    size: String,
+    size: Number,
     badgeClass: {
       type: [String, Object, Array]
     }
@@ -49,8 +41,8 @@ export default {
     badgeStyle () {
       return {
         'background-color': getColor(this.color),
-        'width': this.circle ? this.size : '',
-        'height': this.circle ? this.size : ''
+        'width': this.circle ? this.size + 'px' : '',
+        'height': this.circle ? this.size + 'px' : ''
       }
     },
     badgeInternalClass () {
@@ -91,8 +83,8 @@ export default {
   }
   &-float {
     position: absolute;
-    top: -12px;
-    right: -12px;
+    top: -5px;
+    right: -5px;
   }
   &-round{
     border-radius:10000px;

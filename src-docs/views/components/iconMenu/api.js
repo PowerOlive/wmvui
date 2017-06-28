@@ -60,16 +60,6 @@ export default {
     default: 'window',
     desc: 'props.scroller'
   }, {
-    name: 'tooltip',
-    type: 'String',
-    default: '',
-    desc: 'props.tooltip'
-  }, {
-    name: 'tooltipPosition',
-    type: 'String',
-    default: 'bottom-center',
-    desc: 'props.tooltipPosition'
-  }, {
     name: 'value',
     type: '',
     default: '',

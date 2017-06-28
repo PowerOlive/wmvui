@@ -20,8 +20,6 @@ export default {
     anchorOrigin: '锚点的位置',
     targetOrigin: '目标的的位置',
     scroller: '滚动的元素，会监听它的 `scroll` 事件, 在滚动时会不断更新弹出框的位置',
-    tooltip: '工具提示文本',
-    tooltipPosition: '提示文字文字, [垂直位置]-[水平位置]，垂直位置: top，middle, bottom; 水平位置: left, center, right',
     value: '设置以后菜单将为可选择的菜单，当菜单项的value 和 当前 value相等，则菜单项为被选中状态'
   },
   slots: {

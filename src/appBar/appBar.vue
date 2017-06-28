@@ -71,6 +71,14 @@ export default {
     line-height: 100%;
     min-width: auto;
   }
+  .vui-icon-menu{
+    .vui-icon{
+      margin-right:0;
+    }
+  }
+  .vui-text-field{
+    margin-bottom:0;
+  }
 }
 
 .vui-appbar-title {
