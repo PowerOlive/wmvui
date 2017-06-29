@@ -1,13 +1,5 @@
-@appbarColor: @primaryColor;
-@appbarTextColor: @alternateTextColor;
-
 @avatarColor: @alternateTextColor;
 @avatarBackgroundColor: darken(@alternateTextColor, 26%);
-
-@baseFontFamily: @fontFamily;
-@baseTextColor: @textColor;
-@baseBackgroundColor: @backgroundColor;
-@baseLinkColor: @accentColor;
 
 @badgeColor: @lighterPrimaryColor;
 @badgeTextColor: @alternateTextColor;
@@ -16,6 +8,9 @@
 @badgeSecondaryColor: @accentColor;
 @badgeSecondaryTextColor: @alternateTextColor;
 
+@appbarColor: @primaryColor;
+@appbarTextColor: @alternateTextColor;
+
 @bottomNavBackgroundColor: @dialogBackgroundColor;
 @bottomNavShiftBackgroundColor: @primaryColor;
 @bottomNavUnselectedColor: @primaryTextColor;
@@ -23,12 +18,17 @@
 @bottomNavSelectedColor: @primaryColor;
 @bottomNavShiftSelectedColor: @alternateTextColor;
 
+@baseFontFamily: @fontFamily;
+@baseTextColor: @textColor;
+@baseBackgroundColor: @backgroundColor;
+@baseLinkColor: @accentColor;
+
+@bottomSheetColor: @dialogBackgroundColor;
+
 // button
 @buttonColor: transparent;
 @buttonTextColor: @textColor;
 
-
-@bottomSheetColor: @dialogBackgroundColor;
 
 @cardBackgroudColor: @backgroundColor;
 @cardTitleColor: fade(@textColor, 87%);
@@ -39,16 +39,16 @@
 @cardMediaSubtitleColor: @lightWhite;
 @cardTextColor: @textColor;
 
-@checkboxColor: @textColor;
-@checkboxTextColor: @textColor;
-@checkboxDisabledColor: @disabledColor;
-@checkboxCheckedColor: @primaryColor;
-
 @chipColor: darken(@alternateTextColor, 12%);
 @chipHoverColor: rgb(206, 206, 206);
 @chipTextColor: fade(@textColor, 87%);
 @chipDeleteColor: fade(@textColor, 26%);
 @chipHoverDeleteColor: fade(fade(@textColor, 26%), 40%);
+
+@checkboxColor: @textColor;
+@checkboxTextColor: @textColor;
+@checkboxDisabledColor: @disabledColor;
+@checkboxCheckedColor: @primaryColor;
 
 @datePickerColor: @primaryColor;
 @datePickerTextColor: @alternateTextColor;
@@ -83,12 +83,6 @@
 @listSelectedColor: @primaryColor;
 
 
-@paginationTextColor: @textColor;
-@paginationHoverBackgroundColor: rgba(0, 0, 0, .1);
-@paginationActiveBackgroundColor: @primaryColor;
-@paginationActiveColor: @white;
-@paginationDisabledColor: @disabledColor;
-
 @menuTextColor: @textColor;
 @menuSelectColor: @accentColor;
 @menuHoverColor: rgba(0, 0, 0, .1);
@@ -98,6 +92,12 @@
 
 @paperColor: @textColor;
 @paperBackgroundColor: @dialogBackgroundColor;
+
+@paginationTextColor: @textColor;
+@paginationHoverBackgroundColor: rgba(0, 0, 0, .1);
+@paginationActiveBackgroundColor: @primaryColor;
+@paginationActiveColor: @white;
+@paginationDisabledColor: @disabledColor;
 
 @popoverColor: @dialogBackgroundColor;
 
@@ -110,15 +110,15 @@
 @radioDisabledColor: @disabledColor;
 @radioCheckedColor: @primaryColor;
 
-@refreshControlColor: @primaryColor;
-
-@snackbarColor: @textColor;
-@snackbarTextColor: @alternateTextColor;
-
 @sliderTrackColor: @lighterPrimaryColor;
 @sliderSelectionColor: @primaryColor;
 @sliderDisabledColor:  @lighterPrimaryColor;
 @sliderZeroColor: @alternateTextColor;
+
+@refreshControlColor: @primaryColor;
+
+@snackbarColor: @textColor;
+@snackbarTextColor: @alternateTextColor;
 
 @stepperBackgroundColor: transparent;
 @stepperHoverBackgroundColor: fade(@textColor, 6%);
@@ -155,6 +155,13 @@
 @tabsTextColor: fade(@alternateTextColor, 70%);
 @tabsSelectedTextColor: @alternateTextColor;
 
+@timePickerColor: @alternateTextColor;
+@timePickerClockColor: @textColor;
+@timePickerClockCircleColor: fade(@darkBlack, 7%);
+@timePickerSelectColor: @primaryColor;
+@timePickerSelectTextColor: @alternateTextColor;
+@timePickerHeaderColor: @primaryColor;
+
 @textFieldTextColor: @primaryTextColor;
 @textFieldInputColor: @textColor;
 @textFieldHintColor: @disabledColor;
@@ -165,13 +172,6 @@
 @textFieldFocusLineColor: @primaryColor;
 @textFieldErrorLineColor: @red;
 @textFieldDisabledLineColor: @disabledColor;
-
-@timePickerColor: @alternateTextColor;
-@timePickerClockColor: @textColor;
-@timePickerClockCircleColor: fade(@darkBlack, 7%);
-@timePickerSelectColor: @primaryColor;
-@timePickerSelectTextColor: @alternateTextColor;
-@timePickerHeaderColor: @primaryColor;
 
 @tooltipTextColor: @alternateTextColor;
 @tooltipRippleColor: @grey700;

@@ -3,6 +3,11 @@
   color: @appbarTextColor;
 }
 
+.vui-avatar {
+  color: @avatarColor;
+  background-color: @avatarBackgroundColor;
+}
+
 .vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -26,11 +31,6 @@ body {
 
 a {
   color: @baseLinkColor;
-}
-
-.vui-avatar {
-  color: @avatarColor;
-  background-color: @avatarBackgroundColor;
 }
 
 .vui-bottom-nav {
@@ -77,6 +77,43 @@ a {
 
 .vui-btn-primary{
   color: @buttonPrimaryTextColor;
+}
+
+.vui-checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      + .vui-checkbox-wrapper {
+        .vui-checkbox-icon-uncheck{
+          color: @checkboxCheckedColor;
+        }
+        .vui-checkbox-ripple-wrapper{
+          color: @checkboxCheckedColor;
+        }
+      }
+
+    }
+  }
+}
+
+.vui-checkbox-label {
+  color: @checkboxTextColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
+}
+
+.vui-checkbox-icon-uncheck {
+  color: @checkboxColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
+}
+
+.vui-checkbox-icon-checked {
+  color: @checkboxCheckedColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
 }
 
 .vui-card {
@@ -132,62 +169,6 @@ a {
   color: @chipDeleteColor;
 }
 
-.vui-checkbox {
-  input[type="checkbox"] {
-    &:checked {
-      + .vui-checkbox-wrapper {
-        .vui-checkbox-icon-uncheck{
-          color: @checkboxCheckedColor;
-        }
-        .vui-checkbox-ripple-wrapper{
-          color: @checkboxCheckedColor;
-        }
-      }
-
-    }
-  }
-}
-
-.vui-checkbox-label {
-  color: @checkboxTextColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
-.vui-checkbox-icon-uncheck {
-  color: @checkboxColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
-.vui-checkbox-icon-checked {
-  color: @checkboxCheckedColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
-.vui-dialog {
-  background-color: @dialogColor;
-}
-
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
-}
-
 .vui-calendar {
   color: @datePickerCalendarTextColor;
 }
@@ -228,6 +209,25 @@ a {
   .vui-year-button.hover &{
     color: @datePickerSelectColor;
   }
+}
+
+.vui-dialog {
+  background-color: @dialogColor;
+}
+
+.vui-dialog-footer,
+.vui-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
+  }
+}
+
+.vui-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.vui-dialog-body {
+  color: @dialogBodyColor
 }
 
 .vui-dropDown-menu-text {
@@ -390,10 +390,6 @@ a {
    }
 }
 
-.vui-refresh-control {
-  color: @refreshControlColor;
-}
-
 .vui-slider-track {
   background-color: @sliderTrackColor;
 }
@@ -415,6 +411,10 @@ a {
     color: @sliderDisabledColor;
     background-color: @sliderZeroColor;
   }
+}
+
+.vui-refresh-control {
+  color: @refreshControlColor;
 }
 
 .vui-snackbar {

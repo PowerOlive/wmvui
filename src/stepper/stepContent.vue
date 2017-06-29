@@ -38,7 +38,7 @@ export default {
     border-left: 1px solid @grey400;
   }
   &.last {
-    border-left: none;
+    border-left: none !important;
   }
 }
 

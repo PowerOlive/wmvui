@@ -244,7 +244,7 @@ export default {
 }
 
 .vui-item {
-  padding: 5px;
+  padding: 8px;
   min-height: 48px;
   display: flex;
   color: @textColor;

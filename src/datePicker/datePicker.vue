@@ -1,6 +1,6 @@
 <template>
-<div class="vui-date-picker" :class="{'fill': fill}">
-  <text-field @focus="handleFocus" @labelClick="handleClick" :value="inputValue" :disabled="disabled" :fill="fill"
+<div class="vui-date-picker">
+  <text-field @focus="handleFocus" @labelClick="handleClick" :value="inputValue" :disabled="disabled"
     :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
     :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconSize="iconSize" :inputClass="inputClass"
@@ -109,10 +109,10 @@ export default {
     inputClass: {
       type: [String, Array, Object]
     },
-    fill: {
-      type: Boolean,
-      default: false
-    },
+    // fill: {
+    //   type: Boolean,
+    //   default: false
+    // },
     underlineShow: {
       type: Boolean,
       default: true
@@ -183,11 +183,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-date-picker{
-  display: inline-block;
   position: relative;
-  width: 256px;
-  &.fill {
-    width: 100%
-  }
+  width: 100%
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-<div class="vui-time-picker" :class="{'fill': fill}">
-  <text-field @focus="handleFocus" :name="name" @labelClick="handleClick" :value="inputValue" :fill="fill"
+<div class="vui-time-picker">
+  <text-field @focus="handleFocus" :name="name" @labelClick="handleClick" :value="inputValue"
     :inputClass="inputClass" :label="label" :labelFloat="labelFloat" :labelClass="labelClass" :labelFocusClass="labelFocusClass"
     :hintText="hintText" :hintTextClass="hintTextClass" :helpText="helpText" :helpTextClass="helpTextClass"
     :disabled="disabled" :errorText="errorText" :errorColor="errorColor" :icon="icon" :iconClass="iconClass"
@@ -91,10 +91,10 @@ export default {
     iconClass: {
       type: [String, Array, Object]
     },
-    fill: {
-      type: Boolean,
-      default: false
-    },
+    // fill: {
+    //   type: Boolean,
+    //   default: false
+    // },
     underlineShow: {
       type: Boolean,
       default: true
@@ -159,11 +159,9 @@ export default {
 
 <style lang="less">
 .vui-time-picker{
-  display: inline-block;
   position: relative;
-  width: 256px;
-  &.fill {
-    width: 100%;
-  }
+  width: 100%;
+  /* &.fill {
+  } */
 }
 </style>
