@@ -206,11 +206,11 @@ export default {
       }, {
         title: '计时器',
         value: '/clocker',
-        icon: 'clock'
+        icon: 'clocker'
       }, {
         title: '倒计时',
         value: '/countdown',
-        icon: 'clock'
+        icon: 'countdown'
       }, {
         title: '选择器',
         value: '/picker',
@@ -218,11 +218,11 @@ export default {
       }, {
         title: '数字动画',
         value: '/magicSum',
-        icon: 'picker'
+        icon: 'magicSum'
       }, {
         title: '滚动消息',
         value: '/marquee',
-        icon: 'picker'
+        icon: 'marquee'
       }, {
         title: '无限滚动',
         value: '/infiniteScroll',

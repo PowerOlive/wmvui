@@ -79,43 +79,6 @@ a {
   color: @buttonPrimaryTextColor;
 }
 
-.vui-checkbox {
-  input[type="checkbox"] {
-    &:checked {
-      + .vui-checkbox-wrapper {
-        .vui-checkbox-icon-uncheck{
-          color: @checkboxCheckedColor;
-        }
-        .vui-checkbox-ripple-wrapper{
-          color: @checkboxCheckedColor;
-        }
-      }
-
-    }
-  }
-}
-
-.vui-checkbox-label {
-  color: @checkboxTextColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
-.vui-checkbox-icon-uncheck {
-  color: @checkboxColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
-.vui-checkbox-icon-checked {
-  color: @checkboxCheckedColor;
-  .vui-checkbox.disabled & {
-    color: @checkboxDisabledColor;
-  }
-}
-
 .vui-card {
   background-color: @cardBackgroudColor;
 }
@@ -151,6 +114,43 @@ a {
 
 .vui-card-text{
   color: @cardTextColor;
+}
+
+.vui-checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      + .vui-checkbox-wrapper {
+        .vui-checkbox-icon-uncheck{
+          color: @checkboxCheckedColor;
+        }
+        .vui-checkbox-ripple-wrapper{
+          color: @checkboxCheckedColor;
+        }
+      }
+
+    }
+  }
+}
+
+.vui-checkbox-label {
+  color: @checkboxTextColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
+}
+
+.vui-checkbox-icon-uncheck {
+  color: @checkboxColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
+}
+
+.vui-checkbox-icon-checked {
+  color: @checkboxCheckedColor;
+  .vui-checkbox.disabled & {
+    color: @checkboxDisabledColor;
+  }
 }
 
 .vui-chip {
@@ -300,7 +300,6 @@ a {
   color: @listSecondaryTextColor;
 }
 
-
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -321,6 +320,7 @@ a {
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
+
 
 .vui-pagination-item{
   color: @paginationTextColor;

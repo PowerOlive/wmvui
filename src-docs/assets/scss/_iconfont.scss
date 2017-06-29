@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_g7cxyue5zdgf1or.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_g7cxyue5zdgf1or.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_g7cxyue5zdgf1or.woff') format('woff'), /* chrome, firefox */
-  url('//at.alicdn.com/t/font_g7cxyue5zdgf1or.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_g7cxyue5zdgf1or.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_gtwnc35i6ba10pb9.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_gtwnc35i6ba10pb9.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_gtwnc35i6ba10pb9.woff') format('woff'), /* chrome, firefox */
+  url('//at.alicdn.com/t/font_gtwnc35i6ba10pb9.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_gtwnc35i6ba10pb9.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 [class^=icon-]:before,
@@ -17,8 +17,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 .icon-vertical-more:before { content: "\e629"; }
 
 .icon-like-fill:before { content: "\e668"; }
@@ -26,6 +24,10 @@
 .icon-like:before { content: "\e669"; }
 
 .icon-nav:before { content: "\e794"; }
+
+.icon-shop-cart:before { content: "\e634"; }
+
+.icon-star:before { content: "\e62b"; }
 
 .icon-warn-fill:before { content: "\e671"; }
 
@@ -105,6 +107,8 @@
 
 .icon-checkbox:before { content: "\e602"; }
 
+.icon-magicSum:before { content: "\e609"; }
+
 .icon-double-arrow-top:before { content: "\e604"; }
 
 .icon-more:before { content: "\e7f6"; }
@@ -137,11 +141,17 @@
 
 .icon-theme:before { content: "\e672"; }
 
+.icon-marquee:before { content: "\e615"; }
+
 .icon-layout:before { content: "\e63c"; }
+
+.icon-clocker:before { content: "\e6d5"; }
 
 .icon-switch:before { content: "\e655"; }
 
 .icon-layer:before { content: "\e60e"; }
+
+.icon-countdown:before { content: "\e6e2"; }
 
 .icon-dot:before { content: "\e628"; }
 
