@@ -1,8 +1,8 @@
 <template>
 <div>
-  <vui-slider v-model="value1" class="demo-slider"/>
-  <vui-slider v-model="value2" class="demo-slider"/>
-  <vui-slider v-model="value3" class="demo-slider"/>
+  <vui-range v-model="value1" class="demo-range"/>
+  <vui-range v-model="value2" class="demo-range"/>
+  <vui-range v-model="value3" class="demo-range"/>
 </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="css">
-.demo-slider {
+.demo-range {
   margin-bottom: 16px;
 }
 </style>

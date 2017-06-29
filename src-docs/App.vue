@@ -189,7 +189,7 @@ export default {
         icon: 'switch'
       }, {
         title: '滑块控件',
-        value: '/slider',
+        value: '/range',
         icon: 'slider'
       }, {
         title: '步骤导航',

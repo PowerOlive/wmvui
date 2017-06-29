@@ -1,13 +1,13 @@
 <template>
-<div class="vui-slider" :class="sliderClass" tabindex="0"
+<div class="vui-range" :class="sliderClass" tabindex="0"
   @focus="handleFocus" @blur="handleBlur" @keydown="handleKeydown"
   @touchstart="handleTouchStart" @touchend="handleTouchEnd"
   @touchcancel="handleTouchEnd"  @mousedown="handleMouseDown"
   @mouseup="handleMouseUp" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
   <input type="hidden" :name="name" :value="inputValue">
-  <div class="vui-slider-track"></div>
-  <div class="vui-slider-fill" :style="fillStyle"></div>
-  <div class="vui-slider-thumb" :style="thumbStyle">
+  <div class="vui-range-track"></div>
+  <div class="vui-range-fill" :style="fillStyle"></div>
+  <div class="vui-range-thumb" :style="thumbStyle">
     <focus-ripple v-if="(focused || hover) && !active"></focus-ripple>
   </div>
 </div>
@@ -17,7 +17,7 @@
 import focusRipple from '../internal/focusRipple'
 import keycode from 'keycode'
 export default {
-  name: 'vui-slider',
+  name: 'vui-range',
   props: {
     name: {
       type: String
@@ -247,7 +247,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-slider {
+.vui-range {
   width: 100%;
   position: relative;
   height: 24px;
@@ -259,7 +259,7 @@ export default {
   outline: none;
 }
 
-.vui-slider-track{
+.vui-range-track{
   position: absolute;
   height: 2px;
   left: 0;
@@ -269,7 +269,7 @@ export default {
   background-color: @lighterPrimaryColor;
 }
 
-.vui-slider-fill{
+.vui-range-fill{
   position: absolute;
   height: 2px;
   width: 100%;
@@ -277,12 +277,12 @@ export default {
   left: 0;
   top: 50%;
   margin-top: -1px;
-  .vui-slider.disabled & {
+  .vui-range.disabled & {
     background-color: @lighterPrimaryColor;
   }
 }
 
-.vui-slider-thumb {
+.vui-range-thumb {
   position: absolute;
   top: 50%;
   width: 12px;
@@ -293,12 +293,12 @@ export default {
   transform: translate(-50%, -50%);
   transition: background 450ms @easeOutFunction, border-color 450ms @easeOutFunction, width 450ms @easeOutFunction, height 450ms @easeOutFunction;
   cursor: pointer;
-  .vui-slider.active &{
+  .vui-range.active &{
     width: 20px;
     height: 20px;
   }
-  .vui-slider.zero &,
-  .vui-slider.disabled &{
+  .vui-range.zero &,
+  .vui-range.disabled &{
     border: 2px solid @lighterPrimaryColor;
     color: @lighterPrimaryColor;
     background-color: @alternateTextColor;
@@ -308,7 +308,7 @@ export default {
     }
   }
 
-  .vui-slider.disabled & {
+  .vui-range.disabled & {
     cursor: default;
   }
 

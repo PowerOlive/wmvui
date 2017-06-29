@@ -40,7 +40,7 @@ import number from './views/components/number'
 import Checkbox from './views/components/checkbox'
 import Radio from './views/components/radio'
 import Switch from './views/components/switch'
-import Slider from './views/components/slider'
+import Range from './views/components/Range'
 // import SnackbarToast from './views/components/snackbarToast'
 import Stepper from './views/components/stepper'
 import SubHeader from './views/components/subHeader'
@@ -107,7 +107,7 @@ const router = new Router({
     { path: '/checkbox', component: Checkbox },
     { path: '/radio', component: Radio },
     { path: '/switch', component: Switch },
-    { path: '/slider', component: Slider },
+    { path: '/range', component: Range },
     // { path: '/snackbarToast', component: SnackbarToast },
     { path: '/stepper', component: Stepper },
     { path: '/subHeader', component: SubHeader },

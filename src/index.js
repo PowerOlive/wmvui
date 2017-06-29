@@ -42,7 +42,7 @@ import selectField from './selectField'
 import checkbox from './checkbox'
 import radio from './radio'
 import _switch from './switch'
-import slider from './slider'
+import range from './range'
 import progress from './progress'
 import loading from './loading'
 // import linearProgress from './linearProgress'
@@ -107,7 +107,7 @@ const components = {
   checkbox,
   radio,
   _switch,
-  slider,
+  range,
   progress,
   loading,
   // linearProgress,
