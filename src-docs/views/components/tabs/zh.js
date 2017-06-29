@@ -9,7 +9,8 @@ export default {
     props: {
       lineHeight: '高亮线的样式，同 `class` 绑定方式一致',
       value: '必需，需要和子组件 tab 配合',
-      color: '选中颜色'
+      color: '选中颜色',
+      theme: '自定义主题'
     },
     slots: {
       default: '用于放置 tab 组件'

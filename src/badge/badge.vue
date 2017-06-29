@@ -41,8 +41,8 @@ export default {
     badgeStyle () {
       return {
         'background-color': getColor(this.color),
-        'width': this.circle ? this.size + 'px' : '',
-        'height': this.circle ? this.size + 'px' : ''
+        'width': this.size ? this.size + 'px' : '',
+        'height': this.size ? this.size + 'px' : ''
       }
     },
     badgeInternalClass () {

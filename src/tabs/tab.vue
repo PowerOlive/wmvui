@@ -7,7 +7,7 @@
   </slot>
   <vui-badge 
   v-if="badge" 
-  circle size="18px" 
+  circle :size="badge.size" 
   :content="badge.content" 
   :primary="badge.primary"
   :success="badge.success"
@@ -63,7 +63,7 @@ export default {
     },
     activeStyle () {
       return {
-        'color': this.active ? this.$parent.color : ''
+        'color': this.active ? this.$parent.active : ''
       }
     },
     textClass () {

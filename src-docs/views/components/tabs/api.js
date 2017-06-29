@@ -11,10 +11,15 @@ export default {
       default: '',
       desc: 'tabs.props.value'
     }, {
-      name: 'color',
+      name: 'active',
       type: '',
       default: '',
-      desc: 'tabs.props.color'
+      desc: 'tabs.props.active'
+    }, {
+      name: 'theme',
+      type: '',
+      default: '',
+      desc: 'tabs.props.theme'
     }],
     slots: [{
       name: 'default',

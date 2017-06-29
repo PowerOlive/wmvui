@@ -3,11 +3,6 @@
   color: @appbarTextColor;
 }
 
-.vui-avatar {
-  color: @avatarColor;
-  background-color: @avatarBackgroundColor;
-}
-
 .vui-badge {
   background-color: @badgeColor;
   color: @badgeTextColor;
@@ -21,6 +16,21 @@
 .vui-badge-secondary {
   background-color: @badgeSecondaryColor;
   color: @badgeSecondaryTextColor;
+}
+
+body {
+  background-color: @baseBackgroundColor;
+  color: @baseTextColor;
+  font-family: @baseFontFamily;
+}
+
+a {
+  color: @baseLinkColor;
+}
+
+.vui-avatar {
+  color: @avatarColor;
+  background-color: @avatarBackgroundColor;
 }
 
 .vui-bottom-nav {
@@ -53,18 +63,20 @@
   }
 }
 
-body {
-  background-color: @baseBackgroundColor;
-  color: @baseTextColor;
-  font-family: @baseFontFamily;
-}
-
-a {
-  color: @baseLinkColor;
-}
-
 .vui-bottom-sheet {
   background-color: @bottomSheetColor;
+}
+
+// button
+.vui-btn {
+  color: @buttonTextColor;
+  .vui-circle-ripple {
+    color: @buttonTextColor;
+  }
+}
+
+.vui-btn-primary{
+  color: @buttonPrimaryTextColor;
 }
 
 .vui-card {
@@ -104,16 +116,20 @@ a {
   color: @cardTextColor;
 }
 
-// button
-.vui-btn {
-  color: @buttonTextColor;
-  .vui-circle-ripple {
-    color: @buttonTextColor;
+.vui-chip {
+  background-color: @chipColor;
+  color: @chipTextColor;
+  &.hover{
+    .vui-chip-delete-icon{
+      color: @chipHoverDeleteColor;
+    }
+    background-color: @chipHoverColor;
+    cursor: pointer;
   }
 }
 
-.vui-btn-primary{
-  color: @buttonPrimaryTextColor;
+.vui-chip-delete-icon{
+  color: @chipDeleteColor;
 }
 
 .vui-checkbox {
@@ -153,20 +169,23 @@ a {
   }
 }
 
-.vui-chip {
-  background-color: @chipColor;
-  color: @chipTextColor;
-  &.hover{
-    .vui-chip-delete-icon{
-      color: @chipHoverDeleteColor;
-    }
-    background-color: @chipHoverColor;
-    cursor: pointer;
+.vui-dialog {
+  background-color: @dialogColor;
+}
+
+.vui-dialog-footer,
+.vui-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
   }
 }
 
-.vui-chip-delete-icon{
-  color: @chipDeleteColor;
+.vui-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.vui-dialog-body {
+  color: @dialogBodyColor
 }
 
 .vui-calendar {
@@ -209,25 +228,6 @@ a {
   .vui-year-button.hover &{
     color: @datePickerSelectColor;
   }
-}
-
-.vui-dialog {
-  background-color: @dialogColor;
-}
-
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
 }
 
 .vui-dropDown-menu-text {
@@ -300,6 +300,7 @@ a {
   color: @listSecondaryTextColor;
 }
 
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -320,7 +321,6 @@ a {
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
-
 
 .vui-pagination-item{
   color: @paginationTextColor;
@@ -1157,36 +1157,6 @@ a {
   color: @subHeaderColor;
 }
 
-.vui-table {
-  background-color: @tableBackgroundColor;
-}
-
-.vui-thead {
-  border-bottom-color: @tableBorderColor;
-}
-
-.vui-th {
-  color: @tableTheadTextColor;
-}
-
-.vui-tr {
-  border-bottom-color: @tableBorderColor;
-  color: @tableTextColor;
-  &.selected {
-    background-color: @tableRowSelectedBackgroundColor;
-  }
-  &.hover {
-    background-color: @tableRowHoverBackgroundColor;
-  }
-  &.stripe {
-    background-color: @tableRowStripeBackgroundColor;
-  }
-
-  .vui-tfoot & {
-    border-top-color: @tableBorderColor;
-  }
-}
-
 .vui-switch {
   input[type="checkbox"] {
     &:checked {
@@ -1236,6 +1206,36 @@ a {
   background-color: @switchThumbOffColor;
   .vui-switch.disabled & {
     background-color: @switchThumbDisabledColor;
+  }
+}
+
+.vui-table {
+  background-color: @tableBackgroundColor;
+}
+
+.vui-thead {
+  border-bottom-color: @tableBorderColor;
+}
+
+.vui-th {
+  color: @tableTheadTextColor;
+}
+
+.vui-tr {
+  border-bottom-color: @tableBorderColor;
+  color: @tableTextColor;
+  &.selected {
+    background-color: @tableRowSelectedBackgroundColor;
+  }
+  &.hover {
+    background-color: @tableRowHoverBackgroundColor;
+  }
+  &.stripe {
+    background-color: @tableRowStripeBackgroundColor;
+  }
+
+  .vui-tfoot & {
+    border-top-color: @tableBorderColor;
   }
 }
 

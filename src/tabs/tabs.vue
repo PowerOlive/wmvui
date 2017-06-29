@@ -1,12 +1,11 @@
 <template>
-  <div class="vui-tabs">
+  <div class="vui-tabs" :style="TabStyle">
     <slot></slot>
     <span class="vui-tabs-line" ref="tabsline" :style="activeLine"></span>
   </div>
 </template>
 
 <script>
-import {getColor} from '../utils'
 export default {
   name: 'vui-tabs',
   props: {
@@ -15,7 +14,8 @@ export default {
     // },
     lineHeight: Number,
     value: {},
-    color: String
+    active: String,
+    theme: {}
   },
   data () {
     return {
@@ -29,11 +29,17 @@ export default {
     this.setTabLightStyle()
   },
   computed: {
+    TabStyle () {
+      return {
+        'background-color': this.theme ? this.theme.background : '',
+        'color': this.theme ? this.theme.color : ''
+      }
+    },
     activeLine () {
       return {
-        'background-color': getColor(this.color),
+        'background-color': this.theme ? this.theme.active : this.active,
         'height': this.lineHeight + 'px',
-        'bottom': -this.lineHeight + 'px'
+        'bottom': this.theme ? '0' : -this.lineHeight + 'px'
       }
     }
   },
@@ -96,7 +102,7 @@ export default {
     justify-content: center;
     line-height: normal;
     align-items: center;
-    color: fade(@textColor, 80%);
+    /* color: fade(@textColor, 80%); */
     transition: all .45s @easeInOutFunction;
       &.disabled,
       &[disabled]{
@@ -118,7 +124,7 @@ export default {
     backface-visibility: hidden;
   }
   &-active{
-    color: @primaryColor;;
+    color: @primaryColor;
   }
   &-line{
     background-color: @primaryColor;
