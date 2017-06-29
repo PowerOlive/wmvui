@@ -236,9 +236,9 @@ export default {
   user-select: none;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  > .vui-divider {
-    margin: 7px 0px 8px;
-  }
+/*   > .vui-divider {
+  margin: 7px 0px 8px;
+} */
   > .vui-sub-header {
     padding-left: 24px;
     margin-top: -8px

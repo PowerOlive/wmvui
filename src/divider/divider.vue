@@ -62,8 +62,9 @@ export default {
       text-align: center;
       background: #fff;
       z-index: 1;
-      max-width: 30%;
+      max-width: 40%;
       height:100%;
+      padding: 0 10px;
     }
 
   }

@@ -5,18 +5,26 @@
       :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
       :disableFocusRipple="disableFocusRipple" :disabled="disabled" containerElement="div"
       @click="handleClick" @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit">
-     <div class="vui-menu-item" :class="{'have-left-icon': leftIcon || inset}">
-       <icon :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="vui-menu-item-left-icon" :class="leftIconClass"/>
-       <div class="vui-menu-item-title" :class="titleClass">
-         <slot name="title">
-           {{title}}
-         </slot>
-       </div>
-       <div v-if="!rightIcon">
-         <span v-if="showAfterText" :class="afterTextClass" style="color:#999;">{{afterText}}</span>
-         <slot name="after"></slot>
-       </div>
-       <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
+      <div class="vui-menu-item" :class="{'have-left-icon': leftIcon || inset}">
+        <div class="vui-menu-item-title" :class="titleClass">
+          <icon v-if="leftIcon" :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="vui-menu-item-left-icon" :class="leftIconClass"/>
+          <slot name="title">
+            {{title}}
+          </slot>
+        </div>
+        <div v-if="afterText">
+          <span :class="afterTextClass" class="vui-menu-item-after" style="color:#999;">{{afterText}}</span>
+          <slot name="after"></slot>
+        </div>
+        <div v-else-if="rightIcon && afterText">
+          <span :class="afterTextClass" style="color:#999;">{{afterText}}</span>
+          <slot name="after"></slot>
+          <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
+        </div>
+        <div v-else>
+          <slot name="after"></slot>
+          <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
+        </div>
      </div>
    </abstract-button>
    <popover :open="openMenu" v-if="$slots && $slots.default && $slots.default.length > 0" :anchorOrigin="{ vertical: 'top', horizontal: 'right'}"
@@ -181,78 +189,81 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-menu-item-wrapper {
-  display: block;
-  font-size: 16px;
-  height: 48px;
-  line-height: 48px;
-  transition: all .45s @easeOutFunction;
-  color: @textColor;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  .vui-menu-destop & {
-    height: 32px;
-    line-height: 32px;
-    font-size: 15px;
-  }
-  &.hover {
-    background-color: rgba(0, 0, 0, .1);
-  }
-  &.active {
-    color: @accentColor;
-  }
-  &.disabled {
-    color: @disabledColor;
-    cursor: not-allowed;
-  }
-}
 
 .vui-menu-item{
-  padding: 0px 16px;
+  padding: 0px 14px;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &-wrapper {
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    transition: all .45s @easeOutFunction;
+    color: @textColor;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    .vui-menu-destop & {
+      height: 32px;
+      line-height: 32px;
+      font-size: 15px;
+    }
+    &.hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
+    &.active {
+      color: @accentColor;
+    }
+    &.disabled {
+      color: @disabledColor;
+      cursor: not-allowed;
+    }
+  }
   .vui-menu-destop & {
-    padding: 0 24px;
+    padding: 0 10px;
   }
   &.have-left-icon{
-    padding-left: 40px;
+    /* padding-left: 40px; */
+  }
+  &-after{
+    font-size: 14px;
+  }
+  &-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+  }
+  &-left-icon{
+    /* position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); */
+    /* margin: 0 12px; */
+    color: @grey600;
+    .vui-menu-destop & {
+      /* top: 4px; */
+      /* left: 24px;
+      margin: 0; */
+    }
+  }
+  &-right-icon{
+   /*  position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%); */
+    color: @grey600;
+    .vui-menu-destop & {
+      /* top: 4px; */
+      /* right: 24px;
+      margin: 0; */
+    }
   }
 }
 
-.vui-menu-item-title{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-}
 
-.vui-menu-item-left-icon{
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  /* margin: 0 12px; */
-  transform: translateY(-50%);
-  color: @grey600;
-  .vui-menu-destop & {
-    /* top: 4px; */
-    left: 24px;
-    margin: 0;
-  }
-}
 
-.vui-menu-item-right-icon{
-  position: absolute;
-  top: 0;
-  right: 4px;
-  margin: 0 12px;
-  color: @grey600;
-  .vui-menu-destop & {
-    /* top: 4px; */
-    right: 24px;
-    margin: 0;
-  }
-}
 </style>
