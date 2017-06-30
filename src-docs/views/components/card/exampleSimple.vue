@@ -1,10 +1,10 @@
 <template>
 <vui-card>
   <vui-card-header title="李白" subTitle="骚贱浪">
-    <vui-avatar src="/images/uicon.jpg" slot="avatar"/>
+    <vui-avatar src="images/uicon.jpg" slot="avatar"/>
   </vui-card-header>
   <vui-card-media title="稳住" subTitle="不浪，我们能赢">
-    <img src="/images/sun.jpg" />
+    <img src="images/sun.jpg" />
   </vui-card-media>
   <vui-card-title title="放我出去" subTitle="我要喝药"/>
   <vui-card-text>

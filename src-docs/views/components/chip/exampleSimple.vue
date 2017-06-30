@@ -3,7 +3,7 @@
   <vui-tag class="demo-chip">默认标签</vui-tag>
   <vui-tag class="demo-chip"  @delete="handleClose" showDelete>可删除的标签</vui-tag>
   <vui-tag class="demo-chip">
-    <vui-avatar src="/images/uicon.jpg"/>带头像的标签
+    <vui-avatar src="images/uicon.jpg"/>带头像的标签
   </vui-tag>
   <vui-tag class="demo-chip" @delete="handleClose" showDelete>
     <vui-svg-icon icon="love" :size="42"/>SVG多彩图标

@@ -6,7 +6,7 @@
     </div>
   </vui-list-item>
   <vui-list-item :value="6" title="王召君" toggleNested :open="false">
-    <vui-avatar src="/images/avatar3.jpg" slot="leftAvatar"/>
+    <vui-avatar src="images/avatar3.jpg" slot="leftAvatar"/>
     <vui-list-item slot="nested" class="pd10">
       Myron Liu -周末要来你这里出差，要不要一起吃个饭呀，实在编不下去了,哈哈哈哈哈哈
     </vui-list-item>
