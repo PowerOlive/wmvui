@@ -116,6 +116,22 @@ a {
   color: @cardTextColor;
 }
 
+.vui-chip {
+  background-color: @chipColor;
+  color: @chipTextColor;
+  &.hover{
+    .vui-chip-delete-icon{
+      color: @chipHoverDeleteColor;
+    }
+    background-color: @chipHoverColor;
+    cursor: pointer;
+  }
+}
+
+.vui-chip-delete-icon{
+  color: @chipDeleteColor;
+}
+
 .vui-checkbox {
   input[type="checkbox"] {
     &:checked {
@@ -151,22 +167,6 @@ a {
   .vui-checkbox.disabled & {
     color: @checkboxDisabledColor;
   }
-}
-
-.vui-chip {
-  background-color: @chipColor;
-  color: @chipTextColor;
-  &.hover{
-    .vui-chip-delete-icon{
-      color: @chipHoverDeleteColor;
-    }
-    background-color: @chipHoverColor;
-    cursor: pointer;
-  }
-}
-
-.vui-chip-delete-icon{
-  color: @chipDeleteColor;
 }
 
 .vui-calendar {
@@ -300,6 +300,7 @@ a {
   color: @listSecondaryTextColor;
 }
 
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -320,7 +321,6 @@ a {
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
-
 
 .vui-pagination-item{
   color: @paginationTextColor;

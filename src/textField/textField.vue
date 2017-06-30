@@ -6,7 +6,7 @@
       <text-field-hint v-if="hintText" :text="hintText" :show="showHint" :class="hintTextClass"></text-field-hint>
       <slot>
         <input v-if="!multiLine" ref="input" :name="name" :type="type" :value="inputValue"
-          :disabled="disabled" @change="handleChange" @focus="handleFocus" @input="handleInput" @blur="handleBlur"
+          :disabled="disabled" :readonly="readonly" @change="handleChange" @focus="handleFocus" @input="handleInput" @blur="handleBlur"
           :max="max" :min="min" class="vui-text-field-input" :class="inputClass" :required="required">
         <enhanced-textarea :name="name" v-if="multiLine" ref="textarea" :normalClass="inputClass":value="inputValue" :disabled="disabled" :rows="rows" :rowsMax="rowsMax" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></enhanced-textarea>
       </slot>
@@ -98,10 +98,14 @@ export default {
       type: Boolean,
       default: false
     },
-    fill: {
+    readonly: {
       type: Boolean,
       default: false
     },
+    // fill: {
+    //   type: Boolean,
+    //   default: false
+    // },
     underlineShow: {
       type: Boolean,
       default: true
@@ -139,8 +143,8 @@ export default {
         'has-icon': this.icon,
         'error': this.errorText,
         'multi-line': this.multiLine,
-        'disabled': this.disabled,
-        'full-width': this.fill
+        'disabled': this.disabled
+        // 'full-width': this.fill
       }
     },
     float () {

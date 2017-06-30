@@ -45,6 +45,11 @@ export default {
     default: 'false',
     desc: 'props.disabled'
   }, {
+    name: 'readonly',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.readonly'
+  }, {
     name: 'hintText',
     type: 'String',
     default: '',
@@ -75,11 +80,11 @@ export default {
     default: '',
     desc: 'props.errorColor'
   }, {
-    name: 'fill',
-    type: 'Boolean',
-    default: 'false',
-    desc: 'props.fill'
-  }, {
+  //   name: 'fill',
+  //   type: 'Boolean',
+  //   default: 'false',
+  //   desc: 'props.fill'
+  // }, {
     name: 'underlineShow',
     type: 'Boolean',
     default: 'true',
