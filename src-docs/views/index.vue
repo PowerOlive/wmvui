@@ -8,7 +8,7 @@
         WMVUI
       </h1>
       <h2 class="vui-banner-sub-title">
-        基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index" style="color:yellow">Muse-UI</a> 的UI组件库再次开发<br>部分组件正在开发中 感谢开源
+        基于 Vue 2.0 和 <a href="https://www.muse-ui.org/#/index" style="color:yellow">Muse-UI</a> 的UI组件库再次开发<br>添加了很多实用功能，因为比较懒所以直接修改文档
       </h2>
       <div class="vui-banner-actions">
         <vui-button label="文档" to="/install" backgroundColor="#ffc107" class="vui-banner-button"/>

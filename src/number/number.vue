@@ -131,6 +131,7 @@ $number-input-border-color:#bbb;
 .vui-number-selector{
   border-radius: 0;
   height:29px;
+  line-height: 29px;
   color: $number-input-font-color;
   float: left;
   display: block;
