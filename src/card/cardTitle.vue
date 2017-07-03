@@ -1,11 +1,7 @@
 <template>
 <div class="vui-card-title-container">
-  <div class="vui-card-title" :class="titleClass">
-    {{title}}
-  </div>
-  <div class="vui-card-sub-title" :class="subTitleClass">
-    {{subTitle}}
-  </div>
+  <div class="vui-card-title" :class="titleClass">{{title}}</div>
+  <div class="vui-card-sub-title" :class="subTitleClass">{{subTitle}}</div>
 </div>
 </template>
 
@@ -32,17 +28,17 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-card-title-container{
-  padding: 16px;
+  /* padding: 15px; */
   position: relative;
-  .vui-card-title{
-    font-size: 24px;
-    color: @textColor;
-    line-height: 36px;
-  }
-  .vui-card-sub-title{
-    font-size: 14px;
-    color: @lightBlack;
-    display: block;
-  }
+}
+.vui-card-title{
+  font-size: 24px;
+  color: @textColor;
+  line-height: 36px;
+}
+.vui-card-sub-title{
+  font-size: 14px;
+  color: @lightBlack;
+  display: block;
 }
 </style>

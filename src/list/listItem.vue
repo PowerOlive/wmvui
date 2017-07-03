@@ -2,9 +2,17 @@
   <div>
     <abstract-button @click="handleClick"  containerElement="div"
       :href="href" :disabled="disabled" :disableFocusRipple="disableRipple"  :disableTouchRipple="disableRipple" :target="target"
-      :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
-      @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit"
+      :to="to" :tag="tag" 
+      :append="append" 
+      :replace="replace"
+      :activeClass="activeClass" 
+      :event="event" 
+      :exact="exact" 
       class="vui-item-wrapper" :wrapperStyle="itemStyle" :centerRipple="false">
+      <!-- 
+      @keyboardFocus="handleKeyboardFocus" 
+      @hover="handleHover" 
+      @hoverExit="handleHoverExit" -->
       <div :class="itemClass">
         <div class="vui-item-left" v-if="showLeft">
           <slot name="left"></slot>
@@ -194,17 +202,17 @@ export default {
       if (isNotNull(this.value)) this.$parent.handleChange(this.value)
       if (this.toggleNested) this.handleToggleNested()
     },
-    handleKeyboardFocus (isFocus) {
-      this.$emit('keyboardFocus', isFocus)
-      this.$emit('keyboard-focus', isFocus)
-    },
-    handleHover (event) {
-      this.$emit('hover', event)
-    },
-    handleHoverExit (event) {
-      this.$emit('hoverExit', event)
-      this.$emit('hover-exit', event)  // 兼容 html 里的用法
-    },
+    // handleKeyboardFocus (isFocus) {
+    //   this.$emit('keyboardFocus', isFocus)
+    //   this.$emit('keyboard-focus', isFocus)
+    // },
+    // handleHover (event) {
+    //   this.$emit('hover', event)
+    // },
+    // handleHoverExit (event) {
+    //   this.$emit('hoverExit', event)
+    //   this.$emit('hover-exit', event)  // 兼容 html 里的用法
+    // },
     handleNestedChange (value) {
       this.$parent.handleChange(value)
     },

@@ -6,10 +6,7 @@ import svgIcon from './svgIcon'
 import star from './star'
 import badge from './badge'
 import appBar from './appBar'
-// import iconButton from './iconButton'
 import button from './button'
-// import raisedButton from './raisedButton'
-// import floatButton from './floatButton'
 import contentBlock from './contentBlock'
 import * as list from './list'
 import subHeader from './subHeader'
@@ -19,24 +16,18 @@ import infiniteScroll from './infiniteScroll'
 import avatar from './avatar'
 import * as tabs from './tabs'
 import paper from './paper'
-// import * as bottomNav from './bottomNav'
 import * as card from './card'
-import chip from './chip'
+import tags from './tags'
 import overlay from './internal/popup/overlay'
 import dialog from './dialog'
-// import toast from './toast'
-import snackbar from './snackbar'
 import popup from './popup'
 import preview from './preview'
 import * as menu from './menu'
-// import bottomSheet from './bottomSheet'
+import dropDownMenu from './dropDownMenu'
 import popover from './popover'
 import iconMenu from './iconMenu'
-// import dropDownMenu from './dropDownMenu'
 import drawer from './drawer'
 import picker from './picker'
-// import tooltip from './tooltip'
-
 import textField from './textField'
 import selectField from './selectField'
 import checkbox from './checkbox'
@@ -45,8 +36,6 @@ import _switch from './switch'
 import range from './range'
 import progress from './progress'
 import loading from './loading'
-// import linearProgress from './linearProgress'
-// import circularProgress from './circularProgress'
 import * as gridList from './gridList'
 import * as table from './table'
 import datePicker from './datePicker'
@@ -54,6 +43,7 @@ import timePicker from './timePicker'
 import countDown from './countdown'
 import clocker from './clocker'
 import magicSum from './magicSum'
+import tooltip from './tooltip'
 import * as stepper from './stepper'
 // import autoComplete from './autoComplete'
 // import pagination from './pagination'
@@ -72,10 +62,7 @@ const components = {
   star,
   badge,
   appBar,
-  // iconButton,
   button,
-  // raisedButton,
-  // floatButton,
   contentBlock,
   ...list,
   subHeader,
@@ -85,23 +72,18 @@ const components = {
   avatar,
   ...tabs,
   paper,
-  // ...bottomNav,
   ...card,
-  chip,
+  tags,
   overlay,
   dialog,
   preview,
-  // toast,
-  snackbar,
   popup,
   ...menu,
-  // bottomSheet,
+  dropDownMenu,
   popover,
   iconMenu,
-  // dropDownMenu,
   drawer,
   picker,
-  // tooltip,
   textField,
   selectField,
   checkbox,
@@ -110,8 +92,6 @@ const components = {
   range,
   progress,
   loading,
-  // linearProgress,
-  // circularProgress,
   ...gridList,
   ...table,
   datePicker,
@@ -119,12 +99,10 @@ const components = {
   countDown,
   clocker,
   magicSum,
+  tooltip,
   ...stepper,
-  // autoComplete,
-  // ...grid,
   ...flexbox,
   ...marquee
-  // pagination
 }
 
 const install = function () {

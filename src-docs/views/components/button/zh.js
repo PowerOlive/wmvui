@@ -24,7 +24,7 @@ export default {
     iconRight: '文字的位置, 默认左边，可设置右边显示',
     circle: '圆形按钮',
     round: '圆角按钮',
-    text: '无背景按钮 可配置状态 ',
+    text: '文字按钮 可配置状态 ',
     invert: '是否显示成反色按钮 需要配合对应的`按钮状态`',
     state: '按钮状态可选值 `primary` `success` `info` `warn` `danger`',
     padding: '按钮填充大小，允许传2个值 上下 与 左右',
@@ -34,7 +34,7 @@ export default {
     target: '相当于 a 标签的target属性',
     backgroundColor: '按钮背景色',
     color: '按钮颜色',
-    hoverColor: '鼠标移上去的背景色',
+    // hoverColor: '鼠标移上去的背景色',
     fill: '占一整行的按钮',
     activeColor: '点击时颜色',
     activeOpacity: '点击时颜色透明度'
@@ -43,10 +43,10 @@ export default {
     default: '用来放置 input[type=file] 等特殊的按钮，或者自定义icon、文字'
   },
   events: {
-    click: '按钮点击事件',
-    hover: '鼠标移到按钮上的事件',
-    hoverExit: '鼠标移出按钮上的事件',
-    keyboardFocus: '键盘使按钮获取焦点的事件，第一个参数为true 时表示获取焦点，为 false 失去焦点, (isFocus)'
+    click: '按钮点击事件'
+    // hover: '鼠标移到按钮上的事件',
+    // hoverExit: '鼠标移出按钮上的事件',
+    // keyboardFocus: '键盘使按钮获取焦点的事件，第一个参数为true 时表示获取焦点，为 false 失去焦点, (isFocus)'
   },
   router
 }

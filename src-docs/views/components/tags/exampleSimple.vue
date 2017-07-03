@@ -1,19 +1,19 @@
 <template>
 <div class="demo-chip-container">
-  <vui-tag class="demo-chip">默认标签</vui-tag>
-  <vui-tag class="demo-chip"  @delete="handleClose" showDelete>可删除的标签</vui-tag>
-  <vui-tag class="demo-chip">
+  <vui-tags class="demo-chip">默认标签</vui-tags>
+  <vui-tags class="demo-chip"  @delete="handleClose" showDelete>可删除的标签</vui-tags>
+  <vui-tags class="demo-chip">
     <vui-avatar src="images/uicon.jpg"/>带头像的标签
-  </vui-tag>
-  <vui-tag class="demo-chip" @delete="handleClose" showDelete>
+  </vui-tags>
+  <vui-tags class="demo-chip" @delete="handleClose" showDelete>
     <vui-svg-icon icon="love" :size="42"/>SVG多彩图标
-  </vui-tag>
-  <vui-tag class="demo-chip" @delete="handleClose" showDelete icon="phone-fill" :iconSize="24">
+  </vui-tags>
+  <vui-tags class="demo-chip" @delete="handleClose" showDelete icon="phone-fill" :iconSize="24">
     <vui-avatar icon="email-fill" :size="48" />给我打电话
-  </vui-tag>
-  <vui-tag class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
+  </vui-tags>
+  <vui-tags class="demo-chip" backgroundColor="blue300" @delete="handleClose" showDelete>
     <vui-avatar color="blue300" backgroundColor="indigo900" :size="48">MB</vui-avatar>自定义效果
-  </vui-tag>
+  </vui-tags>
   <vui-popup position="center" toast :overlay="true" :open="toast">你点击了删除</vui-popup>
 </div>
 </template>

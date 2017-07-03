@@ -33,40 +33,6 @@ a {
   color: @baseLinkColor;
 }
 
-.vui-bottom-nav {
-  background-color: @bottomNavBackgroundColor;
-}
-
-.vui-bottom-nav-shift{
-  background-color: @bottomNavShiftBackgroundColor;
-}
-
-.vui-buttom-item {
-  color: @bottomNavUnselectedColor;
-  .vui-bottom-nav-shift & {
-    color: @bottomNavShiftUnselectedColor;
-  }
-}
-
-.vui-bottom-item-active{
-  .vui-bottom-item-text {
-    color: @bottomNavSelectedColor;
-    .vui-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
-  .vui-bottom-item-icon {
-    color: @bottomNavSelectedColor;
-    .vui-bottom-nav-shift & {
-      color: @bottomNavShiftSelectedColor;
-    }
-  }
-}
-
-.vui-bottom-sheet {
-  background-color: @bottomSheetColor;
-}
-
 // button
 .vui-btn {
   color: @buttonTextColor;
@@ -114,22 +80,6 @@ a {
 
 .vui-card-text{
   color: @cardTextColor;
-}
-
-.vui-chip {
-  background-color: @chipColor;
-  color: @chipTextColor;
-  &.hover{
-    .vui-chip-delete-icon{
-      color: @chipHoverDeleteColor;
-    }
-    background-color: @chipHoverColor;
-    cursor: pointer;
-  }
-}
-
-.vui-chip-delete-icon{
-  color: @chipDeleteColor;
 }
 
 .vui-checkbox {
@@ -257,16 +207,6 @@ a {
 }
 
 
-// circle
-.vui-circle-spinner{
-  border-color: @circleColor;
-}
-
-.vui-circle-secondary {
-  border-color: @circleSecondaryColor;
-}
-
-
 // list
 .vui-item-wrapper{
   &.hover {
@@ -301,6 +241,15 @@ a {
 }
 
 
+// circle
+.vui-circle-spinner{
+  border-color: @circleColor;
+}
+
+.vui-circle-secondary {
+  border-color: @circleSecondaryColor;
+}
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -321,6 +270,7 @@ a {
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
+
 
 .vui-pagination-item{
   color: @paginationTextColor;
@@ -415,11 +365,6 @@ a {
 
 .vui-refresh-control {
   color: @refreshControlColor;
-}
-
-.vui-snackbar {
-  color: @snackbarTextColor;
-  background-color: @snackbarColor;
 }
 
 .vui-step-button {
@@ -1250,6 +1195,22 @@ a {
 }
 .vui-tab-active {
   color: @tabsSelectedTextColor;
+}
+
+.vui-chip {
+  background-color: @chipColor;
+  color: @chipTextColor;
+  &.hover{
+    .vui-chip-delete-icon{
+      color: @chipHoverDeleteColor;
+    }
+    background-color: @chipHoverColor;
+    cursor: pointer;
+  }
+}
+
+.vui-chip-delete-icon{
+  color: @chipDeleteColor;
 }
 
 .vui-text-field{

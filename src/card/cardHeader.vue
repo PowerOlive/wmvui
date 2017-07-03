@@ -2,12 +2,8 @@
 <div class="vui-card-header">
   <slot name="avatar"></slot>
   <div class="vui-card-header-title" v-if="title || subTitle">
-    <div class="vui-card-title" :class="titleClass">
-      {{title}}
-    </div>
-    <div class="vui-card-sub-title" :class="subTitleClass">
-      {{subTitle}}
-    </div>
+    <div class="vui-card-title" :class="titleClass">{{title}}</div>
+    <div class="vui-card-sub-title" :class="subTitleClass">{{subTitle}}</div>
   </div>
   <slot></slot>
 </div>
@@ -36,12 +32,12 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-card-header {
-  padding: 16px;
+  /* padding: 15px; */
   font-weight: 500;
   position: relative;
   white-space: nowrap;
   .vui-avatar {
-    margin-right: 16px;
+    margin-right: 10px;
   }
 }
 
@@ -50,13 +46,13 @@ export default {
   vertical-align: top;
   white-space: normal;
   padding-right: 90px;
-  .vui-card-title{
-    font-size: 15px;
-    color: fade(@textColor, 87%);
-  }
-  .vui-card-sub-title{
-    font-size: 14px;
-    color: fade(@textColor, 57%);
-  }
+}
+.vui-card-title{
+  font-size: 15px;
+  color: fade(@textColor, 87%);
+}
+.vui-card-sub-title{
+  font-size: 14px;
+  color: fade(@textColor, 57%);
 }
 </style>

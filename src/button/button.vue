@@ -1,9 +1,10 @@
 <template>
-<abstract-button
-  @click="handleClick" 
-  @keyboardFocus="handleKeyboardFocus" 
+  <!-- @keyboardFocus="handleKeyboardFocus" 
   @hover="handleHover" 
   @hoverExit="handleHoverExit"
+    -->
+<abstract-button
+  @click="handleClick" 
   :disabled="disabled" 
   :type="type" 
   :href="href" 
@@ -11,7 +12,7 @@
   :style="buttonStyle" 
   :to="to" 
   :tag="tag" 
-  :activeClass="activeClass" 
+  :activeClass="activeClass"
   :event="event" 
   :exact="exact" 
   :append="append" 
@@ -92,10 +93,10 @@ export default {
       type: String,
       default: ''
     },
-    hoverColor: {
-      type: String,
-      default: ''
-    },
+    // hoverColor: {
+    //   type: String,
+    //   default: ''
+    // },
     activeColor: {
       type: String
     },
@@ -114,18 +115,18 @@ export default {
   methods: {
     handleClick (e) {
       this.$emit('click', e)
-    },
-    handleKeyboardFocus (isFocus) {
-      this.$emit('keyboardFocus', isFocus)
-      this.$emit('keyboard-focus', isFocus)  // 兼容 html 里的用法
-    },
-    handleHover (event) {
-      this.$emit('hover', event)
-    },
-    handleHoverExit (event) {
-      this.$emit('hoverExit', event)
-      this.$emit('hover-exit', event)  // 兼容 html 里的用法
     }
+    // handleKeyboardFocus (isFocus) {
+    //   this.$emit('keyboardFocus', isFocus)
+    //   this.$emit('keyboard-focus', isFocus)  // 兼容 html 里的用法
+    // },
+    // handleHover (event) {
+    //   this.$emit('hover', event)
+    // },
+    // handleHoverExit (event) {
+    //   this.$emit('hoverExit', event)
+    //   this.$emit('hover-exit', event)  // 兼容 html 里的用法
+    // }
   },
   computed: {
     buttonStyle () {

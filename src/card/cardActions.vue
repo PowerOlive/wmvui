@@ -13,7 +13,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-card-actions {
-  padding: 8px;
+  /* padding: 15px; */
   position: relative;
 }
 </style>

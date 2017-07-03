@@ -9,21 +9,21 @@ export default [{
   default: 'a',
   desc: 'router.tag'
 }, {
-  name: 'activeClass',
-  type: 'String',
-  default: 'router-link-active',
-  desc: 'router.activeClass'
-}, {
-  name: 'event',
-  type: 'String,Array',
-  default: 'click',
-  desc: 'router.event'
-}, {
-  name: 'exact',
-  type: 'Boolean',
-  default: '',
-  desc: 'router.exact'
-}, {
+//   name: 'activeClass',
+//   type: 'String',
+//   default: 'router-link-active',
+//   desc: 'router.activeClass'
+// }, {
+//   name: 'event',
+//   type: 'String,Array',
+//   default: 'click',
+//   desc: 'router.event'
+// }, {
+//   name: 'exact',
+//   type: 'Boolean',
+//   default: '',
+//   desc: 'router.exact'
+// }, {
   name: 'append',
   type: 'Boolean',
   default: '',

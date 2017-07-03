@@ -13,7 +13,7 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-card-text{
-  padding: 16px;
+  /* padding: 15px; */
   font-size: 14px;
   color: @textColor;
 }

@@ -2,9 +2,18 @@
 <div>
    <abstract-button  class="vui-menu-item-wrapper" :class="{'active': active}"
       :href="href" :target="target" ref="button" :centerRipple="false"
-      :to="to" :tag="tag" :activeClass="activeClass" :event="event" :exact="exact" :append="append" :replace="replace"
+      :to="to" :tag="tag" 
+      :activeClass="activeClass" 
+      :event="event" 
+      :exact="exact" 
+      :append="append" 
+      :replace="replace"
       :disableFocusRipple="disableFocusRipple" :disabled="disabled" containerElement="div"
-      @click="handleClick" @keyboardFocus="handleKeyboardFocus" @hover="handleHover" @hoverExit="handleHoverExit">
+      @click="handleClick"
+      >
+      <!-- @keyboardFocus="handleKeyboardFocus" 
+      @hover="handleHover" 
+      @hoverExit="handleHoverExit" -->
       <div class="vui-menu-item" :class="{'have-left-icon': leftIcon || inset}">
         <div class="vui-menu-item-title" :class="titleClass">
           <icon v-if="leftIcon" :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="vui-menu-item-left-icon" :class="leftIconClass"/>
@@ -142,17 +151,17 @@ export default {
     close () {
       this.openMenu = false
     },
-    handleKeyboardFocus (isFocus) {
-      this.$emit('keyboardFocus', isFocus)
-      this.$emit('keyboard-focus', isFocus)
-    },
-    handleHover (event) {
-      this.$emit('hover', event)
-    },
-    handleHoverExit (event) {
-      this.$emit('hoverExit', event)
-      this.$emit('hover-exit', event)
-    },
+    // handleKeyboardFocus (isFocus) {
+    //   this.$emit('keyboardFocus', isFocus)
+    //   this.$emit('keyboard-focus', isFocus)
+    // },
+    // handleHover (event) {
+    //   this.$emit('hover', event)
+    // },
+    // handleHoverExit (event) {
+    //   this.$emit('hoverExit', event)
+    //   this.$emit('hover-exit', event)
+    // },
     applyFocusState () {
       const button = this.$refs.button
       if (button) {

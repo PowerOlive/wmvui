@@ -52,14 +52,14 @@ export default {
   bottom: 0;
   padding: 16px;
   background-color: @lightBlack;
-  .vui-card-title {
-    font-size: 24px;
-    color: @darkWhite;
-    line-height: 36px;
-  }
-  .vui-card-sub-title {
-    color: @lightWhite;
-    font-size: 14px;
-  }
+}
+.vui-card-title {
+  font-size: 24px;
+  color: @darkWhite;
+  line-height: 36px;
+}
+.vui-card-sub-title {
+  color: @lightWhite;
+  font-size: 14px;
 }
 </style>

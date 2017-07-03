@@ -101,7 +101,7 @@ export default {
         icon: 'card'
       }, {
         title: '标签',
-        value: '/chip',
+        value: '/tags',
         icon: 'tag'
       }, {
         title: '副标题',

@@ -81,11 +81,11 @@ export default {
     default: '',
     desc: 'props.color'
   }, {
-    name: 'hoverColor',
-    type: 'String',
-    default: '',
-    desc: 'props.hoverColor'
-  }, {
+  //   name: 'hoverColor',
+  //   type: 'String',
+  //   default: '',
+  //   desc: 'props.hoverColor'
+  // }, {
     name: 'fill',
     type: 'Boolean',
     default: 'false',
@@ -108,14 +108,14 @@ export default {
   events: [{
     name: 'click',
     desc: 'events.click'
-  }, {
-    name: 'hover',
-    desc: 'events.hover'
-  }, {
-    name: 'hoverExit',
-    desc: 'events.hoverExit'
-  }, {
-    name: 'keyboardFocus',
-    desc: 'events.keyboardFocus'
+  // }, {
+  //   name: 'hover',
+  //   desc: 'events.hover'
+  // }, {
+  //   name: 'hoverExit',
+  //   desc: 'events.hoverExit'
+  // }, {
+  //   name: 'keyboardFocus',
+  //   desc: 'events.keyboardFocus'
   }]
 }
