@@ -75,6 +75,9 @@ export default {
   .vui-btn{
     padding-left:15px;
     padding-right:15px;
+    .vui-icon{
+      margin-right:0;
+    }
   }
   .vui-icon-menu{
     .vui-icon{
@@ -84,19 +87,26 @@ export default {
   .vui-text-field{
     margin-bottom:0;
   }
+  &-title {
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 400;
+    /* line-height: 56px; */
+  }
+  .vui-badge-container{
+    height:100%;
+    .vui-badge{
+      top:4px;
+      right:4px;
+    }
+  }
 }
 
-.vui-appbar-title {
-  flex: 1;
-  padding-left: 8px;
-  padding-right: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 20px;
-  font-weight: 400;
-  /* line-height: 56px; */
-}
 
 </style>
