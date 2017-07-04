@@ -70,6 +70,8 @@ export default {
     height: 100%;
     line-height: 100%;
     min-width: auto;
+    padding-left:15px;
+    padding-right:15px;
   }
   .vui-icon-menu{
     .vui-icon{
