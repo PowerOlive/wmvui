@@ -8,7 +8,8 @@
         <div class="vui-flex-item exmaple-drawer-content">
           <vui-list :value="menuVal" @itemClick="handleItemClick">
             <template v-for="item in list">
-                <vui-list-item :value="item.value" :title="item.title">
+                <vui-list-item :value="item.value">
+                  <template slot="title">{{item.title}}</template>
                   <vui-icon slot="left" :icon="item.icon" :size="18" />
                 </vui-list-item>
             </template>

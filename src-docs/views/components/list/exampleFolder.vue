@@ -1,18 +1,24 @@
 <template>
   <vui-list>
-    <vui-sub-header inset>文件夹</vui-sub-header>
-    <vui-list-item title="文件夹" describeText="2017-06-12">
-      <vui-avatar icon="like-fill" slot="leftAvatar"/>
+    <vui-sub-header>文件夹</vui-sub-header>
+    <vui-list-item>
+      <template slot="title">文件夹</template>
+      <template slot="describe">2017-06-12</template>
+      <vui-avatar icon="like-fill" slot="left"/>
       <vui-icon icon="right" slot="right"/>
     </vui-list-item>
     <vui-divider dotted />
-    <vui-list-item title="文件夹" describeText="2017-06-12">
-      <vui-avatar icon="like-fill" backgroundColor="blue" slot="leftAvatar" />
+    <vui-list-item>
+      <template slot="title">文件夹</template>
+      <template slot="describe">2017-06-12</template>
+      <vui-avatar icon="like-fill" backgroundColor="blue" slot="left" />
       <vui-icon icon="right" slot="right"/>
     </vui-list-item>
     <vui-divider dotted />
-    <vui-list-item title="文件夹" describeText="2017-06-12">
-      <vui-avatar icon="like-fill" backgroundColor="yellow600" slot="leftAvatar" />
+    <vui-list-item>
+      <template slot="title">文件夹</template>
+      <template slot="describe">2017-06-12</template>
+      <vui-avatar icon="like-fill" backgroundColor="yellow600" slot="left" />
       <vui-icon icon="right" slot="right"/>
     </vui-list-item>
     <vui-divider dotted />

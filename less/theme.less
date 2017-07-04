@@ -119,6 +119,25 @@ a {
   }
 }
 
+.vui-dialog {
+  background-color: @dialogColor;
+}
+
+.vui-dialog-footer,
+.vui-dialog-header {
+  &.scrollable{
+    border-bottom-color: @dialogBorderColor;
+  }
+}
+
+.vui-dialog-title{
+  color: @dialogTitleColor;
+}
+
+.vui-dialog-body {
+  color: @dialogBodyColor
+}
+
 .vui-calendar {
   color: @datePickerCalendarTextColor;
 }
@@ -161,25 +180,6 @@ a {
   }
 }
 
-.vui-dialog {
-  background-color: @dialogColor;
-}
-
-.vui-dialog-footer,
-.vui-dialog-header {
-  &.scrollable{
-    border-bottom-color: @dialogBorderColor;
-  }
-}
-
-.vui-dialog-title{
-  color: @dialogTitleColor;
-}
-
-.vui-dialog-body {
-  color: @dialogBodyColor
-}
-
 .vui-dropDown-menu-text {
   color: @dropDownMenuTextColor;
 }
@@ -204,6 +204,16 @@ a {
   .vui-icon {
     color: @gridListTextColor;
   }
+}
+
+
+// circle
+.vui-circle-spinner{
+  border-color: @circleColor;
+}
+
+.vui-circle-secondary {
+  border-color: @circleSecondaryColor;
 }
 
 
@@ -241,15 +251,6 @@ a {
 }
 
 
-// circle
-.vui-circle-spinner{
-  border-color: @circleColor;
-}
-
-.vui-circle-secondary {
-  border-color: @circleSecondaryColor;
-}
-
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -271,7 +272,6 @@ a {
   color: @menuRightIconColor;
 }
 
-
 .vui-pagination-item{
   color: @paginationTextColor;
   &.hover {
@@ -291,12 +291,12 @@ a {
   color: @paperColor;
 }
 
-.vui-popover {
-  background-color: @popoverColor;
-}
-
 .vui-popup {
   background-color: @popupColor;
+}
+
+.vui-popover {
+  background-color: @popoverColor;
 }
 
 .vui-circular-progress-determinate-path{
@@ -365,55 +365,6 @@ a {
 
 .vui-refresh-control {
   color: @refreshControlColor;
-}
-
-.vui-step-button {
-  background-color: @stepperBackgroundColor;
-  &.hover {
-    background-color: @stepperHoverBackgroundColor
-  }
-}
-
-.vui-step-connector-line {
-  border-color: @stepperConnectorLineColor;
-}
-
-.vui-step-content{
-  .vui-stepper-vertical & {
-    border-left: 1px solid @stepperConnectorLineColor;
-  }
-}
-
-
-.vui-step-label{
-  color: @stepperTextColor;
-  &.disabled {
-    color: @stepperDisabledTextColor;
-  }
-}
-
-
-.vui-step-label-icon {
-  color: @stepperInactiveIconColor;
-  .vui-step-label.disabled &{
-    color: @stepperInactiveIconColor;
-  }
-  .vui-step-label.completed &,
-  .vui-step-label.active & {
-    color: @stepperIconColor;
-  }
-}
-
-.vui-step-label-circle{
-  background-color: @stepperInactiveIconColor;
-  color: @stepperNumTextColor;
-  .vui-step-label.disabled &{
-    background-color: @stepperInactiveIconColor;
-  }
-  .vui-step-label.completed &,
-  .vui-step-label.active & {
-    background-color: @stepperIconColor;
-  }
 }
 
 .vui-appbar{
@@ -1097,6 +1048,55 @@ a {
   .vui-magic-sum-info{color: @infoColor}
   .vui-magic-sum-warn{color: @warnColor}
   .vui-magic-sum-danger{color: @dangerColor}
+.vui-step-button {
+  background-color: @stepperBackgroundColor;
+  &.hover {
+    background-color: @stepperHoverBackgroundColor
+  }
+}
+
+.vui-step-connector-line {
+  border-color: @stepperConnectorLineColor;
+}
+
+.vui-step-content{
+  .vui-stepper-vertical & {
+    border-left: 1px solid @stepperConnectorLineColor;
+  }
+}
+
+
+.vui-step-label{
+  color: @stepperTextColor;
+  &.disabled {
+    color: @stepperDisabledTextColor;
+  }
+}
+
+
+.vui-step-label-icon {
+  color: @stepperInactiveIconColor;
+  .vui-step-label.disabled &{
+    color: @stepperInactiveIconColor;
+  }
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
+    color: @stepperIconColor;
+  }
+}
+
+.vui-step-label-circle{
+  background-color: @stepperInactiveIconColor;
+  color: @stepperNumTextColor;
+  .vui-step-label.disabled &{
+    background-color: @stepperInactiveIconColor;
+  }
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
+    background-color: @stepperIconColor;
+  }
+}
+
 // subheader
 .vui-sub-title{
   color: @subHeaderColor;

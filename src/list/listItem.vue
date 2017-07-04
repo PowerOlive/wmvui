@@ -16,46 +16,40 @@
       <div :class="itemClass">
         <div class="vui-item-left" v-if="showLeft">
           <slot name="left"></slot>
-          <slot name="leftAvatar"></slot>
-          <slot name="leftImg"></slot>
         </div>
+
         <div class="vui-item-content">
           <div class="vui-item-title-row" v-if="showTitleRow">
-            <div class="vui-item-title" :class="titleClass">
-               <slot name="title">
-                 {{title}}
-               </slot>
+            <div class="vui-item-title">
+               <slot name="title"></slot>
             </div>
-            <div class="vui-item-after" :class="afterTextClass">
+            <!-- <div class="vui-item-after">
                 <slot name="after">
                   {{afterText}}
                 </slot>
-            </div>
+            </div> -->
           </div>
-          <div class="vui-item-text" :style="textStyle" :class="describeTextClass" v-if="showDescribe">
-            <slot name="describe">
-              {{describeText}}
-            </slot>
+          <div class="vui-item-text" :style="textStyle" v-if="showDescribe">
+            <slot name="describe"></slot>
           </div>
           <slot></slot>
         </div>
+
         <div class="vui-item-right" v-if="showRight">
           <vui-button @click.stop="handleToggleNested" @mousedown.native="stop" @touchstart.native="stop"  v-if="toggleNested">
-            <svg v-if="nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
+            <svg v-if="nestedOpen" class="vui-item-svg-icon" viewBox="0 0 24 24">
               <path d="M6 15L12 9L18 15"/>
             </svg>
-            <svg v-if="!nestedOpen" class="vui-item-svg-icon" :class="toggleIconClass" viewBox="0 0 24 24">
+            <svg v-if="!nestedOpen" class="vui-item-svg-icon"viewBox="0 0 24 24">
               <path d="M6 9L12 15L18 9"/>
             </svg>
           </vui-button>
           <slot name="right"></slot>
-          <slot name="rightAvatar"></slot>
-          <slot name="rightImg"></slot>
         </div>
       </div>
     </abstract-button>
     <expand-transition>
-      <vui-list v-if="showNested" :class="nestedListClass" :nestedLevel="nestedLevel" @change="handleNestedChange" :value="nestedSelectValue">
+      <vui-list v-if="showNested" :nestedLevel="nestedLevel" @change="handleNestedChange" :value="nestedSelectValue">
         <slot name="nested"></slot>
       </vui-list>
     </expand-transition>
@@ -79,27 +73,27 @@ export default {
     target: {
       type: String
     },
-    title: {
-      type: String,
-      default: ''
-    },
-    titleClass: {
-      type: [String, Object, Array]
-    },
-    afterText: {
-      type: String,
-      default: ''
-    },
-    afterTextClass: {
-      type: [String, Object, Array]
-    },
-    describeText: {
-      type: String,
-      default: ''
-    },
-    describeTextClass: {
-      type: [String, Object, Array]
-    },
+    // title: {
+    //   type: String,
+    //   default: ''
+    // },
+    // titleClass: {
+    //   type: [String, Object, Array]
+    // },
+    // afterText: {
+    //   type: String,
+    //   default: ''
+    // },
+    // afterTextClass: {
+    //   type: [String, Object, Array]
+    // },
+    // describeText: {
+    //   type: String,
+    //   default: ''
+    // },
+    // describeTextClass: {
+    //   type: [String, Object, Array]
+    // },
     describeLine: {
       type: Number,
       default: 1
@@ -108,9 +102,9 @@ export default {
     //   type: Boolean,
     //   default: false
     // },
-    nestedListClass: {
-      type: [String, Object, Array]
-    },
+    // nestedListClass: {
+    //   type: [String, Object, Array]
+    // },
     open: {
       type: Boolean,
       default: true
@@ -119,9 +113,9 @@ export default {
       type: Boolean,
       default: false
     },
-    toggleIconClass: {
-      type: [String, Object, Array]
-    },
+    // toggleIconClass: {
+    //   type: [String, Object, Array]
+    // },
     disabled: {
       type: Boolean,
       default: false
@@ -138,34 +132,27 @@ export default {
     }
   },
   computed: {
-    hasAvatar () {
-      return this.$slots && ((this.$slots.leftAvatar && this.$slots.leftAvatar.length > 0) || (this.$slots.rightAvatar && this.$slots.rightAvatar.length > 0))
-    },
-    hasImg () {
-      return this.$slots && ((this.$slots.leftImg && this.$slots.leftImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0))
-    },
     nestedLevel () {
       return this.$parent.nestedLevel + 1
     },
     showLeft () {
-      return this.$slots && (((this.$slots.left && this.$slots.left.length > 0) || (this.$slots.leftAvatar && this.$slots.leftAvatar.length > 0)) || ((this.$slots.leftImg && this.$slots.leftImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0)))
+      return this.$slots && (this.$slots.left && this.$slots.left.length > 0)
     },
     showRight () {
-      return this.toggleNested || (this.$slots && (((this.$slots.right && this.$slots.right.length > 0) || (this.$slots.rightAvatar && this.$slots.rightAvatar.length > 0)) || ((this.$slots.rightImg && this.$slots.rightImg.length > 0) || (this.$slots.rightImg && this.$slots.rightImg.length > 0))))
+      return this.toggleNested || (this.$slots && (this.$slots.right && this.$slots.right.length > 0))
     },
     showTitleRow () {
-      return this.title || (this.$slots && this.$slots.title && this.$slots.title.length > 0) ||
-              this.afterText || (this.$slots && this.$slots.after && this.$slots.after.length > 0)
+      return (this.$slots && this.$slots.title && this.$slots.title.length > 0) || (this.$slots && this.$slots.after && this.$slots.after.length > 0)
     },
     showDescribe () {
-      return this.describeText || (this.$slots && this.$slots.describe && this.$slots.describe.length > 0)
+      return this.$slots && this.$slots.describe && this.$slots.describe.length > 0
     },
     itemClass () {
       var arr = ['vui-item']
       // if (this.showLeft || this.inset) arr.push('show-left')
-      if (this.showRight) arr.push('show-right')
-      if (this.hasAvatar) arr.push('has-avatar')
-      if (this.hasImg) arr.push('has-img')
+      // if (this.showRight) arr.push('show-right')
+      // if (this.hasAvatar) arr.push('has-avatar')
+      // if (this.hasImg) arr.push('has-img')
       if (this.selected) arr.push('selected')
       return arr.join(' ')
     },
@@ -264,7 +251,7 @@ export default {
     /* padding-right: 4px; */
   }
   &.has-avatar {
-    min-height: 56px;
+    /* min-height: 56px; */
     /* padding: 5px */
   }
   &.has-img{

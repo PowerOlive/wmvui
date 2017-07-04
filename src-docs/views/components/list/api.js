@@ -30,41 +30,41 @@ export default {
       type: 'String',
       default: '',
       desc: 'listItem.props.target'
-    }, {
-      name: 'title',
-      type: 'String',
-      default: '',
-      desc: 'listItem.props.title'
-    }, {
-      name: 'titleClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'listItem.props.titleClass'
-    }, {
-      name: 'afterText',
-      type: 'String',
-      default: '',
-      desc: 'listItem.props.afterText'
-    }, {
-      name: 'afterTextClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'listItem.props.afterTextClass'
-    }, {
-      name: 'describeText',
-      type: 'String',
-      default: '',
-      desc: 'listItem.props.describeText'
-    }, {
+    // }, {
+    //   name: 'title',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'listItem.props.title'
+    // }, {
+    //   name: 'titleClass',
+    //   type: 'String,Object,Array',
+    //   default: '',
+    //   desc: 'listItem.props.titleClass'
+    // }, {
+      // name: 'afterText',
+      // type: 'String',
+      // default: '',
+      // desc: 'listItem.props.afterText'
+    // }, {
+    //   name: 'afterTextClass',
+    //   type: 'String,Object,Array',
+    //   default: '',
+    //   desc: 'listItem.props.afterTextClass'
+    // }, {
+    //   name: 'describe',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'listItem.props.describe'
+    // }, {
       name: 'describeLine',
       type: 'Number',
       default: '1',
       desc: 'listItem.props.describeLine'
     }, {
-      name: 'describeTextClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'listItem.props.describeTextClass'
+      // name: 'describeTextClass',
+      // type: 'String,Object,Array',
+      // default: '',
+      // desc: 'listItem.props.describeTextClass'
     // }, {
     //   name: 'inset',
     //   type: 'Boolean',
@@ -91,15 +91,15 @@ export default {
       default: 'false',
       desc: 'listItem.props.toggleNested'
     }, {
-      name: 'toggleIconClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'listItem.props.toggleIconClass'
-    }, {
-      name: 'nestedListClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'listItem.props.nestedListClass'
+    //   name: 'toggleIconClass',
+    //   type: 'String,Object,Array',
+    //   default: '',
+    //   desc: 'listItem.props.toggleIconClass'
+    // }, {
+    //   name: 'nestedListClass',
+    //   type: 'String,Object,Array',
+    //   default: '',
+    //   desc: 'listItem.props.nestedListClass'
     }, {
       name: 'open',
       type: 'Boolean',
@@ -110,21 +110,15 @@ export default {
       name: 'left',
       desc: 'listItem.slots.left'
     }, {
-      name: 'leftAvatar',
-      desc: 'listItem.slots.leftAvatar'
-    }, {
       name: 'right',
       desc: 'listItem.slots.right'
-    }, {
-      name: 'rightAvatar',
-      desc: 'listItem.slots.rightAvatar'
     }, {
       name: 'title',
       desc: 'listItem.slots.title'
     }, {
-      name: 'after',
-      desc: 'listItem.slots.after'
-    }, {
+    //   name: 'after',
+    //   desc: 'listItem.slots.after'
+    // }, {
       name: 'describe',
       desc: 'listItem.slots.describe'
     }, {
@@ -138,15 +132,15 @@ export default {
       name: 'click',
       desc: 'listItem.events.click'
     }, {
-      name: 'hover',
-      desc: 'listItem.events.hover'
-    }, {
-      name: 'hoverExit',
-      desc: 'listItem.events.hoverExit'
-    }, {
-      name: 'keyboardFocus',
-      desc: 'listItem.events.keyboardFocus'
-    }, {
+    //   name: 'hover',
+    //   desc: 'listItem.events.hover'
+    // }, {
+    //   name: 'hoverExit',
+    //   desc: 'listItem.events.hoverExit'
+    // }, {
+    //   name: 'keyboardFocus',
+    //   desc: 'listItem.events.keyboardFocus'
+    // }, {
       name: 'toggleNested',
       desc: 'listItem.events.toggleNested'
     }]
