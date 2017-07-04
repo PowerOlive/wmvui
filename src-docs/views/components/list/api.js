@@ -55,7 +55,7 @@ export default {
     //   type: 'String',
     //   default: '',
     //   desc: 'listItem.props.describe'
-    // }, {
+    }, {
       name: 'describeLine',
       type: 'Number',
       default: '1',
