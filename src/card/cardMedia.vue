@@ -1,12 +1,12 @@
 <template>
 <div class="vui-card-media">
   <slot></slot>
-  <div v-if="title || subTitle" class="vui-card-media-title">
-    <div class="vui-card-title" v-if="title" :class="titleClass">
-      {{title}}
+  <div class="vui-card-media-title">
+    <div class="vui-card-title">
+      <slot name="title"></slot>
     </div>
-    <div class="vui-card-sub-title" v-if="subTitle" :class="subTitleClass">
-      {{subTitle}}
+    <div class="vui-card-sub-title">
+      <slot name="subTitle"></slot>
     </div>
   </div>
 </div>
@@ -16,18 +16,6 @@
 export default {
   name: 'vui-card-media',
   props: {
-    title: {
-      type: String
-    },
-    titleClass: {
-      type: [String, Array, Object]
-    },
-    subTitle: {
-      type: String
-    },
-    subTitleClass: {
-      type: [String, Array, Object]
-    }
   }
 }
 </script>
@@ -52,14 +40,14 @@ export default {
   bottom: 0;
   padding: 16px;
   background-color: @lightBlack;
-}
-.vui-card-title {
-  font-size: 24px;
-  color: @darkWhite;
-  line-height: 36px;
-}
-.vui-card-sub-title {
-  color: @lightWhite;
-  font-size: 14px;
+  .vui-card-title {
+    font-size: 24px;
+    color: @lightWhite;
+    line-height: 36px;
+  }
+  .vui-card-sub-title {
+    color: @lightWhite;
+    font-size: 14px;
+  }
 }
 </style>

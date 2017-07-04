@@ -1,9 +1,13 @@
 <template>
 <div class="vui-card-header">
   <slot name="avatar"></slot>
-  <div class="vui-card-header-title" v-if="title || subTitle">
-    <div class="vui-card-title" :class="titleClass">{{title}}</div>
-    <div class="vui-card-sub-title" :class="subTitleClass">{{subTitle}}</div>
+  <div class="vui-card-header-title">
+    <div class="vui-card-title">
+      <slot name="title"></slot>
+    </div>
+    <div class="vui-card-sub-title">
+      <slot name="subTitle"></slot>
+    </div>
   </div>
   <slot></slot>
 </div>
@@ -13,18 +17,6 @@
 export default {
   name: 'vui-card-header',
   props: {
-    title: {
-      type: String
-    },
-    titleClass: {
-      type: [String, Array, Object]
-    },
-    subTitle: {
-      type: String
-    },
-    subTitleClass: {
-      type: [String, Array, Object]
-    }
   }
 }
 </script>
@@ -38,21 +30,22 @@ export default {
   white-space: nowrap;
   .vui-avatar {
     margin-right: 10px;
+    vertical-align: middle;
   }
 }
 
 .vui-card-header-title{
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   white-space: normal;
   padding-right: 90px;
-}
-.vui-card-title{
-  font-size: 15px;
-  color: fade(@textColor, 87%);
-}
-.vui-card-sub-title{
-  font-size: 14px;
-  color: fade(@textColor, 57%);
+  .vui-card-title{
+    font-size: 15px;
+    color: fade(@textColor, 87%);
+  }
+  .vui-card-sub-title{
+    font-size: 14px;
+    color: fade(@textColor, 57%);
+  }
 }
 </style>

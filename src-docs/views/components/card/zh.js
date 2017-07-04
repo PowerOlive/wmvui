@@ -11,37 +11,43 @@ export default {
   },
   cardHeader: {
     props: {
-      title: '标题文字',
-      titleClass: '标题样式,同 `class` 绑定方式一致',
-      subTitle: '子标题文字',
-      subTitleClass: '子标题样式,同 `class` 绑定方式一致'
+      // title: '标题文字',
+      // titleClass: '标题样式,同 `class` 绑定方式一致',
+      // subTitle: '子标题文字',
+      // subTitleClass: '子标题样式,同 `class` 绑定方式一致'
     },
     slots: {
+      title: '用于放置 标题',
+      subTitle: '用于放置 子标题',
       avatar: '用于放置 avatar 组件',
       default: '用于放置一些其它内容'
     }
   },
   cardMedia: {
     props: {
-      title: '标题文字',
-      titleClass: '标题样式,同 `class` 绑定方式一致',
-      subTitle: '子标题文字',
-      subTitleClass: '子标题样式,同 `class` 绑定方式一致'
+      // title: '标题文字',
+      // titleClass: '标题样式,同 `class` 绑定方式一致',
+      // subTitle: '子标题文字',
+      // subTitleClass: '子标题样式,同 `class` 绑定方式一致'
     },
     slots: {
+      title: '用于放置 标题',
+      subTitle: '用于放置 子标题',
       default: '放置图片等媒体元素'
     }
   },
   cardTitle: {
     props: {
-      title: '标题文字',
-      titleClass: '标题样式,同 `class` 绑定方式一致',
-      subTitle: '子标题文字',
-      subTitleClass: '子标题样式,同 `class` 绑定方式一致'
+      // title: '标题文字',
+      // titleClass: '标题样式,同 `class` 绑定方式一致',
+      // subTitle: '子标题文字',
+      // subTitleClass: '子标题样式,同 `class` 绑定方式一致'
     }
   },
   cardText: {
     slots: {
+      title: '用于放置 标题',
+      subTitle: '用于放置 子标题',
       default: '用于放置大段介绍性的文字'
     }
   },

@@ -7,20 +7,20 @@ export default {
   },
   cardHeader: {
     props: [{
-      name: 'title',
-      type: 'String',
-      default: '',
-      desc: 'cardHeader.props.title'
-    }, {
+    //   name: 'title',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'cardHeader.props.title'
+    // }, {
     //   name: 'titleClass',
     //   type: 'String,Object,Array',
     //   default: '',
     //   desc: 'cardHeader.props.titleClass'
     // }, {
-      name: 'subTitle',
-      type: 'String',
-      default: '',
-      desc: 'cardHeader.props.subTitle'
+    //   name: 'subTitle',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'cardHeader.props.subTitle'
     // }, {
     //   name: 'subTitleClass',
     //   type: 'String,Object,Array',
@@ -31,26 +31,32 @@ export default {
       name: 'avatar',
       desc: 'cardHeader.slots.avatar'
     }, {
+      name: 'title',
+      desc: 'cardHeader.slots.title'
+    }, {
+      name: 'subTitle',
+      desc: 'cardHeader.slots.subTitle'
+    }, {
       name: 'default',
       desc: 'cardHeader.slots.default'
     }]
   },
   cardMedia: {
     props: [{
-      name: 'title',
-      type: 'String',
-      default: '',
-      desc: 'cardMedia.props.title'
+    //   name: 'title',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'cardMedia.props.title'
     // }, {
     //   name: 'titleClass',
     //   type: 'String,Object,Array',
     //   default: '',
     //   desc: 'cardMedia.props.titleClass'
-    }, {
-      name: 'subTitle',
-      type: 'String',
-      default: '',
-      desc: 'cardMedia.props.subTitle'
+    // }, {
+    //   name: 'subTitle',
+    //   type: 'String',
+    //   default: '',
+    //   desc: 'cardMedia.props.subTitle'
     // }, {
     //   name: 'subTitleClass',
     //   type: 'String,Object,Array',
@@ -58,26 +64,32 @@ export default {
     //   desc: 'cardMedia.props.subTitleClass'
     }],
     slots: [{
+      name: 'title',
+      desc: 'cardHeader.slots.title'
+    }, {
+      name: 'subTitle',
+      desc: 'cardHeader.slots.subTitle'
+    }, {
       name: 'default',
       desc: 'cardMedia.slots.default'
     }]
   },
   cardTitle: {
     props: [{
-      name: 'title',
-      type: 'String',
-      default: '',
-      desc: 'cardTitle.props.title'
+      // name: 'title',
+      // type: 'String',
+      // default: '',
+      // desc: 'cardTitle.props.title'
     // }, {
     //   name: 'titleClass',
     //   type: 'String,Object,Array',
     //   default: '',
     //   desc: 'cardTitle.props.titleClass'
     }, {
-      name: 'subTitle',
-      type: 'String',
-      default: '',
-      desc: 'cardTitle.props.subTitle'
+      // name: 'subTitle',
+      // type: 'String',
+      // default: '',
+      // desc: 'cardTitle.props.subTitle'
     // }, {
     //   name: 'subTitleClass',
     //   type: 'String,Object,Array',
@@ -87,6 +99,12 @@ export default {
   },
   cardText: {
     slots: [{
+      name: 'title',
+      desc: 'cardHeader.slots.title'
+    }, {
+      name: 'subTitle',
+      desc: 'cardHeader.slots.subTitle'
+    }, {
       name: 'default',
       desc: 'cardText.slots.default'
     }]
