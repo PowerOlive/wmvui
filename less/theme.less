@@ -303,6 +303,29 @@ a {
   stroke: @circularProgressColor;
 }
 
+.vui-slider-track {
+  background-color: @sliderTrackColor;
+}
+
+
+.vui-slider-fill{
+  background-color: @sliderSelectionColor;
+  &.disabled {
+    background-color: @sliderDisabledColor;
+  }
+}
+
+.vui-slider-thumb{
+  background-color: @sliderSelectionColor;
+  color: @sliderSelectionColor;
+  .vui-slider.zero &,
+  .vui-slider.disabled &{
+    border-color: @sliderDisabledColor;
+    color: @sliderDisabledColor;
+    background-color: @sliderZeroColor;
+  }
+}
+
 .vui-radio {
   input[type="radio"] {
     &:checked {
@@ -338,29 +361,6 @@ a {
   .vui-radio.disabled & {
      color: @radioDisabledColor;
    }
-}
-
-.vui-slider-track {
-  background-color: @sliderTrackColor;
-}
-
-
-.vui-slider-fill{
-  background-color: @sliderSelectionColor;
-  &.disabled {
-    background-color: @sliderDisabledColor;
-  }
-}
-
-.vui-slider-thumb{
-  background-color: @sliderSelectionColor;
-  color: @sliderSelectionColor;
-  .vui-slider.zero &,
-  .vui-slider.disabled &{
-    border-color: @sliderDisabledColor;
-    color: @sliderDisabledColor;
-    background-color: @sliderZeroColor;
-  }
 }
 
 .vui-refresh-control {

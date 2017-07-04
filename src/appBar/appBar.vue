@@ -52,7 +52,7 @@ export default {
   color: @alternateTextColor;
   background-color: @primaryColor;
   height: 56px;
-  padding: 0 8px;
+  /* padding: 0 8px; */
   width: 100%;
   .flex-shrink(0);
   z-index: 100;
