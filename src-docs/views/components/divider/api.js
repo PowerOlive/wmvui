@@ -2,32 +2,32 @@ export default {
   props: [{
     name: 'top',
     type: 'String',
-    default: '0',
+    default: '',
     desc: 'props.top'
   }, {
     name: 'right',
     type: 'String',
-    default: '0',
+    default: '',
     desc: 'props.right'
   }, {
     name: 'bottom',
     type: 'String',
-    default: '0',
+    default: '',
     desc: 'props.bottom'
   }, {
     name: 'left',
     type: 'String',
-    default: '0',
+    default: '',
     desc: 'props.top'
   }, {
     name: 'padding',
     type: 'Array',
-    default: '0',
+    default: '',
     desc: 'props.padding'
   }, {
     name: 'dotted',
     type: 'Boolean',
-    default: '0',
+    default: 'false',
     desc: 'props.dotted'
   }, {
     name: 'title',

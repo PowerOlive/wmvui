@@ -1,6 +1,6 @@
 {
   "name": "wmvui",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "Based on the muse-ui modification, there is no problem related to me",
   "author": "wmvui",
   "main": "dist/wmvui.js",

@@ -21,7 +21,8 @@
         <div class="vui-item-content">
           <div class="vui-item-title-row" v-if="showTitleRow">
             <div class="vui-item-title">
-               <slot name="title"></slot>
+                <template v-if="title">{{title}}</template>
+                <slot name="title"></slot>
             </div>
             <!-- <div class="vui-item-after">
                 <slot name="after">
@@ -73,38 +74,14 @@ export default {
     target: {
       type: String
     },
-    // title: {
-    //   type: String,
-    //   default: ''
-    // },
-    // titleClass: {
-    //   type: [String, Object, Array]
-    // },
-    // afterText: {
-    //   type: String,
-    //   default: ''
-    // },
-    // afterTextClass: {
-    //   type: [String, Object, Array]
-    // },
-    // describeText: {
-    //   type: String,
-    //   default: ''
-    // },
-    // describeTextClass: {
-    //   type: [String, Object, Array]
-    // },
+    title: {
+      type: String,
+      default: ''
+    },
     describeLine: {
       type: Number,
       default: 1
     },
-    // inset: {
-    //   type: Boolean,
-    //   default: false
-    // },
-    // nestedListClass: {
-    //   type: [String, Object, Array]
-    // },
     open: {
       type: Boolean,
       default: true

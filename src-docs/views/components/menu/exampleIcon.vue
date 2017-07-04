@@ -1,32 +1,61 @@
 <template>
-<div>
   <vui-paper class="demo-menu">
     <vui-menu>
-      <vui-menu-item title="李白" leftIcon="like-fill" rightIcon="right" />
-      <vui-menu-item title="王玿珺"/>
-      <vui-menu-item title="墨子" leftIcon="code"/>
+      <vui-menu-item>
+        <vui-icon icon="code" slot="left" />
+        <template slot="title">李白</template>
+        <vui-icon icon="right" :size="14" slot="right" />
+      </vui-menu-item>
+      <vui-menu-item>
+        <template slot="title">姜子牙</template>
+        <vui-badge content="11" circle slot="right" />
+        <vui-icon icon="right" :size="14" slot="right" />
+      </vui-menu-item>
+      <vui-menu-item>
+        <vui-icon icon="right" :size="14" slot="left" />
+        <template slot="title">李白</template>
+        <vui-badge content="骚贱浪" slot="right" />
+        <vui-icon icon="like-fill" color="red" slot="right" style="margin-left:10px"/>
+        <vui-icon icon="right" :size="14" slot="right" />
+      </vui-menu-item>
+      <vui-menu-item>
+        <template slot="title">敌人节</template>
+        <vui-icon icon="right" :size="14" slot="right" />
+      </vui-menu-item>
+      <vui-menu-item title="蔡文鸡" />
+      <vui-menu-item>
+      <template slot="title">亚瑟</template>
+        <template slot="right">
+          <span style="color:#999">大贱人</span>
+        </template>
+      </vui-menu-item>
+      <vui-menu-item>
+        <template slot="title">不知火舞</template>
+        <template slot="right">
+          <span style="color:#999">骚贱浪</span>
+        </template>
+      </vui-menu-item>
+      <vui-menu-item>
+        <template slot="title">韩信</template>
+        <template slot="right">
+          <span style="color:#999">韩跳跳</span>
+        </template>
+      </vui-menu-item>
+      <vui-menu-item>
+        <template slot="title">孙悟空</template>
+        <template slot="right">
+          <span style="color:#999">猴三棍</span>
+        </template>
+      </vui-menu-item>
       <vui-divider />
-      <vui-menu-item title="阿柯" leftIcon="code"/>
-      <vui-menu-item title="亚瑟" leftIcon="code"/>
-      <vui-menu-item title="典韦" leftIcon="code"/>
+      <vui-menu-item>
+        <template slot="title">妲已</template>
+        <template slot="right">
+          <span style="color:#999">少儿不益</span>
+        </template>
+      </vui-menu-item>
     </vui-menu>
   </vui-paper>
-  <vui-paper class="demo-menu">
-    <vui-menu>
-      <vui-menu-item title="姜子牙" rightIcon="right">
-        <vui-badge content="11" circle slot="after" />
-      </vui-menu-item>
-      <vui-menu-item title="李白" leftIcon="like-fill" rightIcon="right">
-        <vui-badge content="骚贱浪" slot="after"/>
-        <vui-icon icon="like-fill" color="red" slot="after" style="margin-left:10px"/>
-      </vui-menu-item>
-      <vui-menu-item title="敌人节" rightIcon="right"/>
-      <vui-menu-item title="蔡文鸡" rightIcon="right" rightIconColor="#559"/>
-      <vui-menu-item title="刘备" rightIcon="right"/>
-      <vui-menu-item title="张飞（小飞飞）" rightIcon="right"/>
-    </vui-menu>
-  </vui-paper>
-</div>
 </template>
 
 

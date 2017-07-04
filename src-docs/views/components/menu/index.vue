@@ -4,14 +4,8 @@
   <code-example :code="exampleSimpleCode" :title="$t('simpleExample')" :description="$t('simpleExampleDesc')">
     <ex-simple />
   </code-example>
-  <code-example :code="exampleDisabledCode" :title="$t('disabledExample')" :description="$t('disabledExampleDesc')">
-    <ex-disabled />
-  </code-example>
   <code-example :code="exampleIconCode" :title="$t('iconExample')" :description="$t('iconExampleDesc')">
     <ex-icon />
-  </code-example>
-  <code-example :code="exampleAfterCode" :title="$t('afterExample')" :description="$t('afterExampleDesc')">
-    <ex-after />
   </code-example>
   <code-example :code="exampleNestedCode" :title="$t('nestedExample')" :description="$t('nestedExampleDesc')">
     <ex-nested />
@@ -24,12 +18,8 @@
 <script>
 import exampleSimple from './exampleSimple'
 import exampleSimpleCode from '!raw!./exampleSimple'
-import exampleDisabled from './exampleDisabled'
-import exampleDisabledCode from '!raw!./exampleDisabled'
 import exampleIcon from './exampleIcon'
 import exampleIconCode from '!raw!./exampleIcon'
-import exampleAfter from './exampleAfter'
-import exampleAfterCode from '!raw!./exampleAfter'
 import exampleNested from './exampleNested'
 import exampleNestedCode from '!raw!./exampleNested'
 import apiData from './api'
@@ -39,18 +29,14 @@ export default {
   data () {
     return {
       exampleSimpleCode,
-      exampleDisabledCode,
       exampleIconCode,
-      exampleAfterCode,
       exampleNestedCode,
       apiData
     }
   },
   components: {
     'ex-simple': exampleSimple,
-    'ex-disabled': exampleDisabled,
     'ex-icon': exampleIcon,
-    'ex-after': exampleAfter,
     'ex-nested': exampleNested
   },
   locales: {

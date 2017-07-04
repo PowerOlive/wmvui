@@ -10,10 +10,11 @@
   </vui-paper>
   <vui-paper class="demo-menu">
     <vui-menu>
-      <vui-menu-item title="大乔"/>
-      <vui-menu-item title="小乔"/>
-      <vui-menu-item title="蔡文姬"/>
-      <vui-menu-item title="妲已"/>
+      <vui-menu-item title="返回"/>
+      <vui-menu-item disabled title="前进"/>
+      <vui-divider />
+      <vui-menu-item disabled title="切换"/>
+      <vui-menu-item title="菜单"/>
     </vui-menu>
   </vui-paper>
 </div>

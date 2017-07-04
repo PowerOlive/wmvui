@@ -3,7 +3,9 @@
     <vui-refresh-control :refreshing="refreshing" :trigger="trigger" @refresh="refresh"/>
     <vui-list>
       <template v-for="item in list">
-        <vui-list-item disableRipple :title="item"/>
+        <vui-list-item disableRipple>
+          <template slot="title">{{item}}</template>
+        </vui-list-item>
         <vui-divider/>
       </template>
     </vui-list>

@@ -246,7 +246,7 @@ export default {
 }
 
 .vui-menu-destop {
-  padding: 16px 0;
+  /* padding: 16px 0; */
   > .vui-sub-header {
     margin-top: -16px;
   }

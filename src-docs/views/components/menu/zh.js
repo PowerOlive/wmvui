@@ -5,12 +5,8 @@ export default {
   description,
   simpleExample: '简单的用法',
   simpleExampleDesc: '两个简单的例子，可以根据内容自动调整宽度',
-  disabledExample: '不可用的菜单',
-  disabledExampleDesc: '改变`desktop`将菜单的样式改为桌面版， 设置`disabled`菜单项将不可以用',
   iconExample: '图标使用',
   iconExampleDesc: '`menuItem` 组件使用 `leftIcon` 和 `rightIcon` 来配合 `icon` 组件',
-  afterExample: '菜单快捷显示',
-  afterExampleDesc: '`afterText` 属性定义标题右边的文字',
   nestedExample: '嵌套菜单',
   nestedExampleDesc: '通过 `slot` 指定嵌套菜单，会在点击时出现',
   menu: {

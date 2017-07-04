@@ -2,7 +2,9 @@
 <div class="demo-infinite-container">
   <vui-list>
     <template v-for="item in list">
-      <vui-list-item :title="item"/>
+      <vui-list-item>
+        <template slot="title">{{item}}</template>
+      </vui-list-item>
       <vui-divider/>
     </template>
   </vui-list>

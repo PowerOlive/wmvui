@@ -54,7 +54,7 @@
           <vui-badge content="1" circle primary />
         </div>
       </div>
-      <vui-slider :value="30"/>
+      <vui-range :value="30"/>
       <vui-progress type="line" mode="determinate" :value="40" />
       <br>
       <vui-flex>

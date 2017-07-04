@@ -70,6 +70,9 @@ export default {
     height: 100%;
     line-height: 100%;
     min-width: auto;
+    margin:0;
+  }
+  .vui-btn{
     padding-left:15px;
     padding-right:15px;
   }
