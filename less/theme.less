@@ -1,11 +1,11 @@
-.vui-avatar {
-  color: @avatarColor;
-  background-color: @avatarBackgroundColor;
-}
-
 .vui-appbar{
   background-color: @appbarColor;
   color: @appbarTextColor;
+}
+
+.vui-avatar {
+  color: @avatarColor;
+  background-color: @avatarBackgroundColor;
 }
 
 .vui-badge {
@@ -23,6 +23,16 @@
   color: @badgeSecondaryTextColor;
 }
 
+body {
+  background-color: @baseBackgroundColor;
+  color: @baseTextColor;
+  font-family: @baseFontFamily;
+}
+
+a {
+  color: @baseLinkColor;
+}
+
 // button
 .vui-btn {
   color: @buttonTextColor;
@@ -33,16 +43,6 @@
 
 .vui-btn-primary{
   color: @buttonPrimaryTextColor;
-}
-
-body {
-  background-color: @baseBackgroundColor;
-  color: @baseTextColor;
-  font-family: @baseFontFamily;
-}
-
-a {
-  color: @baseLinkColor;
 }
 
 .vui-card {
@@ -250,6 +250,7 @@ a {
   color: @listSecondaryTextColor;
 }
 
+
 .vui-menu-item-wrapper{
   color: @menuTextColor;
   &.active {
@@ -270,7 +271,6 @@ a {
 .vui-menu-item-right-icon {
   color: @menuRightIconColor;
 }
-
 
 .vui-pagination-item{
   color: @paginationTextColor;
@@ -301,29 +301,6 @@ a {
 
 .vui-circular-progress-determinate-path{
   stroke: @circularProgressColor;
-}
-
-.vui-slider-track {
-  background-color: @sliderTrackColor;
-}
-
-
-.vui-slider-fill{
-  background-color: @sliderSelectionColor;
-  &.disabled {
-    background-color: @sliderDisabledColor;
-  }
-}
-
-.vui-slider-thumb{
-  background-color: @sliderSelectionColor;
-  color: @sliderSelectionColor;
-  .vui-slider.zero &,
-  .vui-slider.disabled &{
-    border-color: @sliderDisabledColor;
-    color: @sliderDisabledColor;
-    background-color: @sliderZeroColor;
-  }
 }
 
 .vui-radio {
@@ -361,6 +338,29 @@ a {
   .vui-radio.disabled & {
      color: @radioDisabledColor;
    }
+}
+
+.vui-slider-track {
+  background-color: @sliderTrackColor;
+}
+
+
+.vui-slider-fill{
+  background-color: @sliderSelectionColor;
+  &.disabled {
+    background-color: @sliderDisabledColor;
+  }
+}
+
+.vui-slider-thumb{
+  background-color: @sliderSelectionColor;
+  color: @sliderSelectionColor;
+  .vui-slider.zero &,
+  .vui-slider.disabled &{
+    border-color: @sliderDisabledColor;
+    color: @sliderDisabledColor;
+    background-color: @sliderZeroColor;
+  }
 }
 
 .vui-refresh-control {
