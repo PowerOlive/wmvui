@@ -133,6 +133,10 @@ export default {
         value: '/preview',
         icon: 'swiper'
       }, {
+        title: '懒加载',
+        value: '/lazyload',
+        icon: 'lazyload'
+      }, {
         title: '无敌的弹层',
         value: '/popup',
         icon: 'layer'

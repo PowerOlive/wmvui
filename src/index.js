@@ -45,8 +45,6 @@ import clocker from './clocker'
 import magicSum from './magicSum'
 import tooltip from './tooltip'
 import * as stepper from './stepper'
-// import autoComplete from './autoComplete'
-// import pagination from './pagination'
 
 import number from './number'   // 自定义
 
@@ -54,6 +52,7 @@ import number from './number'   // 自定义
 
 import * as flexbox from './flexbox'
 import * as marquee from './marquee'
+import lazyload from './lazyload'
 import config from './config'
 const components = {
   number,
@@ -102,6 +101,7 @@ const components = {
   tooltip,
   ...stepper,
   ...flexbox,
+  lazyload,
   ...marquee
 }
 

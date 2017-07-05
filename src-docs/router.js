@@ -47,6 +47,7 @@ import Countdown from './views/components/countdown'
 import Clocker from './views/components/clocker'
 import MagicSum from './views/components/magicSum'
 import Marquee from './views/components/marquee'
+import lazyload from './views/components/lazyload'
 Vue.use(Router)
 
 const router = new Router({
@@ -100,6 +101,7 @@ const router = new Router({
     { path: '/clocker', component: Clocker },
     { path: '/magicSum', component: MagicSum },
     { path: '/marquee', component: Marquee },
+    { path: '/lazyload', component: lazyload },
     { path: '*', redirect: '/index' }
   ]
 })
