@@ -32,8 +32,14 @@ export default {
   computed: {
     itemStyle () {
       let styles = {}
-      let marginName = this.$parent.vertical ? 'marginTop' : 'marginLeft'
-      styles[marginName] = `${this.$parent.gutter}px`
+      if (this.$parent.vertical) {
+        styles['marginTop'] = `${this.$parent.gutter}px`
+      } else if (this.$parent.wrap) {
+        styles['marginBottom'] = `${this.$parent.gutter}px`
+        styles['marginRight'] = `${this.$parent.gutter}px`
+      } else {
+        styles['marginLeft'] = `${this.$parent.gutter}px`
+      }
       // styles['flex'] = `${this.grow} ${this.shrink} ${this.basis}`
       styles['order'] = this.order
       return styles
