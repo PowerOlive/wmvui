@@ -24,10 +24,10 @@ export default {
     type: 'Number',
     default: '300',
     desc: 'props.time'
-  // }, {
-  //   name: 'cut',
-  //   type: 'cut',
-  //   default: 'false',
-  //   desc: 'props.cut'
+  }, {
+    name: 'cut',
+    type: 'cut',
+    default: 'false',
+    desc: 'props.cut'
   }]
 }
