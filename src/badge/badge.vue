@@ -21,21 +21,25 @@ export default {
       type: String,
       default: ''
     },
-    color: {
-      type: String,
-      default: ''
-    },
-    primary: Boolean,
-    success: Boolean,
-    info: Boolean,
-    warn: Boolean,
-    danger: Boolean,
+    theme: Object,
+    // primary: Boolean,
+    // success: Boolean,
+    // info: Boolean,
+    // warn: Boolean,
+    // danger: Boolean,
     round: Boolean,
     circle: {
       type: Boolean,
       default: false
     },
-    dot: Boolean,
+    dot: {
+      type: [Boolean, String],
+      default: ''
+    },
+    label: {
+      type: [Boolean, String, Object],
+      default: ''
+    },
     size: Number
   },
   computed: {
@@ -43,26 +47,39 @@ export default {
       return this.$slots && this.$slots.sub && this.$slots.sub.length > 0
     },
     badgeStyle () {
-      return {
-        'background-color': this.color,
+      let size = {
         'width': this.size ? this.size + 'px' : '',
         'height': this.size ? this.size + 'px' : '',
         'line-height': this.size ? this.size + 'px' : ''
       }
+      let dot = {
+        'background': this.dot
+      }
+      let label = (typeof this.label) === 'string' ? {'border-color': this.label, 'color': this.label} : this.label
+      let style = {}
+      if (this.dot) {
+        style = {...size, ...dot}
+      } else if (this.label) {
+        style = {...size, ...label}
+      } else {
+        style = {...size, ...this.theme}
+      }
+      return style
     },
     bdageClass () {
-      const {circle, round, primary, success, info, warn, danger, badgeClass, dot} = this
+      const {circle, round, badgeClass, dot, label} = this
       const isFloat = this.$slots && this.$slots.sub && this.$slots.sub.length > 0
       const classNames = []
       if (circle) classNames.push('vui-badge-circle')
       if (round) classNames.push('vui-badge-round')
-      if (primary) classNames.push('vui-badge-primary')
+      /* if (primary) classNames.push('vui-badge-primary')
       if (success) classNames.push('vui-badge-success')
       if (info) classNames.push('vui-badge-info')
       if (warn) classNames.push('vui-badge-warn')
-      if (danger) classNames.push('vui-badge-danger')
+      if (danger) classNames.push('vui-badge-danger') */
       if (isFloat) classNames.push('vui-badge-float')
       if (dot) classNames.push('vui-badge-dot')
+      if (label) classNames.push('vui-badge-label')
       return classNames.concat(convertClass(badgeClass))
     }
   }
@@ -82,8 +99,8 @@ export default {
     padding: 0 6px;
     line-height: 1.5;
     font-size: 12px;
-    background-color: @lighterPrimaryColor;
-    color: @alternateTextColor;
+    background-color: @primaryColor;
+    color: #fff;
     text-align: center;
   }
   &-float {
@@ -114,7 +131,7 @@ export default {
       border-radius:10000px;
     }
   }
-  &-primary {
+  /* &-primary {
     .vui-badge-sup{
       background-color: @primaryColor;
     }
@@ -137,6 +154,15 @@ export default {
   &-danger {
     .vui-badge-sup{
       background-color: @dangerColor;
+    }
+  } */
+  &-label{
+    .vui-badge-sup{
+      padding:1px;
+      line-height:1;
+      background-color: transparent;
+      color: #999;
+      border:1px solid #999;
     }
   }
 }

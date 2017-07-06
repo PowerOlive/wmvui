@@ -5,15 +5,10 @@ export default {
     default: '',
     desc: 'props.text'
   }, {
-    name: '状态',
+    name: 'theme',
     type: 'String',
     default: '',
-    desc: 'props.state'
-  }, {
-    name: 'color',
-    type: 'String',
-    default: '',
-    desc: 'props.color'
+    desc: 'props.theme'
   }, {
     name: 'circle',
     type: 'Boolean',
@@ -21,7 +16,7 @@ export default {
     desc: 'props.circle'
   }, {
     name: 'dot',
-    type: 'Boolean',
+    type: 'Boolean String',
     default: 'false',
     desc: 'props.dot'
   }, {
