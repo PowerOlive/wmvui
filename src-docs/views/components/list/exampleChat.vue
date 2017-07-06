@@ -23,7 +23,7 @@
     <vui-list-item>
       <template slot="title">有文字</template>
       <vui-avatar src="images/uicon.jpg" slot="rightAvatar"/>
-      <vui-avatar color="pinkA200" :style="{'margin-left': '-8px'}" backgroundColor="transparent" slot="left">A</vui-avatar>
+      <vui-avatar :theme="theme" :style="{'margin-left': '-8px'}" slot="left">A</vui-avatar>
     </vui-list-item>
     <vui-divider dotted />
   </vui-list>
@@ -31,6 +31,14 @@
 
 <script>
 export default {
+  data () {
+    return {
+      theme: {
+        'background': '#ef5350',
+        'color': '#fff'
+      }
+    }
+  },
   components: {
   }
 }

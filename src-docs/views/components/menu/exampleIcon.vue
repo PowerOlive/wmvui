@@ -8,13 +8,13 @@
       </vui-menu-item>
       <vui-menu-item>
         <template slot="title">姜子牙</template>
-        <vui-badge text="11" primary circle slot="right" />
+        <vui-badge text="11" circle slot="right" />
         <vui-icon icon="right" :size="14" slot="right" />
       </vui-menu-item>
       <vui-menu-item>
         <vui-icon icon="right" :size="14" slot="left" />
         <template slot="title">李白</template>
-        <vui-badge text="骚贱浪" danger slot="right" />
+        <vui-badge text="骚贱浪" slot="right" />
         <vui-icon icon="like-fill" color="red" slot="right" style="margin-left:10px"/>
         <vui-icon icon="right" :size="14" slot="right" />
       </vui-menu-item>

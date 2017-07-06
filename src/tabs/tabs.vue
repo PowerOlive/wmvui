@@ -30,10 +30,7 @@ export default {
   },
   computed: {
     TabStyle () {
-      return {
-        'background-color': this.theme ? this.theme.background : '',
-        'color': this.theme ? this.theme.color : ''
-      }
+      return this.theme
     },
     activeLine () {
       return {

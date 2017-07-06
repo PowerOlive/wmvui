@@ -16,15 +16,11 @@
 import abstractButton from '../internal/abstractButton'
 import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
-import badge from '../badge'
 import {isNotNull} from '../utils'
 export default {
   name: 'vui-tab-item',
   mixins: [routerMixin],
   props: {
-    badge: {
-      type: [Object, Array]
-    },
     icon: {
       type: String,
       default: ''
@@ -80,8 +76,7 @@ export default {
   },
   components: {
     'abstract-button': abstractButton,
-    icon,
-    badge
+    icon
   }
 }
 </script>

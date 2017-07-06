@@ -2,7 +2,7 @@
 <div>
   <vui-tabs :value="activeTab" :lineHeight="1" @change="handleTabChange">
     <vui-tab-item value="李白" title="李白">
-      <vui-badge info circle :size="18" text="1" slot="badge"/>
+      <vui-badge theme="red" circle :size="18" text="1" slot="badge"/>
     </vui-tab-item>
     <vui-tab-item value="禁用" title="禁用" disabled />
     <vui-tab-item value="兰陵王" title="兰陵王" @active="handleActive" />

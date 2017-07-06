@@ -21,7 +21,7 @@ export default {
       type: String,
       default: ''
     },
-    theme: Object,
+    theme: [String, Object],
     // primary: Boolean,
     // success: Boolean,
     // info: Boolean,
@@ -62,7 +62,8 @@ export default {
       } else if (this.label) {
         style = {...size, ...label}
       } else {
-        style = {...size, ...this.theme}
+        let theme = (typeof this.theme) === 'string' ? {'background': this.theme} : this.theme
+        style = {...size, ...theme}
       }
       return style
     },
@@ -119,9 +120,9 @@ export default {
     .vui-badge-sup{
       border-radius: 50%;
       padding: 0;
-      width: 16px;
-      height: 16px;
-      line-height:16px;
+      width: 18px;
+      height: 18px;
+      line-height:18px;
       overflow: hidden;
     }
   }

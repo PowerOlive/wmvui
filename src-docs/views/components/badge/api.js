@@ -6,13 +6,13 @@ export default {
     desc: 'props.text'
   }, {
     name: 'theme',
-    type: 'String',
+    type: 'String Object',
     default: '',
     desc: 'props.theme'
   }, {
     name: 'circle',
     type: 'Boolean',
-    default: '16px',
+    default: '18px',
     desc: 'props.circle'
   }, {
     name: 'dot',

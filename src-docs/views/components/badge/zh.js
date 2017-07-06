@@ -9,7 +9,7 @@ export default {
   custom: '定义不同的内容与尺寸',
   props: {
     text: '内容文本',
-    theme: '主题样式 如 `{background:\'red\'}`',
+    theme: '主题样式 如 ` \'red\' or {background:\'red\'}`',
     round: '是否为圆角',
     circle: '是否为圆形',
     dot: '显示成圆点，可配置颜色',
