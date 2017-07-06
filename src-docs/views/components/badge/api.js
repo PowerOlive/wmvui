@@ -17,8 +17,13 @@ export default {
   }, {
     name: 'circle',
     type: 'Boolean',
-    default: '20px',
+    default: '16px',
     desc: 'props.circle'
+  }, {
+    name: 'dot',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.dot'
   }, {
     name: 'round',
     type: 'Boolean',

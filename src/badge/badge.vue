@@ -1,8 +1,9 @@
 <template>
   <div class="vui-badge" :class="bdageClass">
-    <slot name="sub">
-      <span class="vui-badge-sub"></span>
-    </slot>
+    <span class="vui-badge-sub" v-if="showSub">
+      <slot name="sub">
+      </slot>
+    </span>
     <span class="vui-badge-sup" :style="badgeStyle">
       <slot name="text">
         {{text}}
@@ -34,12 +35,13 @@ export default {
       type: Boolean,
       default: false
     },
-    size: Number,
-    badgeClass: {
-      type: [String, Object, Array]
-    }
+    dot: Boolean,
+    size: Number
   },
   computed: {
+    showSub () {
+      return this.$slots && this.$slots.sub && this.$slots.sub.length > 0
+    },
     badgeStyle () {
       return {
         'background-color': this.color,
@@ -49,7 +51,7 @@ export default {
       }
     },
     bdageClass () {
-      const {circle, round, primary, success, info, warn, danger, badgeClass} = this
+      const {circle, round, primary, success, info, warn, danger, badgeClass, dot} = this
       const isFloat = this.$slots && this.$slots.sub && this.$slots.sub.length > 0
       const classNames = []
       if (circle) classNames.push('vui-badge-circle')
@@ -60,6 +62,7 @@ export default {
       if (warn) classNames.push('vui-badge-warn')
       if (danger) classNames.push('vui-badge-danger')
       if (isFloat) classNames.push('vui-badge-float')
+      if (dot) classNames.push('vui-badge-dot')
       return classNames.concat(convertClass(badgeClass))
     }
   }
@@ -70,9 +73,6 @@ export default {
 @import "../styles/import.less";
 .vui-badge{
   position: relative;
-/*   display: flex;
-justify-text: center;
-align-items: center; */
   &,&-sup,&-sub{
     display: inline-block;
     vertical-align: middle;
@@ -106,6 +106,12 @@ align-items: center; */
       height: 16px;
       line-height:16px;
       overflow: hidden;
+    }
+  }
+  &-dot{
+    .vui-badge-sup{
+      padding:0;
+      border-radius:10000px;
     }
   }
   &-primary {

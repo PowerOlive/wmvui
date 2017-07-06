@@ -14,6 +14,10 @@
 	    <span slot="text">&copy;</span>
 	    <p slot="sub" style="font-size: 14px; padding:10px">版权信息</p>
 	  </vui-badge>
+
+    <vui-badge success :size="8" dot class="demo-icon-badge" />
+    <vui-badge danger :size="10" dot class="demo-icon-badge" />
+    <vui-badge danger :size="12" dot class="demo-icon-badge" />
 </div>
 </template>
 

@@ -17,25 +17,11 @@
       <div class="vui-menu-item">
         <slot name="left" class="vui-menu-item-left-icon"></slot>
         <div class="vui-menu-item-title">
-          <!-- <icon v-if="leftIcon" :icon="leftIcon" :style="{'color': filterColor(leftIconColor)}" class="vui-menu-item-left-icon" :class="leftIconClass"/> -->
           <template v-if="title">{{title}}</template>
           <slot name="title"></slot>
         </div>
         <slot name="after"></slot>
         <slot name="right"></slot>
-        <!-- <div v-if="afterText">
-          <span :class="afterTextClass" class="vui-menu-item-after" style="color:#999;">{{afterText}}</span>
-          <slot name="after"></slot>
-        </div> -->
-        <!-- <div v-else-if="rightIcon && afterText">
-          <span :class="afterTextClass" style="color:#999;">{{afterText}}</span>
-          <slot name="after"></slot>
-          <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
-        </div> -->
-        <!-- <div v-else>
-          <slot name="after"></slot>
-          <icon :icon="rightIcon" :style="{'color': filterColor(rightIconColor)}" class="vui-menu-item-right-icon" :class="rightIconClass"/>
-        </div> -->
      </div>
    </abstract-button>
    <popover :open="openMenu" v-if="$slots && $slots.default && $slots.default.length > 0" :anchorOrigin="{ vertical: 'top', horizontal: 'right'}"
@@ -69,15 +55,6 @@ export default {
     title: {
       type: String
     },
-    // titleClass: {
-    //   type: [String, Object, Array]
-    // },
-    // afterText: {
-    //   type: String
-    // },
-    // afterTextClass: {
-    //   type: [String, Object, Array]
-    // },
     disabled: {
       type: Boolean,
       default: false
@@ -86,28 +63,6 @@ export default {
       type: Boolean,
       default: false
     },
-    // inset: {
-    //   type: Boolean,
-    //   default: false
-    // },
-    // leftIcon: {
-    //   type: String
-    // },
-    // leftIconColor: {
-    //   type: String
-    // },
-    // leftIconClass: {
-    //   type: [String, Object, Array]
-    // },
-    // rightIcon: {
-    //   type: String
-    // },
-    // rightIconColor: {
-    //   type: String
-    // },
-    // rightIconClass: {
-    //   type: [String, Object, Array]
-    // },
     nestedMenuClass: {
       type: [String, Object, Array]
     },
