@@ -3,10 +3,10 @@
   <markdown-element :text="$t('title')"/>
   <vui-paper :class="['theme-' + theme, 'demo-theme-paper']">
     <vui-tabs :value="theme" @change="changeTheme">
-      <vui-tab title="default" value="default"/>
-      <vui-tab title="darkly" value="darkly"/>
-      <vui-tab title="teal" value="teal"/>
-      <vui-tab title="pink" value="pink"/>
+      <vui-tab-item title="default" value="default"/>
+      <vui-tab-item title="darkly" value="darkly"/>
+      <vui-tab-item title="teal" value="teal"/>
+      <vui-tab-item title="pink" value="pink"/>
     </vui-tabs>
     <vui-content-block :padding="['20px']">
       <div class="demo-theme-group">

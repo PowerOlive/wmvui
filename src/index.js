@@ -18,6 +18,7 @@ import * as tabs from './tabs'
 import paper from './paper'
 import * as card from './card'
 import tags from './tags'
+import label from './label'
 import overlay from './internal/popup/overlay'
 import dialog from './dialog'
 import popup from './popup'
@@ -73,6 +74,7 @@ const components = {
   paper,
   ...card,
   tags,
+  label,
   overlay,
   dialog,
   preview,
