@@ -4,26 +4,16 @@ export default {
     type: 'Boolean',
     default: 'false',
     desc: 'props.showDelete'
-  // }, {
-  //   name: 'deleteIconClass',
-  //   type: 'String',
-  //   default: '',
-  //   desc: 'props.deleteIconClass'
   }, {
     name: 'disabled',
     type: 'Boolean',
     default: 'false',
     desc: 'props.disabled'
   }, {
-    name: 'backgroundColor',
-    type: 'String',
+    name: 'theme',
+    type: 'Object',
     default: '',
-    desc: 'props.backgroundColor'
-  }, {
-    name: 'color',
-    type: 'String',
-    default: '',
-    desc: 'props.color'
+    desc: 'props.theme'
   }],
   slots: [{
     name: 'default',

@@ -1,8 +1,8 @@
 <template>
   <div class="vui-avatar" @click="handleClick" :style="avatarStyle">
     <div class="vui-avatar-inner">
-      <icon v-if="icon" :icon="icon" :size="iconSize" :class="iconClass"></icon>
-      <img :src="src" v-if="src" :class="imgClass" />
+      <icon v-if="icon" :icon="icon" :size="iconSize"></icon>
+      <img :src="src" v-if="src" />
       <slot></slot>
     </div>
   </div>
@@ -10,31 +10,17 @@
 
 <script>
 import icon from '../icon'
-import {getColor} from '../utils'
 export default {
   name: 'vui-avatar',
   props: {
-    backgroundColor: {
-      type: String,
-      default: ''
-    },
-    color: {
-      type: String,
-      default: ''
-    },
+    theme: Object,
     icon: {
       type: String,
       default: ''
     },
-    iconClass: {
-      type: [String, Object, Array]
-    },
     src: {
       type: String,
       default: ''
-    },
-    imgClass: {
-      type: [String, Object, Array]
     },
     size: {
       type: Number
@@ -45,12 +31,11 @@ export default {
   },
   computed: {
     avatarStyle () {
-      return {
+      let size = {
         width: this.size ? this.size + 'px' : '',
-        height: this.size ? this.size + 'px' : '',
-        color: getColor(this.color),
-        'background-color': getColor(this.backgroundColor)
+        height: this.size ? this.size + 'px' : ''
       }
+      return {...size, ...this.theme}
     }
   },
   methods: {

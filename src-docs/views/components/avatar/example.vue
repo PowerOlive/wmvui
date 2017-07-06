@@ -13,12 +13,25 @@
     <template slot="title">图标</template>
   </vui-list-item>
   <vui-list-item disabled>
-    <vui-avatar slot="left" icon="menu" color="orange200" backgroundColor="pink400" :size="30" :iconSize="16"/>
+    <vui-avatar slot="left" icon="menu" :theme="theme" :size="30" :iconSize="16"/>
     <template slot="title">图标, 自定义大小、颜色</template>
   </vui-list-item>
   <vui-list-item disabled>
-    <vui-avatar slot="left" color="deepOrange300" backgroundColor="purple500">MB</vui-avatar>
+    <vui-avatar slot="left" :theme="theme">MB</vui-avatar>
     <template slot="title">文字</template>
   </vui-list-item>
 </vui-list>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      theme: {
+        'background': '#ef5350',
+        'color': '#fff'
+      }
+    }
+  }
+}
+</script>

@@ -1,34 +1,19 @@
 export default {
   props: [{
-    name: 'backgroundColor',
-    type: 'String',
+    name: 'theme',
+    type: 'Obejct',
     default: '',
-    desc: 'props.backgroundColor'
-  }, {
-    name: 'color',
-    type: 'String',
-    default: '',
-    desc: 'props.color'
+    desc: 'props.theme'
   }, {
     name: 'src',
     type: 'String',
     default: '',
     desc: 'props.src'
   }, {
-    name: 'imgClass',
-    type: 'String,Object,Array',
-    default: '',
-    desc: 'props.imgClass'
-  }, {
     name: 'icon',
     type: 'String',
     default: '',
     desc: 'props.icon'
-  }, {
-    name: 'iconClass',
-    type: 'String,Object,Array',
-    default: '',
-    desc: 'props.iconClass'
   }, {
     name: 'iconSize',
     type: 'Number',
