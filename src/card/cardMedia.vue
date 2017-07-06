@@ -41,9 +41,7 @@ export default {
   padding: 16px;
   background-color: @lightBlack;
   .vui-card-title {
-    font-size: 24px;
     color: @lightWhite;
-    line-height: 36px;
   }
   .vui-card-sub-title {
     color: @lightWhite;

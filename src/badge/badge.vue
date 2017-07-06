@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {getColor, convertClass} from '../utils'
+import {convertClass} from '../utils'
 export default {
   name: 'vui-badge',
   props: {
@@ -40,7 +40,7 @@ export default {
   computed: {
     badgeStyle () {
       return {
-        'background-color': getColor(this.color),
+        'background-color': this.color,
         'width': this.size ? this.size + 'px' : '',
         'height': this.size ? this.size + 'px' : ''
       }

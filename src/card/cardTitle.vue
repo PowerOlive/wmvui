@@ -20,12 +20,9 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-card-title-container{
-  /* padding: 15px; */
   position: relative;
   .vui-card-title{
-    font-size: 24px;
     color: @textColor;
-    line-height: 36px;
   }
   .vui-card-sub-title{
     font-size: 14px;

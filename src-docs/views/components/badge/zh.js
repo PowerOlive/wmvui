@@ -9,7 +9,8 @@ export default {
   custom: '定义不同的内容与尺寸',
   props: {
     content: '内容文本',
-    color: '可选内置颜色primary success info warn danger',
+    state: '可选内置颜色primary success info warn danger',
+    color: '自定义颜色',
     round: '是否为圆角',
     circle: '是否为圆形',
     size: '配置大小 仅支持circle状态时'

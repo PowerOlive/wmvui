@@ -5,7 +5,12 @@ export default {
     default: '',
     desc: 'props.content'
   }, {
-    name: '颜色',
+    name: '状态',
+    type: 'String',
+    default: '',
+    desc: 'props.state'
+  }, {
+    name: 'color',
     type: 'String',
     default: '',
     desc: 'props.color'
