@@ -110,7 +110,7 @@ export default {
         opacity:.5;
       }
   }
-  &-text{
+  &-title{
     &.has-icon {
       margin-top: 8px;
     }

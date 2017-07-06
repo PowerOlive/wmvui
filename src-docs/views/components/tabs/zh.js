@@ -21,12 +21,12 @@ export default {
   },
   tab: {
     props: {
-      badge: '如 :badge="{\'content\':\'1\',\'danger\':true}"',
+      // badge: '如 :badge="{\'content\':\'1\',\'danger\':true}"',
       icon: 'tab 上的图标',
       iconSize: '图标大小',
       // iconClass: '图标的样式，同 `class` 绑定方式一致',
       title: 'tab 上的文字',
-      titleClass: '标题的样式，同 `class` 绑定方式一致',
+      // titleClass: '标题的样式，同 `class` 绑定方式一致',
       value: '必需，当value 与父组件的 value值相等时，会变成选中状态',
       href: '相当于 a 标签的 href属性，设置之后会渲染成 a 标签，默认是使用button标签',
       disabled: '是否禁用'

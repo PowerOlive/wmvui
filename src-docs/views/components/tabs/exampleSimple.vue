@@ -1,9 +1,11 @@
 <template>
 <div>
   <vui-tabs :value="activeTab" :lineHeight="1" @change="handleTabChange">
-    <vui-tab value="李白" title="李白" :badge="{'content':'1','danger':true}"/>
-    <vui-tab value="禁用" title="禁用" disabled :badge="{'content':'2','warn':true}"/>
-    <vui-tab value="兰陵王" @active="handleActive" title="兰陵王" :badge="{'content':'3','success':true}"/>
+    <vui-tab-item value="李白" title="李白">
+      <vui-badge info circle :size="18" text="1" slot="badge"/>
+    </vui-tab-item>
+    <vui-tab-item value="禁用" title="禁用" disabled />
+    <vui-tab-item value="兰陵王" title="兰陵王" @active="handleActive" />
   </vui-tabs>
   <vui-divider />
   <div v-if="activeTab === '李白'">

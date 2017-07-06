@@ -1,9 +1,11 @@
 <template>
 <div>
   <vui-tabs :value="activeTab" @change="handleTabChange" color="red">
-    <vui-tab value="tab1" icon="like-fill" title="李白" :badge="{'content':'1','danger':true}" />
-    <vui-tab value="tab2" icon="like-fill" title="阿柯"/>
-    <vui-tab value="tab3" icon="like-fill" title="兰陵王"/>
+    <vui-tab-item value="tab1" title="首页" icon="menu" :iconSize="20" />
+    <vui-tab-item value="tab2" title="购物车" icon="shop-cart" :iconSize="20">
+      <vui-badge danger circle :size="18" text="1" slot="badge"/>
+    </vui-tab-item>
+    <vui-tab-item value="tab3" title="喜欢的" icon="like-fill" :iconSize="20" />
   </vui-tabs>
   <vui-divider />
 </div>

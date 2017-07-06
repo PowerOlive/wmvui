@@ -99,9 +99,11 @@ export default {
     font-weight: 400;
     /* line-height: 56px; */
   }
-  .vui-badge-container{
-    height:100%;
-    .vui-badge{
+  .vui-badge{
+    &,&-sub{
+      height:100%;
+    }
+    .vui-badge-sup{
       top:4px;
       right:4px;
     }

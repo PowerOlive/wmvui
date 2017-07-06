@@ -2,9 +2,9 @@
 <div>
   <h2 class="api-view-title">{{title}}</h2>
   <vui-tabs class="api-view-tabs" v-if="showTabs" @change="handleChange" :value="value">
-    <vui-tab value="props" v-if="api.props" title="Props"/>
-    <vui-tab value="slots" v-if="api.slots" title="Slots"/>
-    <vui-tab value="events" v-if="api.events" title="Events"/>
+    <vui-tab-item value="props" v-if="api.props" title="Props"/>
+    <vui-tab-item value="slots" v-if="api.slots" title="Slots"/>
+    <vui-tab-item value="events" v-if="api.events" title="Events"/>
   </vui-tabs>
   <vui-table v-show="value === 'props'" class="api-view-table" :fixedFooter="false" :fixedHeader="false" :showCheckbox="false" :selectable="false">
     <vui-thead>

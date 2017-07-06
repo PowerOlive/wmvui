@@ -51,7 +51,7 @@
             <vui-menu-item value="5" title="英雄联盟"/>
             <vui-menu-item value="6" title="王者荣耀"/>
           </vui-select-field>
-          <vui-badge content="1" circle primary />
+          <vui-badge text="1" circle primary />
         </div>
       </div>
       <vui-range :value="30"/>

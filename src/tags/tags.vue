@@ -6,7 +6,6 @@
   @click= "handleClick"
   @touchend="onTouchend" 
   @touchcancel="onTouchend" 
-  :class="classNames" 
   class="vui-tags" 
   :style="style">
     <slot></slot>
@@ -23,7 +22,6 @@
 </template>
 
 <script>
-import {getColor} from '../utils'
 import icon from '../icon'
 export default {
   name: 'vui-tags',
@@ -58,14 +56,10 @@ export default {
     }
   },
   computed: {
-    // classNames () {
-    //   if (this.disabled) return null
-    //   return this.focus ? ['hover', 'active'] : this.hover ? ['hover'] : null
-    // },
     style () {
       return {
-        'background-color': getColor(this.backgroundColor),
-        'color': getColor(this.color)
+        'background-color': this.backgroundColor,
+        'color': this.color
       }
     }
   },

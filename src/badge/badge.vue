@@ -1,11 +1,13 @@
 <template>
-  <div class="vui-badge-container">
-    <slot></slot>
-    <em class="vui-badge" :style="badgeStyle" :class="badgeInternalClass">
-      <slot name="content">
-        {{content}}
+  <div class="vui-badge" :class="bdageClass">
+    <slot name="sub">
+      <span class="vui-badge-sub"></span>
+    </slot>
+    <span class="vui-badge-sup" :style="badgeStyle">
+      <slot name="text">
+        {{text}}
       </slot>
-    </em>
+    </span>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ import {convertClass} from '../utils'
 export default {
   name: 'vui-badge',
   props: {
-    content: {
+    text: {
       type: String,
       default: ''
     },
@@ -42,12 +44,13 @@ export default {
       return {
         'background-color': this.color,
         'width': this.size ? this.size + 'px' : '',
-        'height': this.size ? this.size + 'px' : ''
+        'height': this.size ? this.size + 'px' : '',
+        'line-height': this.size ? this.size + 'px' : ''
       }
     },
-    badgeInternalClass () {
+    bdageClass () {
       const {circle, round, primary, success, info, warn, danger, badgeClass} = this
-      const isFloat = this.$slots && this.$slots.default && this.$slots.default.length > 0
+      const isFloat = this.$slots && this.$slots.sub && this.$slots.sub.length > 0
       const classNames = []
       if (circle) classNames.push('vui-badge-circle')
       if (round) classNames.push('vui-badge-round')
@@ -66,42 +69,72 @@ export default {
 <style lang="less">
 @import "../styles/import.less";
 .vui-badge{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 6px;
-  line-height: 1.5;
-  font-size: 12px;
-  font-style: normal;
-  background-color: @lighterPrimaryColor;
-  color: @alternateTextColor;
-  border-radius: 4px;
-  overflow: hidden;
-  &-container{
+  position: relative;
+/*   display: flex;
+justify-text: center;
+align-items: center; */
+  &,&-sup,&-sub{
     display: inline-block;
-    position: relative;
+    vertical-align: middle;
+  }
+  &-sup{
+    border-radius: 4px;
+    padding: 0 6px;
+    line-height: 1.5;
+    font-size: 12px;
+    background-color: @lighterPrimaryColor;
+    color: @alternateTextColor;
+    text-align: center;
   }
   &-float {
-    position: absolute;
-    top: -5px;
-    right: -5px;
+    .vui-badge-sup{
+      position: absolute;
+      top: -2px;
+      right: -2px;
+    }
   }
   &-round{
-    border-radius:10000px;
+    .vui-badge-sup{
+      border-radius:10000px;
+    }
   }
   &-circle {
-    border-radius: 50%;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    overflow: hidden;
+    .vui-badge-sup{
+      border-radius: 50%;
+      padding: 0;
+      width: 16px;
+      height: 16px;
+      line-height:16px;
+      overflow: hidden;
+    }
   }
-  &-primary {background-color: @primaryColor;}
-  &-success {background-color: @successColor;}
-  &-info {background-color: @infoColor;}
-  &-warn {background-color: @warnColor;}
-  &-danger {background-color: @dangerColor;}
+  &-primary {
+    .vui-badge-sup{
+      background-color: @primaryColor;
+    }
+  }
+  &-success {
+    .vui-badge-sup{
+      background-color: @successColor;
+    }
+  }
+  &-info {
+    .vui-badge-sup{
+      background-color: @infoColor;
+    }
+  }
+  &-warn {
+    .vui-badge-sup{
+      background-color: @warnColor;
+    }
+  }
+  &-danger {
+    .vui-badge-sup{
+      background-color: @dangerColor;
+    }
+  }
 }
+
 
 
 </style>

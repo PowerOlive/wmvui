@@ -1,9 +1,9 @@
 export default {
   props: [{
-    name: 'content',
+    name: 'text',
     type: 'String',
     default: '',
-    desc: 'props.content'
+    desc: 'props.text'
   }, {
     name: '状态',
     type: 'String',
@@ -17,12 +17,12 @@ export default {
   }, {
     name: 'circle',
     type: 'Boolean',
-    default: 'false',
+    default: '20px',
     desc: 'props.circle'
   }, {
     name: 'round',
     type: 'Boolean',
-    default: 'false',
+    default: '',
     desc: 'props.round'
   }, {
     name: 'size',
@@ -31,8 +31,8 @@ export default {
     desc: 'props.size'
   }],
   slots: [{
-    name: 'content',
-    desc: 'slots.content'
+    name: 'text',
+    desc: 'slots.text'
   }, {
     name: 'default',
     desc: 'slots.default'

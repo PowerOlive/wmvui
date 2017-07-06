@@ -42,10 +42,10 @@ export default {
       default: '',
       desc: 'tab.props.title'
     }, {
-      name: 'titleClass',
-      type: 'String,Object,Array',
-      default: '',
-      desc: 'tab.props.titleClass'
+      // name: 'titleClass',
+      // type: 'String,Object,Array',
+      // default: '',
+      // desc: 'tab.props.titleClass'
     }, {
       name: 'value',
       type: '',
@@ -61,11 +61,11 @@ export default {
       type: 'Boolean',
       default: 'false',
       desc: 'tab.props.disabled'
-    }, {
-      name: 'badge',
-      type: 'Object',
-      default: '',
-      desc: 'tab.props.badge'
+    // }, {
+    //   name: 'badge',
+    //   type: 'Object',
+    //   default: '',
+    //   desc: 'tab.props.badge'
     }],
     events: [{
       name: 'active',

@@ -5,17 +5,10 @@
   <slot>
     <icon :icon="icon" :size="iconSize" />
   </slot>
-  <vui-badge 
-  v-if="badge" 
-  circle :size="badge.size" 
-  :content="badge.content" 
-  :primary="badge.primary"
-  :success="badge.success"
-  :info="badge.info"
-  :warn="badge.warn"
-  :danger="badge.danger"
-   />
-  <div class="vui-tabs-text" :class="textClass" v-if="title">{{title}}</div>
+  <div class="vui-tab-title" v-if="title">
+    <slot name="title">{{title}}</slot>
+  </div>
+  <slot name="badge" />
 </abstract-button>
 </template>
 
@@ -24,9 +17,9 @@ import abstractButton from '../internal/abstractButton'
 import routerMixin from '../internal/routerMixin'
 import icon from '../icon'
 import badge from '../badge'
-import {isNotNull, convertClass} from '../utils'
+import {isNotNull} from '../utils'
 export default {
-  name: 'vui-tab',
+  name: 'vui-tab-item',
   mixins: [routerMixin],
   props: {
     badge: {
@@ -46,9 +39,9 @@ export default {
       type: String,
       default: ''
     },
-    titleClass: {
-      type: [String, Object, Array]
-    },
+    // titleClass: {
+    //   type: [String, Object, Array]
+    // },
     href: {
       type: String
     },
@@ -65,13 +58,13 @@ export default {
       return {
         'color': this.active ? this.$parent.active : ''
       }
-    },
-    textClass () {
-      const {icon, titleClass} = this
-      let classNames = []
-      if (icon) classNames.push('has-icon')
-      return classNames.concat(convertClass(titleClass))
     }
+    // textClass () {
+    //   const {icon, titleClass} = this
+    //   let classNames = []
+    //   if (icon) classNames.push('has-icon')
+    //   return classNames.concat(convertClass(titleClass))
+    // }
   },
   methods: {
     tabClick (e) {
@@ -95,4 +88,10 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
+.vui-tabs-item{
+  .vui-badge{
+    position: absolute;
+    top: 8%;
+  }
+}
 </style>

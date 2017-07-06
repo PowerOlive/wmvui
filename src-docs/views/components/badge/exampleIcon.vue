@@ -1,20 +1,25 @@
 <template>
-<div class="demo-badge-container">
-  <vui-badge success content="10" class="demo-icon-badge" circle>
-    <vui-icon icon="like-fill" :size="24" />
+<div>
+  <vui-badge success circle :size="18" class="demo-icon-badge">
+  	<template slot="text">10</template>
+    <vui-icon icon="like-fill" :size="24" slot="sub" />
   </vui-badge>
-  <vui-badge info content="12" circle>
-    <vui-button :circle="42" icon="like-fill" />
+
+  <vui-badge info circle :size="22" class="demo-icon-badge">
+  	<template slot="text">12</template>
+    <vui-button :circle="42" icon="like-fill" :iconSize="24" slot="sub" />
   </vui-badge>
+
+    <vui-badge primary circle :size="20" class="demo-icon-badge">
+	    <span slot="text">&copy;</span>
+	    <p slot="sub" style="font-size: 14px; padding:10px">版权信息</p>
+	  </vui-badge>
 </div>
 </template>
 
 <style>
-.demo-badge-container{
-  padding-top: 24px;
-}
+
 .demo-icon-badge {
-  padding: 12px;
-  margin-right: 16px;
+  margin: 16px;
 }
 </style>
