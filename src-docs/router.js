@@ -5,7 +5,7 @@ import Install from './views/get-stared/install'
 import Usage from './views/get-stared/usage'
 import Colors from './views/customization/colors'
 import Theme from './views/customization/theme'
-import AppBar from './views/components/appbar'
+import header from './views/components/header'
 import Avatar from './views/components/avatar'
 import Badge from './views/components/badge'
 import button from './views/components/button'
@@ -58,7 +58,7 @@ const router = new Router({
     { path: '/usage', component: Usage },
     { path: '/colors', component: Colors },
     { path: '/theme', component: Theme },
-    { path: '/appbar', component: AppBar },
+    { path: '/header', component: header },
     { path: '/avatar', component: Avatar },
     { path: '/badge', component: Badge },
     { path: '/button', component: button },

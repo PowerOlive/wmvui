@@ -1,5 +1,5 @@
 <template>
-  <vui-appbar>
+  <vui-header>
     <vui-button color="#fff" :iconSize="16" icon="menu" slot="left"/>
     <vui-text-field icon="search" class="appbar-search-field flex-item" hintText="搜索关键字" fill />
     <template slot="right">
@@ -8,7 +8,7 @@
         <vui-button color="#fff" :iconSize="20" icon="like-fill" slot="sub"/>
       </vui-badge>
     </template>
-  </vui-appbar>
+  </vui-header>
 </template>
 
 <style lang="scss">

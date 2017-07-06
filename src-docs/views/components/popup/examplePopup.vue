@@ -5,9 +5,9 @@
   <vui-button primary label="左边弹出" @click="open('left')"/>
   <vui-button primary label="右边弹出" @click="open('right')"/>
   <vui-popup position="bottom" popupClass="demo-popup-bottom" :open="bottomPopup" @close="close('bottom')">
-    <vui-appbar title="弹出">
+    <vui-header title="弹出">
       <vui-button slot="right" label="关闭" color="white" @click="close('bottom')"/>
-    </vui-appbar>
+    </vui-header>
     <vui-content-block>
       <p>
         Popup 弹出框组件，可以从上下左右四个方位弹出，也可以直接渐变透明度显示，弹出框的宽度高度需要自己设置

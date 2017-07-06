@@ -1,9 +1,9 @@
 <template>
-<div class="vui-appbar" :class="['vui-paper-' + zDepth ]" :style="barStyle">
+<div class="vui-header" :class="['vui-paper-' + zDepth ]" :style="barStyle">
   <div class="left">
     <slot name="left"></slot>
   </div>
-  <div class="vui-appbar-title" :class="titleClass">
+  <div class="vui-header-title" :class="titleClass">
     <slot>
       <span>{{title}}</span>
     </slot>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'vui-appbar',
+  name: 'vui-header',
   props: {
     title: {
       type: String,
@@ -44,7 +44,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-appbar {
+.vui-header {
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
@@ -86,6 +86,7 @@ export default {
   }
   .vui-text-field{
     margin-bottom:0;
+    &-line{bottom:0;}
   }
   &-title {
     flex: 1;

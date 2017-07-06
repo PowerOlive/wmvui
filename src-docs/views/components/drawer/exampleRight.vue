@@ -2,7 +2,7 @@
 <div>
   <vui-button primary label="显示在右边" @click="toggle()"/>
   <vui-drawer right :open="open" @close="toggle()">
-    <vui-appbar title="Muse UI"/>
+    <vui-header title="Muse UI"/>
     <vui-list>
       <vui-list-item>
         <template slot="title">菜单1</template>

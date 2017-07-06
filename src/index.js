@@ -5,7 +5,7 @@ import icon from './icon'
 import svgIcon from './svgIcon'
 import star from './star'
 import badge from './badge'
-import appBar from './appBar'
+import header from './header'
 import button from './button'
 import contentBlock from './contentBlock'
 import * as list from './list'
@@ -60,7 +60,7 @@ const components = {
   svgIcon,
   star,
   badge,
-  appBar,
+  header,
   button,
   contentBlock,
   ...list,

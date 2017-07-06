@@ -80,7 +80,7 @@ Vue.component(avatar.name, avatar)
 import appBar from '~MuseUI/appBar'
 export default {
   components: {
-    'vui-appbar':appBar
+    'vui-header':appBar
   }
 }
 ```

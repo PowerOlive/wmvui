@@ -55,14 +55,19 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
+.vui-text-field{
+  &-line,
+  &-focus-line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border: none;
+  }
+}
 .vui-text-field-line {
-  margin: 0;
   height: 1px;
-  border: none;
   background-color: @borderColor;
-  left: 0;
-  right: 0;
-  position: absolute;
   .vui-text-field.has-icon & {
     left: 46px;
   }
@@ -74,13 +79,8 @@ export default {
 }
 
 .vui-text-field-focus-line{
-  margin: 0;
   height: 2px;
-  border: none;
   background-color: @primaryColor;
-  position: absolute;
-  left: 0;
-  right: 0;
   margin-top: -1px;
   transform: scaleX(0);
   transition: transform .45s @easeOutFunction;

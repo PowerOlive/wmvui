@@ -2,9 +2,9 @@
   <div id="app" class="vui-wrapper" :class="{'nav-hide': !open, 'home-page': isHomePage}">
     <vui-drawer :open="open" :docked="docked" @close="toggleNav" class="flex-item demo-meun">
       <div class="vui-flex vui-flex-ver">
-        <vui-appbar :zDepth="0" class="exmaples-nav-appbar">
+        <vui-header :zDepth="0" class="exmaples-nav-appbar">
           <span class="exmaples-appbar-title">WMVUI基于Muse-UI</span>
-        </vui-appbar>
+        </vui-header>
         <div class="vui-flex-item exmaple-drawer-content">
           <vui-list :value="menuVal" @itemClick="handleItemClick">
             <template v-for="item in list">
@@ -18,12 +18,12 @@
       </div>
     </vui-drawer>
     <div class="vui-flex vui-flex-ver example-content">
-      <vui-appbar v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
+      <vui-header v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
       <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
       <vui-button circle color="#fff" :iconSize="24" href="https://github.com/531431988/wmvui" slot="right" icon="github-fill"/>
       <vui-button circle color="#fff" :iconSize="24" href="http://shang.qq.com/wpa/qunwpa?idkey=3981b8fe2e9d310a7414ab49f43fe513781e582747c81952cdf8d2857a8df088" slot="right" icon="qq-group-fill"/>
       <vui-button circle color="#fff" :iconSize="24" slot="right" icon="alipay-fill" @click="showVcode"/>
-    </vui-appbar>
+    </vui-header>
     <vui-popup position="center" overlay :open="openVcode" @close="close">
       <p style="text-align:center;font-size:20px;">如果你想赏我棒棒糖 我也不嫌弃<br>毕竟我是个菜逼</p>
       <img src="images/vcode.png" style="width:80%;display:block;margin:auto">
@@ -62,7 +62,7 @@ export default {
         icon: 'color'
       }, {
         title: '头部',
-        value: '/appbar',
+        value: '/header',
         icon: 'header'
       }, {
         title: '头像',
