@@ -37,13 +37,4 @@ export default {
   }
 }
 </script>
-<style>
-  .demo-label{
-    width: 80px;
-    display: block;
-    text-align: right;
-    padding-right:10px;
-    font-size: 16px;
-    line-height: 44px;
-  }
-</style>
+

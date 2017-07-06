@@ -1,6 +1,6 @@
 <template>
   <div 
-  class="vui-tags" 
+  class="vui-label" 
   :style="style">
     <slot></slot>
     <template v-if="icon">
@@ -12,23 +12,19 @@
 <script>
 import icon from '../icon'
 export default {
-  name: 'vui-tags',
+  name: 'vui-label',
   components: {
     icon
   },
   props: {
     icon: String,
     iconSize: Number,
-    disabled: {
-      type: Boolean,
-      default: false
-    },
     theme: Object
   },
   data () {
     return {
-      focus: false,
-      hover: false
+      // focus: false,
+      // hover: false
     }
   },
   computed: {
@@ -52,7 +48,7 @@ export default {
 
 <style lang="less">
 @import "../styles/import.less";
-.vui-tags {
+.vui-label {
   border-radius: 10000px;
   white-space: nowrap;
   display: inline-flex;
@@ -67,7 +63,7 @@ export default {
     margin-right: 4px;
   }
 }
-.vui-tags>.vui-icon{
+.vui-label>.vui-icon{
   display: inline-block;
   margin-right: -12px;
   margin-left: 4px;

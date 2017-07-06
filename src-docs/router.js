@@ -11,6 +11,7 @@ import Badge from './views/components/badge'
 import button from './views/components/button'
 import Card from './views/components/card'
 import tags from './views/components/tags'
+import label from './views/components/label'
 import Dialog from './views/components/dialog'
 import Divider from './views/components/divider'
 import Drawer from './views/components/drawer'
@@ -64,6 +65,7 @@ const router = new Router({
     { path: '/button', component: button },
     { path: '/card', component: Card },
     { path: '/tags', component: tags },
+    { path: '/label', component: label },
     { path: '/dialog', component: Dialog },
     { path: '/divider', component: Divider },
     { path: '/drawer', component: Drawer },

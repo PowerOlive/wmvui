@@ -102,6 +102,10 @@ export default {
         icon: 'card'
       }, {
         title: '标签',
+        value: '/label',
+        icon: 'tag'
+      }, {
+        title: '角标',
         value: '/tags',
         icon: 'tag'
       }, {
