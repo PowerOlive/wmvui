@@ -56,13 +56,17 @@ export default {
   overflow: hidden;
 } */
   &-wrap{
-    position: absolute;
-    left:0;
-    top:0;
-    overflow: hidden;
     .vui-icon{
+      position: absolute;
+      left:0;
+      top:0;
+      overflow: hidden;
       line-height:1;
       white-space: nowrap;
+      &:after,
+      &:before{
+        line-height:24px;
+      }
       &:after{
         content:attr(data-text);
         font-size: 12px;
@@ -75,19 +79,25 @@ export default {
     }
   }
   &-right{
-    left:initial;
-    right:0;
+    .vui-icon{
+      left:initial;
+      right:0;
+    }
   }
   &-bottom{
-    top:initial;
-    right:0;
-    left:initial;
-    bottom:0;
+    .vui-icon{
+      top:initial;
+      right:0;
+      left:initial;
+      bottom:0;
+    }
   }
   &-left{
-    top:initial;
-    left:0;
-    bottom:0;
+    .vui-icon{
+      top:initial;
+      left:0;
+      bottom:0;
+    }
   }
 }
 

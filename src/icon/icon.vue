@@ -21,6 +21,7 @@ export default {
     iconStyle () {
       return {
         'font-size': this.size + 'px',
+        'line-height': this.size + 'px',
         // 'width': this.size + 'px',
         // 'height': this.size + 'px',
         'color': this.color
