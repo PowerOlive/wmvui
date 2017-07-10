@@ -1,29 +1,26 @@
 export default {
   props: [{
-    name: 'showDelete',
+    name: 'right',
     type: 'Boolean',
     default: 'false',
-    desc: 'props.showDelete'
+    desc: 'props.right'
   }, {
-    name: 'disabled',
+    name: 'bottom',
     type: 'Boolean',
     default: 'false',
-    desc: 'props.disabled'
+    desc: 'props.bottom'
   }, {
-    name: 'theme',
-    type: 'Object',
-    default: '',
-    desc: 'props.theme'
+    name: 'left',
+    type: 'Boolean',
+    default: 'false',
+    desc: 'props.left'
   }],
   slots: [{
     name: 'default',
     desc: 'slots.default'
-  }],
-  events: [{
-    name: 'delete',
-    desc: 'events.delete'
   }, {
-    name: 'click',
-    desc: 'events.click'
-  }]
+    name: 'icon',
+    desc: 'slots.icon'
+  }],
+  events: []
 }

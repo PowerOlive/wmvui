@@ -107,7 +107,7 @@ export default {
       }, {
         title: '角标',
         value: '/tags',
-        icon: 'tag'
+        icon: 'tag1'
       }, {
         title: '副标题',
         value: '/subHeader',
