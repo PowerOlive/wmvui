@@ -21,8 +21,8 @@ export default {
     desc: 'props.svgIcon'
   }, {
     name: 'loading',
-    type: 'Object',
-    default: '',
+    type: 'Boolean',
+    default: 'false',
     desc: 'props.loading'
   }, {
     name: 'fill',

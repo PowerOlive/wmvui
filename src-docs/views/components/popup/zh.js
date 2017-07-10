@@ -6,8 +6,8 @@ export default {
   examplePopup: 'Popup使用示例',
   props: {
     open: '是否打开',
-    toast: '是否显示为toast常规4种状态 error success info warn',
-    loading: '显示为<a href="#/loading">loading</a>参数 type showText color size ',
+    toast: '是否显示为toast `可设置图标颜色{color:\'red\'}`',
+    loading: '显示为<a href="#/loading">loading</a> 参数请看原组件',
     icon: '可选 是否显示图标',
     svgIcon: ' 可选 是否显示彩色SVG图标',
     fill: 'popup 宽100%',

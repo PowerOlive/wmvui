@@ -2,8 +2,9 @@
 <span>
   <transition :name="transition" @after-enter="show()" @after-leave="hide()">
     <div class="vui-popup" ref="popup" v-if="open" :class="popupCss" :style="{'z-index': zIndex}">
-      <loading v-if="loading" :type="loading.type" :showText="loading.showText" :color="loading.color" :size="loading.size"  />
-      <icon v-if="icon" :icon="icon" />
+      <slot name="loading"></slot>  
+      <!-- <loading v-if="loading" :type="loading.type" :showText="loading.showText" :color="loading.color" :size="loading.size"  /> -->
+      <icon v-if="icon" :icon="icon" :color="toast.color" />
       <svg-icon v-if="svgIcon" :icon="svgIcon"  />
       <slot></slot>
       <template v-if="data && value">
@@ -34,7 +35,7 @@
 
 <script>
 import Popup from '../internal/popup'
-import loading from '../loading'
+// import loading from '../loading'
 import picker from '../picker'
 import flexbox from '../flexbox/flexbox'
 import flexboxItem from '../flexbox/flexboxItem'
@@ -47,7 +48,7 @@ export default {
   components: {
     svgIcon,
     icon,
-    loading,
+    // loading,
     picker,
     'vui-flex': flexbox,
     'vui-flex-item': flexboxItem
@@ -66,9 +67,7 @@ export default {
     toast: {
       type: [Boolean, Object]
     },
-    loading: {
-      type: [Boolean, Object]
-    },
+    loading: false,
     icon: String,
     svgIcon: {
       type: [String, Boolean]
@@ -102,20 +101,7 @@ export default {
       let classNames = []
       if (position) classNames.push('vui-popup-' + position)
       if (fill) classNames.push('vui-popup-fill')
-      if (toast) {
-        classNames.push('vui-popup-toast')
-        if (toast.type === 'error') {
-          classNames.push('vui-popup-toast-error')
-        } else if (toast.type === 'success') {
-          classNames.push('vui-popup-toast-success')
-        } else if (toast.type === 'info') {
-          classNames.push('vui-popup-toast-info')
-        } else if (toast.type === 'warn') {
-          classNames.push('vui-popup-toast-warn')
-        } else {
-          classNames.push('vui-popup-toast-text')
-        }
-      }
+      if (toast) classNames.push('vui-popup-toast')
       if (loading) classNames.push('vui-popup-loading')
       return classNames.concat(convertClass(popupClass))
     }
@@ -187,21 +173,6 @@ export default {
   &-loading{
     padding:24px;
     color:#fff;
-  }
-  &-toast-error{
-    color: @dangerColor
-  }
-  &-toast-success{
-    color: @successColor
-  }
-  &-toast-info{
-    color: @infoColor
-  }
-  &-toast-warn{
-    color: @warnColor
-  }
-  &-toast-text{
-    color: #fff
   }
   &-top {
     top: 0;
