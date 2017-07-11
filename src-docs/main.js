@@ -17,6 +17,9 @@ Vue.component('code-example', codeExample)
 Vue.component('api-view', apiView)
 FastClick.attach(document.body)
 
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
+
 /*eslint-disable*/
 new Vue({
   router,

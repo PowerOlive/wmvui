@@ -5,13 +5,13 @@
 
   <ul>
     <li class="vui-flex vui-flex-top">
-      <span class="demo-label">默认</span>
+      <span class="demo-text-field">默认</span>
       <div class="vui-flex-item">
         <vui-text-field v-model="value"/>
       </div>
     </li>
     <li class="vui-flex vui-flex-top">
-      <span class="demo-label">
+      <span class="demo-text-field">
         <vui-icon icon="like-fill" />
       </span>
       <div class="vui-flex-item">
@@ -19,7 +19,7 @@
       </div>
     </li>
     <li class="vui-flex vui-flex-top">
-      <span class="demo-label">多行文本</span>
+      <span class="demo-text-field">多行文本</span>
       <div class="vui-flex-item">
         <vui-text-field hintText="多行文本输入，默认 3行，最大6行" multiLine :rows="3" :rowsMax="6"/>
       </div>
@@ -27,7 +27,6 @@
   </ul>
 </div>
 </template>
-
 <script>
 export default {
   data () {
@@ -38,3 +37,13 @@ export default {
 }
 </script>
 
+<style>
+  .demo-text-field{
+    width: 80px;
+    display: block;
+    text-align: right;
+    padding-right:10px;
+    font-size: 16px;
+    line-height: 44px;
+  }
+</style>

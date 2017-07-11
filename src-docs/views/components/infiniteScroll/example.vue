@@ -9,6 +9,7 @@
     </template>
   </vui-list>
   <vui-infinite-scroll :scroller="scroller" :loading="loading" @load="loadMore"/>
+  <vui-divider v-show="show" title="老娘也是有底线的~" style="height:20px" top="20px" bottom="20px" />
 </div>
 </template>
 
@@ -23,7 +24,8 @@ export default {
       list,
       num: 10,
       loading: false,
-      scroller: null
+      scroller: null,
+      show: false
     }
   },
   mounted () {
@@ -38,6 +40,8 @@ export default {
         }
         this.num += 10
         this.loading = false
+        this.scroller = null
+        this.show = true
       }, 2000)
     }
   }

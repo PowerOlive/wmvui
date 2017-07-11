@@ -7,9 +7,6 @@
   <code-example :code="exampleErrorCode" :title="$t('errorExample')" :description="$t('errorExampleDesc')">
     <ex-error/>
   </code-example>
-  <code-example :code="exampleIconCode" :title="$t('iconExample')">
-    <ex-icon/>
-  </code-example>
   <code-example :code="exampleDisabledCode" :title="$t('disabledExample')">
     <ex-disabled/>
   </code-example>
@@ -25,8 +22,6 @@ import exampleSimple from './exampleSimple'
 import exampleSimpleCode from '!raw!./exampleSimple'
 import exampleError from './exampleError'
 import exampleErrorCode from '!raw!./exampleError'
-import exampleIcon from './exampleIcon'
-import exampleIconCode from '!raw!./exampleIcon'
 import exampleDisabled from './exampleDisabled'
 import exampleDisabledCode from '!raw!./exampleDisabled'
 import exampleInputLength from './exampleInputLength'
@@ -39,7 +34,6 @@ export default {
     return {
       exampleSimpleCode,
       exampleErrorCode,
-      exampleIconCode,
       exampleDisabledCode,
       exampleInputLengthCode,
       apiData
@@ -48,7 +42,6 @@ export default {
   components: {
     'ex-simple': exampleSimple,
     'ex-error': exampleError,
-    'ex-icon': exampleIcon,
     'ex-disabled': exampleDisabled,
     'ex-input-length': exampleInputLength
   },

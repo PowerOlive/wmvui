@@ -1,5 +1,5 @@
 /*!
- * WMVUI v1.2.3 (https://github.com/myronliu347/vue-carbon)
+ * WMVUI v1.2.4 (https://github.com/myronliu347/vue-carbon)
  * (c) 2017 Myron Liu 
  * Released under the MIT License.
  */
