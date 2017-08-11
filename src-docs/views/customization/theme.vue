@@ -89,10 +89,10 @@
 </template>
 
 <script>
-import _default from 'raw!less!../../assets/themes/theme-default.less'
-import darkly from 'raw!less!../../assets/themes/theme-darkly.less'
-import teal from 'raw!less!../../assets/themes/theme-teal.less'
-import pink from 'raw!less!../../assets/themes/theme-pink.less'
+import _default from 'raw!../../assets/themes/theme-default.scss'
+import darkly from 'raw!../../assets/themes/theme-darkly.scss'
+import teal from 'raw!../../assets/themes/theme-teal.scss'
+import pink from 'raw!../../assets/themes/theme-pink.scss'
 import zh from './zh'
 const themes = {
   darkly,
@@ -155,7 +155,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .demo-theme-paper {
   margin-top: 16px;
   margin-bottom: 16px;

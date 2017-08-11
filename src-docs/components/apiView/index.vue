@@ -103,21 +103,21 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../../../src/styles/import.less";
+<style lang="scss">
+@import "../../../src/styles/import.scss";
 .api-view-tabs{
   background-color: transparent;
-  color: @textColor;
+  color: $textColor;
   margin-bottom: 16px;
   .vui-tab-link-highlight {
-    background-color: @primaryColor;
+    background-color: $primaryColor;
   }
   .vui-tab-link{
-    color: @primaryTextColor;
+    color: $primaryTextColor;
   }
 
   .vui-tab-active{
-    color: @primaryColor;
+    color: $primaryColor;
   }
 }
 
@@ -127,7 +127,7 @@ export default {
   font-weight: 400;
   margin-top: 1em;
   margin-bottom: 0;
-  color: @textColor;
+  color: $textColor;
 }
 .api-th {
   font-size: 16px;
@@ -137,7 +137,7 @@ export default {
 }
 
 .api-type-td{
-  color: @accentColor;
+  color: $accentColor;
 }
 .api-default-td,
 .api-desc-td {

@@ -1,0 +1,36 @@
+$import "../vars.scss";
+
+$primaryColor: #375a7f;
+$successColor: #00bc8c;
+$infoColor: #3498db;
+$warnColor: #f39c12;
+$dangerColor: #e74c3c;
+
+$textColor: #474a4f;
+$primaryTextColor: #7e848c;
+$borderColor: #edeff2;
+$disabledColor: #d3d6db;
+
+$import "../theme-vars.scss";
+// components vars
+$badgePrimaryColor: $darkerPrimaryColor;
+$checkboxCheckedColor: $accentColor;
+$checkboxColor: $primaryTextColor;
+$datePickerSelectColor: $accentColor;
+$flatButtonPrimaryTextColor: $accentColor;
+$circleColor: $accentColor;
+$linearProgressFillColor: $accentColor;
+$radioColor: $darkerPrimaryColor;
+$radioCheckedColor: $accentColor;
+$raisedButtonPrimaryColor: $darkerPrimaryColor;
+$refreshControlColor: $accentColor;
+$sliderSelectionColor: $accentColor;
+$snackbarColor: $darkBlack;
+$stepperIconColor: $accentColor;
+$switchThumbOnColor: $accentColor;
+$switchTrackOnColor: lighten($accentColor, 50%);
+$textFieldFocusTextColor: $accentColor;
+$textFieldFocusLineColor: $accentColor;
+$timePickerSelectColor: $accentColor;
+$toastColor: $darkBlack;
+$import "../theme.scss";

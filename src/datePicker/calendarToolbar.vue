@@ -56,8 +56,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-calendar-toolbar {
   display: flex;
   justify-content: space-between;

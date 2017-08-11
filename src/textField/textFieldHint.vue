@@ -18,13 +18,13 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-text-field-hint{
   position: absolute;
   opacity: 0;
-  transition: opacity .45s @easeOutFunction;
-  color: @disabledColor;
+  transition: opacity .45s $easeOutFunction;
+  color: $disabledColor;
   line-height: 34px;
   user-select: none;
   cursor: text;

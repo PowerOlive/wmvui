@@ -58,8 +58,8 @@ export default{
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-pagination-item {
   display: flex;
   justify-content: center;
@@ -71,8 +71,8 @@ export default{
   padding-right: 8px;
   line-height: 32px;
   margin: 0 8px;
-  transition: all .45s @easeOutFunction;
-  color: @textColor;
+  transition: all .45s $easeOutFunction;
+  color: $textColor;
   position: relative;
   cursor: pointer;
   border-radius: 2px;
@@ -80,11 +80,11 @@ export default{
     background-color: rgba(0, 0, 0, .1);
   }
   &.active {
-    color: @white;
-    background-color: @primaryColor;
+    color: $white;
+    background-color: $primaryColor;
   }
   &.disabled {
-    color: @disabledColor;
+    color: $disabledColor;
     cursor: not-allowed;
   }
   &.circle{

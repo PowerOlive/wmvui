@@ -81,8 +81,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-tabs-item{
   .vui-badge{
     position: absolute;

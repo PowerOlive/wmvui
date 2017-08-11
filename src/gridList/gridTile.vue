@@ -81,8 +81,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-grid-tile {
   position: relative;
   display: block;
@@ -123,7 +123,7 @@ export default {
 .vui-grid-tile-title-container{
   margin-left: 16px;
   margin-right: 0;
-  color: @alternateTextColor;
+  color: $alternateTextColor;
   flex: 1;
   overflow: hidden;
   .vui-grid-tile.action-left &{
@@ -138,7 +138,7 @@ export default {
     order: -1;
   }
   .vui-icon {
-    color: @alternateTextColor;
+    color: $alternateTextColor;
   }
 }
 

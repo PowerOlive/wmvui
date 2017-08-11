@@ -9,8 +9,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-step-connector{
   flex: 1;
   .vui-stepper-vertical &{
@@ -20,7 +20,7 @@ export default {
 
 .vui-step-connector-line{
   display: block;
-  border-color: @grey400;
+  border-color: $grey400;
   border-top-style: solid;
   border-top-width: 1px;
   .vui-stepper-vertical & {

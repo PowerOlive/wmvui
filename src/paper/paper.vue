@@ -37,12 +37,12 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-paper {
-  transition: all .45s @easeOutFunction;
-  color: @textColor;
-  background-color: @dialogBackgroundColor;
+  transition: all .45s $easeOutFunction;
+  color: $textColor;
+  background-color: $dialogBackgroundColor;
   &-round {
     border-radius: 10px;
   }

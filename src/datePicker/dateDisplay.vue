@@ -75,17 +75,17 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-date-display{
   width: 100%;
   font-weight: 700;
   display: block;
-  background-color: @primaryColor;
+  background-color: $primaryColor;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border-bottom-left-radius: 0;
-  color: @alternateTextColor;
+  color: $alternateTextColor;
   padding: 20px;
   .vui-calendar-landspace & {
     width: 150px;
@@ -104,7 +104,7 @@ export default {
   font-weight: 500;
   height:20px;
   opacity: 0.7;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
   margin-bottom: 10px;
   .vui-date-display.selected-year &{
     opacity: 1;
@@ -130,7 +130,7 @@ export default {
   font-size: 36px;
   line-height: 36px;
   height: 38px;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
   width: 100%;
   font-weight: 500;
   .vui-date-display.selected-year &{
@@ -162,7 +162,7 @@ export default {
 .vui-date-display-next-leave-active,
 .vui-date-display-prev-enter-active,
 .vui-date-display-prev-leave-active {
-  transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  transition: transform 450ms $easeOutFunction, opacity 450ms $easeOutFunction;
   backface-visibility: hidden;
 }
 

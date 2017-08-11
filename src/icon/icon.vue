@@ -53,7 +53,10 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
+.vui-icon{
+  position: relative;
+}
 .vui-icon:before {
   font-size:inherit;
   color:inherit;

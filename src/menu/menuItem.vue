@@ -153,8 +153,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 
 .vui-menu-item{
   padding: 0px 14px;
@@ -167,8 +167,8 @@ export default {
     font-size: 16px;
     height: 48px;
     line-height: 48px;
-    transition: all .45s @easeOutFunction;
-    color: @textColor;
+    transition: all .45s $easeOutFunction;
+    color: $textColor;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -181,10 +181,10 @@ export default {
       background-color: rgba(0, 0, 0, .1);
     }
     &.active {
-      color: @accentColor;
+      color: $accentColor;
     }
     &.disabled {
-      color: @disabledColor;
+      color: $disabledColor;
       cursor: not-allowed;
     }
   }

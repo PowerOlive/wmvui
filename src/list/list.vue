@@ -24,8 +24,8 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-list {
   padding: 8px 0;
   position: relative;

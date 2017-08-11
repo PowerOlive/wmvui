@@ -199,8 +199,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-item-wrapper {
   display: block;
   color: inherit;
@@ -208,7 +208,7 @@ export default {
   outline: none;
   cursor: pointer;
   &.hover {
-    background-color: fade(@textColor, 10%);
+    // background-color: lighten($textColor, 90%);
   }
   &.disabled{
     cursor: default;
@@ -219,7 +219,7 @@ export default {
   padding: 8px;
   min-height: 48px;
   display: flex;
-  color: @textColor;
+  color: $textColor;
   position: relative;
   &.show-left{
     /* padding-left: 15px; */
@@ -235,7 +235,7 @@ export default {
     /* padding:5px; */
   }
   &.selected {
-    color: @primaryColor;
+    color: $primaryColor;
   }
   .vui-item-content{
     padding-left:4px;
@@ -244,7 +244,7 @@ export default {
 
 .vui-item-toggle-button {
   position: absolute;
-  color: @textColor;
+  color: $textColor;
   position: absolute;
   right: 4px;
   top: 0;
@@ -256,7 +256,7 @@ export default {
   align-items: center;
   justify-content: flex-start;
   /* width: 40px; */
-  color: @grey600;
+  color: $grey600;
   .vui-icon{
     display: block;
     margin: 0 auto;
@@ -265,7 +265,7 @@ export default {
 
 .vui-item-left{
   .vui-item.selected &{
-    color: @primaryColor;
+    color: $primaryColor;
   }
   >.vui-icon{
     margin-left:5px;
@@ -314,7 +314,7 @@ export default {
 }
 .vui-item-after{
   margin-left: auto;
-  color: @primaryTextColor;
+  color: $primaryTextColor;
   display: flex;
   align-items: center;
 }
@@ -332,7 +332,7 @@ export default {
   max-width: 100%;
   text-overflow: ellipsis;
   word-break: break-all;
-  color: @primaryTextColor;
+  color: $primaryTextColor;
 }
 
 .vui-item-svg-icon {

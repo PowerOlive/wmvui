@@ -21,8 +21,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-card-header {
   /* padding: 15px; */
   font-weight: 500;
@@ -41,11 +41,11 @@ export default {
   padding-right: 90px;
   .vui-card-title{
     font-size: 15px;
-    color: fade(@textColor, 87%);
+    color: $textColor;
   }
   .vui-card-sub-title{
     font-size: 14px;
-    color: fade(@textColor, 57%);
+    color: lighten($textColor, 30%);
   }
 }
 </style>

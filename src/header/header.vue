@@ -42,15 +42,15 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-header {
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
   align-items: center;
-  color: @alternateTextColor;
-  background-color: @primaryColor;
+  color: $alternateTextColor;
+  background-color: $primaryColor;
   height: 56px;
   width: 100%;
   z-index: 100;
@@ -85,6 +85,7 @@ export default {
     margin-bottom:0;
     &-line{bottom:0;}
     &-icon{
+      color:rgba(0,0,0,.5);
       position: absolute;
     }
   }

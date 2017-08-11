@@ -197,8 +197,8 @@ export default{
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-pagination{
   display: flex;
   justify-content: flex-start;
@@ -211,7 +211,7 @@ export default{
   height: 24px;
   fill: currentColor;
   user-select: none;
-  transition: all 450ms @easeOutFunction;
+  transition: all 450ms $easeOutFunction;
 }
 
 </style>

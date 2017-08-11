@@ -71,8 +71,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-tabs{
   display: flex;
   justify-content: space-between;
@@ -99,8 +99,8 @@ export default {
     justify-content: center;
     line-height: normal;
     align-items: center;
-    /* color: fade(@textColor, 80%); */
-    transition: all .45s @easeInOutFunction;
+    /* color: lighten($textColor, 80%); */
+    transition: all .45s $easeInOutFunction;
       &.disabled,
       &[disabled]{
         cursor: not-allowed;
@@ -121,10 +121,10 @@ export default {
     backface-visibility: hidden;
   }
   &-active{
-    color: @primaryColor;
+    color: $primaryColor;
   }
   &-line{
-    background-color: @primaryColor;
+    background-color: $primaryColor;
   }
   .vui-badge-container{
     position: absolute;

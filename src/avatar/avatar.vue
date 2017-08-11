@@ -52,15 +52,15 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-avatar{
   display: inline-block;
   height: 40px;
   width: 40px;
   font-size: 20px;
-  color: @alternateTextColor;
-  background-color: darken(@alternateTextColor, 26%);
+  color: $alternateTextColor;
+  background-color: darken($alternateTextColor, 26%);
   text-align: center;
   border-radius: 50%;
   img {

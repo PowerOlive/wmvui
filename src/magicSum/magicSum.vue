@@ -80,11 +80,11 @@ export default {
   }
 }
 </script>
-<style lang="less">
-  @import "../styles/import.less";
-  .vui-magic-sum{color: @primaryColor}
-  .vui-magic-sum-success{color: @successColor}
-  .vui-magic-sum-info{color: @infoColor}
-  .vui-magic-sum-warn{color: @warnColor}
-  .vui-magic-sum-danger{color: @dangerColor}
+<style lang="scss">
+  @import "../styles/import.scss";
+  .vui-magic-sum{color: $primaryColor}
+  .vui-magic-sum-success{color: $successColor}
+  .vui-magic-sum-info{color: $infoColor}
+  .vui-magic-sum-warn{color: $warnColor}
+  .vui-magic-sum-danger{color: $dangerColor}
 </style>

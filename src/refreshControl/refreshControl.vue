@@ -173,14 +173,14 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-refresh-control{
   display: flex;
   margin: 0 auto;
   width: 40px;
   height: 40px;
-  color: @primaryColor;
+  color: $primaryColor;
   align-items: center;
   justify-content: center;
   background-color: #FFF;

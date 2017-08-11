@@ -60,51 +60,51 @@ export default {
 
 ### customize theme
 
-only support the `less` now, the black theme is `dark.less`
+only support the `less` now, the black theme is `dark.scss`
 
 ```less
-@import "muse-ui/less/vars.less"; // default basic variable
+@import "muse-ui/less/vars.scss"; // default basic variable
 
 // change defalut basic variable
 
-@primaryColor: @lightBlue700;
-@darkerPrimaryColor: @lightBlue700;
-@lighterPrimaryColor: @grey600;
-@accentColor: @pinkA200;
-@darkerAccentColor: @pinkA400;
-@lighterAccentColor: @pinkA100;
+@primaryColor: $lightBlue700;
+@darkerPrimaryColor: $lightBlue700;
+@lighterPrimaryColor: $grey600;
+@accentColor: $pinkA200;
+$darkerAccentColor: $pinkA400;
+@lighterAccentColor: $pinkA100;
 
-@textColor: @fullWhite;
+@textColor: $fullWhite;
 @primaryTextColor: fade(@fullWhite, 70%);
-@alternateTextColor: #303030;
+$alternateTextColor: #303030;
 @borderColor: fade(@fullWhite, 30%);
 @disabledColor: fade(@fullWhite, 30%);
 
 // background
 @backgroundColor: #303030;
-@statusBarBackgroundColor: @fullBlack;
-@appbarBackgroundColor: @grey900;
+@statusBarBackgroundColor: $fullBlack;
+@appbarBackgroundColor: $grey900;
 @dialogBackgroundColor: #424242; // dialogs or cards
 
 // icon
 @activeIconColor: fade(@fullWhite, 100%);
 @inActiveIconColor: fade(@fullWhite, 50%);
 
-@import "muse-ui/less/theme-vars.less";  // default component variable
+@import "muse-ui/less/theme-vars.scss";  // default component variable
 
 // change the component variable
-@avatarBackgroundColor: lighten(@alternateTextColor, 26%);
+@avatarBackgroundColor: lighten($alternateTextColor, 26%);
 @datePickerHeaderColor: fade(@fullWhite, 12%);
 @timePickerHeaderColor: fade(@fullWhite, 12%);
 @timePickerClockCircleColor: fade(@fullWhite, 12%);
-@avatarBackgroundColor: lighten(@alternateTextColor, 26%);
-@chipColor: lighten(@alternateTextColor, 12%);
-@floatButtonDisabledColor: lighten(@alternateTextColor, 12%);
+@avatarBackgroundColor: lighten($alternateTextColor, 26%);
+@chipColor: lighten($alternateTextColor, 12%);
+@floatButtonDisabledColor: lighten($alternateTextColor, 12%);
 
 @tableRowHoverBackgroundColor: fade(@textColor, 10%);
 @tableRowSelectedBackgroundColor: fade(@textColor, 5%);
 
-@import "muse-ui/less/theme.less"; // style related to theme
+@import "muse-ui/less/theme.scss"; // style related to theme
 
 ```
 
@@ -116,25 +116,25 @@ the color variable of theme，refer to [material design colors](https://material
 @fontFamily: Roboto, Lato, sans-serif;  // font
 
 // primary color and accent color
-@primaryColor: @lightBlue;           // primary color
-@darkerPrimaryColor: @lightBlue700;  // darker primary color
-@lighterPrimaryColor: @grey400;      // lighter primary color
-@accentColor: @pinkA200;             // accent color
-@darkerAccentColor: @grey100;        // darker accent color
-@lighterAccentColor: @grey500;       // lighter accent color
+@primaryColor: $lightBlue;           // primary color
+@darkerPrimaryColor: $lightBlue700;  // darker primary color
+@lighterPrimaryColor: $grey400;      // lighter primary color
+@accentColor: $pinkA200;             // accent color
+$darkerAccentColor: $grey100;        // darker accent color
+@lighterAccentColor: $grey500;       // lighter accent color
 
 // text color
-@textColor: @darkBlack;
+@textColor: $darkBlack;
 @primaryTextColor: fade(@fullBlack, 54%);
-@alternateTextColor: @white;
+$alternateTextColor: $white;
 @borderColor: fade(@fullBlack, 12%);
 @disabledColor: fade(@fullBlack, 38%);
 
 // background
-@backgroundColor: @white;           // background color
-@statusBarBackgroundColor: @grey300; // useless
-@appbarBackgroundColor: @grey100; // useless in the appbar component
-@dialogBackgroundColor: @white; // dialogs、 cards、 paper background
+@backgroundColor: $white;           // background color
+@statusBarBackgroundColor: $grey300; // useless
+@appbarBackgroundColor: $grey100; // useless in the appbar component
+@dialogBackgroundColor: $white; // dialogs、 cards、 paper background
 
 // icon color
 @activeIconColor: fade(@fullBlack, 54%);

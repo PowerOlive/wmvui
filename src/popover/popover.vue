@@ -203,11 +203,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-popover{
   position: fixed;
-  background: @dialogBackgroundColor;
+  background: $dialogBackgroundColor;
   border-radius: 2px;
   max-height: 100%;
   overflow: visible;

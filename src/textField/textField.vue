@@ -217,15 +217,15 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-text-field{
   font-size: 16px;
   /* width: 256px; */
   /* min-height: 48px; */
   display: block;
   position: relative;
-  color: @primaryTextColor;
+  color: $primaryTextColor;
   margin-bottom: 8px;
 /*   &.full-width {
   width: 100%;
@@ -234,9 +234,9 @@ export default {
     padding-left: 46px;
   }
   &.focus-state {
-    color: @primaryColor;
+    color: $primaryColor;
     &.error{
-      color: @red;
+      color: $red;
     }
   }
   &.has-label{
@@ -258,7 +258,7 @@ export default {
   display: block;
   height: 100%;
   .vui-text-field.disabled &{
-    color: @disabledColor;
+    color: $disabledColor;
     /* cursor: not-allowed; */
   }
   padding-top: 4px;
@@ -286,7 +286,7 @@ export default {
   font-stretch: inherit;
   font-size: inherit;
   font-family: inherit;
-  color: @textColor;
+  color: $textColor;
   font-family: inherit;
   position: relative;
 }
@@ -304,7 +304,7 @@ export default {
     left: 46px;
   }
   .vui-text-field.error &{
-    color: @red;
+    color: $red;
   }
   .vui-text-field.disabled &{
     color: inherit;

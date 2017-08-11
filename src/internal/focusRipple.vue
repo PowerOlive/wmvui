@@ -49,8 +49,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-focus-ripple-wrapper{
   height: 100%;
   width: 100%;
@@ -67,7 +67,7 @@ export default {
   border-radius: 50%;
   opacity: 0.16;
   background-color: currentColor;
-  animation: vui-pulsate 750ms @easeInOutFunction;
+  animation: vui-pulsate 750ms $easeInOutFunction;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }

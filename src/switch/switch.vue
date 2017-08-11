@@ -97,8 +97,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-switch {
   position: relative;
   vertical-align: middle;
@@ -112,11 +112,12 @@ export default {
     &:checked {
       + .vui-switch-wrapper {
         .vui-switch-track{
-          background-color: fade(@primaryColor, 50%);
+          background-color: lighten($primaryColor, 20%);
+
         }
         .vui-switch-thumb{
-          background-color: @primaryColor;
-          color: @primaryColor;
+          background-color: $primaryColor;
+          color: $primaryColor;
           transform: translate3d(18px, 0, 0);
         }
       }
@@ -127,10 +128,10 @@ export default {
     input[type="checkbox"]:checked{
       + .vui-switch-wrapper {
         .vui-switch-track{
-          background-color: @lighterPrimaryColor;
+          background-color: $borderColor;
         }
         .vui-switch-thumb{
-          background-color: @grey300;
+          background-color: $grey300;
         }
       }
     }
@@ -157,7 +158,7 @@ export default {
   padding: 4px 0px 4px 2px;
   position: relative;
   margin-right: 8px;
-  transition: all 450ms @easeOutFunction;
+  transition: all 450ms $easeOutFunction;
   .vui-switch.label-left &{
     margin-right: 0;
     margin-left: 8px;
@@ -169,9 +170,9 @@ export default {
 }
 
 .vui-switch-label {
-  color: @textColor;
+  color: $textColor;
   .vui-switch.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -179,10 +180,10 @@ export default {
   width: 100%;
   height: 14px;
   border-radius: 30px;
-  background-color: @lighterPrimaryColor;
-  transition: all 450ms @easeOutFunction;
+  background-color: $borderColor;;
+  transition: all 450ms $easeOutFunction;
   .vui-switch.disabled & {
-    background-color: @lighterPrimaryColor;
+    background-color: $borderColor;;
   }
 }
 
@@ -193,15 +194,15 @@ export default {
   width: 20px;
   height: 20px;
   line-height: 24px;
-  color: @textColor;
-  background-color: @darkerAccentColor;
+  color: $textColor;
+  background-color: $darkerAccentColor;
   border-radius: 50%;
   // .depth(1);
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-  transition: all 450ms @easeOutFunction;
+  transition: all 450ms $easeOutFunction;
   backface-visibility: hidden;
   .vui-switch.disabled & {
-    background-color: @grey300;
+    background-color: $grey300;
   }
 }
 

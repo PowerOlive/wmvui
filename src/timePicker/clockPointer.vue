@@ -54,11 +54,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-clock-pointer {
   height: 40%;
-  background-color: @primaryColor;
+  background-color: $primaryColor;
   width: 2px;
   left: calc(50% - 1px);
   position: absolute;
@@ -72,8 +72,8 @@ export default {
 
 .vui-clock-pointer-mark {
   box-sizing: content-box;
-  background-color: @alternateTextColor;
-  border: 4px solid @primaryColor;
+  background-color: $alternateTextColor;
+  border: 4px solid $primaryColor;
   width: 7px;
   height: 7px;
   position: absolute;

@@ -57,8 +57,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-th {
   font-weight: normal;
   font-size: 12px;
@@ -66,7 +66,7 @@ export default {
   padding-right: 24px;
   height: 56px;
   text-align: left;
-  color: @primaryTextColor;
+  color: $primaryTextColor;
   position: relative;
 }
 

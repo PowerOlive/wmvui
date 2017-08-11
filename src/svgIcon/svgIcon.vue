@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vui-svg-icon{
     vertical-align: -0.15em;
     fill: currentColor;

@@ -41,7 +41,7 @@ Vue.use(MuseUI)
 
 ```javascript
 import Vue from 'vue'
-import 'muse-components/styles/base.less' // loading the basic of style
+import 'muse-components/styles/base.scss' // loading the basic of style
 import appBar from 'muse-components/appBar'
 import avatar from 'muse-components/avatar'
 // ..

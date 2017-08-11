@@ -34,8 +34,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-divider {
   margin: 0;
   border: none;
@@ -51,7 +51,7 @@ export default {
   &:after{
     content:'';
     height: 1px;
-    background-color: @borderColor;
+    background-color: $borderColor;
     transform: translate3d(0, 0, 0);
   }
   &-title{
@@ -71,7 +71,7 @@ export default {
   &-dotted{
     &:after{
       height:0;
-      border-top:1px dotted @borderColor;
+      border-top:1px dotted $borderColor;
       background:none;
     }
   }

@@ -81,8 +81,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-clock-number{
   display: inline-block;
   width: 32px;
@@ -99,8 +99,8 @@ export default {
   transform: translate(0px, 5px);
   user-select: none;
   &.selected {
-    background-color: @primaryColor;
-    color: @alternateTextColor;
+    background-color: $primaryColor;
+    color: $alternateTextColor;
   }
   &.inner {
     width: 28px;

@@ -81,14 +81,14 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-time-display {
   padding: 14px 0px;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  background-color: @primaryColor;
-  color: @alternateTextColor;
+  background-color: $primaryColor;
+  color: $alternateTextColor;
   .vui-clock-landspace & {
     width: 179px;
     position: relative;

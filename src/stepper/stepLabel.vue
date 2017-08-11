@@ -26,11 +26,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-step-label{
   display: block;
-  color: @textColor;
+  color: $textColor;
   font-size: 14px;
   position: relative;
   &:before{
@@ -47,7 +47,7 @@ export default {
     left:0;
     right:0;
     height:1px;
-    background-color:@grey400;
+    background-color: $grey400;
   }
   .vui-stepper-vertical & {
     /* height: 64px;
@@ -70,18 +70,18 @@ export default {
   margin: auto;
   overflow: hidden;
   border-radius: 100%;
-  background-color: @grey500;
-  color: @alternateTextColor;
+  background-color: $grey500;
+  color: $alternateTextColor;
   &:before{
     content:attr(data-num);
   }
   .vui-step-label.disabled &{
-    background-color: @grey500;
+    background-color: $grey500;
     cursor: not-allowed;
   }
   .vui-step-label.completed &,
   .vui-step-label.active & {
-    background-color: @primaryColor;
+    background-color: $primaryColor;
   }
   .vui-step-label.completed &:before{
     position:absolute;

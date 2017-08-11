@@ -87,8 +87,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-badge{
   position: relative;
   &,&-sup,&-sub{
@@ -100,7 +100,7 @@ export default {
     padding: 0 6px;
     line-height: 1.5;
     font-size: 12px;
-    background-color: @primaryColor;
+    background-color: $primaryColor;
     color: #fff;
     text-align: center;
   }
@@ -134,27 +134,27 @@ export default {
   }
   /* &-primary {
     .vui-badge-sup{
-      background-color: @primaryColor;
+      background-color: $primaryColor;
     }
   }
   &-success {
     .vui-badge-sup{
-      background-color: @successColor;
+      background-color: $successColor;
     }
   }
   &-info {
     .vui-badge-sup{
-      background-color: @infoColor;
+      background-color: $infoColor;
     }
   }
   &-warn {
     .vui-badge-sup{
-      background-color: @warnColor;
+      background-color: $warnColor;
     }
   }
   &-danger {
     .vui-badge-sup{
-      background-color: @dangerColor;
+      background-color: $dangerColor;
     }
   } */
   &-label{
@@ -163,7 +163,7 @@ export default {
       line-height:1;
       background-color: transparent;
       color: #999;
-      border:1px solid #999;
+      border:1px solid darken($borderColor, 20%);
     }
   }
 }
