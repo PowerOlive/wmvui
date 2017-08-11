@@ -52,13 +52,10 @@ export default {
   color: @alternateTextColor;
   background-color: @primaryColor;
   height: 56px;
-  /* padding: 0 8px; */
   width: 100%;
-  .flex-shrink(0);
   z-index: 100;
   > .left,
   > .right{
-    .flex-shrink(0);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -87,6 +84,9 @@ export default {
   .vui-text-field{
     margin-bottom:0;
     &-line{bottom:0;}
+    &-icon{
+      position: absolute;
+    }
   }
   &-title {
     flex: 1;

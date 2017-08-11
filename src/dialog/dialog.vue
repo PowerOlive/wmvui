@@ -145,7 +145,8 @@ export default {
   background-color: @dialogBackgroundColor;
   border-radius: 2px;
   font-size: 16px;
-  .depth(5);
+  // .depth(5);
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
 }
 
 .vui-dialog-title {

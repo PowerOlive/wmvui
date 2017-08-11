@@ -188,7 +188,7 @@ export default {
   appearance: none;
   background: none;
   color: @textColor;
-  .flex-shrink(0);
+  // .flex-shrink(0);
   margin: 0;
   outline: 0;
   padding:5px 22px;

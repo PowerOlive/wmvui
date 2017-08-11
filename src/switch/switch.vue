@@ -196,7 +196,8 @@ export default {
   color: @textColor;
   background-color: @darkerAccentColor;
   border-radius: 50%;
-  .depth(1);
+  // .depth(1);
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   transition: all 450ms @easeOutFunction;
   backface-visibility: hidden;
   .vui-switch.disabled & {

@@ -206,10 +206,10 @@ export default {
   background-color: @borderColor;
   transition: all .45s @easeOutFunction;
   html.pixel-ratio-2 & {
-    .transform(scaleY(0.5));
+    transform:scaleY(0.5);
   }
   html.pixel-ratio-3 & {
-    .transform(scaleY(0.33));
+    transform:scaleY(0.33);
   }
 }
 </style>
