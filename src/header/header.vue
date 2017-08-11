@@ -51,7 +51,7 @@ export default {
   align-items: center;
   color: $alternateTextColor;
   background-color: $primaryColor;
-  height: 56px;
+  height: vw(120);
   width: 100%;
   z-index: 100;
   > .left,
@@ -70,8 +70,8 @@ export default {
     margin:0;
   }
   .vui-btn{
-    padding-left:15px;
-    padding-right:15px;
+    padding-left:vw(30);
+    padding-right:vw(30);
     .vui-icon{
       margin-right:0;
     }
@@ -91,13 +91,13 @@ export default {
   }
   &-title {
     flex: 1;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: vw(16);
+    padding-right: vw(16);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 20px;
+    font-size: vw(32);
     font-weight: 400;
     /* line-height: 56px; */
   }

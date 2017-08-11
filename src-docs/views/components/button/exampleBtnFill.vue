@@ -9,7 +9,7 @@
 
   <br>
   <p>自定义padding按钮</p>
-  <vui-button label="重要" primary :padding="['10px','50px']" class="demo-vui-button" />
+  <vui-button label="重要" primary :padding="[20,100]" class="demo-vui-button" />
 </div>
 </template>
 

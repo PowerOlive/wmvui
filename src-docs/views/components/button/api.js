@@ -48,7 +48,7 @@ export default {
   }, {
     name: 'padding',
     type: 'Array',
-    default: '4px 20px',
+    default: '',
     desc: 'props.padding'
   }, {
     name: 'disabled',

@@ -133,9 +133,9 @@ export default {
       return {
         'background-color': this.hover ? getColor(this.hoverColor) : getColor(this.backgroundColor),
         'color': getColor(this.color),
-        'width': this.circle ? this.circle + 'px' : '',
-        'height': this.circle ? this.circle + 'px' : '',
-        'padding': this.padding ? (this.padding[0] + ' ' + this.padding[1]) : ''
+        'width': this.circle ? this.circle / 7.5 + 'vw' : '',
+        'height': this.circle ? this.circle / 7.5 + 'vw' : '',
+        'padding': this.padding ? (this.padding[0] / 7.5 + 'vw' + ' ' + this.padding[1] / 7.5 + 'vw') : ''
       }
     },
     buttonClass () {
@@ -177,7 +177,7 @@ export default {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  border-radius: 2px;
+  border-radius: vw(4);
   transition-duration: 300ms;
   transition-timing-function: $easeOutFunction;
   transform: translate3d(0, 0, 0);
@@ -191,7 +191,7 @@ export default {
   // .flex-shrink(0);
   margin: 0;
   outline: 0;
-  padding:5px 22px;
+  padding: vw(10) vw(40);
   cursor: pointer;
   /* &.hover {
     background-color: lighten($textColor, 50%);
@@ -206,19 +206,19 @@ export default {
   }
   .vui-icon{
     vertical-align: middle;
-    margin-right:6px;
+    margin-right: vw(12);
   }
   &.vui-label-right {
     .vui-icon{
-      margin-left:6px;
+      margin-left: vw(12);
       margin-right:0;
     }
   }
   &-circle{
     overflow:hidden;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: vw(72);
+    height: vw(72);
     border:none;
     padding:0;
     .vui-icon{
@@ -326,7 +326,7 @@ export default {
   }
   &-label{
     vertical-align: middle;
-    font-size: 14px;
+    font-size: vw(28);
   }
 }
 

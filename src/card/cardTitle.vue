@@ -25,7 +25,7 @@ export default {
     color: $textColor;
   }
   .vui-card-sub-title{
-    font-size: 14px;
+    font-size: vw(28);
     color: $lightBlack;
     display: block;
   }

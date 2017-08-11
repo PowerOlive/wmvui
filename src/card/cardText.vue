@@ -14,7 +14,7 @@ export default {
 @import "../styles/import.scss";
 .vui-card-text{
   /* padding: 15px; */
-  font-size: 14px;
+  font-size: vw(28);
   color: $textColor;
 }
 </style>

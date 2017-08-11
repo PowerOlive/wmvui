@@ -15,7 +15,7 @@
         <vui-badge :theme="warn" text="猴三棍" slot="after"/>
       </vui-menu-item>
       <vui-menu-item title="扁鹊">
-        <vui-badge circle :theme="danger" :size="18" text="1" slot="after"/>
+        <vui-badge circle :theme="danger" :size="48" text="1" slot="after"/>
       </vui-menu-item>
       <vui-menu-item title="王召珺">
         <vui-badge text="大波C" :theme="danger" slot="after"/>

@@ -38,14 +38,14 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 16px;
+  padding: vw(32);
   background-color: $lightBlack;
   .vui-card-title {
     color: $lightWhite;
   }
   .vui-card-sub-title {
     color: $lightWhite;
-    font-size: 14px;
+    font-size: vw(28);
   }
 }
 </style>

@@ -32,8 +32,8 @@ export default {
   computed: {
     avatarStyle () {
       let size = {
-        width: this.size ? this.size + 'px' : '',
-        height: this.size ? this.size + 'px' : ''
+        width: this.size ? this.size / 7.5 + 'vw' : '',
+        height: this.size ? this.size / 7.5 + 'vw' : ''
       }
       return {...size, ...this.theme}
     }
@@ -56,9 +56,9 @@ export default {
 @import "../styles/import.scss";
 .vui-avatar{
   display: inline-block;
-  height: 40px;
-  width: 40px;
-  font-size: 20px;
+  height: vw(96);
+  width: vw(96);
+  font-size: vw(20);
   color: $alternateTextColor;
   background-color: darken($alternateTextColor, 26%);
   text-align: center;

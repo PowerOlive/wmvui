@@ -1,7 +1,7 @@
 <template>
   <div class="vui-star">
     <input v-model="currentValue" style="display:none">
-    <span class="vui-star-item" v-for="i in max" @click="handleClick(i-1)" :class="{'is-active':currentValue > i-1}" :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin+'px'}">
+    <span class="vui-star-item" v-for="i in max" @click="handleClick(i-1)" :class="{'is-active':currentValue > i-1}" :style="{color: colors && colors[i-1] ? colors[i-1] : '#ccc',marginRight:margin / 7.5 + 'vw'}">
       <icon :icon="icon" :size="iconSize"></icon>
     </span>
     <span class="vui-star-text" v-if="score">{{currentValue}} 分</span>
@@ -116,8 +116,8 @@ export default {
   color: #ccc;
   position: relative;
   &:last-child {
-    padding-right: 2px!important;
-    margin-right: 0px!important;
+    padding-right: vw(4) !important;
+    margin-right: 0 !important;
   }
   &:hover {
     color: #ffdd99;
@@ -128,6 +128,6 @@ export default {
   }
 }
 .vui-star-text{
-  font-size: 16px;
+  font-size: vw(32);
 }
 </style>

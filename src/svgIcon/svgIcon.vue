@@ -1,5 +1,5 @@
 <template>
-  <svg class="vui-svg-icon" :width="size + 'px'" :height="size + 'px'" aria-hidden="true">
+  <svg class="vui-svg-icon" :width="size / 7.5 + 'vw'" :height="size / 7.5 + 'vw'" aria-hidden="true">
     <use :xlink:href="'#icon-'+ icon" width="100%"></use>
   </svg>
 </template>

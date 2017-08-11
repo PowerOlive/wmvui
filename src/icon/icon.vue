@@ -20,8 +20,8 @@ export default {
   computed: {
     iconStyle () {
       return {
-        'font-size': this.size + 'px',
-        'line-height': this.size + 'px',
+        'font-size': this.size / 7.5 + 'vw',
+        'line-height': this.size / 7.5 + 'vw',
         // 'width': this.size + 'px',
         // 'height': this.size + 'px',
         'color': this.color

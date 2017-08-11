@@ -48,9 +48,9 @@ export default {
     },
     badgeStyle () {
       let size = {
-        'width': this.size ? this.size + 'px' : '',
-        'height': this.size ? this.size + 'px' : '',
-        'line-height': this.size ? this.size + 'px' : ''
+        'width': this.size ? this.size / 7.5 + 'vw' : '',
+        'height': this.size ? this.size / 7.5 + 'vw' : '',
+        'line-height': this.size ? this.size / 7.5 + 'vw' : ''
       }
       let dot = {
         'background': this.dot
@@ -96,10 +96,10 @@ export default {
     vertical-align: middle;
   }
   &-sup{
-    border-radius: 4px;
-    padding: 0 6px;
-    line-height: 1.5;
-    font-size: 12px;
+    border-radius: vw(8);
+    padding: vw(10) vw(16);
+    line-height: 1;
+    font-size: vw(22);
     background-color: $primaryColor;
     color: #fff;
     text-align: center;
@@ -107,8 +107,8 @@ export default {
   &-float {
     .vui-badge-sup{
       position: absolute;
-      top: -2px;
-      right: -2px;
+      top: vw(-10);
+      right: vw(-10);
     }
   }
   &-round{
@@ -120,16 +120,16 @@ export default {
     .vui-badge-sup{
       border-radius: 50%;
       padding: 0;
-      width: 18px;
-      height: 18px;
-      line-height:18px;
+      width: vw(36);
+      height: vw(36);
+      line-height:vw(36);
       overflow: hidden;
     }
   }
   &-dot{
     .vui-badge-sup{
       padding:0;
-      border-radius:10000px;
+      border-radius: 10000px
     }
   }
   /* &-primary {
@@ -159,8 +159,8 @@ export default {
   } */
   &-label{
     .vui-badge-sup{
-      padding:1px;
-      line-height:1;
+      padding: vw(2);
+      line-height: 1;
       background-color: transparent;
       color: #999;
       border:1px solid darken($borderColor, 20%);

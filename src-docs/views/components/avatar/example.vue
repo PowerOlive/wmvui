@@ -5,7 +5,7 @@
     <template slot="title">图片</template>
   </vui-list-item>
   <vui-list-item disabled>
-    <vui-avatar  slot="left" src="images/uicon.jpg" :size="30"/>
+    <vui-avatar  slot="left" src="images/uicon.jpg" :size="64"/>
     <template slot="title">图片,自定义大小</template>
   </vui-list-item>
   <vui-list-item disabled>
@@ -13,7 +13,7 @@
     <template slot="title">图标</template>
   </vui-list-item>
   <vui-list-item disabled>
-    <vui-avatar slot="left" icon="menu" :theme="theme" :size="30" :iconSize="16"/>
+    <vui-avatar slot="left" icon="menu" :theme="theme" :size="64" :iconSize="16"/>
     <template slot="title">图标, 自定义大小、颜色</template>
   </vui-list-item>
   <vui-list-item disabled>

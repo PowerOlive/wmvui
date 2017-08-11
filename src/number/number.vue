@@ -6,7 +6,7 @@
     class="vui-number-selector vui-number-selector-sub" 
     :class="{'vui-number-disabled':disabledMin}"
      :disabled="disabledMin" />
-    <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width+'px'}" :readonly="!disabled" pattern="[0-9]*"/>
+    <input v-model.number="currentValue" :name="name" class="vui-number-input" :style="{width: width / 7.5 +'vw'}" :readonly="!disabled" pattern="[0-9]*"/>
     <vui-button 
     icon="plus"
     @click="add" 
@@ -47,7 +47,7 @@ export default {
     },
     width: {
       type: Number,
-      default: 30
+      default: 60
     }
   },
   created () {
@@ -110,6 +110,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/import.scss";
 $number-input-font-color:#333;
 $number-input-font-disabled-color:#999;
 $number-input-border-color:#bbb;
@@ -130,8 +131,8 @@ $number-input-border-color:#bbb;
 .vui-number-input,
 .vui-number-selector{
   border-radius: 0;
-  height:29px;
-  line-height: 29px;
+  height: vw(58);
+  line-height:  vw(58);
   color: $number-input-font-color;
   float: left;
   display: block;
@@ -140,7 +141,7 @@ $number-input-border-color:#bbb;
   .vui-icon{
     margin:0;
     &:before{
-      font-size: 14px;
+      font-size:  vw(28);
       vertical-align: middle;
     }
   }
@@ -149,7 +150,7 @@ $number-input-border-color:#bbb;
 .vui-number-selector{
     padding: 0;
     text-align: center;
-    width: 28px;
+    width:  vw(58);
 }
 .vui-number-selector-sub {
   border-right:none;

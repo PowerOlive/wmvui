@@ -25,11 +25,10 @@ export default {
 @import "../styles/import.scss";
 .vui-card-header {
   /* padding: 15px; */
-  font-weight: 500;
   position: relative;
   white-space: nowrap;
   .vui-avatar {
-    margin-right: 10px;
+    margin-right: vw(20);
     vertical-align: middle;
   }
 }

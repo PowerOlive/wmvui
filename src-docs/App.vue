@@ -10,7 +10,7 @@
             <template v-for="item in list">
                 <vui-list-item :value="item.value">
                   <template slot="title">{{item.title}}</template>
-                  <vui-icon slot="left" :icon="item.icon" :size="18" />
+                  <vui-icon slot="left" :icon="item.icon" :size="32" />
                 </vui-list-item>
             </template>
           </vui-list>
@@ -19,10 +19,10 @@
     </vui-drawer>
     <div class="vui-flex vui-flex-ver example-content">
       <vui-header v-if="!isHomePage" :zDepth="0" :title="title === 'index' ? '' : $t(title)" class="example-appbar" :class="{'nav-hide': !open}">
-      <vui-button :circle="42" color="#fff" :iconSize="18" @click="toggleNav" icon="menu" slot="left"/>
-      <vui-button circle color="#fff" :iconSize="24" href="https://github.com/531431988/wmvui" slot="right" icon="github-fill"/>
-      <vui-button circle color="#fff" :iconSize="24" href="http://shang.qq.com/wpa/qunwpa?idkey=3981b8fe2e9d310a7414ab49f43fe513781e582747c81952cdf8d2857a8df088" slot="right" icon="qq-group-fill"/>
-      <vui-button circle color="#fff" :iconSize="24" slot="right" icon="alipay-fill" @click="showVcode"/>
+      <vui-button :circle="42" color="#fff" :iconSize="32" @click="toggleNav" icon="menu" slot="left"/>
+      <vui-button circle color="#fff" :iconSize="40" href="https://github.com/531431988/wmvui" slot="right" icon="github-fill"/>
+      <vui-button circle color="#fff" :iconSize="40" href="http://shang.qq.com/wpa/qunwpa?idkey=3981b8fe2e9d310a7414ab49f43fe513781e582747c81952cdf8d2857a8df088" slot="right" icon="qq-group-fill"/>
+      <vui-button circle color="#fff" :iconSize="40" slot="right" icon="alipay-fill" @click="showVcode"/>
     </vui-header>
     <vui-popup position="center" overlay :open="openVcode" @close="close">
       <p style="text-align:center;font-size:20px;">如果你想赏我棒棒糖 我也不嫌弃<br>毕竟我是个菜逼</p>
