@@ -71,11 +71,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-expand-enter-active,
 .vui-expand-leave-active {
-  transition: height .45s @easeOutFunction, padding .45s @easeOutFunction;
+  transition: height .45s $easeOutFunction, padding .45s $easeOutFunction;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
 }

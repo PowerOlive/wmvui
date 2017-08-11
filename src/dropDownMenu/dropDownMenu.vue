@@ -151,18 +151,18 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-dropDown-menu {
   display: inline-block;
   font-size: 15px;
   height: 48px;
   position: relative;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
   cursor: pointer;
   overflow: hidden;
   &.disabled{
-    color: @disabledColor;
+    color: $disabledColor;
     cursor: not-allowed;
   }
 }
@@ -171,7 +171,7 @@ export default {
   position: absolute;
   right: 16px;
   top: 16px;
-  color: @borderColor;
+  color: $borderColor;
   fill: currentColor;
   display: inline-block;
   width: 24px;
@@ -185,9 +185,9 @@ export default {
   line-height: 56px;
   opacity: 1;
   position: relative;
-  color: @textColor;
+  color: $textColor;
   .vui-dropDown-menu.disabled &{
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -203,13 +203,13 @@ export default {
   right: 0px;
   position: absolute;
   height: 1px;
-  background-color: @borderColor;
-  transition: all .45s @easeOutFunction;
+  background-color: $borderColor;
+  transition: all .45s $easeOutFunction;
   html.pixel-ratio-2 & {
-    .transform(scaleY(0.5));
+    transform:scaleY(0.5);
   }
   html.pixel-ratio-3 & {
-    .transform(scaleY(0.33));
+    transform:scaleY(0.33);
   }
 }
 </style>

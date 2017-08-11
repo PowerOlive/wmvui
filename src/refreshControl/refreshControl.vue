@@ -173,19 +173,19 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-refresh-control{
   display: flex;
   margin: 0 auto;
   width: 40px;
   height: 40px;
-  color: @primaryColor;
+  color: $primaryColor;
   align-items: center;
   justify-content: center;
   background-color: #FFF;
   border-radius: 50%;
-  .depth(1);
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   position: absolute;
   left: 50%;
   margin-left: -18px;

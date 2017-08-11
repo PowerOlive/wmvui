@@ -32,10 +32,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../../../src/styles/import.less";
+<style lang="scss">
+@import "../../../src/styles/import.scss";
 .code-examples {
-  background-color: @dialogBackgroundColor;
+  background-color: $dialogBackgroundColor;
   margin-bottom: 32px;
   .markdown-body + & {
     margin-top: 24px;

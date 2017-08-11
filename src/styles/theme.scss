@@ -1,0 +1,665 @@
+.vui-header{
+  background-color: $appbarColor;
+  color: $appbarTextColor;
+}
+
+.vui-avatar {
+  color: $avatarColor;
+  background-color: $avatarBackgroundColor;
+}
+
+body {
+  background-color: $baseBackgroundColor;
+  color: $baseTextColor;
+  font-family: $baseFontFamily;
+}
+
+a {
+  color: $baseLinkColor;
+}
+
+
+.vui-btn{
+  &-primary{
+    color:#fff;
+    background-color: $primaryColor;
+  }
+  &-success{
+    color:#fff;
+    background-color: $successColor;
+  }
+  &-info{
+    color:#fff;
+    background-color: $infoColor;
+  }
+  &-warn{
+    color:#fff;
+    background-color: $warnColor;
+  }
+  &-danger{
+    color:#fff;
+    background-color: $dangerColor;
+  }
+  &-invert{
+    background:transparent;
+    border:2px solid lighten($textColor, 90%);
+    padding: 3px 22px;
+    &-primary{
+      color:$primaryColor;
+      border-color:$primaryColor;
+    }
+    &-success{
+      color:$successColor;
+      border-color:$successColor;
+    }
+    &-info{
+      color:$infoColor;
+      border-color:$infoColor;
+    }
+    &-warn{
+      color:$warnColor;
+      border-color:$warnColor;
+    }
+    &-danger{
+      color:$dangerColor;
+      border-color:$dangerColor;
+    }
+  }
+  &-text{
+    background:transparent;
+    /* &.hover{
+      background-color: lighten($textColor, 50%);
+    } */
+    &-primary{ color: $primaryColor }
+    &-success{ color: $successColor }
+    &-info{ color: $infoColor }
+    &-warn{ color: $warnColor }
+    &-danger{ color: $dangerColor }
+  }
+}
+
+.vui-badge{
+  &-primary {background-color: $primaryColor;}
+  &-success {background-color: $successColor;}
+  &-info {background-color: $infoColor;}
+  &-warn {background-color: $warnColor;}
+  &-danger {background-color: $dangerColor;}
+}
+
+.vui-loading{
+  &-line{
+    background-color:$primaryColor;
+  }
+  &-success{
+    .vui-loading-line{background-color: $successColor}
+    .vui-circle{border-color: $successColor}
+  }
+  &-info{
+    .vui-loading-line{background-color: $infoColor}
+    .vui-circle{border-color: $infoColor}
+  }
+  &-warn{
+    .vui-loading-line{background-color: $warnColor}
+    .vui-circle{border-color: $warnColor}
+  }
+  &-danger{
+    .vui-loading-line{background-color: $dangerColor}
+    .vui-circle{border-color: $dangerColor}
+  }
+  .vui-circle-spinner{
+    border-color: $primaryColor;
+  }
+}
+.vui-progress{
+  &-circle{
+    &-determinate{
+      position: relative;
+      &-path{
+        stroke: $primaryColor;
+      }
+    }
+    &-success{stroke: $successColor}
+    &-info{stroke: $infoColor}
+    &-warn{stroke: $warnColor}
+    &-danger{stroke: $dangerColor}
+  }
+  &-line{
+    &-indeterminate,
+    &-determinate{
+      background-color: $primaryColor;
+    }
+    &-success{background-color: $successColor}
+    &-info{background-color: $infoColor}
+    &-warn{background-color: $warnColor}
+    &-danger{background-color: $dangerColor}
+  }
+}
+
+.vui-card {
+  background-color: $cardBackgroudColor;
+  &-header-title{
+    .vui-card-title{
+      color: $cardTitleColor;
+    }
+    .vui-card-sub-title{
+      color: $cardSubtitleColor;
+    }
+  }
+  &-media-title {
+    background-color: $cardMediaOverlayContentBackground;
+    .vui-card-title {
+      color: $cardMediaTitleColor;
+    }
+    .vui-card-sub-title {
+      color: $cardMediaSubtitleColor;
+    }
+  }
+  &-title-container{
+    .vui-card-title{
+      color: $cardTitleColor;
+    }
+    .vui-card-sub-title{
+      color: $cardSubtitleColor;
+    }
+  }
+  &-text{
+    color: $cardTextColor;
+  }
+}
+
+
+
+
+
+
+.vui-checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      + .vui-checkbox-wrapper {
+        .vui-checkbox-icon-uncheck{
+          color: $checkboxCheckedColor;
+        }
+        .vui-checkbox-ripple-wrapper{
+          color: $checkboxCheckedColor;
+        }
+      }
+
+    }
+  }
+  &-label {
+    color: $checkboxTextColor;
+    .vui-checkbox.disabled & {
+      color: $checkboxDisabledColor;
+    }
+  }
+  &-icon-uncheck {
+    color: $checkboxColor;
+    .vui-checkbox.disabled & {
+      color: $checkboxDisabledColor;
+    }
+  }
+  &-icon-checked {
+    color: $checkboxCheckedColor;
+    .vui-checkbox.disabled & {
+      color: $checkboxDisabledColor;
+    }
+  }
+}
+
+
+.vui-radio {
+  input[type="radio"] {
+    &:checked {
+      + .vui-radio-wrapper {
+        .vui-radio-icon-uncheck{
+          color: $radioCheckedColor;
+        }
+        .vui-radio-ripple-wrapper{
+          color: $radioCheckedColor;
+        }
+      }
+
+    }
+  }
+  &-label {
+    color: $radioTextColor;
+    .vui-radio.disabled & {
+      color: $radioDisabledColor;
+    }
+  }
+  &-icon-uncheck {
+    color: $radioColor;
+    .vui-radio.disabled & {
+      color: $radioDisabledColor;
+    }
+  }
+
+  &-icon-checked {
+    color: $radioCheckedColor;
+    .vui-radio.disabled & {
+       color: $radioDisabledColor;
+     }
+  }
+}
+
+
+.vui-chip {
+  background-color: $chipColor;
+  color: $chipTextColor;
+  &.hover{
+    .vui-chip-delete-icon{
+      color: $chipHoverDeleteColor;
+    }
+    background-color: $chipHoverColor;
+    cursor: pointer;
+  }
+  &-delete-icon{
+    color: $chipDeleteColor;
+  }
+}
+
+.vui-calendar {
+  color: $datePickerCalendarTextColor;
+}
+
+.vui-calendar-year {
+  background-color: $datePickerCalendarYearBackgroundColor;
+}
+
+.vui-date-display{
+  background-color: $datePickerHeaderColor;
+  color: $datePickerTextColor;
+}
+
+
+.vui-day-button-bg {
+  background-color: $datePickerSelectColor;
+}
+
+.vui-day-button-text{
+  font-weight: 400;
+  position: relative;
+  color: $datePickerCalendarTextColor;
+  .vui-day-button.now & {
+    color: $datePickerSelectColor;
+  }
+  .vui-day-button.hover &,
+  .vui-day-button.selected &{
+    color: $datePickerSelectTextColor;
+  }
+}
+
+.vui-year-button-text {
+  color: $datePickerCalendarTextColor;
+  .vui-year-button.selected &{
+    color: $datePickerSelectColor;
+  }
+  .vui-year-button.hover &{
+    color: $datePickerSelectColor;
+  }
+}
+
+.vui-dialog {
+  background-color: $dialogColor;
+  &-footer,
+  &-header {
+    &.scrollable{
+      border-bottom-color: $dialogBorderColor;
+    }
+  }
+  &-title{
+    color: $dialogTitleColor;
+  }
+
+  &-body {
+    color: $dialogBodyColor
+  }
+}
+
+
+.vui-dropDown-menu-text {
+  color: $dropDownMenuTextColor;
+}
+
+.vui-dropDown-menu-icon {
+  color: $dropDownMenuIconColor;
+}
+
+.vui-dropDown-menu-line {
+  background-color: $dropDownMenuLineColor;
+}
+
+.vui-grid-tile-titlebar{
+  background-color: $gridListTitlebarColor;
+}
+
+.vui-grid-tile-title-container{
+  color: $gridListTextColor;
+}
+
+.vui-grid-tile-action {
+  .vui-icon {
+    color: $gridListTextColor;
+  }
+}
+
+
+// circle
+.vui-circle-spinner{
+  border-color: $circleColor;
+}
+
+.vui-circle-secondary {
+  border-color: $circleSecondaryColor;
+}
+
+.vui-linear-progress{
+  background-color: $linearProgressColor;
+}
+
+.vui-linear-progress-indeterminate{
+  background-color: $linearProgressFillColor;
+}
+
+.vui-linear-progress-determinate{
+  background-color: $linearProgressFillColor;
+}
+
+
+// list
+.vui-item-wrapper{
+  &.hover {
+    background-color: $listHoverColor;
+  }
+}
+.vui-item {
+  color: $listTextColor;
+  &.selected {
+    color: $listSelectedColor;
+  }
+}
+
+.vui-item-link-icon{
+  color: $listRightIconColor;
+}
+
+.vui-item-left{
+  color: $listLeftIconColor;
+  .vui-item.selected &{
+    color: $primaryColor;
+  }
+}
+
+.vui-item-right{
+  color: $listRightIconColor;
+}
+
+.vui-item-after{
+  color: $listSecondaryTextColor;
+}
+
+.vui-item-text{
+  color: $listSecondaryTextColor;
+}
+
+.vui-menu-item-wrapper{
+  color: $menuTextColor;
+  &.active {
+    color: $menuSelectColor;
+  }
+  &.hover {
+    background-color: $menuHoverColor;
+  }
+  &.disabled {
+    color: $menuDisabledColor;
+  }
+}
+
+.vui-menu-item-left-icon{
+  color: $menuLeftIconColor;
+}
+
+.vui-menu-item-right-icon {
+  color: $menuRightIconColor;
+}
+
+
+.vui-paper {
+  background-color: $paperBackgroundColor;
+  color: $paperColor;
+}
+
+.vui-picker{
+  background-color: $pickerColor;
+  .scroller-item-selected{
+    color:$primaryColor;
+  }
+}
+
+.vui-popover {
+  background-color: $popoverColor;
+}
+
+.vui-popup {
+  background-color: $popupColor;
+}
+
+
+.vui-refresh-control {
+  color: $refreshControlColor;
+}
+
+.vui-slider-track {
+  background-color: $sliderTrackColor;
+}
+
+
+.vui-slider-fill{
+  background-color: $sliderSelectionColor;
+  &.disabled {
+    background-color: $sliderDisabledColor;
+  }
+}
+
+.vui-slider-thumb{
+  background-color: $sliderSelectionColor;
+  color: $sliderSelectionColor;
+  .vui-slider.zero &,
+  .vui-slider.disabled &{
+    border-color: $sliderDisabledColor;
+    color: $sliderDisabledColor;
+    background-color: $sliderZeroColor;
+  }
+}
+
+.vui-snackbar {
+  color: $snackbarTextColor;
+  background-color: $snackbarColor;
+}
+
+.vui-step-button {
+  background-color: $stepperBackgroundColor;
+  &.hover {
+    background-color: $stepperHoverBackgroundColor
+  }
+}
+
+.vui-step-connector-line {
+  border-color: $stepperConnectorLineColor;
+}
+
+.vui-step-content{
+  .vui-stepper-vertical & {
+    border-left: 1px solid $stepperConnectorLineColor;
+  }
+}
+
+
+.vui-step-label{
+  color: $stepperTextColor;
+  &.disabled {
+    color: $stepperDisabledTextColor;
+  }
+}
+
+
+.vui-step-label-icon {
+  color: $stepperInactiveIconColor;
+  .vui-step-label.disabled &{
+    color: $stepperInactiveIconColor;
+  }
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
+    color: $stepperIconColor;
+  }
+}
+
+.vui-step-label-circle{
+  background-color: $stepperInactiveIconColor;
+  color: $stepperNumTextColor;
+  .vui-step-label.disabled &{
+    background-color: $stepperInactiveIconColor;
+  }
+  .vui-step-label.completed &,
+  .vui-step-label.active & {
+    background-color: $stepperIconColor;
+  }
+}
+
+// subheader
+.vui-sub-title{
+  color: $subHeaderColor;
+}
+
+.vui-switch {
+  input[type="checkbox"] {
+    &:checked {
+      + .vui-switch-wrapper {
+        .vui-switch-track{
+          background-color: $switchTrackOnColor;
+        }
+        .vui-switch-thumb{
+          background-color: $switchThumbOnColor;
+          color: $switchThumbOnColor;
+        }
+      }
+
+    }
+  }
+  &.disabled {
+    input[type="checkbox"]:checked{
+      + .vui-switch-wrapper {
+        .vui-switch-track{
+          background-color: $switchTrackDisabledColor;
+        }
+        .vui-switch-thumb{
+          background-color: $switchThumbDisabledColor;
+        }
+      }
+    }
+  }
+  &-label {
+    color: $switchTextColor;
+    .vui-switch.disabled & {
+      color: $switchTextDisabledColor;
+    }
+  }
+
+  &-track {
+    background-color: $switchTrackOffColor;
+    .vui-switch.disabled & {
+      background-color: $switchTrackDisabledColor;
+    }
+  }
+
+  &-thumb {
+    color: $switchTextColor;
+    background-color: $switchThumbOffColor;
+    .vui-switch.disabled & {
+      background-color: $switchThumbDisabledColor;
+    }
+  }
+}
+
+.vui-tabs{
+  &-active{
+    color: $primaryColor;;
+  }
+  &-line{
+    background-color: $primaryColor;
+  }
+}
+
+
+.vui-text-field{
+  color: $textFieldTextColor;
+  &.focus-state {
+    color: $textFieldFocusTextColor;
+    &.error{
+      color: $textFieldErrorTextColor;
+    }
+  }
+  &.disabled {
+    color: $textFieldDisabledTextColor;
+  }
+  &-input {
+    color: $textFieldInputColor;
+  }
+  &-help {
+    .vui-text-field.error &{
+      color: $textFieldErrorTextColor;
+    }
+  }
+  &-line {
+    background-color: $textFieldLineColor;
+    &.disabled {
+      border-color: $textFieldDisabledLineColor;
+    }
+  }
+  &-focus-line{
+    background-color: $textFieldFocusLineColor;
+    &.error {
+      background-color: $textFieldErrorLineColor;
+    }
+  }
+  &-hint {
+    color: $textFieldHintColor;
+  }
+  &-label {
+    .vui-text-field.has-label &.float {
+      color: $textFieldHintColor
+    }
+  }
+}
+
+.vui-clock-circle {
+  background-color: $timePickerClockCircleColor;
+}
+
+.vui-time-display {
+  background-color: $timePickerHeaderColor;
+  color: $timePickerColor;
+}
+
+.vui-clock-number{
+  &.selected {
+    background-color: $timePickerSelectColor;
+    color: $timePickerSelectTextColor;
+  }
+}
+
+.vui-clock-pointer {
+  background-color: $timePickerSelectColor;
+
+}
+
+.vui-clock-pointer-mark {
+  background-color: $timePickerSelectTextColor;
+  border-color:  $timePickerSelectColor;
+}
+
+  .vui-magic-sum{color: $primaryColor}
+  .vui-magic-sum-success{color: $successColor}
+  .vui-magic-sum-info{color: $infoColor}
+  .vui-magic-sum-warn{color: $warnColor}
+  .vui-magic-sum-danger{color: $dangerColor}

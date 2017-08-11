@@ -125,8 +125,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-checkbox {
   position: relative;
   display: inline-block;
@@ -140,16 +140,16 @@ export default {
       + .vui-checkbox-wrapper {
         .vui-checkbox-icon-uncheck{
           opacity: 0;
-          transition: opacity 650ms @easeOutFunction 150ms;
-          color: @primaryColor;
+          transition: opacity 650ms $easeOutFunction 150ms;
+          color: $primaryColor;
         }
         .vui-checkbox-icon-checked{
           opacity: 1;
           transform: scale(1);
-          transition: opacity 0ms @easeOutFunction, transform 800ms @easeOutFunction;
+          transition: opacity 0ms $easeOutFunction, transform 800ms $easeOutFunction;
         }
         .vui-checkbox-ripple-wrapper{
-          color: @primaryColor;
+          color: $primaryColor;
         }
       }
 
@@ -189,9 +189,9 @@ export default {
 }
 
 .vui-checkbox-label {
-  color: @textColor;
+  color: $textColor;
   .vui-checkbox.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -208,10 +208,10 @@ export default {
   left: 0;
   top: 0;
   opacity: 1;
-  transition: opacity 1s @easeOutFunction .2s;
-  color: @textColor;
+  transition: opacity 1s $easeOutFunction .2s;
+  color: $textColor;
   .vui-checkbox.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -220,11 +220,11 @@ export default {
   left: 0;
   top: 0;
   opacity: 0;
-  color: @primaryColor;
+  color: $primaryColor;
   transform: scale(0);
-  transition: opacity 450ms @easeOutFunction, transform 0ms @easeOutFunction 450ms;
+  transition: opacity 450ms $easeOutFunction, transform 0ms $easeOutFunction 450ms;
   .vui-checkbox.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 

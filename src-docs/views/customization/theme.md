@@ -48,46 +48,46 @@ export default {
 ``` -->
 
 ### 自定义主题
-目前只支持 `less`, 如黑色的主题配置如下所示 `dark.less`
+目前只支持 `less`, 如黑色的主题配置如下所示 `dark.scss`
 ```js
 import Vue from 'vue'
 import MuseUI from 'wuvui'
 import 'wmvui/dist/wuvui.css'
-@import "path/theme.less"; // 引入自定义主题(path)路径
+@import "path/theme.scss"; // 引入自定义主题(path)路径
 Vue.use(MuseUI)
 ```
 
 ```less
 // 修改基础变量
-@primaryColor: @blue500;  // 主色
-@darkerPrimaryColor: @blue700;
-@lighterPrimaryColor: @grey400;
+@primaryColor: $blue500;  // 主色
+@darkerPrimaryColor: $blue700;
+@lighterPrimaryColor: $grey400;
 
 // success
-@successColor: @green500;
-@darkerSuccessColor: @green600; 
+@successColor: $green500;
+@darkerSuccessColor: $green600; 
 
 // info
-@infoColor: @blue300;
-@darkerInfoColor: @blue500; 
+@infoColor: $blue300;
+@darkerInfoColor: $blue500; 
 
 // warn
-@warnColor: @orange400;
-@darkerWarnColor: @orange600; 
+@warnColor: $orange400;
+@darkerWarnColor: $orange600; 
 
 // danger
-@dangerColor: @red400;
-@darkerDangerColor: @red600; 
+@dangerColor: $red400;
+@darkerDangerColor: $red600; 
 
 ……
 
-@import "wmvui/less/theme-vars.less";  // 默认组件变量
+@import "wmvui/less/theme-vars.scss";  // 默认组件变量
 
 // 修改组件变量
 @datePickerHeaderColor: fade(@fullWhite, 12%);
 ……
 
-@import "wmvui/less/theme.less"; // 主题相关的样式
+@import "wmvui/less/theme.scss"; // 主题相关的样式
 
 ```
 
@@ -99,25 +99,25 @@ Vue.use(MuseUI)
 @fontFamily: Roboto, Lato, sans-serif;  // 字体
 
 // 主色和强调色
-@primaryColor: @lightBlue;           // 主色
-@darkerPrimaryColor: @lightBlue700;  // 更深的主色
-@lighterPrimaryColor: @grey400;      // 浅一点的主色
-@accentColor: @pinkA200;             // 强调色
-@darkerAccentColor: @grey100;        // 更深的强调色
-@lighterAccentColor: @grey500;       // 浅一点的强调色
+@primaryColor: $lightBlue;           // 主色
+@darkerPrimaryColor: $lightBlue700;  // 更深的主色
+@lighterPrimaryColor: $grey400;      // 浅一点的主色
+@accentColor: $pinkA200;             // 强调色
+$darkerAccentColor: $grey100;        // 更深的强调色
+@lighterAccentColor: $grey500;       // 浅一点的强调色
 
 // 文本颜色
-@textColor: @darkBlack;
+@textColor: $darkBlack;
 @primaryTextColor: fade(@fullBlack, 54%);
-@alternateTextColor: @white;
+$alternateTextColor: $white;
 @borderColor: fade(@fullBlack, 12%);
 @disabledColor: fade(@fullBlack, 38%);
 
 // background
-@backgroundColor: @white;           // 背景色
-@statusBarBackgroundColor: @grey300; // web项目没有状态栏，所以也没有使用
-@appbarBackgroundColor: @grey100; // 并未在appbar组件中应用
-@dialogBackgroundColor: @white; // dialogs、 cards、 paper 组件背景
+@backgroundColor: $white;           // 背景色
+@statusBarBackgroundColor: $grey300; // web项目没有状态栏，所以也没有使用
+@appbarBackgroundColor: $grey100; // 并未在appbar组件中应用
+@dialogBackgroundColor: $white; // dialogs、 cards、 paper 组件背景
 
 // icon color
 @activeIconColor: fade(@fullBlack, 54%);

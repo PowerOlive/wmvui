@@ -230,10 +230,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-calendar {
-  color: @textColor;
+  color: $textColor;
   user-select: none;
   width: 100%;
 }
@@ -255,7 +255,7 @@ export default {
   font-size: 12px;
   font-weight: 400;
   padding: 0px 8px;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
 }
 
 .vui-calendar-week {
@@ -296,7 +296,7 @@ export default {
 .vui-calendar-slide-next-leave-active,
 .vui-calendar-slide-prev-enter-active,
 .vui-calendar-slide-prev-leave-active {
-  transition: transform 450ms @easeOutFunction, opacity 450ms @easeOutFunction;
+  transition: transform 450ms $easeOutFunction, opacity 450ms $easeOutFunction;
   backface-visibility: hidden;
   position: absolute;
   left: 0;

@@ -136,8 +136,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-clock {
   user-select: none;
   width: 280px;
@@ -167,7 +167,7 @@ export default {
   width: 260px;
   height: 260px;
   border-radius: 100%;
-  background-color: fade(@darkBlack, 7%);
+  background-color: lighten($textColor, 95%);
   .vui-clock-landspace &{
     left: 50%;
     margin-left: -130px;

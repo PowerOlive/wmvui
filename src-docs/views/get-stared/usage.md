@@ -64,7 +64,7 @@ webpack2
 
 ```javascript
 import Vue from 'vue'
-import 'wmvui/src/styles/base.less' // 加载基础的样式
+import 'wmvui/src/styles/base.scss' // 加载基础的样式
 import appBar from 'wmvui/src/appBar'
 import avatar from 'wmvui/src/avatar'
 // ..

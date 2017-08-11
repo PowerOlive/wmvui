@@ -46,16 +46,16 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-label {
   border-radius: 10000px;
   white-space: nowrap;
   display: inline-flex;
   vertical-align: middle;
   align-items: center;
-  background-color: darken(@alternateTextColor, 12%);
-  color: fade(@textColor, 87%);
+  background-color: darken($alternateTextColor, 12%);
+  color: $textColor;
   padding: 2px 12px;
   .vui-avatar:first-child,
   .vui-svg-icon{
@@ -67,8 +67,8 @@ export default {
   display: inline-block;
   margin-right: -12px;
   margin-left: 4px;
-  color: fade(@textColor, 26%);
-  transition: all 450ms @easeOutFunction;
+  color: rgba(0,0,0,.4);
+  transition: all 450ms $easeOutFunction;
 }
 
 

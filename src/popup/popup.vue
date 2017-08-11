@@ -133,11 +133,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-popup {
   position: fixed;
-  background-color: @dialogBackgroundColor;
+  background-color: $dialogBackgroundColor;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);

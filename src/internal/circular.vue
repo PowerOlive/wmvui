@@ -51,8 +51,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-circle-wrapper {
   display: inline-block;
   position: relative;
@@ -78,7 +78,7 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 0;
-  border-color: @primaryColor;
+  border-color: $primaryColor;
   opacity: 1;
   -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;

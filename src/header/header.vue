@@ -42,23 +42,20 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-header {
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
   align-items: center;
-  color: @alternateTextColor;
-  background-color: @primaryColor;
+  color: $alternateTextColor;
+  background-color: $primaryColor;
   height: 56px;
-  /* padding: 0 8px; */
   width: 100%;
-  .flex-shrink(0);
   z-index: 100;
   > .left,
   > .right{
-    .flex-shrink(0);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -87,6 +84,10 @@ export default {
   .vui-text-field{
     margin-bottom:0;
     &-line{bottom:0;}
+    &-icon{
+      color:rgba(0,0,0,.5);
+      position: absolute;
+    }
   }
   &-title {
     flex: 1;

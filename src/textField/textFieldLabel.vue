@@ -36,11 +36,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-text-field-label {
   line-height: 20px;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
   z-index: 1;
   cursor: text;
   transform: translate3d(0, 0, 0) scale(0.75);
@@ -54,7 +54,7 @@ export default {
   }
   .vui-text-field.has-label &.float {
     transform: translate3d(0, 28px, 0) scale(1);
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 </style>

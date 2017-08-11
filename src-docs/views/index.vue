@@ -62,8 +62,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../../src/styles/vars.less";
+<style lang="scss">
+@import "../../src/styles/vars.scss";
 .vui-banner{
   z-index: 100;
   position: absolute;
@@ -78,9 +78,9 @@ export default {
   height: 120px;
   line-height: 100px;
   text-align: center;
-  background-color: @alternateTextColor;
+  background-color: $alternateTextColor;
   margin:  10% auto 0;
-  color: @primaryColor;
+  color: $primaryColor;
   font-size: 50px;
   border-radius: 50%;
   margin-bottom: 32px;
@@ -98,14 +98,14 @@ export default {
   font-size: 48px;
   line-height: 1;
   font-weight: 300;
-  color: fade(@alternateTextColor, 87%);
+  color: lighten($alternateTextColor, 87%);
   margin-top: 0;
   margin-bottom: 12px;
   text-align: center;
 }
 
 .vui-banner-sub-title{
-  color: fade(@alternateTextColor, 87%);
+  color: lighten($alternateTextColor, 87%);
   text-align: center;
   font-weight: 300;
   margin-bottom: 16px;

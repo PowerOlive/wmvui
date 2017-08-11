@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vui-text-field-textarea{
   resize: vertical;
   line-height: 1.5;

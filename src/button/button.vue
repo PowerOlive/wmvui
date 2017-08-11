@@ -171,15 +171,15 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-btn {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   border-radius: 2px;
   transition-duration: 300ms;
-  transition-timing-function: @easeOutFunction;
+  transition-timing-function: $easeOutFunction;
   transform: translate3d(0, 0, 0);
   text-decoration: none;
   text-transform: uppercase;
@@ -187,14 +187,14 @@ export default {
   /* border:2px solid transparent; */
   appearance: none;
   background: none;
-  color: @textColor;
-  .flex-shrink(0);
+  color: $textColor;
+  // .flex-shrink(0);
   margin: 0;
   outline: 0;
   padding:5px 22px;
   cursor: pointer;
   /* &.hover {
-    background-color: fade(@textColor, 10%);
+    background-color: lighten($textColor, 50%);
   } */
 /*   &.vui-btn-icon.hover{
   background-color:transparent
@@ -245,42 +245,42 @@ export default {
   }
   &-primary{
     color:#fff;
-    background-color: @primaryColor;
+    background-color: $primaryColor;
     /* &.hover{
-      background-color: lighten(@primaryColor, 10%);
+      background-color: lighten($primaryColor, 10%);
     } */
   }
   &-success{
     color:#fff;
-    background-color: @successColor;
+    background-color: $successColor;
     /* &.hover{
-      background-color: lighten(@successColor, 10%);
+      background-color: lighten($successColor, 10%);
     } */
   }
   &-info{
     color:#fff;
-    background-color: @infoColor;
+    background-color: $infoColor;
     /* &.hover{
-      background-color: lighten(@infoColor, 10%);
+      background-color: lighten($infoColor, 10%);
     } */
   }
   &-warn{
     color:#fff;
-    background-color: @warnColor;
+    background-color: $warnColor;
     /* &.hover{
-      background-color: lighten(@warnColor, 10%);
+      background-color: lighten($warnColor, 10%);
     } */
   }
   &-danger{
     color:#fff;
-    background-color: @dangerColor;
+    background-color: $dangerColor;
     /* &.hover{
-      background-color: lighten(@dangerColor, 6%);
+      background-color: lighten($dangerColor, 6%);
     } */
   }
   &-invert{
     background:transparent;
-    border:2px solid fade(@textColor, 10%);
+    border:2px solid $borderColor;
     padding: 3px 22px;
     /* &-primary,
     &-success,
@@ -293,36 +293,36 @@ export default {
       }
     } */
     &-primary{
-      color:@primaryColor;
-      border-color:@primaryColor;
+      color:$primaryColor;
+      border-color:$primaryColor;
     }
     &-success{
-      color:@successColor;
-      border-color:@successColor;
+      color:$successColor;
+      border-color:$successColor;
     }
     &-info{
-      color:@infoColor;
-      border-color:@infoColor;
+      color:$infoColor;
+      border-color:$infoColor;
     }
     &-warn{
-      color:@warnColor;
-      border-color:@warnColor;
+      color:$warnColor;
+      border-color:$warnColor;
     }
     &-danger{
-      color:@dangerColor;
-      border-color:@dangerColor;
+      color:$dangerColor;
+      border-color:$dangerColor;
     }
   }
   &-text{
     background:transparent;
     /* &.hover{
-      background-color: fade(@textColor, 10%);
+      background-color: lighten($textColor, 50%);
     } */
-    &-primary{ color: @primaryColor }
-    &-success{ color: @successColor }
-    &-info{ color: @infoColor }
-    &-warn{ color: @warnColor }
-    &-danger{ color: @dangerColor }
+    &-primary{ color: $primaryColor }
+    &-success{ color: $successColor }
+    &-info{ color: $infoColor }
+    &-warn{ color: $warnColor }
+    &-danger{ color: $dangerColor }
   }
   &-label{
     vertical-align: middle;

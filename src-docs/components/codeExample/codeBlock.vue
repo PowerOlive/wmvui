@@ -49,15 +49,15 @@ ${this.code}
 }
 </script>
 
-<style lang="less">
-@import "../../../src/styles/import.less";
+<style lang="scss">
+@import "../../../src/styles/import.scss";
 .code-toolbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 56px;
   padding: 0 10px 0 20px;
-  background-color: darken(@darkerAccentColor, 5%);
+  background-color: darken($darkerAccentColor, 5%);
   cursor: pointer;
 }
 
@@ -69,13 +69,13 @@ ${this.code}
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: @primaryTextColor;
+  color: $primaryTextColor;
 }
 
 .code-block-code-style {
   overflow: auto;
   max-height: 1400px;
-  transition: max-height 800ms @easeInOutFunction;
+  transition: max-height 800ms $easeInOutFunction;
   display: block;
   overflow-x: auto;
   margin: 0;

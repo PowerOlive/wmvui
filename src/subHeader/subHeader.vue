@@ -33,10 +33,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-sub-header {
-  color: @primaryTextColor;
+  color: $primaryTextColor;
   font-size: 14px;
   line-height: 48px;
   /* padding-left: 16px; */

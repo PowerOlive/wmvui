@@ -53,8 +53,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-text-field{
   &-line,
   &-focus-line{
@@ -67,23 +67,23 @@ export default {
 }
 .vui-text-field-line {
   height: 1px;
-  background-color: @borderColor;
+  background-color: $borderColor;
   .vui-text-field.has-icon & {
     left: 46px;
   }
   &.disabled{
     height: auto;
     background-color: transparent;
-    border-bottom: 1px dashed @disabledColor;
+    border-bottom: 1px dashed $disabledColor;
   }
 }
 
 .vui-text-field-focus-line{
   height: 2px;
-  background-color: @primaryColor;
+  background-color: $primaryColor;
   margin-top: -1px;
   transform: scaleX(0);
-  transition: transform .45s @easeOutFunction;
+  transition: transform .45s $easeOutFunction;
   .vui-text-field.has-icon & {
     left: 46px;
   }
@@ -92,7 +92,7 @@ export default {
   }
   &.error {
     transform: scaleX(1);
-    background-color: @red;
+    background-color: $red;
 
   }
 }

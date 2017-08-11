@@ -126,8 +126,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-dialog-wrapper {
   position: fixed;
   left: 0;
@@ -142,10 +142,11 @@ export default {
   width: 75%;
   max-width: 768px;
   padding: 0;
-  background-color: @dialogBackgroundColor;
+  background-color: $dialogBackgroundColor;
   border-radius: 2px;
   font-size: 16px;
-  .depth(5);
+  // .depth(5);
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
 }
 
 .vui-dialog-title {
@@ -156,22 +157,22 @@ export default {
   margin: 0;
   font-size: 22px;
   font-weight: normal;
-  color: @textColor;
-  /* border-bottom: 1px solid @borderColor; */
+  color: $textColor;
+  // border-bottom: 2px solid $borderColor;
   &+.vui-dialog-body{
     padding-top:10px;
   }
 }
 .vui-dialog-body {
   padding: 24px 24px 20px;
-  color: fade(@textColor, 60%);
+  color: lighten($textColor, 60%);
 }
 
 .vui-dialog-actions {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-top:1px solid @borderColor;
+  border-top:1px solid $borderColor;
   .vui-btn{
     border:none;
     padding-top:8px; 
@@ -179,9 +180,9 @@ export default {
     flex: 1;
     width: 0%;
     &:not(:only-child){
-      border-right:1px solid @borderColor;
+      border-right:1px solid $borderColor;
       &:first-child{
-        color:@textColor
+        color:$textColor
       }
     }
   }
@@ -189,10 +190,10 @@ export default {
 
 .vui-dialog-slide-enter-active,
 .vui-dialog-slide-leave-active{
-  transition: opacity .45s @easeOutFunction;
+  transition: opacity .45s $easeOutFunction;
   .vui-dialog {
     backface-visibility: hidden;
-    transition: transform .45s @easeOutFunction;
+    transition: transform .45s $easeOutFunction;
   }
 }
 .vui-dialog-slide-enter,

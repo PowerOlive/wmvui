@@ -45,8 +45,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-year-button{
   position: relative;
   display: block;
@@ -65,18 +65,18 @@ export default {
 
 .vui-year-button-text {
   align-self: center;
-  color: @textColor;
+  color: $textColor;
   font-size: 17px;
   font-weight: 400;
   position: relative;
   top: -1px;
   .vui-year-button.selected &{
-    color: @primaryColor;
+    color: $primaryColor;
     font-size: 26px;
     font-weight: 500;
   }
   .vui-year-button.hover &{
-    color: @primaryColor;
+    color: $primaryColor;
   }
 }
 </style>

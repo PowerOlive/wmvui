@@ -134,10 +134,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-table {
-  background-color: @alternateTextColor;
+  background-color: $alternateTextColor;
   padding: 0 24px;
   width: 100%;
   border-collapse: collapse;

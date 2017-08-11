@@ -30,8 +30,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-circle-ripple{
   position: absolute;
   width: 100%;
@@ -47,7 +47,7 @@ export default {
 }
 
 .vui-ripple-enter-active, .vui-ripple-leave-active{
-  transition: opacity 2s @easeOutFunction, transform .45s @easeOutFunction;
+  transition: opacity 2s $easeOutFunction, transform .45s $easeOutFunction;
 }
 
 .vui-ripple-enter {

@@ -115,7 +115,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 .vui-time-picker-dialog{
   width: 280px;
  &.landscape {

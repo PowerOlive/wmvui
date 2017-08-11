@@ -28,14 +28,14 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-step-content{
   margin-left: 25px;
   padding:10px 0 10px 20px;
   overflow: hidden;
   .vui-stepper-vertical & {
-    border-left: 1px solid @grey400;
+    border-left: 1px solid $grey400;
   }
   &.last {
     border-left: none !important;

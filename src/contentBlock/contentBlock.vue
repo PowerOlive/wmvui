@@ -26,12 +26,12 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-content-block{
   padding: 8px 16px;
   &-border{
-    border:1px solid @borderColor;
+    border:1px solid $borderColor;
   }
   /* p{
     margin-top: 1em;

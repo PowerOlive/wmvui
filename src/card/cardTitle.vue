@@ -17,16 +17,16 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-card-title-container{
   position: relative;
   .vui-card-title{
-    color: @textColor;
+    color: $textColor;
   }
   .vui-card-sub-title{
     font-size: 14px;
-    color: @lightBlack;
+    color: $lightBlack;
     display: block;
   }
 }

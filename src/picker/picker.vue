@@ -1,8 +1,8 @@
 <template>
-  <div class="vux-picker">
+  <div class="vui-picker">
     <vui-flex :gutter="0">
       <vui-flex-item :span="columnWidth && columnWidth[index]" v-for="(one, index) in currentData" :key="index" style="margin-left:0;">
-        <div class="vux-picker-item" :id="`vux-picker-${uuid}-${index}`"></div>
+        <div class="vui-picker-item" :id="`vui-picker-${uuid}-${index}`"></div>
       </vui-flex-item>
     </vui-flex>
   </div>
@@ -55,7 +55,7 @@ export default {
       return value2name(this.currentValue, this.data)
     },
     getId (i) {
-      return `#vux-picker-${this.uuid}-${i}`
+      return `#vui-picker-${this.uuid}-${i}`
     },
     render (data, value) {
       this.count = this.currentData.length
@@ -218,7 +218,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "../styles/import.scss";
 .scroller-component {
   display: block;
   position: relative;
@@ -260,7 +261,10 @@ export default {
   font-size: 16px;
   height: 34px;
   line-height: 34px;
-  color: #000;
+  color: $textColor;
+  &-selected{
+    color: $primaryColor;
+  }
 }
 
 .scroller-indicator {

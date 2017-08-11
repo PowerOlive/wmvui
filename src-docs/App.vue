@@ -52,10 +52,10 @@ export default {
         title: '使用',
         value: '/usage',
         icon: 'book'
-      }, {
-        title: '主题',
-        value: '/theme',
-        icon: 'theme'
+      // }, {
+      //   title: '主题',
+      //   value: '/theme',
+      //   icon: 'theme'
       }, {
         title: '颜色',
         value: '/colors',
@@ -309,15 +309,15 @@ function isDesktop () {
 }
 </script>
 
-<style lang="less">
-@import "../src/styles/import.less";
+<style lang="scss">
+@import "../src/styles/import.scss";
 .example-appbar{
   position: fixed;
   left: 256px;
   right: 0;
   top: 0;
   width: auto;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
 }
 .exmaple-drawer-content{
   overflow: auto;
@@ -325,7 +325,7 @@ function isDesktop () {
 .example-content{
   padding-top: 56px;
   padding-left: 256px;
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
 }
 .nav-hide {
   .example-appbar{

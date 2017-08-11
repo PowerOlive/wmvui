@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="scss">
 @import "../assets/github-markdown.css";
 @import "../assets/atom-one-light.css";
 </style>

@@ -126,8 +126,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-clock-minutes{
   height: 100%;
   width: 100%;

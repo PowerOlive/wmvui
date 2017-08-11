@@ -95,24 +95,24 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-tooltip{
   position: absolute;
   font-size: 10px;
   line-height: 22px;
   padding: 0 8px;
   z-index: 300;
-  color: @alternateTextColor;
+  color: $alternateTextColor;
   overflow: hidden;
   top: -1000px;
   border-radius: 2px;
   user-select: none;
   opacity: 0;
-  transition: top 0ms @easeOutFunction 450ms, transform 450ms @easeOutFunction 0ms, opacity 450ms @easeOutFunction 0ms;
+  transition: top 0ms $easeOutFunction 450ms, transform 450ms $easeOutFunction 0ms, opacity 450ms $easeOutFunction 0ms;
   &.when-shown {
     opacity: 0.9;
-    transition: top 0ms @easeOutFunction 0ms,  transform 450ms @easeOutFunction 0ms, opacity 450ms @easeOutFunction 0ms;
+    transition: top 0ms $easeOutFunction 0ms,  transform 450ms $easeOutFunction 0ms, opacity 450ms $easeOutFunction 0ms;
   }
   &.touched{
     font-size: 14px;
@@ -128,10 +128,10 @@ export default {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: transparent;
-  transition: width 0ms @easeOutFunction 450ms, height 0ms @easeOutFunction 450ms, background-color 450ms @easeOutFunction 0ms;
+  transition: width 0ms $easeOutFunction 450ms, height 0ms $easeOutFunction 450ms, background-color 450ms $easeOutFunction 0ms;
   &.when-shown {
-    background-color: @grey700;
-    transition: width 450ms @easeOutFunction 0ms, height 450ms @easeOutFunction 0ms, background-color 450ms @easeOutFunction 0ms;
+    background-color: $grey700;
+    transition: width 450ms $easeOutFunction 0ms, height 450ms $easeOutFunction 0ms, background-color 450ms $easeOutFunction 0ms;
   }
 }
 

@@ -53,8 +53,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-calendar-year-container {
   display: flex;
   justify-content: space-between;
@@ -66,7 +66,7 @@ export default {
 }
 
 .vui-calendar-year {
-  background-color: @dialogBackgroundColor;
+  background-color: $dialogBackgroundColor;
   height: inherit;
   line-height: 35px;
   overflow-x: hidden;

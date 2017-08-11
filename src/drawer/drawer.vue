@@ -103,15 +103,22 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-drawer {
   width: 256px;
   position: fixed;
   top: 0;
   bottom: 0;
-  .scrollable();
-  .no-scrollbar();
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none;
+    opacity: 0 !important;
+  }
   transition-property: transform, visibility;
   transition-duration: 0.45s;
   transform: translate3d(-100%, 0, 0);

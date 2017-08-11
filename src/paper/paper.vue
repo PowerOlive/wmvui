@@ -37,12 +37,12 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-paper {
-  transition: all .45s @easeOutFunction;
-  color: @textColor;
-  background-color: @dialogBackgroundColor;
+  transition: all .45s $easeOutFunction;
+  color: $textColor;
+  background-color: $dialogBackgroundColor;
   &-round {
     border-radius: 10px;
   }
@@ -52,23 +52,23 @@ export default {
   }
 
   &-1 {
-    .depth(1);
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   }
 
   &-2 {
-    .depth(2);
+    box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
   }
 
   &-3 {
-    .depth(4);
+    box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 30px, rgba(0, 0, 0, 0.227451) 0px 6px 10px;
   }
 
   &-4 {
-    .depth(4);
+    box-shadow: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
   }
 
   &-5 {
-    .depth(5);
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
   }
 }
 

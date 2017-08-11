@@ -245,8 +245,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-range {
   width: 100%;
   position: relative;
@@ -266,19 +266,19 @@ export default {
   right: 0;
   top: 50%;
   margin-top: -1px;
-  background-color: @lighterPrimaryColor;
+  background-color: $borderColor;
 }
 
 .vui-range-fill{
   position: absolute;
   height: 2px;
   width: 100%;
-  background-color: @primaryColor;
+  background-color: $primaryColor;
   left: 0;
   top: 50%;
   margin-top: -1px;
   .vui-range.disabled & {
-    background-color: @lighterPrimaryColor;
+    background-color: lighten($primaryColor, 20%);
   }
 }
 
@@ -287,11 +287,11 @@ export default {
   top: 50%;
   width: 12px;
   height: 12px;
-  background-color: @primaryColor;
-  color: @primaryColor;
+  background-color: $primaryColor;
+  color: $primaryColor;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: background 450ms @easeOutFunction, border-color 450ms @easeOutFunction, width 450ms @easeOutFunction, height 450ms @easeOutFunction;
+  transition: background 450ms $easeOutFunction, border-color 450ms $easeOutFunction, width 450ms $easeOutFunction, height 450ms $easeOutFunction;
   cursor: pointer;
   .vui-range.active &{
     width: 20px;
@@ -299,9 +299,9 @@ export default {
   }
   .vui-range.zero &,
   .vui-range.disabled &{
-    border: 2px solid @lighterPrimaryColor;
-    color: @lighterPrimaryColor;
-    background-color: @alternateTextColor;
+    border: 2px solid lighten($primaryColor, 20%);
+    color: lighten($primaryColor, 20%);
+    background-color: $alternateTextColor;
     .vui-focus-ripple-wrapper {
       top: -14px;
       left: -14px;

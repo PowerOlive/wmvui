@@ -143,27 +143,27 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-tr {
-  border-bottom: 1px solid @borderColor;
-  color: @textColor;
+  border-bottom: 1px solid $borderColor;
+  color: $textColor;
   height: 48px;
   &:last-child {
     border-bottom: none;
   }
   &.selected {
-    background-color: @grey100;
+    background-color: $grey100;
   }
-  &.hover {
-    background-color: @grey200;
-  }
-  &.stripe {
-    background-color: fade(lighten(@primaryColor, 50%), 40%);
-  }
+  // &.hover {
+  //   background-color: #eee;
+  // }
+  // &.stripe {
+  //   background-color: lighten($textColor, 90%);
+  // }
 
   .vui-tfoot & {
-    border-top: 1px solid @borderColor;
+    border-top: 1px solid $borderColor;
   }
   .vui-checkbox {
     vertical-align: middle;

@@ -20,8 +20,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-card-media {
   position: relative;
   > img {
@@ -39,12 +39,12 @@ export default {
   right: 0;
   bottom: 0;
   padding: 16px;
-  background-color: @lightBlack;
+  background-color: $lightBlack;
   .vui-card-title {
-    color: @lightWhite;
+    color: $lightWhite;
   }
   .vui-card-sub-title {
-    color: @lightWhite;
+    color: $lightWhite;
     font-size: 14px;
   }
 }

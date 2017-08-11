@@ -69,8 +69,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-day-button {
   display: inline-block;
   background: none;
@@ -100,11 +100,11 @@ export default {
   left: 1px;
   height: 32px;
   width: 32px;
-  background-color: @primaryColor;
+  background-color: $primaryColor;
   border-radius: 50%;
   opacity: 0;
   transform: scale(0);
-  transition: all .45s @easeOutFunction;
+  transition: all .45s $easeOutFunction;
   .vui-day-button.hover &,
   .vui-day-button.selected &{
     transform: scale(1);
@@ -120,13 +120,13 @@ export default {
 .vui-day-button-text{
   font-weight: 400;
   position: relative;
-  color: @textColor;
+  color: $textColor;
   .vui-day-button.now &{
-    color: @primaryColor;
+    color: $primaryColor;
   }
   .vui-day-button.hover &,
   .vui-day-button.selected &{
-    color: @alternateTextColor;
+    color: $alternateTextColor;
   }
 }
 </style>

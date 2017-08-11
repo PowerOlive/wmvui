@@ -10,11 +10,11 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-card-text{
   /* padding: 15px; */
   font-size: 14px;
-  color: @textColor;
+  color: $textColor;
 }
 </style>

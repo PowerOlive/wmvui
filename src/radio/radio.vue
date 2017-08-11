@@ -127,8 +127,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-radio {
   position: relative;
   display: inline-block;
@@ -143,14 +143,14 @@ export default {
         .vui-radio-icon-uncheck{
           opacity: 0;
           transform: scale(0);
-          color: @primaryColor;
+          color: $primaryColor;
         }
         .vui-radio-icon-checked{
           opacity: 1;
           transform: scale(1);
         }
         .vui-radio-ripple-wrapper{
-          color: @primaryColor;
+          color: $primaryColor;
         }
       }
 
@@ -190,11 +190,11 @@ export default {
 }
 
 .vui-radio-label {
-  color: @textColor;
+  color: $textColor;
   flex: 1;
   font-size: 16px;
   .vui-radio.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -211,10 +211,10 @@ export default {
   left: 0;
   top: 0;
   opacity: 1;
-  transition: all 450ms @easeOutFunction;
-  color: @textColor;
+  transition: all 450ms $easeOutFunction;
+  color: $textColor;
   .vui-radio.disabled & {
-    color: @disabledColor;
+    color: $disabledColor;
   }
 }
 
@@ -223,11 +223,11 @@ export default {
   left: 0;
   top: 0;
   opacity: 0;
-  color: @primaryColor;
+  color: $primaryColor;
   transform: scale(0);
-  transition: all 450ms @easeOutFunction;
+  transition: all 450ms $easeOutFunction;
   .vui-radio.disabled & {
-     color: @disabledColor;
+     color: $disabledColor;
    }
 }
 

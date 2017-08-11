@@ -153,8 +153,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-progress{
   /* 圆形 */
   &-circle{
@@ -164,15 +164,15 @@ export default {
     &-determinate{
       position: relative;
       &-path{
-        stroke: @primaryColor;
+        stroke: $primaryColor;
         stroke-linecap: round;
         transition: all 0.3s linear;
       }
     }
-    &-success{stroke: @successColor}
-    &-info{stroke: @infoColor}
-    &-warn{stroke: @warnColor}
-    &-danger{stroke: @dangerColor}
+    &-success{stroke: $successColor}
+    &-info{stroke: $infoColor}
+    &-warn{stroke: $warnColor}
+    &-danger{stroke: $dangerColor}
   }
   /* 条形 */
   &-line{
@@ -180,7 +180,7 @@ export default {
     height: 4px;
     display: block;
     width: 100%;
-    background-color: @lighterPrimaryColor;
+    background-color: lighten($primaryColor, 20%);
     border-radius: 2px;
     margin: 0px;
     text-align: center;
@@ -190,22 +190,22 @@ export default {
       position: absolute;
       top: 0;
       bottom: 0;
-      background-color: @primaryColor;
+      background-color: $primaryColor;
       border-radius: 2px;
     }
     &-indeterminate{
       width: 40%;
-      animation: vui-progress-line-animate 840ms @easeInOutFunction;
+      animation: vui-progress-line-animate 840ms $easeInOutFunction;
       animation-iteration-count: infinite;
     }
     &-determinate{
       left: 0;
       transition: width .3s linear;
     }
-    &-success{background-color: @successColor}
-    &-info{background-color: @infoColor}
-    &-warn{background-color: @warnColor}
-    &-danger{background-color: @dangerColor}
+    &-success{background-color: $successColor}
+    &-info{background-color: $infoColor}
+    &-warn{background-color: $warnColor}
+    &-danger{background-color: $dangerColor}
     &-inner{
         border-radius:1000px;
       &:before{
@@ -217,7 +217,7 @@ export default {
         left: 0;
         opacity:0;
         background:#fff;
-        animation:progress-active 2s @easeInOutFunction infinite
+        animation:progress-active 2s $easeInOutFunction infinite
       }
     }
     &-number{

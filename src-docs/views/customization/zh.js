@@ -20,8 +20,8 @@ export default {
   src/utils/colors.js
   </a>
   或者
-  <a target="_blank" href="https://github.com/531431988/wmvui/blob/master/src/styles/colors.less">
-    src/styles/colors.less
+  <a target="_blank" href="https://github.com/531431988/wmvui/blob/master/src/styles/colors.scss">
+    src/styles/colors.scss
   </a>
   。`
 }

@@ -132,7 +132,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="scss">
 .vui-marquee {
   width: 100%;
   overflow: hidden;

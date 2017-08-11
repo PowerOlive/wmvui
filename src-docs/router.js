@@ -4,7 +4,7 @@ import Index from './views'
 import Install from './views/get-stared/install'
 import Usage from './views/get-stared/usage'
 import Colors from './views/customization/colors'
-import Theme from './views/customization/theme'
+// import Theme from './views/customization/theme'
 import header from './views/components/header'
 import Avatar from './views/components/avatar'
 import Badge from './views/components/badge'
@@ -58,7 +58,7 @@ const router = new Router({
     { path: '/install', component: Install },
     { path: '/usage', component: Usage },
     { path: '/colors', component: Colors },
-    { path: '/theme', component: Theme },
+    // { path: '/theme', component: Theme },
     { path: '/header', component: header },
     { path: '/avatar', component: Avatar },
     { path: '/badge', component: Badge },

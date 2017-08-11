@@ -1,4 +1,4 @@
-import './styles/base.less'
+import './styles/base.scss'
 import Vue from 'vue'
 import {retina} from './utils'
 import icon from './icon'

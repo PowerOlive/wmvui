@@ -1,82 +1,82 @@
 .vui-banner{
-  background-color: @primaryColor;
+  background-color: $primaryColor;
 }
 
 .vui-desc-wrapper{
-  background-color: fade(@alternateTextColor, 30%);
+  background-color: lighten($alternateTextColor, 30%);
 }
 
 .exmaples-drawer{
-  border-right-color: @borderColor;
+  border-right-color: $borderColor;
 }
 
 .vui-lang {
   &:hover,
   &.active {
-    color: @accentColor;
+    color: $accentColor;
   }
 }
 .vui-logo{
-  background-color: @alternateTextColor;
-  color: @primaryColor;
+  background-color: $alternateTextColor;
+  color: $primaryColor;
 }
 
 .vui-banner-button{
-  color: @primaryColor;
+  color: $primaryColor;
 }
 
 
 .vui-banner-title{
-  color: fade(@alternateTextColor, 87%);
+  color: lighten($alternateTextColor, 87%);
 }
 
 .vui-banner-sub-title{
-  color: fade(@alternateTextColor, 87%);
+  color: lighten($alternateTextColor, 87%);
 }
 
 .api-view-tabs{
   background-color: transparent;
-  color: @textColor;
+  color: $textColor;
   .vui-tab-link-highlight {
-    background-color: @primaryColor;
+    background-color: $primaryColor;
   }
 
   .vui-tab-link{
-    color: @primaryTextColor;
+    color: $primaryTextColor;
   }
 
   .vui-tab-active{
-    color: @primaryColor;
+    color: $primaryColor;
   }
 }
 
 .api-view-title{
-  color: @textColor;
+  color: $textColor;
 }
 
 .api-type-td{
-  color: @accentColor;
+  color: $accentColor;
 }
 
 .code-toolbar{
-  background-color: darken(@darkerAccentColor, 5%);
+  background-color: darken($darkerAccentColor, 5%);
 }
 
 .code-toolBar-title{
-  color: @primaryTextColor;
+  color: $primaryTextColor;
 }
 
 .code-examples {
-  background-color: @dialogBackgroundColor;
+  background-color: $dialogBackgroundColor;
 }
 
 
 .markdown-body {
-  color: @textColor;
+  color: $textColor;
 }
 
 .markdown-body a {
-  color: @primaryColor;
+  color: $primaryColor;
 }
 
 .markdown-body h1,
@@ -85,7 +85,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  color: @textColor;
+  color: $textColor;
 }
 
 .markdown-body h1 .octicon-link,
@@ -94,14 +94,14 @@
 .markdown-body h4 .octicon-link,
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
-  color: @textColor;
+  color: $textColor;
 }
 
 .markdown-body blockquote {
-  color: @primaryTextColor;
+  color: $primaryTextColor;
 }
 
 
 .markdown-body img {
-  background-color: @alternateTextColor;
+  background-color: $alternateTextColor;
 }

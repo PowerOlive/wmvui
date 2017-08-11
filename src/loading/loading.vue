@@ -17,7 +17,6 @@
 
 <script>
 import circular from '../internal/circular'
-import {getColor} from '../utils'
 export default {
   name: 'vui-loading',
   props: {
@@ -58,7 +57,7 @@ export default {
     },
     loadingStyle () {
       return {
-        'background-color': getColor(this.color)
+        'background-color': this.color
       }
     }
   },
@@ -68,8 +67,8 @@ export default {
 }
 </script>
 
-<style lang="less">
-@import "../styles/import.less";
+<style lang="scss">
+@import "../styles/import.scss";
 .vui-loading{
   &,&-wrap{
     text-align: center;
@@ -81,9 +80,9 @@ export default {
   }
   &-line{
     height:100%;
-    background-color:@primaryColor;
+    background-color:$primaryColor;
     display: inline-block;
-    width:calc((100% - 40px) / 8);
+    width:calc((100% - 20px) / 5);
     animation-fill-mode: both;
     margin:0 2px;
     &:nth-child(1){ 
@@ -105,20 +104,20 @@ export default {
     }
   }
   &-success{
-    .vui-loading-line{background-color: @successColor}
-    .vui-circle{border-color: @successColor}
+    .vui-loading-line{background-color: $successColor}
+    .vui-circle{border-color: $successColor}
   }
   &-info{
-    .vui-loading-line{background-color: @infoColor}
-    .vui-circle{border-color: @infoColor}
+    .vui-loading-line{background-color: $infoColor}
+    .vui-circle{border-color: $infoColor}
   }
   &-warn{
-    .vui-loading-line{background-color: @warnColor}
-    .vui-circle{border-color: @warnColor}
+    .vui-loading-line{background-color: $warnColor}
+    .vui-circle{border-color: $warnColor}
   }
   &-danger{
-    .vui-loading-line{background-color: @dangerColor}
-    .vui-circle{border-color: @dangerColor}
+    .vui-loading-line{background-color: $dangerColor}
+    .vui-circle{border-color: $dangerColor}
   }
 
 }
